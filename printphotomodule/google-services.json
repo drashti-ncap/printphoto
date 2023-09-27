@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "994538272236",
+    "project_id": "printphoto-764da",
+    "storage_bucket": "printphoto-764da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994538272236:android:8582401c4aecf38dd67cc9",
+        "android_client_info": {
+          "package_name": "com.mobile.cover.photo.editor.back.maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994538272236-4pc8mk0798pqmsdn3ibmvjj5krobm5kn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.cover.photo.editor.back.maker",
+            "certificate_hash": "9c50cba56479ee7b7adc31f4bac8ed39343ca49e"
+          }
+        },
+        {
+          "client_id": "994538272236-hr4i4s8tdhd8l1htle7ipa6060ai4bgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKnN3WVJhPuJj092GkYAkYaJeXWRE34Y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994538272236-hr4i4s8tdhd8l1htle7ipa6060ai4bgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

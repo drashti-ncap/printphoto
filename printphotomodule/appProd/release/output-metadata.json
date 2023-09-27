@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.mobile.cover.photo.editor.back.maker",
+  "variantName": "appProdRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 73,
+      "versionName": "78",
+      "outputFile": "app-appProd-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

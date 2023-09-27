@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/m3_side_sheet_slide_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/m3_side_sheet_slide_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/m3_bottom_sheet_slide_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/m3_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/mtrl_bottom_sheet_slide_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/mtrl_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/m3_side_sheet_slide_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/m3_side_sheet_slide_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/m3_bottom_sheet_slide_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/m3_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/mtrl_bottom_sheet_slide_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim-v21/mtrl_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim-v21/fragment_fast_out_extra_slow_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-fragment-1.3.6-49:/anim-v21/fragment_fast_out_extra_slow_in.xml"
+    }
+]

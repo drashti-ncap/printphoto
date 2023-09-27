@@ -1,0 +1,86 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mergeAppDevReleaseResources-85:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\Drashti\\Projects\\printphoto-android-2022_SDK\\printphotomodule\\src\\main\\res\\values-hdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "8,9,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "198,250,61",
+                        "endColumns": "50,48,34",
+                        "endOffsets": "244,294,91"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,106,155",
+                        "endColumns": "50,48,34",
+                        "endOffsets": "101,150,185"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\629ff9cbbdefaa81fe2ae0abeb9d9a11\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "190",
+                        "endLines": "9",
+                        "endColumns": "13",
+                        "endOffsets": "462"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\Drashti\\Projects\\printphoto-android-2022_SDK\\printphotomodule\\src\\main\\res\\values-hdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "8,9,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "198,250,61",
+                        "endColumns": "50,48,34",
+                        "endOffsets": "244,294,91"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,106,155",
+                        "endColumns": "50,48,34",
+                        "endOffsets": "101,150,185"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\629ff9cbbdefaa81fe2ae0abeb9d9a11\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "190",
+                        "endLines": "9",
+                        "endColumns": "13",
+                        "endOffsets": "462"
+                    }
+                }
+            ]
+        }
+    ]
+}

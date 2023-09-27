@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\629ff9cbbdefaa81fe2ae0abeb9d9a11\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mergeAppProdReleaseResources-85:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\629ff9cbbdefaa81fe2ae0abeb9d9a11\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

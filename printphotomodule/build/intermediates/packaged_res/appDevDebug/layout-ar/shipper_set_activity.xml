@@ -1,0 +1,356 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_mainlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <!--android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_360sdp"-->
+
+
+        <!-- frame 1 -->
+        <FrameLayout
+            android:id="@+id/fl_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout
+                android:id="@+id/maskable_fl_1"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1
+                android:id="@+id/maskable_fl_2"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2
+                android:id="@+id/maskable_fl_3"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3
+                android:id="@+id/maskable_fl_4"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4
+                android:id="@+id/maskable_fl_5"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5
+                android:id="@+id/maskable_fl_6"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6
+                android:id="@+id/maskable_fl_7"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7
+                android:id="@+id/maskable_fl_8"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8
+                android:id="@+id/maskable_fl_9"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9
+                android:id="@+id/maskable_fl_10"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout10
+                android:id="@+id/maskable_fl_11"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout10>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout11
+                android:id="@+id/maskable_fl_12"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout11>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout12
+                android:id="@+id/maskable_fl_13"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout12>
+
+            <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout13
+                android:id="@+id/maskable_fl_14"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                app:porterduffxfermode="DST_IN">
+
+                <com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView
+                    android:id="@+id/iv_subframe_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/appicon" />
+
+            </com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout13>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolBarStyle.Event"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/pnuregular"
+                    android:gravity="center"
+                    android:singleLine="true"
+
+                    android:text="@string/design_shipper_bottle"
+                    android:textColor="@color/colortitle1"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/id_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:src="@drawable/ic_action_back" />
+
+            <ImageView
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:src="@drawable/ic_help"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/pnuregular"
+        android:text="@string/continue_val"
+
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

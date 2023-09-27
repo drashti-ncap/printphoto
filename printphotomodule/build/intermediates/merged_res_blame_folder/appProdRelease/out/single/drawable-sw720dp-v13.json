@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw720dp-v13/ic_cancelnew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw720dp/ic_cancelnew.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw720dp-v13/ic_resizenew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw720dp/ic_resizenew.png"
+    }
+]

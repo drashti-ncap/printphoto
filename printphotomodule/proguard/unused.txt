@@ -1,0 +1,2219 @@
+com.activate.gcm.C2dmModule:
+    private static final java.lang.String LCAT
+    private org.appcelerator.kroll.KrollFunction errorCallback
+    private org.appcelerator.kroll.KrollFunction messageCallback
+    private org.appcelerator.kroll.KrollFunction successCallback
+    public void <init>()
+    public java.lang.String getRegistrationId()
+    public java.lang.String getSenderId()
+    public void registerC2dm(java.util.HashMap)
+    public void unregister()
+com.activate.gcm.C2dmModulePrototype
+com.activate.gcm.CommonUtilities
+com.activate.gcm.GCMIntentService:
+    private static final java.lang.String ERROR_EVENT
+    private static final java.lang.String LCAT
+    private static final java.lang.String MESSAGE_EVENT
+    private static final java.lang.String REGISTER_EVENT
+    private static final java.lang.String UNREGISTER_EVENT
+com.activate.gcm.GcmBootstrap
+com.activate.gcm.GcmGeneratedBindings
+com.google.android.gcm.GCMBaseIntentService:
+    private static final java.lang.String EXTRA_TOKEN
+    public static final java.lang.String TAG
+    private static final java.lang.String WAKELOCK_KEY
+com.google.android.gcm.GCMBroadcastReceiver:
+    private static final java.lang.String TAG
+com.google.android.gcm.GCMConstants
+com.google.android.gcm.GCMRegistrar:
+    private static final java.lang.String BACKOFF_MS
+    private static final int DEFAULT_BACKOFF_MS
+    private static final java.lang.String GSF_PACKAGE
+    private static final java.lang.String PREFERENCES
+    private static final java.lang.String PROPERTY_APP_VERSION
+    private static final java.lang.String PROPERTY_ON_SERVER
+    private static final java.lang.String PROPERTY_REG_ID
+    private static final java.lang.String TAG
+    private static com.google.android.gcm.GCMBroadcastReceiver sRetryReceiver
+    private void <init>()
+    public static void checkDevice(android.content.Context)
+    public static void checkManifest(android.content.Context)
+    private static void checkReceiver(android.content.Context,java.util.Set,java.lang.String)
+    public static boolean isRegisteredOnServer(android.content.Context)
+    public static synchronized void onDestroy(android.content.Context)
+    public static varargs void register(android.content.Context,java.lang.String[])
+    public static void setRegisteredOnServer(android.content.Context,boolean)
+    private static synchronized void setRetryBroadcastReceiver(android.content.Context)
+    public static void unregister(android.content.Context)
+com.google.android.youtube.player.YouTubeApiServiceUtil:
+    private void <init>()
+com.google.android.youtube.player.YouTubeBaseActivity$a:
+    public final void a(com.google.android.youtube.player.YouTubePlayerView,java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+com.google.android.youtube.player.YouTubeBaseActivity:
+    static synthetic android.os.Bundle a(com.google.android.youtube.player.YouTubeBaseActivity)
+    static synthetic android.os.Bundle b(com.google.android.youtube.player.YouTubeBaseActivity)
+com.google.android.youtube.player.YouTubeIntents
+com.google.android.youtube.player.YouTubePlayer$ErrorReason
+com.google.android.youtube.player.YouTubePlayer$OnFullscreenListener
+com.google.android.youtube.player.YouTubePlayer$PlaybackEventListener
+com.google.android.youtube.player.YouTubePlayer$PlayerStateChangeListener
+com.google.android.youtube.player.YouTubePlayer$PlayerStyle
+com.google.android.youtube.player.YouTubePlayer$PlaylistEventListener
+com.google.android.youtube.player.YouTubePlayer$Provider:
+    public abstract void initialize(java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+com.google.android.youtube.player.YouTubePlayer:
+    public static final int FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE
+    public static final int FULLSCREEN_FLAG_CONTROL_ORIENTATION
+    public static final int FULLSCREEN_FLAG_CONTROL_SYSTEM_UI
+    public static final int FULLSCREEN_FLAG_CUSTOM_LAYOUT
+    public abstract void addFullscreenControlFlag(int)
+    public abstract void cuePlaylist(java.lang.String)
+    public abstract void cuePlaylist(java.lang.String,int,int)
+    public abstract void cueVideo(java.lang.String)
+    public abstract void cueVideo(java.lang.String,int)
+    public abstract void cueVideos(java.util.List)
+    public abstract void cueVideos(java.util.List,int,int)
+    public abstract int getCurrentTimeMillis()
+    public abstract int getDurationMillis()
+    public abstract int getFullscreenControlFlags()
+    public abstract boolean hasNext()
+    public abstract boolean hasPrevious()
+    public abstract boolean isPlaying()
+    public abstract void loadPlaylist(java.lang.String)
+    public abstract void loadPlaylist(java.lang.String,int,int)
+    public abstract void loadVideo(java.lang.String)
+    public abstract void loadVideo(java.lang.String,int)
+    public abstract void loadVideos(java.util.List)
+    public abstract void loadVideos(java.util.List,int,int)
+    public abstract void next()
+    public abstract void pause()
+    public abstract void play()
+    public abstract void previous()
+    public abstract void release()
+    public abstract void seekRelativeMillis(int)
+    public abstract void seekToMillis(int)
+    public abstract void setFullscreen(boolean)
+    public abstract void setFullscreenControlFlags(int)
+    public abstract void setManageAudioFocus(boolean)
+    public abstract void setOnFullscreenListener(com.google.android.youtube.player.YouTubePlayer$OnFullscreenListener)
+    public abstract void setPlaybackEventListener(com.google.android.youtube.player.YouTubePlayer$PlaybackEventListener)
+    public abstract void setPlayerStateChangeListener(com.google.android.youtube.player.YouTubePlayer$PlayerStateChangeListener)
+    public abstract void setPlayerStyle(com.google.android.youtube.player.YouTubePlayer$PlayerStyle)
+    public abstract void setPlaylistEventListener(com.google.android.youtube.player.YouTubePlayer$PlaylistEventListener)
+    public abstract void setShowFullscreenButton(boolean)
+com.google.android.youtube.player.YouTubePlayerFragment$a:
+    public final void a(com.google.android.youtube.player.YouTubePlayerView,java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+com.google.android.youtube.player.YouTubePlayerFragment:
+    static synthetic com.google.android.youtube.player.YouTubePlayer$OnInitializedListener a(com.google.android.youtube.player.YouTubePlayerFragment)
+    public void initialize(java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+    public static com.google.android.youtube.player.YouTubePlayerFragment newInstance()
+com.google.android.youtube.player.YouTubePlayerSupportFragment$a
+com.google.android.youtube.player.YouTubePlayerSupportFragment
+com.google.android.youtube.player.YouTubePlayerView$b:
+    public abstract void a(com.google.android.youtube.player.YouTubePlayerView,java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+com.google.android.youtube.player.YouTubePlayerView:
+    public final void initialize(java.lang.String,com.google.android.youtube.player.YouTubePlayer$OnInitializedListener)
+com.google.android.youtube.player.YouTubeStandalonePlayer
+com.google.android.youtube.player.YouTubeThumbnailLoader$ErrorReason
+com.google.android.youtube.player.YouTubeThumbnailLoader$OnThumbnailLoadedListener
+com.google.android.youtube.player.YouTubeThumbnailLoader
+com.google.android.youtube.player.YouTubeThumbnailView$1
+com.google.android.youtube.player.YouTubeThumbnailView$2
+com.google.android.youtube.player.YouTubeThumbnailView$OnInitializedListener
+com.google.android.youtube.player.YouTubeThumbnailView:
+    private com.google.android.youtube.player.internal.b a
+    static synthetic com.google.android.youtube.player.internal.b a(com.google.android.youtube.player.YouTubeThumbnailView)
+    static synthetic com.google.android.youtube.player.internal.b b(com.google.android.youtube.player.YouTubeThumbnailView)
+    public final void initialize(java.lang.String,com.google.android.youtube.player.YouTubeThumbnailView$OnInitializedListener)
+com.google.android.youtube.player.internal.a
+com.google.android.youtube.player.internal.ab:
+    public abstract com.google.android.youtube.player.YouTubeThumbnailLoader a(com.google.android.youtube.player.internal.b,com.google.android.youtube.player.YouTubeThumbnailView)
+com.google.android.youtube.player.internal.ad:
+    public final com.google.android.youtube.player.YouTubeThumbnailLoader a(com.google.android.youtube.player.internal.b,com.google.android.youtube.player.YouTubeThumbnailView)
+com.google.android.youtube.player.internal.b:
+    public abstract com.google.android.youtube.player.internal.k a(com.google.android.youtube.player.internal.j)
+com.google.android.youtube.player.internal.c$a$a
+com.google.android.youtube.player.internal.d$a$a:
+    public final void a()
+    public final void a(int)
+    public final void a(com.google.android.youtube.player.internal.e)
+    public final void a(com.google.android.youtube.player.internal.f)
+    public final void a(com.google.android.youtube.player.internal.g)
+    public final void a(com.google.android.youtube.player.internal.h)
+    public final void a(java.lang.String)
+    public final void a(java.lang.String,int)
+    public final void a(java.lang.String,int,int)
+    public final void a(java.util.List,int,int)
+    public final void b()
+    public final void b(int)
+    public final void b(java.lang.String,int)
+    public final void b(java.lang.String,int,int)
+    public final void b(java.util.List,int,int)
+    public final void b(boolean)
+    public final void c(int)
+    public final void c(boolean)
+    public final boolean c()
+    public final void d(int)
+    public final void d(boolean)
+    public final boolean d()
+    public final boolean e()
+    public final void f()
+    public final void g()
+    public final int h()
+    public final int i()
+    public final int j()
+    public final void k()
+com.google.android.youtube.player.internal.d$a:
+    public boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
+com.google.android.youtube.player.internal.d:
+    public abstract void a()
+    public abstract void a(int)
+    public abstract void a(com.google.android.youtube.player.internal.e)
+    public abstract void a(com.google.android.youtube.player.internal.f)
+    public abstract void a(com.google.android.youtube.player.internal.g)
+    public abstract void a(com.google.android.youtube.player.internal.h)
+    public abstract void a(java.lang.String)
+    public abstract void a(java.lang.String,int)
+    public abstract void a(java.lang.String,int,int)
+    public abstract void a(java.util.List,int,int)
+    public abstract void b()
+    public abstract void b(int)
+    public abstract void b(java.lang.String,int)
+    public abstract void b(java.lang.String,int,int)
+    public abstract void b(java.util.List,int,int)
+    public abstract void b(boolean)
+    public abstract void c(int)
+    public abstract void c(boolean)
+    public abstract boolean c()
+    public abstract void d(int)
+    public abstract void d(boolean)
+    public abstract boolean d()
+    public abstract boolean e()
+    public abstract void f()
+    public abstract void g()
+    public abstract int h()
+    public abstract int i()
+    public abstract int j()
+    public abstract void k()
+com.google.android.youtube.player.internal.e$a$a
+com.google.android.youtube.player.internal.e$a
+com.google.android.youtube.player.internal.e
+com.google.android.youtube.player.internal.f$a$a
+com.google.android.youtube.player.internal.f$a
+com.google.android.youtube.player.internal.f
+com.google.android.youtube.player.internal.g$a$a
+com.google.android.youtube.player.internal.g$a
+com.google.android.youtube.player.internal.g
+com.google.android.youtube.player.internal.h$a$a
+com.google.android.youtube.player.internal.h$a
+com.google.android.youtube.player.internal.h
+com.google.android.youtube.player.internal.i$a:
+    public boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
+com.google.android.youtube.player.internal.j$a$a
+com.google.android.youtube.player.internal.j$a
+com.google.android.youtube.player.internal.j
+com.google.android.youtube.player.internal.k$a$a
+com.google.android.youtube.player.internal.k$a
+com.google.android.youtube.player.internal.k
+com.google.android.youtube.player.internal.l$a$a:
+    public final com.google.android.youtube.player.internal.k a(com.google.android.youtube.player.internal.j)
+com.google.android.youtube.player.internal.l$a:
+    public boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
+com.google.android.youtube.player.internal.l:
+    public abstract com.google.android.youtube.player.internal.k a(com.google.android.youtube.player.internal.j)
+com.google.android.youtube.player.internal.o:
+    public final com.google.android.youtube.player.internal.k a(com.google.android.youtube.player.internal.j)
+com.google.android.youtube.player.internal.p$a$1
+com.google.android.youtube.player.internal.p$a$2
+com.google.android.youtube.player.internal.p$a
+com.google.android.youtube.player.internal.p
+com.google.android.youtube.player.internal.s$1
+com.google.android.youtube.player.internal.s$2
+com.google.android.youtube.player.internal.s$3
+com.google.android.youtube.player.internal.s$4
+com.google.android.youtube.player.internal.s:
+    public final void addFullscreenControlFlag(int)
+    public final void cuePlaylist(java.lang.String)
+    public final void cuePlaylist(java.lang.String,int,int)
+    public final void cueVideo(java.lang.String)
+    public final void cueVideo(java.lang.String,int)
+    public final void cueVideos(java.util.List)
+    public final void cueVideos(java.util.List,int,int)
+    public final int getCurrentTimeMillis()
+    public final int getDurationMillis()
+    public final int getFullscreenControlFlags()
+    public final boolean hasNext()
+    public final boolean hasPrevious()
+    public final boolean isPlaying()
+    public final void loadPlaylist(java.lang.String)
+    public final void loadPlaylist(java.lang.String,int,int)
+    public final void loadVideo(java.lang.String)
+    public final void loadVideo(java.lang.String,int)
+    public final void loadVideos(java.util.List)
+    public final void loadVideos(java.util.List,int,int)
+    public final void next()
+    public final void pause()
+    public final void play()
+    public final void previous()
+    public final void release()
+    public final void seekRelativeMillis(int)
+    public final void seekToMillis(int)
+    public final void setFullscreen(boolean)
+    public final void setFullscreenControlFlags(int)
+    public final void setManageAudioFocus(boolean)
+    public final void setOnFullscreenListener(com.google.android.youtube.player.YouTubePlayer$OnFullscreenListener)
+    public final void setPlaybackEventListener(com.google.android.youtube.player.YouTubePlayer$PlaybackEventListener)
+    public final void setPlayerStateChangeListener(com.google.android.youtube.player.YouTubePlayer$PlayerStateChangeListener)
+    public final void setPlayerStyle(com.google.android.youtube.player.YouTubePlayer$PlayerStyle)
+    public final void setPlaylistEventListener(com.google.android.youtube.player.YouTubePlayer$PlaylistEventListener)
+    public final void setShowFullscreenButton(boolean)
+com.google.android.youtube.player.internal.z:
+    public static boolean a(android.content.pm.PackageManager)
+com.larvalabs.svgandroid.ParserHelper
+com.larvalabs.svgandroid.SVG
+com.larvalabs.svgandroid.SVGBuilder
+com.larvalabs.svgandroid.SVGColors
+com.larvalabs.svgandroid.SVGDrawable$1
+com.larvalabs.svgandroid.SVGDrawable$SVGState
+com.larvalabs.svgandroid.SVGDrawable
+com.larvalabs.svgandroid.SVGParseException
+com.larvalabs.svgandroid.SVGParser$1
+com.larvalabs.svgandroid.SVGParser$Gradient
+com.larvalabs.svgandroid.SVGParser$LayerAttributes
+com.larvalabs.svgandroid.SVGParser$NumberParse
+com.larvalabs.svgandroid.SVGParser$Properties:
+    org.xml.sax.Attributes atts
+    com.larvalabs.svgandroid.SVGParser$StyleSet styles
+    private void <init>(org.xml.sax.Attributes)
+    synthetic void <init>(org.xml.sax.Attributes,com.larvalabs.svgandroid.SVGParser$1)
+    public java.lang.String getAttr(java.lang.String)
+    public java.lang.Integer getColor(java.lang.String)
+    public float getFloat(java.lang.String,float)
+    public java.lang.Float getFloat(java.lang.String)
+    public java.lang.Float getFloat(java.lang.String,java.lang.Float)
+    public java.lang.String getString(java.lang.String)
+    private int hex3Tohex6(int)
+    private int parseNum(java.lang.String)
+    private java.lang.Integer rgb(int,int,int)
+com.larvalabs.svgandroid.SVGParser$SVGHandler
+com.larvalabs.svgandroid.SVGParser$StyleSet
+com.larvalabs.svgandroid.SVGParser
+com.mobile.cover.photo.editor.back.maker.BuildConfig:
+    public static final java.lang.String BUILD_TYPE
+    public static final boolean DEBUG
+    public static final java.lang.String FLAVOR
+    public static final java.lang.String LIBRARY_PACKAGE_NAME
+    public static final java.lang.String ad_appopen_resume
+    public static final java.lang.String ad_banner
+    public static final java.lang.String ad_interstitial_splash
+    public static final java.lang.String ad_native
+    public static final java.lang.String ads_open_app
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.Chat.models.ChatMessage:
+    private java.lang.String sender
+    public java.lang.String getSender()
+    public void setImageurl(java.lang.String)
+    public void setMessage(java.lang.String)
+    public void setSender(java.lang.String)
+    public void setTimestamp(java.lang.String)
+    public void setType(com.mobile.cover.photo.editor.back.maker.Chat.models.ChatMessage$Type)
+com.mobile.cover.photo.editor.back.maker.Commen.DynamicUnitUtils
+com.mobile.cover.photo.editor.back.maker.Commen.GlobalData$KEYNAME
+com.mobile.cover.photo.editor.back.maker.Commen.GlobalData:
+    public static int AD_index
+    public static final int APPID
+    public static android.graphics.Bitmap SELECTED_BITMAP
+    public static android.graphics.Bitmap bitmapPhoto
+    public static android.net.Uri editedImageUri
+    public static android.graphics.Bitmap faceBitmap
+    public static int h
+    public static java.lang.String image_path
+    public static boolean is_camera_backgroud
+    public static java.lang.String ntv_img
+    public static java.lang.String ntv_inglink
+    public static int selectedColor
+    public void <init>()
+    public static android.app.ProgressDialog createProgressDialog(android.content.Context)
+    private static java.io.File getTemporalFile(android.content.Context)
+    public static java.lang.String saveCameraBGPhoto(android.content.Context,android.graphics.Bitmap)
+    public static java.lang.String saveToInternalStorage(android.graphics.Bitmap)
+    public static java.lang.String saveToTempPhoto(android.graphics.Bitmap)
+    public static android.app.Dialog showProgress(android.content.Context,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager$1
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager$3
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager$4
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager$5
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager$6
+com.mobile.cover.photo.editor.back.maker.Commen.NetworkManager:
+    public void <init>()
+    public static boolean isGPSConnected(android.content.Context)
+    public static boolean isInternetConnected(android.app.Activity)
+    public static boolean isWiFiConnected(android.content.Context)
+    public static void showGPSSettingsAlert(android.content.Context)
+    public static void showInternetSettingsAlert(android.content.Context)
+com.mobile.cover.photo.editor.back.maker.Commen.OnSingleClickListener:
+    private static final long MIN_CLICK_INTERVAL
+com.mobile.cover.photo.editor.back.maker.Commen.Share:
+    public static java.lang.String discount_amount
+    public static java.util.List images
+    public static java.lang.String item_edit_id
+    public static boolean update
+    public void <init>()
+    public static java.lang.Boolean RestartApp(android.app.Activity)
+    public static boolean checkAndRequestPermissions(android.app.Activity,int)
+    public static boolean checkInternetConenction(android.content.Context)
+    public static android.app.Dialog showProgress(android.content.Context,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs:
+    public static final java.lang.String AD_INDEX
+    public static final java.lang.String AccessToken
+    public static final java.lang.String CART_COUNT
+    public static final java.lang.String COUNT
+    public static final java.lang.String ITEM_SIZE
+    public static final java.lang.String ProfileId
+    public static final java.lang.String REVIEW
+    public static final java.lang.String SCREEN_HEIGHT
+    public static final java.lang.String SCREEN_WIDTH
+    public static final java.lang.String SELLER
+    public static final java.lang.String SPLASH_AD_DATA
+    public static final java.lang.String Sellerid
+    public static final java.lang.String TOKEN
+    public static final java.lang.String URL_INDEX
+    public static final java.lang.String isapproved
+    public static final java.lang.String mobile
+    public static final java.lang.String uid
+    public static void checkForNullKey(java.lang.String)
+    public static void clearPrefs(android.content.Context)
+    public static boolean contain(android.content.Context,java.lang.String)
+    public static java.util.ArrayList getAdListAddress(android.content.Context,java.lang.String)
+    public static com.mobile.cover.photo.editor.back.maker.model.Address getAddress(android.content.Context,java.lang.String)
+    public static boolean getBoolean(android.content.Context,java.lang.String,boolean)
+    public static float getFloat(android.content.Context,java.lang.String)
+    public static float getFloat(android.content.Context,java.lang.String,float)
+    public static int getInt(android.content.Context,java.lang.String,int)
+    public static java.util.ArrayList getListString(android.content.Context,java.lang.String)
+    public static long getLong(android.content.Context,java.lang.String)
+    public static long getLong(android.content.Context,java.lang.String,long)
+    public static void putAdListAddress(android.content.Context,java.lang.String,java.util.ArrayList)
+    public static void putListString(android.content.Context,java.lang.String,java.util.ArrayList)
+    public static void save(android.content.Context,java.lang.String,float)
+    public static void save(android.content.Context,java.lang.String,long)
+    public static void save(android.content.Context,java.lang.String,com.mobile.cover.photo.editor.back.maker.model.Address)
+com.mobile.cover.photo.editor.back.maker.Commen.global
+com.mobile.cover.photo.editor.back.maker.Drag_recyclerview.adapter.MyAdapterRecyclerView$MyViewHolder:
+    public void setDescription(java.lang.String)
+    public void setName(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Drag_recyclerview.model.Item
+com.mobile.cover.photo.editor.back.maker.Instagram.Instagram:
+    public void resetSession()
+com.mobile.cover.photo.editor.back.maker.Instagram.InstagramDialog:
+    static final int MARGIN
+    static final int PADDING
+    static final java.lang.String TAG
+    public void clearCache()
+com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest$InstagramRequestListener
+com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest$RequestTask
+com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest:
+    static synthetic java.lang.String access$000(com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest,java.lang.String,java.util.List)
+    static synthetic java.lang.String access$100(com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest,java.lang.String,java.util.List)
+    public void createRequest(java.lang.String,java.lang.String,java.util.List,com.mobile.cover.photo.editor.back.maker.Instagram.InstagramRequest$InstagramRequestListener)
+com.mobile.cover.photo.editor.back.maker.Instagram.InstagramSession:
+    private static final java.lang.String ACCESS_TOKEN
+    private static final java.lang.String FULLNAME
+    private static final java.lang.String PROFILPIC
+    private static final java.lang.String SHARED
+    private static final java.lang.String USERID
+    private static final java.lang.String USERNAME
+com.mobile.cover.photo.editor.back.maker.Instagram.util.Cons
+com.mobile.cover.photo.editor.back.maker.Instagram.util.Debug:
+    public void <init>()
+    public static void e(java.lang.String)
+    public static void e(java.lang.String,java.lang.String)
+    public static void e(java.lang.String,java.lang.String,java.lang.Exception)
+com.mobile.cover.photo.editor.back.maker.Instagram.util.StringUtil:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.Notification.CommonUtilities:
+    public static final java.lang.String DISPLAY_MESSAGE_ACTION
+    public static final java.lang.String EXTRA_MESSAGE
+    public static final java.lang.String SENDER_ID
+    static final java.lang.String SERVER_URL
+    public static final java.lang.String TAG
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.Notification.GCMIntentService:
+    private static final int BIG_PICTURE_STYLE
+    private static final java.lang.String TAG
+    private static androidx.core.app.NotificationCompat$Builder Notification(androidx.core.app.NotificationCompat$Builder)
+    public static android.app.Notification setBigTextStyleNotification()
+com.mobile.cover.photo.editor.back.maker.Notification.MyFirebaseMessagingService:
+    private java.lang.String Category
+    private java.lang.String Data
+    private static final java.lang.String TAG
+    private androidx.core.app.NotificationCompat$Builder builder
+    private android.app.NotificationManager notificationManager
+    private int notification_id
+    private android.widget.RemoteViews remoteViews
+com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Action:
+    public void <init>()
+    public java.lang.Integer getType()
+    public void setType(java.lang.Integer)
+com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.AdditionalData:
+    public void <init>()
+    public void setCategoryId(java.lang.String)
+    public void setCategoryName(java.lang.String)
+    public void setOffer(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Notification:
+    public void <init>()
+    public java.lang.Integer getAndroidNotificationId()
+    public java.lang.Integer getDisplayType()
+    public java.lang.Boolean getIsAppInFocus()
+    public java.lang.Boolean getShown()
+    public void setAndroidNotificationId(java.lang.Integer)
+    public void setDisplayType(java.lang.Integer)
+    public void setIsAppInFocus(java.lang.Boolean)
+    public void setPayload(com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Payload)
+    public void setShown(java.lang.Boolean)
+com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Payload:
+    public void <init>()
+    public java.lang.String getBody()
+    public java.lang.String getFromProjectNumber()
+    public java.lang.String getGroupMessage()
+    public java.lang.Integer getLockScreenVisibility()
+    public java.lang.String getNotificationID()
+    public java.lang.Integer getPriority()
+    public java.lang.String getRawPayload()
+    public java.lang.String getTitle()
+    public void setAdditionalData(com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.AdditionalData)
+    public void setBody(java.lang.String)
+    public void setFromProjectNumber(java.lang.String)
+    public void setGroupMessage(java.lang.String)
+    public void setLockScreenVisibility(java.lang.Integer)
+    public void setNotificationID(java.lang.String)
+    public void setPriority(java.lang.Integer)
+    public void setRawPayload(java.lang.String)
+    public void setTitle(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.notification_main_response:
+    public com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Action getAction()
+    public void setAction(com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Action)
+    public void setNotification(com.mobile.cover.photo.editor.back.maker.Notification.Notification_model.Notification)
+com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity$2:
+    public int getTotalPageCount()
+com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity:
+    private static final java.lang.String TAG
+    private boolean checkAndRequestPermissionsCamera(int)
+    private boolean checkAndRequestPermissionsStorage()
+    private boolean isNetworkConnected()
+com.mobile.cover.photo.editor.back.maker.Pagination.PaginationAdapter:
+    private static final java.lang.String BASE_URL_IMG
+    private static final int ITEM
+    private static final int LOADING
+    public java.util.List getMovies()
+    public boolean isEmpty()
+    public void setMovies(java.util.List)
+com.mobile.cover.photo.editor.back.maker.Pagination.PaginationScrollListener:
+    public abstract int getTotalPageCount()
+com.mobile.cover.photo.editor.back.maker.Pagination.api.MovieApi:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.Paymentintegration.StatusActivity$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.Paymentintegration.StatusActivity:
+    android.widget.TextView tv_prepaid
+com.mobile.cover.photo.editor.back.maker.Paymentintegration.WebViewActivity:
+    java.lang.String html
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity:
+    private static final long MIN_CLICK_INTERVAL
+    boolean clicked
+    public static com.mobile.cover.photo.editor.back.maker.model.SubDataModelDetails current_model
+    private void handelMainData(com.mobile.cover.photo.editor.back.maker.model.new_main_model)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreen$Companion:
+    public final int getANIM_ITEM_DURATION()
+    public final int getITEM_DELAY()
+    public final int getSTARTUP_DELAY()
+    public final java.lang.String getText()
+    public final void setText(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreen:
+    private static java.lang.String text
+    public void _$_clearFindViewByIdCache()
+    public static final synthetic int access$getANIM_ITEM_DURATION$cp()
+    public static final synthetic int access$getITEM_DELAY$cp()
+    public static final synthetic int access$getSTARTUP_DELAY$cp()
+    public static final synthetic java.lang.String access$getText$cp()
+    public static final synthetic void access$setText$cp(java.lang.String)
+    public final android.app.ProgressDialog getPd()
+    public final void setPInfo$printphotomodule_appProdRelease(android.content.pm.PackageInfo)
+    public final void setPd(android.app.ProgressDialog)
+    public final void setTAG$printphotomodule_appProdRelease(java.lang.String)
+    private final void setupCrashlytics()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreenKt
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ChangePasswordActivity$ChangePasswordAPICall$1:
+    public final java.lang.String getTAG()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ChangePasswordActivity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.CartRecyclerAdapter$6:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.CartRecyclerAdapter:
+    private android.graphics.Bitmap downloadImage(java.lang.String)
+    private java.io.InputStream getHttpConnection(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeAdapter$MyViewHolder:
+    public final void setIvThumb(android.widget.ImageView)
+    public final void setProgressBar(android.widget.ProgressBar)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeAdapter:
+    public final android.content.Context getContext()
+    public final java.util.List getData()
+    public final com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener getOnItemClickListener()
+    public final void setContext(android.content.Context)
+    public final void setData(java.util.List)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeMallAdapter$MyViewHolder:
+    public final void setIvThumb(android.widget.ImageView)
+    public final void setProgressBar(android.widget.ProgressBar)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeMallAdapter:
+    public final android.content.Context getContext()
+    public final java.util.List getData()
+    public final com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener getOnItemClickListener()
+    public final void setContext(android.content.Context)
+    public final void setData(java.util.List)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeSubAdapter$MyViewHolder:
+    public final void setIvThumb(android.widget.ImageView)
+    public final void setProgressBar(android.widget.ProgressBar)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.ModelAdapter$12
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.ModelAdapter$13
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.ModelAdapter$14
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.ModelAdapter$15
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.ModelAdapter:
+    private static final long MIN_CLICK_INTERVAL
+    public void onRequestPermissionsResult(int,java.lang.String[],int[])
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIKt
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService:
+    public abstract retrofit2.Call applyCouponCode(java.lang.String,java.lang.String,int)
+    public abstract retrofit2.Call applyPromoCode(java.lang.String)
+    public abstract retrofit2.Call cancel_order(java.lang.String,java.lang.String)
+    public abstract retrofit2.Call ccavenue_transaction(java.lang.String)
+    public abstract retrofit2.Call checkcod(java.lang.String,java.lang.String)
+    public abstract retrofit2.Call deleteaddress(java.lang.String,java.lang.String)
+    public abstract retrofit2.Call getOrder(java.lang.String)
+    public abstract retrofit2.Call getSubMainCatagaries(java.lang.String)
+    public abstract retrofit2.Call getcodeapply(java.lang.String)
+    public abstract retrofit2.Call getimages(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+    public abstract retrofit2.Call getmugdetails(java.lang.Integer)
+    public abstract retrofit2.Call getorderdetiails(java.lang.Integer)
+    public abstract retrofit2.Call getorderid(java.lang.Integer,java.lang.String)
+    public abstract retrofit2.Call gettxnstatusresponse(java.lang.String)
+    public abstract retrofit2.Call postRawJSON(java.lang.String,java.lang.String,java.lang.String)
+    public abstract retrofit2.Call post_written_request(java.lang.String,java.lang.String)
+    public abstract retrofit2.Call send_email_otp(java.lang.String,java.lang.String)
+    public abstract retrofit2.Call sendrequest(java.lang.String)
+    public abstract retrofit2.Call verify_user_mobile_email(java.lang.String,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.Api:
+    public static final java.lang.String BASE_URL
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.DeleteRecored
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient:
+    public final android.content.Context getMContext()
+    public final void setApiInterface(com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.RetrofitClient2:
+    public final android.content.Context getMContext()
+    public final void setApiInterface(com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.ServiceGenerator
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.tracking_api
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.auth.PhoneAuthActivityKt
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AppSignatureHelper$Companion
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AppSignatureHelper
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP$Callback
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP$Companion:
+    public final java.lang.String getHashCode(android.content.Context)
+    public final int getRC_HINT()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP$requestPhoneNoHint$3
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP:
+    private com.google.android.gms.common.api.GoogleApiClient googleApiClient
+    public static final synthetic int access$getRC_HINT$cp()
+    public final void requestPhoneNoHint()
+    public final void requestPhoneNoHint(com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP$Callback)
+    private static final void requestPhoneNoHint$lambda$0(com.google.android.gms.common.ConnectionResult)
+    private static final void requestPhoneNoHint$lambda$1(com.google.android.gms.common.ConnectionResult)
+    private static final void requestPhoneNoHint$lambda$2(com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP$Callback,com.google.android.gms.common.ConnectionResult)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity$1:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity$23:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity$24:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity:
+    private static final int CHROME_CUSTOM_TAB_REQUEST_CODE
+    private static final long MIN_CLICK_INTERVAL
+    java.lang.String Orderid
+    android.widget.LinearLayout id_ll_gift
+    androidx.recyclerview.widget.RecyclerView recyclerview
+    public static android.widget.TextView tv_gift
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.SelectAddressActivity$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.SelectAddressActivity:
+    private static final long MIN_CLICK_INTERVAL
+    public static android.widget.TextView title
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.complaints.Complain_ticket_system:
+    private static final int FILECHOOSER_RESULTCODE
+    private static final int INPUT_FILE_REQUEST_CODE
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.deeplinks.ProductActivity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt:
+    public static final java.lang.String CURRENCY_TYPE
+    public static final java.lang.String SEARCH_BRAND_MODEL
+    public static final java.lang.String SEARCH_BRAND_NAME
+    public static final java.lang.String SEARCH_SHOPPING_MALL
+    public static final java.lang.String VIEW_MALL
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FirebaseEventsKt:
+    public static final java.lang.String ORDER_ID
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentAccount$7:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentAccount$login
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentAccount:
+    android.widget.LinearLayout id_signOut
+    java.lang.Integer mobilecode
+    android.widget.Spinner sp_code
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart$9:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart:
+    private static final long MIN_CLICK_INTERVAL
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentHome:
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentHomeSub:
+    private static final long MIN_CLICK_INTERVAL
+    android.widget.EditText fragOne_ed_search
+    android.widget.ImageView id_back
+    private long mLastClickTime
+    android.app.ProgressDialog pd
+    android.widget.TextView title
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentMall$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentMall$4:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentMall:
+    android.widget.ImageView id_back
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder$4
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder$5
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder$6
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder:
+    android.app.ProgressDialog pd
+    static synthetic void access$200(com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentOrder)
+    private void displayalert()
+    public void exitdialog()
+    private void rate_app()
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.UserProfileFragment$4:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.UserProfileFragment$6:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.MallSearchActivity:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_detail_activity:
+    private static final long MIN_CLICK_INTERVAL
+    private static final int REQ_SIGNIN
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data$1
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data$2$1
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data$2$2
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data$2
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_main_category_data
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_sub_category_data_adapter:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.newoffers.OfferAdapter$MyViewHolder:
+    public android.widget.Button btn_apply
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.newoffers.OfferAdapter:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.newoffers.OffersActivity$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.sipper.ShipperCategoryActivity$Companion:
+    public final void setMActivity(android.app.Activity)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.sipper.ShipperCategoryActivity:
+    public void _$_clearFindViewByIdCache()
+    public static final synthetic void access$setMActivity$cp(android.app.Activity)
+    private final boolean checkAndRequestPermissionsCamera(int)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.sipper.adapter.ShipperAdapter$MyViewHolder:
+    public android.widget.TextView tv_name
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.sipper.adapter.ShipperAdapter:
+    private static final long MIN_CLICK_INTERVAL
+    android.graphics.Bitmap bitmap
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.ConstantKt:
+    public static final java.lang.String TAG_HTTP_REQUEST
+    public static final java.lang.String fontPath
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.DataHelperKt:
+    private static final java.lang.String KEY_CANCEL_REASONS
+    private static final java.lang.String KEY_CASE_ID
+    private static final java.lang.String KEY_CONFIGURATIONS
+    private static final java.lang.String KEY_MODEL_DATA
+    private static final java.lang.String KEY_MODEL_DETAILS
+    private static final java.lang.String KEY_OFFER_AMOUNT
+    private static final java.lang.String KEY_PRODUCT_ID
+    private static final java.lang.String KEY_PRODUCT_ID_TYPE
+    private static final java.lang.String KEY_RESEND_PRIORITY
+    private static final java.lang.String KEY_WA_HOME
+    private static final java.lang.String KEY_WA_INDIA
+    private static final java.lang.String KEY_WA_INTERNATIONAL
+    private static final java.lang.String KEY_WA_SAUDI
+    private static final boolean isTesting
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.ReasonAdapter$ViewHolder:
+    public final void setText(android.widget.TextView)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.ReasonAdapter:
+    public final android.content.Context getContext()
+    public final java.util.List getReasons()
+    public final void setContext(android.content.Context)
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.UtilsKt:
+    private static final int SOURCE_SCALE_HEIGHT
+    private static final int SOURCE_SCALE_WIDTH
+    public static final android.graphics.Bitmap getUrlBitmap(android.content.Context,java.lang.String)
+    public static final boolean isOnline(android.content.Context)
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Default_testing_image_activity:
+    android.widget.Button btn_1
+    android.widget.Button btn_2
+    android.widget.Button btn_3
+    android.app.ProgressDialog progressDialog
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Default_testing_image_activity_final_image:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.activity.Testing.OnboardingWithCenterAnimationActivity:
+    public static final int ANIM_ITEM_DURATION
+    public static final int ITEM_DELAY
+    public static final int STARTUP_DELAY
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Paypal_data_model:
+    public void <init>()
+    public void setRedirectUrl(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Testing_paypal_demo$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Testing_paypal_demo:
+    private static final int CHROME_CUSTOM_TAB_REQUEST_CODE
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Utils$1
+com.mobile.cover.photo.editor.back.maker.activity.Testing.Utils
+com.mobile.cover.photo.editor.back.maker.activity.Testing.paypal_model:
+    public void setData(com.mobile.cover.photo.editor.back.maker.activity.Testing.Paypal_data_model)
+    public void setResponseCode(java.lang.String)
+    public void setResponseMessage(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_MainApiClient:
+    public static final java.lang.String BASE_URL
+    private static final java.lang.String DEVELOPMENT_ROOT_URL
+    private static final java.lang.String ROOT_URL
+    public retrofit2.Retrofit getClient()
+    public retrofit2.Retrofit getClientForPincode()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_RetrofitClient
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.Address:
+    public java.lang.String getCity()
+    public java.lang.String getCompany()
+    public java.lang.String getCountry()
+    public java.lang.String getEmail()
+    public java.lang.String getFirstname()
+    public java.lang.String getLastname()
+    public java.lang.String getPhone()
+    public java.lang.String getStreet1()
+    public java.lang.String getType()
+    public java.lang.String getZip()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.File:
+    public java.lang.String getMd5sum()
+    public java.lang.String getType()
+    public java.lang.String getUrl()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.Item:
+    public java.lang.String getCount()
+    public java.util.List getFiles()
+    public java.util.List getOptions()
+    public java.lang.String getProduct()
+    public java.lang.String getReference()
+    public java.lang.String getShippingLevel()
+    public java.lang.String getTitle()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.Option:
+    public java.lang.String getCount()
+    public java.lang.String getType()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.ResponseDashboard:
+    public java.util.List getAddresses()
+    public java.lang.String getApikey()
+    public java.lang.String getEmail()
+    public java.util.List getItems()
+    public java.lang.String getReference()
+com.mobile.cover.photo.editor.back.maker.activity.Testing.testing_model.response_data:
+    public void setOrder(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CaseEditActivity2$Companion:
+    public final android.graphics.Bitmap loadBitmapFromView(android.widget.RelativeLayout)
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CaseEditActivity2$crateReq:
+    public final okhttp3.MultipartBody$Builder getBuilder$printphotomodule_appProdRelease()
+    public final void setBuilder$printphotomodule_appProdRelease(okhttp3.MultipartBody$Builder)
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CaseEditActivity2$intView$1:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CaseEditActivity2$intView$2:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CaseEditActivity2:
+    private android.graphics.Bitmap bitmap
+    public void _$_clearFindViewByIdCache()
+    public final android.graphics.Bitmap combineImages(android.graphics.Bitmap,android.graphics.Bitmap)
+    public final android.graphics.Bitmap getBground$printphotomodule_appProdRelease()
+    public final android.graphics.Bitmap getBitmap$printphotomodule_appProdRelease()
+    public final android.graphics.Bitmap getBitmapPrint(android.graphics.Bitmap,java.lang.String,java.lang.String)
+    public final com.mobile.cover.photo.editor.back.maker.customView.MaskableFrameLayout getMaskableFrameLayout$printphotomodule_appProdRelease()
+    public final android.graphics.Bitmap getMsk$printphotomodule_appProdRelease()
+    public final int getSelectedColor$printphotomodule_appProdRelease()
+    public final android.graphics.Bitmap getUp_image$printphotomodule_appProdRelease()
+    public void onError()
+    public void onFinish()
+    public void onProgressUpdate(int)
+    private final void savebitmap(android.graphics.Bitmap,java.lang.String)
+    public final void setBground$printphotomodule_appProdRelease(android.graphics.Bitmap)
+    public final void setBitmap$printphotomodule_appProdRelease(android.graphics.Bitmap)
+    public final void setHeight$printphotomodule_appProdRelease(int)
+    public final void setMaskableFrameLayout$printphotomodule_appProdRelease(com.mobile.cover.photo.editor.back.maker.customView.MaskableFrameLayout)
+    public final void setMsk$printphotomodule_appProdRelease(android.graphics.Bitmap)
+    public final void setSelectedColor$printphotomodule_appProdRelease(int)
+    public final void setUp_image$printphotomodule_appProdRelease(android.graphics.Bitmap)
+    public final void setWidth$printphotomodule_appProdRelease(int)
+com.mobile.cover.photo.editor.back.maker.activity.Un_Usefull_Old.CropImageActivity1:
+    java.lang.String imageUrl
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.AlbumImagesActivity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Background_image_activity:
+    public void _$_clearFindViewByIdCache()
+    public final java.util.List getSqlist$printphotomodule_appProdRelease()
+    public final void setProgressDialog$printphotomodule_appProdRelease(android.app.ProgressDialog)
+    public final void setSqlist$printphotomodule_appProdRelease(java.util.List)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity$12:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity$7
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity$Preview_request
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity:
+    private static final long MIN_CLICK_INTERVAL
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    com.bumptech.glide.Glide glide
+    static synthetic boolean access$100(com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity,int)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    private void selectImage()
+    private void sendData()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CoffeeMugEditActivity$6:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CoffeeMugEditActivity$8
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CoffeeMugEditActivity:
+    private static final long MIN_CLICK_INTERVAL
+    android.graphics.Bitmap bitmap
+    static synthetic boolean access$100(com.mobile.cover.photo.editor.back.maker.activity.Usefull.CoffeeMugEditActivity,int)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.CoffeeMugEditActivity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.ComplainChatActivity$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.ComplainChatActivity$4:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.ComplainChatActivity:
+    java.lang.String text_chatmessage
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Contactus_activity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity$10:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity$5
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity:
+    private static final long MIN_CLICK_INTERVAL
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity,int)
+    static synthetic boolean access$300(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap combineImages(android.graphics.Bitmap,android.graphics.Bitmap)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Default_image_activity$Companion:
+    public final java.lang.String getHeight()
+    public final java.util.List getImagedata()
+    public final java.lang.String getModel_id()
+    public final java.lang.String getPaid_amount()
+    public final java.util.List getSqlist_images()
+    public final java.lang.String getTotal_amount()
+    public final java.lang.String getWidth()
+    public final void setActivity(android.app.Activity)
+    public final void setHeight(java.lang.String)
+    public final void setImagedata(java.util.List)
+    public final void setModel_id(java.lang.String)
+    public final void setModel_name(java.lang.String)
+    public final void setPaid_amount(java.lang.String)
+    public final void setSqlist_images(java.util.List)
+    public final void setTotal_amount(java.lang.String)
+    public final void setWidth(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Default_image_activity:
+    private static java.lang.String height
+    private static java.util.List imagedata
+    private static java.lang.String model_id
+    private static java.lang.String paid_amount
+    private static java.lang.String total_amount
+    private static java.lang.String width
+    public void _$_clearFindViewByIdCache()
+    public static final synthetic java.lang.String access$getHeight$cp()
+    public static final synthetic java.util.List access$getImagedata$cp()
+    public static final synthetic java.lang.String access$getModel_id$cp()
+    public static final synthetic java.lang.String access$getPaid_amount$cp()
+    public static final synthetic java.util.List access$getSqlist_images$cp()
+    public static final synthetic java.lang.String access$getTotal_amount$cp()
+    public static final synthetic java.lang.String access$getWidth$cp()
+    public static final synthetic void access$setActivity$cp(android.app.Activity)
+    public static final synthetic void access$setHeight$cp(java.lang.String)
+    public static final synthetic void access$setImagedata$cp(java.util.List)
+    public static final synthetic void access$setModel_id$cp(java.lang.String)
+    public static final synthetic void access$setModel_name$cp(java.lang.String)
+    public static final synthetic void access$setPaid_amount$cp(java.lang.String)
+    public static final synthetic void access$setSqlist_images$cp(java.util.List)
+    public static final synthetic void access$setTotal_amount$cp(java.lang.String)
+    public static final synthetic void access$setWidth$cp(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Display_address_activity:
+    private static final long MIN_CLICK_INTERVAL
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity$11:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity$6
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity:
+    private static final long MIN_CLICK_INTERVAL
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    com.github.clans.fab.FloatingActionButton fab_faceactivity
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity,int)
+    static synthetic boolean access$300(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap combineImages(android.graphics.Bitmap,android.graphics.Bitmap)
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,float,float)
+    public android.graphics.Bitmap newRotateBitmap(android.graphics.Bitmap,float)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.EditRegDataActivity:
+    private static final java.lang.String TAG
+    public varargs void setdimensH(android.widget.LinearLayout[])
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.FaceActivity:
+    public static final java.lang.String ALLOW_MULTIPLE_IMAGES
+    public static final java.lang.String IMAGE_SOURCE
+    private android.widget.ImageView iv_ads
+    public static android.widget.ImageView iv_blast
+    public static android.widget.ImageView iv_more_app
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.FacebookAlbumPhotoActivity:
+    public static android.widget.ImageView iv_blast
+    public static android.widget.ImageView iv_more_app
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Feedback_activity$11:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Feedback_activity$6
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Feedback_activity:
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Feedback_activity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.FinalScreenActivity:
+    private java.io.File[] allFiles
+    private int height
+    java.lang.String m
+    private android.content.SharedPreferences sharedpreferences
+    private int width
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.FontActivity$initView$1:
+    public void onDeleteMember(int)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.FontActivity:
+    private android.graphics.Typeface face
+    private boolean flag
+    private android.widget.ImageView iv_blast
+    private android.widget.ImageView iv_more_app
+    public void _$_clearFindViewByIdCache()
+    public final boolean getColorFlag$printphotomodule_appProdRelease()
+    public final android.graphics.Typeface getFace$printphotomodule_appProdRelease()
+    public final boolean getFlag$printphotomodule_appProdRelease()
+    public final android.widget.ImageView getIv_blast$printphotomodule_appProdRelease()
+    public final android.widget.ImageView getIv_more_app$printphotomodule_appProdRelease()
+    public final int getSColor$printphotomodule_appProdRelease()
+    public final java.lang.Boolean is_closed$printphotomodule_appProdRelease()
+    public final void setColorFlag$printphotomodule_appProdRelease(boolean)
+    public final void setFace$printphotomodule_appProdRelease(android.graphics.Typeface)
+    public final void setFlag$printphotomodule_appProdRelease(boolean)
+    public final void setIv_blast$printphotomodule_appProdRelease(android.widget.ImageView)
+    public final void setIv_more_app$printphotomodule_appProdRelease(android.widget.ImageView)
+    public final void setSColor$printphotomodule_appProdRelease(int)
+    public final void set_closed$printphotomodule_appProdRelease(java.lang.Boolean)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.ForgetpasswordActivity$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.LogInActivity$6:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.LogInActivity:
+    android.widget.LinearLayout id_signOut
+    private static boolean isAirplaneModeOn(android.content.Context)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Mug_images_category_activity:
+    private boolean checkAndRequestPermissionsCamera(int)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Multiple_StickerActivity:
+    private android.widget.ImageView iv_blast
+    private android.widget.ImageView iv_more
+    private android.widget.ImageView iv_more_app
+    android.app.ProgressDialog pd
+    private androidx.appcompat.widget.Toolbar toolbar_top
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.New_address_save_update_activity:
+    private static final long MIN_CLICK_INTERVAL
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.OfferActivity$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.OrderDetailActivity$1:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.OrderDetailActivity:
+    int Shipping_charge
+    int final_total
+    android.widget.RelativeLayout rl_track
+    int total
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.RegistrationActivity$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.RegistrationActivity:
+    android.widget.ImageView im_key
+    android.widget.ImageView im_user
+    java.lang.Runnable runnable
+    private void setDimens()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Select_region:
+    public void _$_clearFindViewByIdCache()
+    public final int getSelected_pos$printphotomodule_appProdRelease()
+    public final java.util.ArrayList getSpinnercodeArray$printphotomodule_appProdRelease()
+    public final void setPd(android.app.ProgressDialog)
+    public final void setSelected_pos$printphotomodule_appProdRelease(int)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.SellerRegistration$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.SellerRegistration:
+    android.widget.LinearLayout id_ll_register
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.SellerWalletActivity$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.SellerWalletActivity:
+    com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.transactionadapter mAdapter
+    androidx.recyclerview.widget.RecyclerView recyclerview
+    android.widget.TextView tv_underc
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Seller_policy:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.StickerActivity$Companion:
+    public final java.util.ArrayList getList()
+    public final void setList(java.util.ArrayList)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.StickerActivity:
+    public void _$_clearFindViewByIdCache()
+    public static final synthetic java.util.ArrayList access$getList$cp()
+    public static final synthetic void access$setList$cp(java.util.ArrayList)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Track_web_view_activity:
+    java.lang.String URL_link
+    android.app.ProgressDialog pd
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Tshirt_Editing_Activity$11
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Tshirt_Editing_Activity$16:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Tshirt_Editing_Activity:
+    private float device_height
+    private float device_width
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Tshirt_Editing_Activity,int)
+    static synthetic boolean access$300(com.mobile.cover.photo.editor.back.maker.activity.Usefull.Tshirt_Editing_Activity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap getBitmapPrint(android.graphics.Bitmap,java.lang.Float,java.lang.Float)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.VideoActivity:
+    public void _$_clearFindViewByIdCache()
+    private final void enterFullScreen()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Zoom_view_activity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.bulk_order_activity$bulk_order$1:
+    public final java.lang.String getTAG()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.bulk_order_activity:
+    public void _$_clearFindViewByIdCache()
+    public final java.lang.Integer getCode_position$printphotomodule_appProdRelease()
+    public final java.lang.Integer getCountry_code$printphotomodule_appProdRelease()
+    public final java.util.List getPrice_range$printphotomodule_appProdRelease()
+    public final java.util.List getProducts$printphotomodule_appProdRelease()
+    public final java.util.ArrayList getSpinnercodeArray$printphotomodule_appProdRelease()
+    public final void setPrice_range$printphotomodule_appProdRelease(java.util.List)
+    public final void setProducts$printphotomodule_appProdRelease(java.util.List)
+    public final void setSpinnercodeArray$printphotomodule_appProdRelease(java.util.ArrayList)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.fancy_mobile_cover:
+    android.widget.ImageView id_back
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.finished_activity:
+    public void _$_clearFindViewByIdCache()
+    public android.view.View _$_findCachedViewById(int)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$4
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$9:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$crateReq$1$1
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$crateReq$1$2
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$crateReq$1$3
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$crateReq$1
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity$crateReq
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity:
+    private static final long MIN_CLICK_INTERVAL
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    com.github.clans.fab.FloatingActionButton fab_faceactivity
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity,int)
+    static synthetic boolean access$300(com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity,int)
+    static synthetic void access$500(com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap combineImages(android.graphics.Bitmap,android.graphics.Bitmap)
+    public java.io.File getFile(java.lang.String,android.graphics.Bitmap,java.lang.String)
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,float,float)
+    private void selectImage()
+    private void sendData()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.jewellery_activity$crateReq:
+    public final okhttp3.MultipartBody$Builder getBuilder$printphotomodule_appProdRelease()
+    public final void setBuilder$printphotomodule_appProdRelease(okhttp3.MultipartBody$Builder)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.jewellery_activity:
+    public void _$_clearFindViewByIdCache()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.test_frame_editing_activity$HttpImageRequestTask:
+    com.larvalabs.svgandroid.SVG svg
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.test_frame_editing_activity$create_bitmap
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.test_frame_editing_activity:
+    private static final long MIN_CLICK_INTERVAL
+    android.graphics.drawable.Drawable[] frame_2
+    private void generate_jpg()
+    private void mergeBitmap(android.graphics.Bitmap,android.graphics.Bitmap,int)
+    private java.lang.String saveToInternalStorage(android.graphics.Bitmap)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.test_frame_image_adapter:
+    private static final long MIN_CLICK_INTERVAL
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing$3:
+    public void openFileChooser(android.webkit.ValueCallback)
+    public void openFileChooser(android.webkit.ValueCallback,java.lang.String)
+    public void openFileChooser(android.webkit.ValueCallback,java.lang.String,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing:
+    private static final int FILECHOOSER_RESULTCODE
+    private static final int INPUT_FILE_REQUEST_CODE
+    private static final java.lang.String TAG
+    static synthetic android.webkit.ValueCallback access$302(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing,android.webkit.ValueCallback)
+    static synthetic android.net.Uri access$400(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing)
+    static synthetic android.net.Uri access$402(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing,android.net.Uri)
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity$12:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity$7
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity$Preview_request
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity$create_bitmap
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity:
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    com.bumptech.glide.Glide glide
+    static synthetic boolean access$100(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity,int)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity,int)
+    static synthetic void access$400(com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,float,float)
+    private void selectImage()
+    private void sendData()
+    private void setDiemnsagain()
+com.mobile.cover.photo.editor.back.maker.adapter.CustomPagerAdapter:
+    public void deletePage(int,int)
+com.mobile.cover.photo.editor.back.maker.adapter.Display_slide_CustomPagerAdapter:
+    public void deletePage(int,int)
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_default_image_adapter:
+    android.graphics.Bitmap final_result
+    private java.util.List sqlitemodelListFiltered_images
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_frame_image_adapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_frame_image_adapter$generate_resource
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_frame_image_adapter
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_new_default_image_adapter$MyViewHolder:
+    public android.widget.TextView tv_name
+    public android.widget.ImageView up
+com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_new_default_image_adapter:
+    android.graphics.Bitmap bitmap
+    android.graphics.Bitmap final_result
+    private java.util.List sqlitemodelListFiltered_images
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.AddressRecyclerAdapter$1
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.AddressRecyclerAdapter$2
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.AddressRecyclerAdapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.AddressRecyclerAdapter
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.PlaceOrderAddressRecyclerAdapter$1
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.PlaceOrderAddressRecyclerAdapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Un_Usefull_Old_Adapter.PlaceOrderAddressRecyclerAdapter
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FacebookAlbumAdapter$1
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FacebookAlbumAdapter$2
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FacebookAlbumAdapter$3
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FacebookAlbumAdapter$ViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FacebookAlbumAdapter
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FontAdapter$EventListener:
+    public abstract void onDeleteMember(int)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FontAdapter$MyViewHolder:
+    public final void setFont_name$printphotomodule_appProdRelease(android.widget.TextView)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FontAdapter:
+    public final com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.FontAdapter$EventListener getEventListener()
+    public final com.mobile.cover.photo.editor.back.maker.model.FontModel getItem(int)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.PhoneAlbumImagesAdapter:
+    private static final long MIN_CLICK_INTERVAL
+    private long mLastClickTime
+    private boolean getResolution6x6(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.Request_RecyclerAdapter$2:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.Request_RecyclerAdapter$6:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.Request_RecyclerAdapter:
+    private static final long MIN_CLICK_INTERVAL
+    private long mLastClickTime
+    com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener onItemClickListener
+    public void setOnItemClickListener(com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.background_image_adapter:
+    android.graphics.Bitmap bitmap
+    android.graphics.Bitmap bitmap_resource
+    private java.util.List sqlitemodelListFiltered_images
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.default_final_image_adapter:
+    private java.util.List sqlitemodelListFiltered_images
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.default_image_adapter:
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter$1$1
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter$1
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter$2
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter$3
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getoffer_new_frag_dataadapter
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter$3$1
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter$3$2
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter$3$3
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter$3
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter$MyViewHolder:
+    public android.widget.Button btn_apply
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter:
+    private static final long MIN_CLICK_INTERVAL
+    android.app.ProgressDialog pd
+    static synthetic java.util.List access$200(com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter)
+    static synthetic void access$300(com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getofferdataadapter,java.lang.String,java.lang.String,int)
+    private void applycode(java.lang.String,java.lang.String,int)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.getorderDetailsAdapter:
+    android.app.ProgressDialog pd
+    private java.util.List sqlitemodelListFiltered
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_filter_adapter:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_filter_list_adapter:
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_filter_value_adapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_filter_value_adapter$new_listview_holder
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_filter_value_adapter
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_sub_category_data:
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter$2$1
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter$2$2
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter$2
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter:
+    android.app.ProgressDialog pd
+    static synthetic void access$200(com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter,java.lang.String,com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter$MyViewHolder,int)
+    private void wishlist(java.lang.String,com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter$MyViewHolder,int)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mug_image_adapter$MyViewHolder:
+    public android.widget.TextView tv_name
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mug_image_adapter:
+    private static final long MIN_CLICK_INTERVAL
+    android.graphics.Bitmap bitmap
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_AddressRecyclerAdapter:
+    com.mobile.cover.photo.editor.back.maker.interfacce.OnaddressItemClickListener onaddressItemClickListener
+    public void setOnaddressItemClickListener(com.mobile.cover.photo.editor.back.maker.interfacce.OnaddressItemClickListener)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_Sub_getorderDetailsAdapter$3:
+    public static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_Sub_getorderDetailsAdapter$MyViewHolder:
+    public android.widget.TextView tv_status
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_default_image_adapter$MyViewHolder
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_default_image_adapter
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_getorderadapter:
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.search_adapter:
+    public android.graphics.Bitmap RotateBitmap(android.graphics.Bitmap,float)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.sub_StickerAdapter:
+    com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener onItemClickListener
+    public void setOnItemClickListener(com.mobile.cover.photo.editor.back.maker.interfacce.OnItemClickListener)
+com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.transactionadapter:
+    private java.util.List sqlitemodelListFiltered
+com.mobile.cover.photo.editor.back.maker.constraint.RegReq
+com.mobile.cover.photo.editor.back.maker.constraint.Update
+com.mobile.cover.photo.editor.back.maker.customView.BrushImageView:
+    private int prevSector
+    public void loadAsset(java.lang.String)
+    void pushColor(int)
+com.mobile.cover.photo.editor.back.maker.customView.FontUtils:
+    public void <init>()
+    public static android.graphics.Typeface getTypefaceFromRaw(android.content.Context,int)
+    public static android.graphics.Typeface loadFont(android.content.Context,java.lang.String)
+    public static void setFont(android.view.View)
+    private static void tryClose(java.io.Closeable)
+com.mobile.cover.photo.editor.back.maker.customView.MaskableFrameLayout:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.customView.PhilImageView:
+    public void loadAsset(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.BitmapStickerIcon:
+    public static final float DEFAULT_ICON_EXTRA_RADIUS
+    public static final float DEFAULT_ICON_RADIUS
+    public void draw(android.graphics.Canvas,android.graphics.Paint)
+    public float getIconExtraRadius()
+    public void setIconExtraRadius(float)
+    public void setIconRadius(float)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.DrawableSticker:
+    public void setDrawable(android.graphics.drawable.Drawable)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker:
+    protected static final java.lang.String TAG
+    public android.graphics.RectF getBound()
+    public float getCurrentHeight()
+    public float getCurrentScale()
+    public float getCurrentWidth()
+    public android.graphics.RectF getMappedBound()
+    private float getMatrixScale(android.graphics.Matrix)
+    public abstract void setDrawable(android.graphics.drawable.Drawable)
+    public void setMatrix(android.graphics.Matrix)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerUtils:
+    private static final java.lang.String TAG
+    void <init>()
+    public static void notifySystemGallery(android.content.Context,java.io.File)
+    public static java.lang.String saveImageToGallery(java.io.File,android.graphics.Bitmap)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView$OnStickerOperationListener:
+    public abstract void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView:
+    private static final java.lang.String TAG
+    public void addfancyStickerMain(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public android.graphics.Bitmap createBitmap1(float,float)
+    public android.graphics.Bitmap createBitmapCanvas(java.lang.String,java.lang.String)
+    private com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker findHandlingSticker2()
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,int,int)
+    public boolean isStickerNull()
+    public boolean remove(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public void removeAllStickers()
+    public boolean removeCurrentSticker()
+    public void replace(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public void replace(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker,boolean)
+    public android.graphics.Bitmap rotateBitmap(android.graphics.Bitmap,float)
+    public void save(java.io.File)
+    public void updateSticker(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.TextSticker
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.back_StickerView$OnStickerOperationListener:
+    public abstract void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.customView.StickerView.back_StickerView:
+    private static final java.lang.String TAG
+    public void addStickerMain_bg(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker,int)
+    public void addStickerMain_mug(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public android.graphics.Bitmap createBitmap(java.lang.String,java.lang.String)
+    public android.graphics.Bitmap createBitmapCanvas(java.lang.String,java.lang.String)
+    private com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker findHandlingSticker2()
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,int,int)
+    public boolean isStickerNull()
+    public boolean remove(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public void removeAllStickers()
+    public boolean removeCurrentSticker()
+    public void replace(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+    public void replace(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker,boolean)
+    public android.graphics.Bitmap rotateBitmap(android.graphics.Bitmap,float)
+    public void save(java.io.File)
+    public void updateSticker(com.mobile.cover.photo.editor.back.maker.customView.StickerView.Sticker)
+com.mobile.cover.photo.editor.back.maker.customView.TouchImageView$DoubleTapZoom:
+    private static final float ZOOM_TIME
+com.mobile.cover.photo.editor.back.maker.customView.TouchImageView:
+    private static final java.lang.String DEBUG
+    private static final float SUPER_MAX_MULTIPLIER
+    private static final float SUPER_MIN_MULTIPLIER
+    public boolean canScrollHorizontallyFroyo(int)
+    private void printMatrixInfo()
+com.mobile.cover.photo.editor.back.maker.customView.VectorImageView$1
+com.mobile.cover.photo.editor.back.maker.customView.VectorImageView$OnImageCommandsListener:
+    public abstract int getCurrentColor()
+com.mobile.cover.photo.editor.back.maker.customView.VectorImageView:
+    int getSector(float,float)
+    android.graphics.Path getSectorpath(float,float)
+    public abstract void initThis()
+    public void loadAsset(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.Compat:
+    private static final int SIXTY_FPS_INTERVAL
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.customView.photoview.IPhotoView:
+    public static final float DEFAULT_MAX_SCALE
+    public static final float DEFAULT_MID_SCALE
+    public static final float DEFAULT_MIN_SCALE
+    public static final int DEFAULT_ZOOM_DURATION
+    public abstract boolean canZoom()
+    public abstract void getDisplayMatrix(android.graphics.Matrix)
+    public abstract android.graphics.RectF getDisplayRect()
+    public abstract com.mobile.cover.photo.editor.back.maker.customView.photoview.IPhotoView getIPhotoViewImplementation()
+    public abstract float getMaximumScale()
+    public abstract float getMediumScale()
+    public abstract float getMinimumScale()
+    public abstract float getScale()
+    public abstract android.widget.ImageView$ScaleType getScaleType()
+    public abstract android.graphics.Bitmap getVisibleRectangleBitmap()
+    public abstract void setAllowParentInterceptOnEdge(boolean)
+    public abstract boolean setDisplayMatrix(android.graphics.Matrix)
+    public abstract void setMaximumScale(float)
+    public abstract void setMediumScale(float)
+    public abstract void setMinimumScale(float)
+    public abstract void setOnDoubleTapListener(android.view.GestureDetector$OnDoubleTapListener)
+    public abstract void setOnLongClickListener(android.view.View$OnLongClickListener)
+    public abstract void setOnMatrixChangeListener(com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher$OnMatrixChangedListener)
+    public abstract void setOnPhotoTapListener(com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher$OnPhotoTapListener)
+    public abstract void setOnScaleChangeListener(com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher$OnScaleChangeListener)
+    public abstract void setOnSingleFlingListener(com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher$OnSingleFlingListener)
+    public abstract void setOnViewTapListener(com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher$OnViewTapListener)
+    public abstract void setRotationBy(float)
+    public abstract void setRotationTo(float)
+    public abstract void setScale(float)
+    public abstract void setScale(float,float,float,boolean)
+    public abstract void setScale(float,boolean)
+    public abstract void setScaleLevels(float,float,float)
+    public abstract void setScaleType(android.widget.ImageView$ScaleType)
+    public abstract void setZoomTransitionDuration(int)
+    public abstract void setZoomable(boolean)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoView:
+    public boolean canZoom()
+    public void getDisplayMatrix(android.graphics.Matrix)
+    public boolean setDisplayMatrix(android.graphics.Matrix)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.PhotoViewAttacher:
+    static final int EDGE_BOTH
+    static final int EDGE_LEFT
+    static final int EDGE_NONE
+    static final int EDGE_RIGHT
+    private static final java.lang.String LOG_TAG
+    public boolean canZoom()
+    public com.mobile.cover.photo.editor.back.maker.customView.photoview.IPhotoView getIPhotoViewImplementation()
+    public void getSuppMatrix(android.graphics.Matrix)
+    public void setBaseRotation(float)
+    public boolean setDisplayMatrix(android.graphics.Matrix)
+    public void setZoomInterpolator(android.view.animation.Interpolator)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.gestures.CupcakeGestureDetector:
+    private static final java.lang.String LOG_TAG
+com.mobile.cover.photo.editor.back.maker.customView.photoview.gestures.EclairGestureDetector:
+    private static final int INVALID_POINTER_ID
+com.mobile.cover.photo.editor.back.maker.customView.photoview.gestures.VersionedGestureDetector:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.customView.photoview.log.LogManager:
+    public void <init>()
+    public static void setLogger(com.mobile.cover.photo.editor.back.maker.customView.photoview.log.Logger)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.log.Logger:
+    public abstract int d(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract int e(java.lang.String,java.lang.String)
+    public abstract int e(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract int i(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract int v(java.lang.String,java.lang.String)
+    public abstract int v(java.lang.String,java.lang.String,java.lang.Throwable)
+    public abstract int w(java.lang.String,java.lang.String)
+    public abstract int w(java.lang.String,java.lang.String,java.lang.Throwable)
+com.mobile.cover.photo.editor.back.maker.customView.photoview.log.LoggerDefault:
+    public int d(java.lang.String,java.lang.String,java.lang.Throwable)
+    public int e(java.lang.String,java.lang.String)
+    public int e(java.lang.String,java.lang.String,java.lang.Throwable)
+    public int i(java.lang.String,java.lang.String,java.lang.Throwable)
+    public int v(java.lang.String,java.lang.String)
+    public int v(java.lang.String,java.lang.String,java.lang.Throwable)
+    public int w(java.lang.String,java.lang.String)
+    public int w(java.lang.String,java.lang.String,java.lang.Throwable)
+com.mobile.cover.photo.editor.back.maker.customView.recycleview.CustomRecyclerViewAdapter:
+    public void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)
+    public void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener)
+com.mobile.cover.photo.editor.back.maker.customView.recycleview.DividerItemDecoration
+com.mobile.cover.photo.editor.back.maker.customView.recycleview.SpaceItemDecoration:
+    public void <init>(int)
+    public void <init>(int,boolean,boolean)
+    public void <init>(android.content.Context,int)
+    public void <init>(android.content.Context,int,boolean,boolean)
+    public void <init>(android.content.Context,android.util.AttributeSet,boolean,boolean)
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$2
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$3
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$4
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$5
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$6
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$7
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp$SvgHandler$SvgText:
+    private static final int BOTTOM
+    private static final int CENTER
+    private static final int LEFT
+    private static final int MIDDLE
+    private static final int RIGHT
+    private static final int TOP
+com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp:
+    static synthetic java.io.InputStream access$200(java.io.InputStream)
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpDrawable getDrawable()
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpDrawable getDrawable(android.view.View)
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpPicture getSharpPicture()
+    public void into(android.view.View)
+    private void intoBackground(android.view.View)
+    public static com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp loadAsset(android.content.res.AssetManager,java.lang.String)
+    public static com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp loadFile(java.io.File)
+    public static android.graphics.Path loadPath(java.lang.String)
+    public static com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp loadResource(android.content.res.Resources,int)
+    public static com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp loadString(java.lang.String)
+    public static void prepareTexts(java.util.HashMap)
+    private static java.io.InputStream readInputStream(java.io.InputStream)
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.Sharp withAssets(android.content.res.AssetManager)
+com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpDrawable:
+    public void <init>(android.graphics.Picture)
+    public void setCacheScale(float)
+    public void setCaching(boolean)
+com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpPicture:
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpDrawable createDrawable(android.view.View,int)
+    public android.graphics.RectF getBounds()
+    public com.mobile.cover.photo.editor.back.maker.customView.sharp.SharpDrawable getDrawable()
+    public android.graphics.RectF getLimits()
+    public android.graphics.Picture getPicture()
+com.mobile.cover.photo.editor.back.maker.customView.sharp.SvgColors:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.db.DatabaseHelper
+com.mobile.cover.photo.editor.back.maker.extra.ProgressRequestBody$ProgressUpdater
+com.mobile.cover.photo.editor.back.maker.extra.ProgressRequestBody$UploadCallbacks
+com.mobile.cover.photo.editor.back.maker.extra.ProgressRequestBody
+com.mobile.cover.photo.editor.back.maker.fragment.Custom_cover_frag_list$1
+com.mobile.cover.photo.editor.back.maker.fragment.Custom_cover_frag_list$2
+com.mobile.cover.photo.editor.back.maker.fragment.Custom_cover_frag_list
+com.mobile.cover.photo.editor.back.maker.fragment.FacebookFragment$1
+com.mobile.cover.photo.editor.back.maker.fragment.FacebookFragment$2
+com.mobile.cover.photo.editor.back.maker.fragment.FacebookFragment$3
+com.mobile.cover.photo.editor.back.maker.fragment.FacebookFragment
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragment$5
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragment$6
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragment:
+    private static final java.lang.String PROGRESS_DIALOG
+    private static final int REQUEST_PICK_IMAGE
+    private static final int REQUEST_SAF_PICK_IMAGE
+    public void pickImage()
+    private void showRationaleDialog(int,permissions.dispatcher.PermissionRequest)
+    public void showRationaleForCrop(permissions.dispatcher.PermissionRequest)
+    public void showRationaleForPick(permissions.dispatcher.PermissionRequest)
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragmentPermissionsDispatcher$1
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragmentPermissionsDispatcher$PickImagePermissionRequest
+com.mobile.cover.photo.editor.back.maker.fragment.MainFragmentPermissionsDispatcher
+com.mobile.cover.photo.editor.back.maker.fragment.Mall_FragmentOne:
+    android.widget.ImageView id_back
+    android.widget.TextView title
+com.mobile.cover.photo.editor.back.maker.fragment.SelectCompany:
+    android.app.ProgressDialog progressDialog
+com.mobile.cover.photo.editor.back.maker.interfacce.OnSubItemClickListener
+com.mobile.cover.photo.editor.back.maker.mainapplication:
+    private static final java.lang.String APPSFLYER_TOKEN
+    public static boolean deleteDir(java.io.File)
+    public com.facebook.AccessTokenTracker getAccessTokenTracker()
+    public android.graphics.Typeface getApplicationTypeFace()
+    public int getBg()
+    public com.facebook.CallbackManager getCallbackManager()
+    public java.io.File getEffect()
+    public int getEndBgSlide()
+    public int getFrame()
+    public com.facebook.ProfileTracker getProfileTracker()
+    public float getSecond()
+    public int getStartBgSlide()
+    public void initArray()
+    public void setBg(int)
+    public void setEffect(java.io.File)
+    public void setEndBgSlide(int)
+    public void setFrame(int)
+    public void setSecond(float)
+    public void setStartBgSlide(int)
+    public static void trimCache(android.content.Context)
+com.mobile.cover.photo.editor.back.maker.phonecase.CoverStyle:
+    private android.app.ProgressDialog pDialog
+    android.widget.TextView tv_select_case
+    public double setDiscount(java.lang.String,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.phonecase.FragmentPhoneCover:
+    private static final long MIN_CLICK_INTERVAL
+    android.widget.ImageView id_back
+com.mobile.cover.photo.editor.back.maker.phonecase.FragmentRequestModelBrand:
+    java.lang.String model
+    public java.util.ArrayList new_model
+    android.widget.AutoCompleteTextView sp_brand
+    android.widget.AutoCompleteTextView sp_model
+com.mobile.cover.photo.editor.back.maker.phonecase.SelectCompanyMobel:
+    private static final long MIN_CLICK_INTERVAL
+    java.lang.String model
+    android.app.ProgressDialog pd
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog$1
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog$2
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog$3
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog$4
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog$onRateListener
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.RateDialog
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.library_feedback.DeviceInfo:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.library_feedback.FeedbackUtils:
+    private static final java.lang.String emailId
+    private static final java.lang.String message
+    public void <init>()
+    public static boolean hasPermission(android.content.Context,java.lang.String[])
+com.mobile.cover.photo.editor.back.maker.rateandfeedback.library_feedback.SystemLog:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.testing_modules.AlbumAdapterById$Holder:
+    public void onItemClick(android.view.View,java.lang.Object)
+com.mobile.cover.photo.editor.back.maker.testing_modules.DisplayMetricsHandler
+com.mobile.cover.photo.editor.back.maker.testing_modules.FileHelper
+com.mobile.cover.photo.editor.back.maker.testing_modules.ImageByAlbumAdapter$Holder:
+    public void onItemClick(android.view.View,java.lang.Object)
+com.mobile.cover.photo.editor.back.maker.testing_modules.ImageByAlbumAdapter:
+    public void deleteItm(int)
+com.mobile.cover.photo.editor.back.maker.testing_modules.ImageData:
+    public int direction_position
+    public android.graphics.drawable.Drawable drawable
+    public long id
+    public java.lang.String imageAlbum
+    public int more_direction_position
+    public java.lang.String getDirection()
+    public int getDirection_position()
+    public android.graphics.drawable.Drawable getDrawable()
+    public long getId()
+    public java.lang.String getImageAlbum()
+    public int getImageCount()
+    public int getMore_direction_position()
+    public java.lang.String getMoredirection()
+    public int getSelected_image_count()
+    public java.lang.String getTemp_imagePath()
+    public java.lang.String getTemp_org_imagePath()
+    public int getTwoDEffect()
+    public boolean isSelected()
+    public void setDirection(java.lang.String)
+    public void setDirection_position(int)
+    public void setDrawable(android.graphics.drawable.Drawable)
+    public void setId(long)
+    public void setImageAlbum(java.lang.String)
+    public void setImageCount(int)
+    public void setMore_direction_position(int)
+    public void setMoredirection(java.lang.String)
+    public void setSelected_image_count(int)
+    public void setTwoDEffect(int)
+com.mobile.cover.photo.editor.back.maker.testing_modules.PhotoPickupImageActivity$2
+com.mobile.cover.photo.editor.back.maker.testing_modules.PhotoPickupImageActivity$3
+com.mobile.cover.photo.editor.back.maker.testing_modules.PhotoPickupImageActivity$4
+com.mobile.cover.photo.editor.back.maker.testing_modules.PhotoPickupImageActivity$5
+com.mobile.cover.photo.editor.back.maker.testing_modules.PhotoPickupImageActivity:
+    private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE
+    public static final java.lang.String EXTRA_FROM_PREVIEW
+    private boolean checkAndRequestPermissionsAudio()
+    public android.net.Uri getImageUri(android.content.Context,android.graphics.Bitmap)
+    private void previewCapturedImage(java.lang.String)
+    private void setDeleteAlertDialog()
+    private void showAlert()
+com.mobile.cover.photo.editor.back.maker.testing_modules.SelectedImageAdapter$Holder:
+    public void onItemClick(android.view.View,java.lang.Object)
+com.mobile.cover.photo.editor.back.maker.testing_modules.SelectedImageHorizontalAdapter$MyView:
+    public void onItemClick(android.view.View,com.mobile.cover.photo.editor.back.maker.testing_modules.ImageData)
+com.mobile.cover.photo.editor.back.maker.testing_modules.SelectedImageHorizontalAdapter:
+    java.io.File[] contents
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity$10:
+    public void onStickerNull()
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity$5
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity$createcover
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity:
+    public static final int PICK_IMAGE
+    android.graphics.Bitmap bitmap
+    static synthetic boolean access$100(com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity,int)
+    static synthetic boolean access$200(com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Custom_CaseEditActivity,int)
+    private boolean checkAndRequestPermissionsCamera(int)
+    public android.graphics.Bitmap combineImages(android.graphics.Bitmap,android.graphics.Bitmap)
+    public android.graphics.Bitmap getBitmapPrint(android.graphics.Bitmap)
+    private void selectImage()
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.MainActivity:
+    private static final java.lang.String TAG
+    android.app.ProgressDialog pd
+    android.graphics.Bitmap CropBitmapTransparency(android.graphics.Bitmap)
+    public static android.graphics.Bitmap createBitmapFromView(android.view.View,int,int)
+    public android.graphics.Bitmap getResizedBitmap(android.graphics.Bitmap,float,float)
+    public android.graphics.Bitmap getResizedBitmapCover(android.graphics.Bitmap,int,int)
+    public static android.graphics.Bitmap loadBitmapFromView(android.view.View)
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Mug_MainActivity:
+    private static final java.lang.String TAG
+    public static float frame10_height
+    public static float frame10_width
+    public static float frame10_x
+    public static float frame10_y
+    public static float frame11_height
+    public static float frame11_width
+    public static float frame11_x
+    public static float frame11_y
+    public static float frame12_height
+    public static float frame12_width
+    public static float frame12_x
+    public static float frame12_y
+    public static float frame13_height
+    public static float frame13_width
+    public static float frame13_x
+    public static float frame13_y
+    public static float frame14_height
+    public static float frame14_width
+    public static float frame14_x
+    public static float frame14_y
+    public static float frame3_height
+    public static float frame3_width
+    public static float frame3_x
+    public static float frame3_y
+    public static float frame4_height
+    public static float frame4_width
+    public static float frame4_x
+    public static float frame4_y
+    public static float frame5_height
+    public static float frame5_width
+    public static float frame5_x
+    public static float frame5_y
+    public static float frame6_height
+    public static float frame6_width
+    public static float frame6_x
+    public static float frame6_y
+    public static float frame7_height
+    public static float frame7_width
+    public static float frame7_x
+    public static float frame7_y
+    public static float frame8_height
+    public static float frame8_width
+    public static float frame8_x
+    public static float frame8_y
+    public static float frame9_height
+    public static float frame9_width
+    public static float frame9_x
+    public static float frame9_y
+    private void initSubFrame_eight(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7)
+    private void initSubFrame_five(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4)
+    private void initSubFrame_four(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3)
+    private void initSubFrame_fourteen(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout10,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout11,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout12,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout13)
+    private void initSubFrame_seven(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6)
+    private void initSubFrame_six(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5)
+    private void initSubFrame_ten(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9)
+    private void initSubFrame_three(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2)
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.activity.Shipper_MainActivity:
+    private static final java.lang.String TAG
+    public static float frame10_height
+    public static float frame10_width
+    public static float frame10_x
+    public static float frame10_y
+    public static float frame11_height
+    public static float frame11_width
+    public static float frame11_x
+    public static float frame11_y
+    public static float frame12_height
+    public static float frame12_width
+    public static float frame12_x
+    public static float frame12_y
+    public static float frame13_height
+    public static float frame13_width
+    public static float frame13_x
+    public static float frame13_y
+    public static float frame14_height
+    public static float frame14_width
+    public static float frame14_x
+    public static float frame14_y
+    public static float frame4_height
+    public static float frame4_width
+    public static float frame4_x
+    public static float frame4_y
+    public static float frame5_height
+    public static float frame5_width
+    public static float frame5_x
+    public static float frame5_y
+    public static float frame6_height
+    public static float frame6_width
+    public static float frame6_x
+    public static float frame6_y
+    public static float frame7_height
+    public static float frame7_width
+    public static float frame7_x
+    public static float frame7_y
+    public static float frame8_height
+    public static float frame8_width
+    public static float frame8_x
+    public static float frame8_y
+    public static float frame9_height
+    public static float frame9_width
+    public static float frame9_x
+    public static float frame9_y
+    private void initSubFrame_eight(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7)
+    private void initSubFrame_five(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4)
+    private void initSubFrame_four(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3)
+    private void initSubFrame_fourteen(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout10,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout11,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout12,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout13)
+    private void initSubFrame_seven(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6)
+    private void initSubFrame_six(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5)
+    private void initSubFrame_ten(java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8,java.util.ArrayList,com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9)
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.model.DimensionModel:
+    public void setHeight(int)
+    public void setWidth(int)
+    public void setX(int)
+    public void setY(int)
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.CustomImageView:
+    public static final int DEFAULT_SCALE_FIT_INSIDE
+    public static final int DEFAULT_SCALE_ORIGINAL
+    static final int DRAG
+    static final int NONE
+    private static final java.lang.String TAG
+    static final int ZOOM
+    float transitionalRatio
+    private void dumpEvent(android.view.MotionEvent)
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout10:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout11:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout12:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout13:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout1:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout2:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout3:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout4:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout5:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout6:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout7:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout8:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout9:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.dimension_kajal_maulik.widgets.MaskableFrameLayout:
+    private static final int MODE_ADD
+    private static final int MODE_CLEAR
+    private static final int MODE_DARKEN
+    private static final int MODE_DST
+    private static final int MODE_DST_ATOP
+    private static final int MODE_DST_IN
+    private static final int MODE_DST_OUT
+    private static final int MODE_DST_OVER
+    private static final int MODE_LIGHTEN
+    private static final int MODE_MULTIPLY
+    private static final int MODE_OVERLAY
+    private static final int MODE_SCREEN
+    private static final int MODE_SRC
+    private static final int MODE_SRC_ATOP
+    private static final int MODE_SRC_IN
+    private static final int MODE_SRC_OUT
+    private static final int MODE_SRC_OVER
+    private static final int MODE_XOR
+    private static final java.lang.String TAG
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.ExpandIconView$State
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.ExpandIconView:
+    private static final long DEFAULT_ANIMATION_DURATION
+    private static final float DELTA_ALPHA
+    private static final int INTERMEDIATE
+    public static final int LESS
+    public static final int MORE
+    private static final float MORE_STATE_ALPHA
+    private static final float PADDING_PROPORTION
+    private static final float THICKNESS_PROPORTION
+    public void switchState()
+    public void switchState(boolean)
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.VerticalSlidingPanel$2
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.VerticalSlidingPanel$LayoutParams:
+    android.graphics.Paint dimPaint
+    public void <init>(int,int)
+    public void <init>(com.mobile.cover.photo.editor.back.maker.testing_modules.view.VerticalSlidingPanel$LayoutParams)
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.VerticalSlidingPanel$SimplePanelSlideListener
+com.mobile.cover.photo.editor.back.maker.testing_modules.view.VerticalSlidingPanel:
+    private static final int DEFAULT_FADE_COLOR
+    private static final int DEFAULT_MIN_FLING_VELOCITY
+    private static final boolean DEFAULT_OVERLAY_FLAG
+    private static final int DEFAULT_PANEL_HEIGHT
+    private static final int DEFAULT_PARALLAX_OFFSET
+    private static final int DEFAULT_SHADOW_HEIGHT
+    protected boolean canScroll(android.view.View,boolean,int,int,int)
+    public boolean expandPane()
+    public void hidePane()
+    public boolean isOverlayed()
+    public boolean isSlideable()
+com.mobile.cover.photo.editor.back.maker.utility.AvenuesParams
+com.mobile.cover.photo.editor.back.maker.utility.Constants
+com.mobile.cover.photo.editor.back.maker.utility.LoadingDialog:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.utility.PathUtil:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.utility.RSAUtility:
+    public void <init>()
+com.mobile.cover.photo.editor.back.maker.utility.ServiceUtility:
+    public void <init>()
+    public static int randInt(int,int)
+    public java.util.Map readProperties(java.lang.String)
+    public static java.util.ArrayList tokenizeToArrayList(java.lang.String,java.lang.String)
+    public static java.util.Map tokenizeToHashMap(java.lang.String,java.lang.String,java.lang.String)
+com.mobile.cover.photo.editor.back.maker.volley.JsonHelperKt$getCategories$itemType$1
+com.mobile.cover.photo.editor.back.maker.volley.JsonHelperKt$getConfigurationData$itemType$1
+com.mobile.cover.photo.editor.back.maker.volley.JsonHelperKt
+com.mobile.cover.photo.editor.back.maker.volley.LruBitmapCache
+com.mobile.cover.photo.editor.back.maker.volley.VolleyController:
+    private com.android.volley.toolbox.ImageLoader mImageLoader
+    public void addToRequestQueue(com.android.volley.Request)
+    public void addToRequestQueue(com.android.volley.Request,java.lang.String)
+    public void cancelPendingRequests(java.lang.Object)
+    public com.android.volley.toolbox.ImageLoader getImageLoader()
+    public static synchronized com.mobile.cover.photo.editor.back.maker.volley.VolleyController getInstance()
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$1
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$2
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$3
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$4
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$5
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$6
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$ArrayReqListener
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$ObjectReqListener
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper$StringReqListener
+com.mobile.cover.photo.editor.back.maker.volley.VolleyHelper
+com.mobile.cover.photo.editor.back.maker.volley.VolleyMultipartRequest$DataPart
+com.mobile.cover.photo.editor.back.maker.volley.VolleyMultipartRequest
+com.mobile.cover.photo.editor.back.maker.volley.VolleyUtil$1
+com.mobile.cover.photo.editor.back.maker.volley.VolleyUtil$2
+com.mobile.cover.photo.editor.back.maker.volley.VolleyUtil$3
+com.mobile.cover.photo.editor.back.maker.volley.VolleyUtil$onFinished
+com.mobile.cover.photo.editor.back.maker.volley.VolleyUtil
+com.mobile.cover.photo.editor.back.maker.widget.ScaleCardView:
+    private static final int SPEC
+com.mobile.cover.photo.editor.back.maker.widget.ScaleImageView:
+    private static final int SPEC
+com.activate.gcm.C2dmModule:
+    private static com.activate.gcm.C2dmModule _THIS
+    public void sendError(java.lang.String)
+    public void sendMessage(java.util.HashMap)
+    public void sendSuccess(java.lang.String)
+com.mobile.cover.photo.editor.back.maker.Commen.Share:
+    public static int SelectStickerPosition
+    public static java.lang.String type
+com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs:
+    public static java.lang.String Database_Creation
+    public static java.lang.String FULL_AD_IMAGE
+    public static java.lang.String MORE_APP_INDEX
+    public static java.lang.String Set_Title
+    public static java.lang.String title_category
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity:
+    public static int dummy_total
+    public static java.lang.String fsCouponCode
+    public static int gift_price
+    public static boolean isOfferCode
+    public static int promo_code
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart$2$1
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart$2$2
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart$2
+com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart$3
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity:
+    public static android.graphics.Bitmap final_bitmap
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Custom_CaseEditActivity:
+    public static android.graphics.Bitmap final_bitmap
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.Dynamic_EditActivity:
+    public static android.graphics.Bitmap new_result
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.frame_Dynamic_EditActivity:
+    public static android.graphics.Bitmap cover_bitmap
+    public static android.graphics.Bitmap new_result
+com.mobile.cover.photo.editor.back.maker.activity.Usefull.testing_CaseEditActivity:
+    public static android.graphics.Bitmap final_bitmap
+    public static android.graphics.Bitmap preview_bitmap

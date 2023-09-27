@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/printphoto-android-2022_SDK.iml" filepath="$PROJECT_DIR$/.idea/modules/printphoto-android-2022_SDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imagelibrary/printphoto-android-2022_SDK.imagelibrary.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.iml" filepath="$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinview/printphoto-android-2022_SDK.pinview.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.iml" filepath="$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.main.iml" filepath="$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/printphotomodule/printphoto-android-2022_SDK.printphotomodule.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.iml" filepath="$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/swiperefreshlayoutbottomlib/printphoto-android-2022_SDK.swiperefreshlayoutbottomlib.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UniversalVideoView Library</string>
+
+    <string name="loading">Loading...</string>
+    <string name="error_msg">Error occurred while play video</string>
+</resources>

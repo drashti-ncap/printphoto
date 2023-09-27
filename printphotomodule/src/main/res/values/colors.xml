@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0ABAD4</color>
+    <color name="colorPrimaryDark">#0ABAD4</color>
+    <color name="colorAccent">#0ABAD4</color>
+    <color name="colorbutton">#0498E1</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="color_green">#53EC2F</color>
+    <color name="color_red">#EC2F2F</color>
+
+    <color name="background">#263238</color>
+    <color name="background_dup">#3253575E</color>
+
+
+    <color name="text_color">#646464</color>
+    <color name="colortitle1">#0ABAD4</color>
+    <color name="colortitle2">#4BD559</color>
+    <color name="searchbg">#E5E5E5</color>
+    <color name="dummyprice">#b2b2b2</color>
+    <color name="bg">#e5e5e5</color>
+    <color name="black">#000000</color>
+
+
+    <color name="black_semi_transparent">#B2000000</color>
+
+    <color name="caldroid_transparent">#00000000</color>
+
+    <color name="grey_500">#BDBDBD</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="transparent">@android:color/transparent</color>
+
+    <color name="progress_background">#0D000000</color>
+
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <color name="textColorPrimary">#FFFFFB</color>
+
+
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="placeholder_grey_20">#33AAADC4</color>
+    <color name="tint_grey_unselect">#767676</color>
+    <color name="tint_blue_select">#0ABAD4</color>
+
+</resources>

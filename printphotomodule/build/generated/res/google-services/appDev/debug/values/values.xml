@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">994538272236-hr4i4s8tdhd8l1htle7ipa6060ai4bgb.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">994538272236</string>
+    <string name="google_api_key" translatable="false">AIzaSyBKnN3WVJhPuJj092GkYAkYaJeXWRE34Y4</string>
+    <string name="google_app_id" translatable="false">1:994538272236:android:8582401c4aecf38dd67cc9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBKnN3WVJhPuJj092GkYAkYaJeXWRE34Y4</string>
+    <string name="google_storage_bucket" translatable="false">printphoto-764da.appspot.com</string>
+    <string name="project_id" translatable="false">printphoto-764da</string>
+</resources>

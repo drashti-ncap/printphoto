@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.wlf:FileDownloader:0.3.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/095134e2513db572b284f9892e4514e6/transformed/jetified-FileDownloader-0.3.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/095134e2513db572b284f9892e4514e6/transformed/jetified-FileDownloader-0.3.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wlf/FileDownloader/0.3.2/4e9a0a7efb6ba9b48454376fc6f8d4d54b82aef7/FileDownloader-0.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.wlf/FileDownloader/0.3.2/9b49d8ddb853eb7699fa6c95957886b06da392ff/FileDownloader-0.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

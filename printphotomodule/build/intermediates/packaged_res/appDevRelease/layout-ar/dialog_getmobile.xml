@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_180sdp"
+    android:background="#ffffffff"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/pnuregular"
+        android:gravity="center"
+        android:text="@string/verification"
+
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.0dip"
+        android:layout_below="@+id/verify"
+        android:background="#ff999999" />
+
+    <LinearLayout
+        android:id="@+id/above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/rect"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sp_code"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rect"
+            android:clickable="false"
+            android:entries="@array/Country_Type" />
+
+        <EditText
+            android:id="@+id/btn_push"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/pnuregular"
+            android:gravity="center"
+            android:hint="@string/enter_mobile_number"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/below_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/rect"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/pnuregular"
+            android:gravity="center"
+            android:hint="Enter EmailID"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/btn_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_13sdp"
+        android:paddingTop="@dimen/_13sdp"
+        android:text="Message"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_16sdp" />-->
+
+    <Button
+        android:id="@+id/btn_send_otp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/pnuregular"
+        android:gravity="center"
+        android:text="@string/send_otp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+</RelativeLayout>

@@ -1,0 +1,56 @@
+buildscript {
+    ext.kotlin_version = '1.7.20'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+
+        flatDir {
+            dirs("libs")
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.14'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://artifactory.apero.vn/artifactory/gradle-release/'
+            credentials {
+                username "deployer"
+                password "apero@123"
+            }
+        }
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
+        maven {url 'https://android-sdk.is.com/'}
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

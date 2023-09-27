@@ -1,0 +1,5 @@
+<resources>
+
+    <!-- tex size -->
+    <dimen name="txt0">8dp</dimen>
+</resources>

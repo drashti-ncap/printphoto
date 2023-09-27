@@ -1,0 +1,922 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_account.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_account.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_lock_update.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_lock_update.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask10_4.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask10_4.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_street.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_street.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/text_down.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/text_down.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/vivovnine.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/vivovnine.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/heart_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/heart_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/right_arrow.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/right_arrow.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/forget_ar.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/forget_ar.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_mall_filter.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_mall_filter.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_minus.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_minus.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_arrow.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_arrow.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_address.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_address.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/tshirt_front_logo_model.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/tshirt_front_logo_model.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_cancel_sort.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_cancel_sort.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_front_select.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_front_select.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/track_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/track_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/sp_product.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/sp_product.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_whatsapp.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_whatsapp.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_mall.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_mall.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask4_4.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask4_4.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/resend_otp.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/resend_otp.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_offer_profile.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_offer_profile.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_user_update.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_user_update.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_offers.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_offers.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/dummy_border.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/dummy_border.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/back_model.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/back_model.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/splash_name.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/splash_name.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/vivoveleven.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/vivoveleven.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_code_doted.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_code_doted.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_seller.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_seller.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_back.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_back.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape5.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape5.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask9_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask9_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mug_select_image.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mug_select_image.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/tablerow_bottomborder.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/tablerow_bottomborder.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask2_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask2_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/add_to_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/add_to_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/note_pro.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/note_pro.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/rect.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/rect.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_translate.jpg",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_translate.jpg"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_paytm.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_paytm.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask1_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask1_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_change_password.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_change_password.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/resend_otp_ar.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/resend_otp_ar.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask19_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask19_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_back_select.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_back_select.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/promocode_ar.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/promocode_ar.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/fancy_black_border.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/fancy_black_border.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_terms_condi.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_terms_condi.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_feedback.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_feedback.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_7.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_7.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/oppofone.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/oppofone.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iv_share_image.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iv_share_image.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_bg.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_bg.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_6.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_6.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shipper_mask_3_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shipper_mask_3_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_most_rating.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_most_rating.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/white_arrow_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/white_arrow_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_bg_color_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_bg_color_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_5.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_5.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_mall.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_mall.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/frame_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/frame_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_low_rate_up.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_low_rate_up.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/fancy_add_photo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/fancy_add_photo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/model_popsocket.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/model_popsocket.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_text_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_text_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/send_feedback.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/send_feedback.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/paypal.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/paypal.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask2_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask2_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_home.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_home.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask25_4.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask25_4.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/oppofseven.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/oppofseven.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask4_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask4_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_logo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_logo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/splash_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/splash_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_sports_selecte.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_sports_selecte.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/icon_video_disp.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/icon_video_disp.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_home.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_home.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/tshirt_front_model.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/tshirt_front_model.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_bg_color.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_bg_color.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask13_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask13_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ipad_mini.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ipad_mini.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_account.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_account.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/bg_images_final.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/bg_images_final.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_select_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_select_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_front.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_front.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask9_3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask9_3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask4_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask4_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/termsofuse.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/termsofuse.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_text.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_text.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_high_rate_down.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_high_rate_down.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask9_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask9_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/share.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/share.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/new_spalsh.jpg",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/new_spalsh.jpg"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_cancelnew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_cancelnew.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask25_5.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask25_5.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_close.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_close.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/text_upper.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/text_upper.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/t_shirts.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/t_shirts.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_plus.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_plus.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/new_gif_final.gif",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/new_gif_final.gif"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_select_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_select_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_aarow_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_aarow_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask10_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask10_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_learn.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_learn.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_chart_info.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_chart_info.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask24_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask24_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/progress_splash.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/progress_splash.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_have_a_promocode.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_have_a_promocode.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/logout.jpg",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/logout.jpg"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_mobile_no.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_mobile_no.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/heart_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/heart_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/transparent_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/transparent_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_bga.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_bga.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_save_deselect.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_save_deselect.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_call.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_call.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_pesonal_detials.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_pesonal_detials.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/model1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/model1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_select_account.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_select_account.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_share_now.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_share_now.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/thanks_using_text.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/thanks_using_text.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_text.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_text.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/alert_border_red.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/alert_border_red.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_resizenew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_resizenew.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask10_3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask10_3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/notesixpro.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/notesixpro.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/black_track_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/black_track_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_arrow_status.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_arrow_status.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_bg.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_bg.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_home_no.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_home_no.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ketchy_dot.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ketchy_dot.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_my_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_my_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_state.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_state.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/exiting_text.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/exiting_text.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_mall_select.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_mall_select.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_sticker.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_sticker.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_formal_select.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_formal_select.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask25_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask25_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_edit_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_edit_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_select_home.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_select_home.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_delivery_address.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_delivery_address.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape4.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape4.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask4_3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask4_3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_email.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_email.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_unfavorites.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_unfavorites.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_4.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_4.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/logo_mask.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/logo_mask.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_favorites.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_favorites.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_refund.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_refund.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask10_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask10_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_exiting.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_exiting.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iv_model_share.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iv_model_share.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/progress.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/progress.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask25_3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask25_3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/offer_border.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/offer_border.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iv_zoom.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iv_zoom.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/banner_img.jpeg",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/banner_img.jpeg"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/appicon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/appicon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_country.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_country.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_email_id.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_email_id.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/tshirt_front_mask.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/tshirt_front_mask.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_tick.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_tick.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mug_mask.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mug_mask.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_landmark.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_landmark.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/miytwo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/miytwo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_image.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_image.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_round_close.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_round_close.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/sort_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/sort_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_sticker_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_sticker_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/logo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/logo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iphone_mask.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iphone_mask.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/forget_password.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/forget_password.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_delete.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_delete.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_add_image.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_add_image.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_thanks.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_thanks.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_add_image_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_add_image_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/offer_arbic.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/offer_arbic.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mug_text.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mug_text.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/vivoyninefive.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/vivoyninefive.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ar_ic_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ar_ic_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_adhaar.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_adhaar.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_contac_us.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_contac_us.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shipper_mask_3_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shipper_mask_3_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/add_to_cart_editor.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/add_to_cart_editor.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/send_complain_msg.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/send_complain_msg.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask_fancy.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask_fancy.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/information.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/information.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_call_logo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_call_logo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_8.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_8.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iphone_model.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iphone_model.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/sp_quantity.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/sp_quantity.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/logomakr_1.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/logomakr_1.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_policy.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_policy.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_new.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_new.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iv_back_tshirt.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iv_back_tshirt.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_sticker.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_sticker.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_sports.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_sports.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_update.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_update.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_city.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_city.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_ser.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_ser.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask22_3.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask22_3.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_print_photo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_print_photo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_formal.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_formal.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_key.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_key.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_user.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_user.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/tshirt_afour.jpg",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/tshirt_afour.jpg"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/vivovseven.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/vivovseven.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/splash_ar.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/splash_ar.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/bulk_order.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/bulk_order.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/iv_currency.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/iv_currency.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/visit_website.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/visit_website.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/offer_eng.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/offer_eng.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask25_2.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask25_2.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_pincode.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_pincode.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_most_popu.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_most_popu.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/shape6.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/shape6.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_merchant.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_merchant.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/exiting_app_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/exiting_app_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/up_img.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/up_img.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/ic_best.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/ic_best.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-nodpi-v4/mask_patiyu.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-nodpi/mask_patiyu.png"
+    }
+]

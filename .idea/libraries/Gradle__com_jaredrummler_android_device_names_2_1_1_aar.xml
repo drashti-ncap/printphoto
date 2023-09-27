@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaredrummler:android-device-names:2.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2c580ac3c48a1e0a5e072961b4d21a34/transformed/jetified-android-device-names-2.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2c580ac3c48a1e0a5e072961b4d21a34/transformed/jetified-android-device-names-2.1.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/android-device-names/2.1.1/fceb3e9f5514f1aee870c7124cce6130fb5be442/android-device-names-2.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/android-device-names/2.1.1/89a37285fb8f91581bbe420ab248567242b69059/android-device-names-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

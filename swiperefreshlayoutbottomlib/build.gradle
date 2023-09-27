@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+afterEvaluate {
+    println(components*.name)
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = group = 'com.github.drashti-ncap'
+                artifactId = 'swiperefreshlayoutbottomlib'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+}

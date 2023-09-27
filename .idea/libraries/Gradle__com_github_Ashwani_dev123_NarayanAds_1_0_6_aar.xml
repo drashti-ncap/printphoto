@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Ashwani-dev123:NarayanAds:1.0.6@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cfbdbfb0e3b16f278f316ea580b12558/transformed/jetified-NarayanAds-1.0.6/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/cfbdbfb0e3b16f278f316ea580b12558/transformed/jetified-NarayanAds-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cfbdbfb0e3b16f278f316ea580b12558/transformed/jetified-NarayanAds-1.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cfbdbfb0e3b16f278f316ea580b12558/transformed/jetified-NarayanAds-1.0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Ashwani-dev123/NarayanAds/1.0.6/382455dd1d6994c0c784617a0950e8448c648568/NarayanAds-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

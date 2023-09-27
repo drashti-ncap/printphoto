@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/mipmap-xxxhdpi-v4/acton_down_fill_dot.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-imagezoom-1.2.1-67:/mipmap-xxxhdpi-v4/acton_down_fill_dot.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

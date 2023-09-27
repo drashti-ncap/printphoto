@@ -1,0 +1,7 @@
+<resources>
+
+    <!--Splash Screen-->
+    <dimen name="headertext">23sp</dimen>
+    <dimen name="infotext">@dimen/_12sdp</dimen>
+
+</resources>

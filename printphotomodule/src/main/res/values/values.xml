@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="WaitingDots">
+        <attr name="dotsColor" format="color" />
+        <attr name="period" format="integer" />
+        <attr name="jumpHeight" format="integer" />
+        <attr name="autoplay" format="boolean" />
+    </declare-styleable>
+    <!-- From: file:/C:/Users/Tajchert/Documents/WaitingDots/lib/src/main/res/values/strings.xml -->
+    <eat-comment />
+    <declare-styleable name="ChatView">
+        <attr name="backgroundColor" format="color" />
+        <attr name="inputBackgroundColor" format="color" />
+        <attr name="inputUseEditorAction" format="boolean" />
+        <attr name="inputTextAppearance" format="reference" />
+        <attr name="inputTextSize" format="dimension" />
+        <attr name="inputTextColor" format="color" />
+        <attr name="inputHint" format="string" />
+        <attr name="inputHintColor" format="color" />
+        <attr name="sendBtnIcon" format="reference" />
+        <attr name="sendBtnIconTint" format="color" />
+        <attr name="sendBtnBackgroundTint" format="color" />
+        <attr name="backgroundRcv" format="color" />
+        <attr name="backgroundSend" format="color" />
+        <attr name="bubbleBackgroundRcv" format="color" />
+        <attr name="bubbleBackgroundSend" format="color" />
+        <attr name="bubbleElevation">
+            <enum name="flat" value="0" />
+            <enum name="elevated" value="1" />
+        </attr>
+        <attr name="messageTextAppearance" format="reference" />
+        <attr name="messageTextColorSend" format="color" />
+        <attr name="messageTextColorRcv" format="color" />
+        <attr name="messageTextSize" format="dimension" />
+        <attr name="tStampTextAppearance" format="reference" />
+        <attr name="tStampTextColorSend" format="color" />
+        <attr name="tStampTextColorRcv" format="color" />
+        <attr name="tStampTextSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="ChatViewInputTextAppearance">
+        <attr name="inputTextSize" />
+        <attr name="inputTextColor" />
+        <attr name="inputHintColor" />
+    </declare-styleable>
+    <declare-styleable name="ChatViewMessageTextAppearance">
+        <attr name="messageTextSize" />
+        <attr name="messageTextColorSend" />
+        <attr name="messageTextColorRcv" />
+    </declare-styleable>
+    <declare-styleable name="ChatViewTStampTextAppearance">
+        <attr name="tStampTextSize" />
+        <attr name="tStampTextColorSend" />
+        <attr name="tStampTextColorRcv" />
+    </declare-styleable>
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_icon" format="reference" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_title" format="string" />
+        <attr name="fab_stroke_visible" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color" />
+        <attr name="fab_addButtonColorNormal" format="color" />
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_addButtonPlusIconColor" format="color" />
+        <attr name="fab_addButtonStrokeVisible" format="boolean" />
+        <attr name="fab_labelStyle" format="reference" />
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SendFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color" />
+    </declare-styleable>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <item name="fab_expand_menu_button" type="id" />
+    <item name="fab_label" type="id" />
+
+</resources>

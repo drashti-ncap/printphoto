@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.3.1" type="baseline" client="gradle" dependencies="false" name="AGP (7.3.1)" variant="all" version="7.3.1">
+
+    <issue
+        id="ResourceType"
+        message="Expected a color resource id (`R.color.`) but received an RGB integer"
+        errorLine1="            ((ShapeDrawable) getBackground()).getPaint().setColor(res.getColor(colorRes));"
+        errorLine2="                                                                               ~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="119"
+            column="80"/>
+    </issue>
+
+    <issue
+        id="AnnotateVersionCheck"
+        message="This method should be annotated with `@ChecksSdkIntAtLeast(api=android.os.Build.VERSION_CODES.LOLLIPOP)`"
+        errorLine1="    private boolean elevationSupported() {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="80"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        errorLine1="        targetSdkVersion 33"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        message="Must be one of: View.LAYER_TYPE_NONE, View.LAYER_TYPE_SOFTWARE, View.LAYER_TYPE_HARDWARE"
+        errorLine1="            ViewCompat.setLayerType(this, ViewCompat.LAYER_TYPE_SOFTWARE, circle.getPaint());"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="69"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="AppCompatCustomView"
+        message="This custom view should extend `androidx.appcompat.widget.AppCompatImageView` instead"
+        errorLine1="class CircleImageView extends ImageView {"
+        errorLine2="                              ~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="40"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.6.1"
+        errorLine1="    implementation &apos;androidx.appcompat:appcompat:1.5.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="24"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21"
+        errorLine1="        return android.os.Build.VERSION.SDK_INT >= 21;"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="81"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="        return android.os.Build.VERSION.SDK_INT &lt; 11;"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="335"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21"
+        errorLine1="        if (android.os.Build.VERSION.SDK_INT >= 11) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="340"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="        if (android.os.Build.VERSION.SDK_INT &lt; 14) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="609"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="        if (android.os.Build.VERSION.SDK_INT &lt; 14) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="659"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="        if (requiresUpdate &amp;&amp; android.os.Build.VERSION.SDK_INT &lt; 11) {"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="965"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        message="Custom view `CircleImageView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        errorLine1="class CircleImageView extends ImageView {"
+        errorLine2="      ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/CircleImageView.java"
+            line="40"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view `SwipeRefreshLayoutBottom` overrides `onTouchEvent` but not `performClick`"
+        errorLine1="    public boolean onTouchEvent(MotionEvent ev) {"
+        errorLine2="                   ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/android/support/library21/custom/SwipeRefreshLayoutBottom.java"
+            line="758"
+            column="20"/>
+    </issue>
+
+</issues>

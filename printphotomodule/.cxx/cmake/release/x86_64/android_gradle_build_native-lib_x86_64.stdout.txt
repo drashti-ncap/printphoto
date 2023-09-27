@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\Vasu\Projects\PrintPhoto\CustomizeMobileCover\app\.cxx\cmake\release\x86_64'
+ninja: no work to do.

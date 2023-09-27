@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Splash Screen-->
+    <dimen name="headertext">24sp</dimen>
+    <dimen name="infotext">@dimen/_11sdp</dimen>
+
+    <dimen name="txt0">16dp</dimen>
+
+</resources>

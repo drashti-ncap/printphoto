@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_standard_accelerate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_standard_accelerate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_standard_decelerate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_standard_decelerate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/mtrl_fast_out_linear_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/mtrl_linear_out_slow_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_standard.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_standard.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_emphasized.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_emphasized.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/mtrl_fast_out_slow_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_emphasized_accelerate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_emphasized_accelerate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_emphasized_decelerate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_emphasized_decelerate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/interpolator-v21/m3_sys_motion_easing_linear.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/interpolator-v21/m3_sys_motion_easing_linear.xml"
+    }
+]

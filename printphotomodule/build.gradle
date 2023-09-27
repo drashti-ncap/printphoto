@@ -1,0 +1,244 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+
+plugins {
+    id 'com.android.library'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'com.google.firebase.crashlytics'
+    id 'maven-publish'
+}
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 73
+        versionName "78"
+        consumerProguardFiles 'consumer-rules.pro'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        useLibrary 'org.apache.http.legacy'
+        multiDexEnabled true
+        manifestPlaceholders = [onesignal_app_id: "52ceeaf2-8f6d-4caa-af18-3035658b3e4e",
+                                onesignal_google_project_number: "994538272236"]
+
+
+        ndk {
+            debugSymbolLevel 'SYMBOL_TABLE'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    ndkVersion '23.0.7123448'
+
+    flavorDimensions "default"
+    productFlavors {
+        appDev {
+            //use id test when dev
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-3940256099942544~3347511713"]
+            buildConfigField "String", "ad_interstitial_splash", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "ad_banner", "\"ca-app-pub-3940256099942544/6300978111\""
+            buildConfigField "String", "ad_appopen_resume", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "String", "ad_native", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "ads_open_app", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "Boolean", "env_dev", "true"
+        }
+        appProd {
+            //add your id ad here
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-3940256099942544~3347511713"]
+            buildConfigField "String", "ad_interstitial_splash", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "ad_banner", "\"ca-app-pub-3940256099942544/6300978111\""
+            buildConfigField "String", "ad_appopen_resume", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "String", "ad_native", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "ads_open_app", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "Boolean", "env_dev", "false"
+        }
+    }
+}
+afterEvaluate {
+    println(components*.name)
+    publishing {
+        publications {
+            appProdRelease(MavenPublication) {
+                from components.appProdRelease
+
+                groupId = group = 'com.github.drashti-ncap'
+                artifactId = 'printphotomodule'
+            }
+        }
+    }
+}
+
+ext {
+    permissionsDispatcherVersion = '2.1.2'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+//    implementation 'apero-inhouse:apero-ads:1.8.0-alpha01'
+    implementation 'com.github.Ashwani-dev123:NarayanAds:1.0.6'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.google.android.material:material:1.7.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.multidex:multidex-instrumentation:2.0.0'
+
+    implementation 'com.google.android.gms:play-services-cast:21.3.0'
+
+    // Kotlin Co-routines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.anko:anko:0.10.5"
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    // for retrofit
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.4'
+
+    //slider
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //loaging dots
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
+    //downlaoad Image
+    implementation 'org.wlf:FileDownloader:0.3.2'
+    //Color Picker
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+    //paytm payment
+    implementation 'com.paytm:pgplussdk:1.1.5'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+
+
+
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+
+
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+    implementation 'com.uncopt:android.justified:1.0'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+
+    implementation 'com.facebook.fresco:fresco:1.0.1'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.13'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.6'
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+
+    implementation 'com.github.hsmnzaydn:imagezoom:1.2.1'
+    implementation 'com.github.rey5137:material:1.3.0'
+
+
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation files('libs/gcm.jar')
+
+    implementation 'com.jaredrummler:android-device-names:2.1.1'
+
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+
+    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
+    implementation 'com.razorpay:checkout:1.6.10'
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
+    implementation 'com.caverock:androidsvg:1.2.1'
+    implementation 'com.github.adhishlal:gifloader:1.1'
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+
+
+    implementation 'com.facebook.android:facebook-core:16.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:16.0.0'
+
+
+
+
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-crashlytics:18.4.1'
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+    implementation 'com.google.android.gms:play-services-identity:18.0.1'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+
+
+    implementation 'com.github.jignesh8992:Utilities:v1.1.0'
+
+
+    //core
+    implementation 'com.github.kittinunf.fuel:fuel:2.2.3'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'swarajsaaj:otpreader:1.1'
+
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.6.2"
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    implementation 'com.google.android.gms:play-services-ads:21.1.0'
+    implementation 'com.google.android.play:integrity:1.2.0'
+
+   // implementation project(path: ':ProxySettings')
+    implementation project(path: ':pinview')
+    implementation project(path: ':imagelibrary')
+    implementation project(':swiperefreshlayoutbottomlib')
+}

@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/values-xxxhdpi-v4/values-xxxhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\Drashti\\Projects\\printphoto-android-2022_SDK\\printphotomodule\\src\\main\\res\\values-xxxhdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "34",
+                        "endOffsets": "47"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "243",
+                        "endColumns": "34",
+                        "endOffsets": "273"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\dde586bde2574f64c47bbd684800461e\\transformed\\jetified-crystalrangeseekbar-1.1.3\\res\\values-xxxhdpi-v4\\values-xxxhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,106,156,200",
+                        "endColumns": "50,49,43,42",
+                        "endOffsets": "101,151,195,238"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mergeAppDevReleaseResources-85:/values-xxxhdpi-v4/values-xxxhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "D:\\Drashti\\Projects\\printphoto-android-2022_SDK\\printphotomodule\\src\\main\\res\\values-xxxhdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "34",
+                        "endOffsets": "47"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "243",
+                        "endColumns": "34",
+                        "endOffsets": "273"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pc\\.gradle\\caches\\transforms-3\\dde586bde2574f64c47bbd684800461e\\transformed\\jetified-crystalrangeseekbar-1.1.3\\res\\values-xxxhdpi-v4\\values-xxxhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,106,156,200",
+                        "endColumns": "50,49,43,42",
+                        "endOffsets": "101,151,195,238"
+                    }
+                }
+            ]
+        }
+    ]
+}

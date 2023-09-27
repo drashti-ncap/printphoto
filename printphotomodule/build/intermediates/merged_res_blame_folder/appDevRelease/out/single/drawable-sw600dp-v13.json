@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_reset.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_reset.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_cancelnew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_cancelnew.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_share.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_share.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/logout.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/logout.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_action_add.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_action_add.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_resizenew.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_resizenew.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_help.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_help.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_contact_us.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_contact_us.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_action_back.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_action_back.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/send_feedback.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/send_feedback.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/icon_filter.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/icon_filter.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_shopping_cart.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_shopping_cart.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_favorites_head.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_favorites_head.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/complain_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/complain_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable-sw600dp-v13/ic_action_done.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable-sw600dp/ic_action_done.png"
+    }
+]

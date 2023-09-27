@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/menu/mediation_debugger_activity_menu.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/menu/mediation_debugger_activity_menu.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/menu/main_menu.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/menu/main_menu.xml"
+    }
+]

@@ -1,0 +1,406 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_rotate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_rotate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/jump_from_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/jump_from_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_open_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fragment_open_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/left_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/left_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_tooltip_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/decelerate_quint.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/decelerate_quint.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/modal_activity_open_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/modal_activity_open_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_slide_in_from_right.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_slide_in_from_right.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/scale_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-imagezoom-1.2.1-67:/anim/scale_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_popup_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_off_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/design_snackbar_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/accelerate_cubic.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/accelerate_cubic.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_in_medium.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fade_in_medium.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_out_medium.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fade_out_medium.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/mtrl_card_lowers_interpolator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/mtrl_card_lowers_interpolator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/no_anim.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/no_anim.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_fade_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_fade_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/popup_flyout_hide.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/popup_flyout_hide.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_slide_out_to_right.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_slide_out_to_right.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_on_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_slide_in_bottom.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_slide_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_slide_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/activity_open_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/activity_open_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/app_right_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/app_right_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_slide_out_bottom.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/slide_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/slide_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/modal_activity_open_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/modal_activity_open_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_scale_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_scale_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_slide_out_to_left.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_slide_out_to_left.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_fade_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_fade_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/linear_indeterminate_line2_head_interpolator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/linear_indeterminate_line2_head_interpolator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_close_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fragment_close_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/design_snackbar_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_slide_in_from_left.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_slide_in_from_left.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/popup_flyout_show.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/popup_flyout_show.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_fade_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/decelerate_cubic.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/decelerate_cubic.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/scale_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-imagezoom-1.2.1-67:/anim/scale_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/slide_up.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/slide_up.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/accelerate_quint.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/accelerate_quint.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_close_exit_reverse.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/fragment_close_exit_reverse.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/slide_left_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/slide_left_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/modal_activity_close_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/modal_activity_close_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/linear_indeterminate_line1_head_interpolator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/linear_indeterminate_line1_head_interpolator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/decelerate_quart.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/decelerate_quart.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_slide_in_top.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_out_slow.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/fade_out_slow.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/linear_indeterminate_line2_tail_interpolator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/linear_indeterminate_line2_tail_interpolator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/app_right_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/app_right_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_slide_up.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_slide_up.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/activity_open_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/activity_open_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/m3_motion_fade_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/m3_motion_fade_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/modal_activity_close_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/modal_activity_close_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_open_enter_reverse.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/fragment_open_enter_reverse.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_popup_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/app_left_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/app_left_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/slide_right_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/slide_right_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_zoom_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_zoom_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/right_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/right_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/jump_to_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/jump_to_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/m3_motion_fade_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/m3_motion_fade_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/linear_indeterminate_line1_tail_interpolator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/anim/linear_indeterminate_line1_tail_interpolator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/bottom_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/bottom_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_zoom_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_zoom_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_close_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fragment_close_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/in_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/in_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fragment_open_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fragment_open_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/activity_close_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/activity_close_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_tooltip_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/out_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/out_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_out_fast.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fade_out_fast.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_fade_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/hold.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/hold.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/splash_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/splash_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/accelerate_quart.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/accelerate_quart.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/abc_slide_out_top.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/activity_close_enter.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/activity_close_enter.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_bounce.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_bounce.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fab_scale_up.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-fab-1.6.4-52:/anim/fab_scale_up.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_move.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_move.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/none.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/none.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/view_blink.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-utils-0.9.0-47:/anim/view_blink.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/app_left_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/anim/app_left_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/onesignal_fade_in.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-OneSignal-4.8.6-79:/anim/onesignal_fade_in.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/onesignal_fade_out.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-OneSignal-4.8.6-79:/anim/onesignal_fade_out.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/fade_in_fast.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/anim/fade_in_fast.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/anim/btn_checkbox_to_checked_icon_null_animation.xml"
+    }
+]

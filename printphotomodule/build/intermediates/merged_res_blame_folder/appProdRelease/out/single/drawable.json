@@ -1,0 +1,1414 @@
+[
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_10.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_10.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_login_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/bg_login_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_8.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_8.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_rotate_right_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_rotate_right_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ads_icon.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ads_icon.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_dialog_material_background_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/avd_hide_password.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/avd_hide_password.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/test_level_drawable.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/test_level_drawable.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_launcher_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/notification_icon_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-core-1.9.0-73:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_bottomsheet_drag_handle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_bottomsheet_drag_handle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_tabs_rounded_line_indicator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_tabs_rounded_line_indicator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ar_table_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ar_table_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_incoming.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shape_incoming.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_fyber.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_fyber.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_photo_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_photo_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/selector_button_exit.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/selector_button_exit.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_verizon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_verizon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rect_shadow_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/rect_shadow_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_dialog_material_background_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_thumb_logo_square.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_thumb_logo_square.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_maio.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_maio.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_6.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_6.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/seller_shadow_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/seller_shadow_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_popupmenu_background_overlay.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_refresh_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_refresh_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_checkbox_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_checkbox_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_item_background_holo_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/close_vector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/drawable/close_vector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_checked_pressed.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_checked_pressed.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_bg_exit_dialog3.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/shape_bg_exit_dialog3.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_cut_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_go_search_api_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_pressed.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_pressed.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/folder_selection.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/folder_selection.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_nend.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_nend.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_ab_back_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/design_password_eye.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/round_rect.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/round_rect.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_19.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_19.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_dialog_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_dialog_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_clear_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_clear_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_card_transparent.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/bg_card_transparent.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_mtrl_chip_close_circle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_instagram_selection.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_instagram_selection.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_auth_dialog_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_auth_dialog_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_group_expand.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_group_expand.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_label.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shape_label.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_yandex.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_yandex.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_white_border_black_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_white_border_black_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_amazon_marketplace.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_amazon_marketplace.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_placeholder.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_placeholder.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/table_button_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/table_button_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_menu_arrow_up_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_keyboard_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_keyboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_play_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_play_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/sample.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/sample.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_tab_indicator_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/avd_show_password.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/avd_show_password.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ads_bg_lib.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ads_bg_lib.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_checkbox_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_checkbox_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_radio_off_to_on_mtrl_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_radio_off_to_on_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_checked_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_applovin.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_applovin.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/cancel.gif",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/cancel.gif"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_radio_material_anim.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_radio_material_anim.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_light_static.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_light_static.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_close.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ic_close.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/blue_tablerow_bottomborder_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/blue_tablerow_bottomborder_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_edit_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/design_ic_visibility_off.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/picker.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/picker.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/progress_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/progress_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/loading_dots_dot.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-loading-dots-1.0.2-8:/drawable/loading_dots_dot.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_tabs_line_indicator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_tabs_line_indicator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_pause_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_pause_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_auth_dialog_header_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_auth_dialog_header_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_retry_round.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shape_retry_round.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_line.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_line.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_facebook.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_facebook.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_group_collapse.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_group_collapse.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_stop_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_stop_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_share_mtrl_alpha.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_share_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_ratingbar_staron.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ic_ratingbar_staron.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_button_send_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-share-16.0.0-39:/drawable/com_facebook_button_send_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_pressed_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_2.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_2.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_inapp.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ic_inapp.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/selector_shape_square.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/selector_shape_square.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_16.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_16.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_vol_type_audiotrack_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_vol_type_audiotrack_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_play_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_play_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_criteo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_criteo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_mtrl_chip_checked_black.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_mtrl_chip_checked_black.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_15.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_15.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_stop_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_stop_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_1.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_1.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_purcharse.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/bg_purcharse.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_popupmenu_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_popupmenu_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_indeterminate.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_indeterminate.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_m3_chip_checked_circle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_m3_chip_checked_circle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/circular_dialog.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/circular_dialog.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_vector_test.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-appcompat-resources-1.6.1-26:/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_avd_show_password.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_avd_show_password.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_indicator_selected.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_indicator_selected.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_secured_by_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_secured_by_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_rounded_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_rounded_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_14.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_14.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_radio_off_mtrl.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_button_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_button_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_radio_on_mtrl.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_dark_static.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_dark_static.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_item_background_holo_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_cancel.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_cancel.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_checked_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_m3_chip_check.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_m3_chip_check.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/circle_transparent.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-imagezoom-1.2.1-67:/drawable/circle_transparent.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ads_icon2.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ads_icon2.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_rotate_left_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_rotate_left_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_star_half_black_48dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_star_half_black_48dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_adcolony.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_adcolony.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/black_new_bg_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/black_new_bg_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_square_ring.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/shape_square_ring.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_connecting_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_connecting_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mall_variant_select.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/mall_variant_select.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/progress.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/progress.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_border_bottom.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_border_bottom.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_white_small.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_white_small.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/admob_close_button_white_circle_black_cross.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-ads-22.3.0-20:/drawable/admob_close_button_white_circle_black_cross.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/round_rect_blue.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/round_rect_blue.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_green_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_green_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_thumb.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_thumb.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_cab_background_top_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/messenger_button_white_bg_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-messenger-16.0.0-37:/drawable/messenger_button_white_bg_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_borderless_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/messenger_button_blue_bg_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-messenger-16.0.0-37:/drawable/messenger_button_blue_bg_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_google_ad_manager.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_google_ad_manager.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/below_shadow.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/below_shadow.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_check_mark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_check_mark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/design_fab_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_ironsource.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_ironsource.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_connected_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_connected_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_radio_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_mintegral.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_mintegral.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_amazon_tam.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_amazon_tam.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ratingbar_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_remove_circle_outline_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_remove_circle_outline_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_pangle.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_pangle.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_mtrl_checked_circle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_mtrl_checked_circle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_nophotos.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_nophotos.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_admob.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_admob.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_textfield_search_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/img_face.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/img_face.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_track.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_track.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_vungle.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_vungle.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/design_snackbar_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gnt_outline_shape.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/gnt_outline_shape.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_checkbox_unchecked_mtrl.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/forward_vector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/drawable/forward_vector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_mopub.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_mopub.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/progress_drawable.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/drawable/progress_drawable.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ratingbar_small_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rect_black.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/rect_black.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_tiktok.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_tiktok.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_connecting_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_connecting_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tooltip_frame_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_11.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_11.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/messenger_button_blue_bg_round.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-messenger-16.0.0-37:/drawable/messenger_button_blue_bg_round.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/fab_label_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/fab_label_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_mute_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_mute_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_arrow_drop_down.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_7.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_7.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_unity.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_unity.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_tapjoy.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_tapjoy.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_hyprmx.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_hyprmx.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_route_seekbar_track.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_route_seekbar_track.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_outgoing_module.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shape_outgoing_module.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/cast_ic_notification_connecting.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-cast-21.3.0-58:/drawable/cast_ic_notification_connecting.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tablerow_bottomborder_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tablerow_bottomborder_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_check_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_9.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_9.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/indicator_corner_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-library-1.1.5-35:/drawable/indicator_corner_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/notification_bg_low.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-core-1.9.0-73:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_dialog_close_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_dialog_close_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mall_variant_deselect.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/mall_variant_deselect.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/notification_tile_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-core-1.9.0-73:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_list_selector_holo_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_connected_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_connected_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gnt_rounded_corners_shape.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/gnt_rounded_corners_shape.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_calendar_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_calendar_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_rounded_text_view_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_rounded_text_view_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_text_cursor_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_arrow_back_black_24.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_arrow_back_black_24.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/sample_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-packaged_res-81:/drawable/sample_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ar_table_button_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ar_table_button_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/table_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/table_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_ratingbar_staroff.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ic_ratingbar_staroff.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_buttons.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/bg_buttons.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_button_icon.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_button_icon.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_tabs_default_indicator.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/admob_close_button_black_circle_white_cross.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-ads-22.3.0-20:/drawable/admob_close_button_black_circle_white_cross.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/progress_big_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/progress_big_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_bg_exit_dialog.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/shape_bg_exit_dialog.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/notification_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-core-1.9.0-73:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_vol_type_audiotrack_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_vol_type_audiotrack_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_5.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_5.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/done.gif",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/done.gif"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_thumb_logo_potrait.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_thumb_logo_potrait.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_selection.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/bg_selection.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_privacy_icon.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_privacy_icon.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_retry_round_selected.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shape_retry_round_selected.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/selector_button_exit_transfer.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/selector_button_exit_transfer.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_group_seekbar_track.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_group_seekbar_track.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_m3_chip_close.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_m3_chip_close.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/new_gif.gif",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/new_gif.gif"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_color_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_color_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_unchecked_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_dialog_close_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_dialog_close_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/square_grey.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/square_grey.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_button_like_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_button_like_background.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_card_ads.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/bg_card_ads.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/messenger_button_white_bg_round.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-messenger-16.0.0-37:/drawable/messenger_button_white_bg_round.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_thumb_logo.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/ic_thumb_logo.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_send_button_icon.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-share-16.0.0-39:/drawable/com_facebook_send_button_icon.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/back_vector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/drawable/back_vector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/sb_progress_drawable.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/sb_progress_drawable.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/navigation_empty_icon.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_search_black_24.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_search_black_24.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/round_size_tshirt.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/round_size_tshirt.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_menu_arrow_down_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_unchecked_pressed.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_13.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_13.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_checkbox_checked_mtrl.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/selector_bg_button_ads.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/selector_bg_button_ads.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_clear_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_verve.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_verve.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_poweredby.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_poweredby.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_exo_rounded_rectangle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_exo_rounded_rectangle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tooltip_frame_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ratingbar_full.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ratingbar_full.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_seekbar_thumb_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_star_black_48dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_star_black_48dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_mytarget.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_mytarget.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_bidmachine.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_bidmachine.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_list_selector_holo_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_privacy_icon_layered_list.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_privacy_icon_layered_list.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_popupmenu_background_overlay.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/more_vector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-finestwebview-1.2.7-62:/drawable/more_vector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_mtrl_chip_checked_circle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_mtrl_chip_checked_circle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_clock_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_clock_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_stop.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_stop.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_button_dark.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_button_dark.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/round_rect_green.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/round_rect_green.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/new_bg_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/new_bg_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_media_pause_light.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_media_pause_light.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_exo_icon_vr.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_exo_icon_vr.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/placeholder_image.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/placeholder_image.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_20.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_20.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_unchecked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_unchecked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_17.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_17.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/tab_indicator_default.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/tab_indicator_default.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_chartboost.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_chartboost.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/above_shadow.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/above_shadow.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_3.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_3.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_favicon_blue.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_favicon_blue.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rety_selector.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/rety_selector.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_password_eye.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_password_eye.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_loader_circle.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_loader_circle.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-play-services-base-18.2.0-18:/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_bg_native.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/shape_bg_native.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_clear_black_24.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/ic_clear_black_24.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_error.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_error.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mr_cast_checkbox.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-mediarouter-1.2.2-16:/drawable/mr_cast_checkbox.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bg_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/bg_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_dropdown_arrow.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_dropdown_arrow.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_ogury_presage.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_ogury_presage.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/round_border_tshirt.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/round_border_tshirt.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_smaato.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_smaato.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_ic_search_api_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/bottom_blue_tablerow_bottomborder_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/bottom_blue_tablerow_bottomborder_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_inmobi.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_inmobi.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shadow_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/shadow_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mediation_snap.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mediation_snap.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_switch_thumb_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_seekbar_track_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_unchecked_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_track_decoration.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_track_decoration.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_18.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_18.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_btn_check_material_anim.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_btn_check_material_anim.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_12.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_12.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_4.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_4.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/design_ic_visibility.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/design_ic_visibility.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/ic_warning.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-NarayanAds-1.0.6-63:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_unmute_to_mute.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_unmute_to_mute.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/top_blue_tablerow_bottomborder_new.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/top_blue_tablerow_bottomborder_new.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/btn_radio_on_to_off_mtrl_animation.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rounded_border1.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/rounded_border1.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_exo_icon_circular_play.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_exo_icon_circular_play.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_cab_background_internal_bg.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/strike.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/strike.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/sp_arrow.png",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/sp_arrow.png"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/shape_square_ring_selected.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/shape_square_ring_selected.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_switch_thumb_pressed_checked.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_switch_thumb_pressed_checked.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/m3_avd_hide_password.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/m3_avd_hide_password.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/selection_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/selection_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/applovin_ic_mute_to_unmute.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-applovin-sdk-11.5.1-29:/drawable/applovin_ic_mute_to_unmute.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/rzp_border.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-checkout-1.6.10-65:/drawable/rzp_border.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/mtrl_ic_arrow_drop_up.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-material-1.9.0-11:/drawable/mtrl_ic_arrow_drop_up.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/color_cursor.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/color_cursor.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-appcompat-1.6.1-25:/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/blue_round_size_tshirt.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-main-90:/drawable/blue_round_size_tshirt.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/gradient_21.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-Utilities-v1.1.0-33:/drawable/gradient_21.xml"
+    },
+    {
+        "merged": "com.mobile.cover.photo.editor.back.maker.printphotomodule-merged_res-87:/drawable/com_facebook_auth_dialog_cancel_background.xml",
+        "source": "com.mobile.cover.photo.editor.back.maker.printphotomodule-jetified-facebook-common-16.0.0-53:/drawable/com_facebook_auth_dialog_cancel_background.xml"
+    }
+]
