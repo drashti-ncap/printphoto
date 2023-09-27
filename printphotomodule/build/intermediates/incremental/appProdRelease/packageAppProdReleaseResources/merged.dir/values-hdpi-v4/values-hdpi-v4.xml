@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="headertext">@dimen/_15ssp</dimen>
-    <dimen name="infotext">@dimen/_15sdp</dimen>
-    <dimen name="txt0">8dp</dimen>
-</resources>

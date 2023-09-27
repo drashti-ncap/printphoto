@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="bubble_thumb_height">70dp</dimen>
-    <dimen name="bubble_thumb_width">70dp</dimen>
-    <dimen name="headertext">23sp</dimen>
-    <dimen name="infotext">@dimen/_12sdp</dimen>
-    <dimen name="thumb_height">30dp</dimen>
-    <dimen name="thumb_width">30dp</dimen>
-</resources>

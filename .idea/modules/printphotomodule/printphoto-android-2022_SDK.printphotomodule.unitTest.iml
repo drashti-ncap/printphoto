@@ -17,6 +17,7 @@
               <args>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1de447525306c57b04850af92eeac7aa/transformed/jetified-gcm.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c01b97daf75fcb591ae10c9612c95e97/transformed/jetified-YouTubeAndroidPlayerApi.jar</arg>
+                <arg>$MODULE_DIR$/../../../printphotomodule/build/intermediates/compile_library_classes_jar/appDevDebug/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/394c207cb5a0f40b88b63672ee570a3f/transformed/jetified-junit-4.13.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/552f90a8c28f4ca447bed8d3b25e7ca7/transformed/jetified-hamcrest-core-1.3.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/815bc5f745d2ddd1288f47933e0ef0e4/transformed/jetified-kotlin-android-extensions-runtime-1.7.20.jar</arg>

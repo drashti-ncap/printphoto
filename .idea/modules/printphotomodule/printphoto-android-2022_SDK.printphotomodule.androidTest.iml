@@ -29,6 +29,7 @@
               <args>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1de447525306c57b04850af92eeac7aa/transformed/jetified-gcm.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c01b97daf75fcb591ae10c9612c95e97/transformed/jetified-YouTubeAndroidPlayerApi.jar</arg>
+                <arg>$MODULE_DIR$/../../../printphotomodule/build/intermediates/compile_library_classes_jar/appDevDebug/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/87eb4d514d42f5f87138a92033861fae/transformed/espresso-core-3.5.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/466768f5607f93acfed7a5e0e5a9f9e5/transformed/runner-1.5.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5e045ed39f7dc9fad5ec8f8e7bbec746/transformed/jetified-shimmer-0.5.0-api.jar</arg>
