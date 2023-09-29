@@ -17,6 +17,7 @@
               <args>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1de447525306c57b04850af92eeac7aa/transformed/jetified-gcm.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c01b97daf75fcb591ae10c9612c95e97/transformed/jetified-YouTubeAndroidPlayerApi.jar</arg>
+                <arg>$MODULE_DIR$/../../../printphotomodule/build/intermediates/compile_library_classes_jar/appDevDebug/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/394c207cb5a0f40b88b63672ee570a3f/transformed/jetified-junit-4.13.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/552f90a8c28f4ca447bed8d3b25e7ca7/transformed/jetified-hamcrest-core-1.3.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/815bc5f745d2ddd1288f47933e0ef0e4/transformed/jetified-kotlin-android-extensions-runtime-1.7.20.jar</arg>
@@ -188,10 +189,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/61843c95f2bb0ffa0222f36962b4cd6b/transformed/jetified-installreferrer-2.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/cf0189318018af4d75f20759388dfc84/transformed/jetified-core-3.3.3.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/69404cfb10adc57bce839d546d8dc001/transformed/jetified-ssp-android-1.1.0-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/9adcf65237a4e4177db5762e9bb29c39/transformed/jetified-library-1.1.5-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/1a67c939893a16ba345a627cb96d98b4/transformed/jetified-picasso-transformations-2.2.1-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/6b1dbf618c157504cca51b1fbf07d1f2/transformed/jetified-picasso-2.5.2.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/e16d0dfc81bedca571fc23aa9f464a69/transformed/jetified-library-2.4.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/2b0a8ae963ddbf5a90ebd842e7f152db/transformed/jetified-autoimageslider-1.3.9-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/7d1d518b2cf4707ef6c3236251c630d8/transformed/jetified-disklrucache-4.15.1.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/46560529df1726bef86a7a1188f550d7/transformed/jetified-annotations-4.15.1.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6b258876a8ba75709cb3c0e4cf0739fe/transformed/exifinterface-1.3.3-api.jar</arg>
@@ -225,6 +223,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/11bb7a66056d47c09462f5fe8abae99e/transformed/jetified-shimmerlayout-2.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d1c6a4e8c0e38e90584c839f2179d4dc/transformed/jetified-volley-1.2.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/8b9a937e7462c90c2fc8d50ee6f9e08c/transformed/jetified-itextg-5.5.10.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/6b1dbf618c157504cca51b1fbf07d1f2/transformed/jetified-picasso-2.5.2.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/2c86a5bd710690158207c7bfa9e5fddb/transformed/jetified-AndroidSvgLoader-1.0.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4b18b4a98faead21b526a4ff243e7ed9/transformed/jetified-androidsvg-1.2.1.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4c5eb313c20276642d7037b3c0f0c43a/transformed/jetified-finestwebview-1.2.7-api.jar</arg>
@@ -355,8 +354,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-basement:18.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-tasks:18.0.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-flags:18.0.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.daimajia.slider:library:1.1.5@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: jp.wasabeef:picasso-transformations:2.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.smarteist:autoimageslider:1.3.9@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:glide:4.15.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:gifdecoder:4.15.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.exifinterface:exifinterface:1.3.3@aar" level="project" />
@@ -495,7 +493,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.10.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:converter-gson:2.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.nineoldandroids:library:2.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:disklrucache:4.15.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.bumptech.glide:annotations:4.15.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4" level="project" />

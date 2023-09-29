@@ -24,9 +24,6 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.facebook.appevents.AppEventsLogger;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
@@ -35,6 +32,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Offer;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.getofferresponse;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.SliderAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.MallSearchActivity;
@@ -42,6 +40,7 @@ import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.newoffers.OfferAdapt
 import com.mobile.cover.photo.editor.back.maker.model.getdata;
 import com.mobile.cover.photo.editor.back.maker.model.getpromodata;
 import com.mobile.cover.photo.editor.back.maker.model.getpromodetail;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,13 +63,14 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
     RecyclerView rv_offer;
     OfferAdapter mAdapter;
     ImageView id_back;
-    SliderLayout banner_slider;
+//    SliderLayout banner_slider;
+    SliderView banner_slider;
+    private ArrayList<String> list= new ArrayList<>();
     TextView ed_search;
     AlertDialog alertDialog;
     FirebaseAnalytics firebaseAnalytics;
     AppEventsLogger logger;
     RelativeLayout rl_offers;
-
 
     private List<getdata> sqlist = new ArrayList<>();
     private List<getpromodata> sqlist2 = new ArrayList<>();
@@ -90,7 +90,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
         Share.click_positions.clear();
         firebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
         logger = AppEventsLogger.newLogger(getActivity());
-        banner_slider.setCustomIndicator(v.findViewById(R.id.custom_indicator));
+      //  banner_slider.setCustomIndicator(v.findViewById(R.id.custom_indicator));
         Bundle params = new Bundle();
         params.putInt("mall_visited", 1);
         firebaseAnalytics.logEvent("mall_visit", params);
@@ -224,7 +224,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                         if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                             Log.e("SUCCESS", "onSUCCESS: ");
                             Share.response_offer = responseData.getOffer();
-                            banner_slider.removeAllSliders();
+                            //banner_slider.removeAllSliders();
                             List<Offer> datumList = responseData.getOffer();
                             List<String> size = new ArrayList<>();
                             for (int i = 0; i < datumList.size(); i++) {
@@ -244,28 +244,32 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                             for (int i = 0; i < datumList.size(); i++) {
                                 if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code,"IN").equalsIgnoreCase("IN")) {
                                     rl_offers.setVisibility(View.VISIBLE);
-                                    TextSliderView textSliderView = new TextSliderView(getContext());
-                                    textSliderView
-                                            .description("mall")
-                                            .image(datumList.get(i).getNOfferNewImage())
-                                            .setScaleType(BaseSliderView.ScaleType.Fit);
-                                    banner_slider.addSlider(textSliderView);
+//                                    TextSliderView textSliderView = new TextSliderView(getContext());
+//                                    textSliderView
+//                                            .description("mall")
+//                                            .image(datumList.get(i).getNOfferNewImage())
+//                                            .setScaleType(BaseSliderView.ScaleType.Fit);
+//                                    banner_slider.addSlider(textSliderView);
+                                    list.add(datumList.get(i).getNOfferNewImage());
                                 } else {
 
                                     Log.e(TAG, "onResponse: " + size.size());
                                     if (size.size() == 0) {
                                         rl_offers.setVisibility(View.GONE);
                                     }
-                                    TextSliderView textSliderView = new TextSliderView(getContext());
-                                    textSliderView
-                                            .description("mall")
-                                            .image(datumList.get(i).getNOfferNewImage())
-                                            .setScaleType(BaseSliderView.ScaleType.Fit);
-                                    if (datumList.get(i).getIs_international() == 1) {
-                                        banner_slider.addSlider(textSliderView);
-                                    }
+//                                    TextSliderView textSliderView = new TextSliderView(getContext());
+//                                    textSliderView
+//                                            .description("mall")
+//                                            .image(datumList.get(i).getNOfferNewImage())
+//                                            .setScaleType(BaseSliderView.ScaleType.Fit);
+//                                    if (datumList.get(i).getIs_international() == 1) {
+//                                        banner_slider.addSlider(textSliderView);
+//                                    }
+                                    list.add(datumList.get(i).getNOfferNewImage());
                                 }
                             }
+
+                            setOfferData();
 
                             getoffer2();
                         } else {
@@ -329,6 +333,16 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
 
+    }
+
+    private void setOfferData() {
+        SliderAdapter adapter = new SliderAdapter(list);
+        banner_slider.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
+        banner_slider.setSliderAdapter(adapter);
+        banner_slider.setCurrentPagePosition(0);
+        banner_slider.setScrollTimeInSec(3);
+        banner_slider.setAutoCycle(true);
+        banner_slider.startAutoCycle();
     }
 
     private void getoffer2() {

@@ -81,8 +81,8 @@ afterEvaluate {
     println(components*.name)
     publishing {
         publications {
-            appDevDebug(MavenPublication) {
-                from components.appDevDebug
+            appProdRelease(MavenPublication) {
+                from components.appProdRelease
 
                 groupId = group = 'com.github.drashti-ncap'
                 artifactId = 'printphotomodule'
@@ -135,9 +135,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.4'
 
     //slider
-    implementation 'com.daimajia.slider:library:1.1.5@aar'
-    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
-    implementation 'com.nineoldandroids:library:2.4.0'
+//    implementation 'com.daimajia.slider:library:1.1.5@aar'
+//    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+//    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
     //glide
     implementation 'com.github.bumptech.glide:glide:4.15.1'
 
@@ -194,7 +195,7 @@ dependencies {
     implementation 'com.itextpdf:itextg:5.5.10'
     implementation 'androidx.browser:browser:1.4.0'
     implementation 'com.jsibbold:zoomage:1.3.1'
-    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
     implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
     implementation 'com.caverock:androidsvg:1.2.1'

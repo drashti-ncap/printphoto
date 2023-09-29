@@ -173,6 +173,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             configMediationProvider();
         }*/
 
+        //configMediationProvider();
         Call<CityState> call = RetrofitClient.getInstance().getMyApi().getData();
         call.enqueue(new Callback<CityState>() {
             @Override
