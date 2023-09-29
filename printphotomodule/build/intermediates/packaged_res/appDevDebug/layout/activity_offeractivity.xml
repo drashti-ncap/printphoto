@@ -57,14 +57,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.daimajia.slider.library.SliderLayout
+                    <com.smarteist.autoimageslider.SliderView
                         android:id="@+id/banner_slider"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_165sdp">
+                        app:sliderAnimationDuration="600"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        android:layoutDirection="ltr"
+                        app:sliderIndicatorRadius="2.5dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                        app:sliderIndicatorUnselectedColor="@color/grey_500"
+                        app:sliderScrollTimeInSec="1"
+                        android:layout_height="@dimen/_165sdp"/>
 
-                    </com.daimajia.slider.library.SliderLayout>
 
-                    <com.daimajia.slider.library.Indicators.PagerIndicator
+                    <!--<com.daimajia.slider.library.Indicators.PagerIndicator
                         android:id="@+id/custom_indicator"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25sdp"
@@ -72,7 +83,7 @@
                         android:gravity="center"
                         android:scrollbarSize="@dimen/_20sdp"
                         app:selected_color="@color/color_green"
-                        app:unselected_color="@color/grey_500" />
+                        app:unselected_color="@color/grey_500" />-->
 
                 </RelativeLayout>
 

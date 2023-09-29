@@ -567,7 +567,6 @@ id constraintLayout
 id constraintLayout2
 id container
 id cropImageView
-id custom_indicator
 id daimajia_slider_image
 id default_home_screen_panel
 id delete_address
@@ -716,6 +715,7 @@ id info
 id item1
 id item2
 id ivBack
+id ivBanner
 id ivDelete
 id ivDone
 id ivImage
@@ -1329,6 +1329,7 @@ layout other_dynamic_fragment
 layout otp_fragment
 layout overview_panel
 layout pager_item
+layout printphoto_slider_layout
 layout region_name_item
 layout render_type_text
 layout request_name_item

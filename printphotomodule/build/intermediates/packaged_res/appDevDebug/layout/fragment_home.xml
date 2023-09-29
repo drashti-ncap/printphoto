@@ -24,11 +24,11 @@
                 android:orientation="vertical">
 
 
-                <com.daimajia.slider.library.SliderLayout
+                <com.smarteist.autoimageslider.SliderView
                     android:id="@+id/banner_slider"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:layout_height="match_parent"/>
 
 
                 <include layout="@layout/top_item_home" />

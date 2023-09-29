@@ -167,10 +167,8 @@ int attr LoadingDots_jump_duration 0x0
 int attr LoadingDots_jump_height 0x0
 int attr LoadingDots_loop_duration 0x0
 int attr LoadingDots_loop_start_delay 0x0
-int attr PagerIndicatorStyle 0x0
 int attr SharedValue 0x0
 int attr SharedValueId 0x0
-int attr SliderStyle 0x0
 int attr SpinKitViewStyle 0x0
 int attr SpinKit_Color 0x0
 int attr SpinKit_Style 0x0
@@ -253,7 +251,6 @@ int attr autoSizePresetSizes 0x0
 int attr autoSizeStepGranularity 0x0
 int attr autoSizeTextType 0x0
 int attr autoTransition 0x0
-int attr auto_cycle 0x0
 int attr autoplay 0x0
 int attr background 0x0
 int attr backgroundColor 0x0
@@ -285,7 +282,6 @@ int attr badgeWithTextShapeAppearance 0x0
 int attr badgeWithTextShapeAppearanceOverlay 0x0
 int attr badgeWithTextWidth 0x0
 int attr barLength 0x0
-int attr barSize 0x0
 int attr bar_color 0x0
 int attr bar_highlight_color 0x0
 int attr barrierAllowsGoneWidgets 0x0
@@ -662,7 +658,6 @@ int attr di_titleTextColor 0x0
 int attr dialogCornerRadius 0x0
 int attr dialogPreferredPadding 0x0
 int attr dialogTheme 0x0
-int attr disableChildrenWhenDisabled 0x0
 int attr displayOptions 0x0
 int attr divider 0x0
 int attr dividerColor 0x0
@@ -984,7 +979,6 @@ int attr indicatorDirectionCircular 0x0
 int attr indicatorDirectionLinear 0x0
 int attr indicatorInset 0x0
 int attr indicatorSize 0x0
-int attr indicator_visibility 0x0
 int attr initialActivityCount 0x0
 int attr initialColor 0x0
 int attr inputBackgroundColor 0x0
@@ -1306,7 +1300,6 @@ int attr messageTextColorRcv 0x0
 int attr messageTextColorSend 0x0
 int attr messageTextSize 0x0
 int attr methodName 0x0
-int attr middleBarArrowSize 0x0
 int attr minHeight 0x0
 int attr minHideDelay 0x0
 int attr minSeparation 0x0
@@ -1400,12 +1393,6 @@ int attr paddingRightSystemWindowInsets 0x0
 int attr paddingStart 0x0
 int attr paddingTopNoTitle 0x0
 int attr paddingTopSystemWindowInsets 0x0
-int attr padding_bottom 0x0
-int attr padding_left 0x0
-int attr padding_right 0x0
-int attr padding_top 0x0
-int attr pager_animation 0x0
-int attr pager_animation_span 0x0
 int attr panEnabled 0x0
 int attr panelBackground 0x0
 int attr panelHeight 0x0
@@ -1435,6 +1422,22 @@ int attr pinBackground 0x0
 int attr pinHeight 0x0
 int attr pinLength 0x0
 int attr pinWidth 0x0
+int attr piv_animationDuration 0x0
+int attr piv_animationType 0x0
+int attr piv_autoVisibility 0x0
+int attr piv_count 0x0
+int attr piv_dynamicCount 0x0
+int attr piv_interactiveAnimation 0x0
+int attr piv_orientation 0x0
+int attr piv_padding 0x0
+int attr piv_radius 0x0
+int attr piv_rtl_mode 0x0
+int attr piv_scaleFactor 0x0
+int attr piv_select 0x0
+int attr piv_selectedColor 0x0
+int attr piv_strokeWidth 0x0
+int attr piv_unselectedColor 0x0
+int attr piv_viewPager 0x0
 int attr pivotAnchor 0x0
 int attr placeHolderBackgroundColor 0x0
 int attr placeHolderSmileColor 0x0
@@ -1447,7 +1450,6 @@ int attr placeholder_emptyVisibility 0x0
 int attr polarRelativeTo 0x0
 int attr popupMenuBackground 0x0
 int attr popupMenuStyle 0x0
-int attr popupPromptView 0x0
 int attr popupTheme 0x0
 int attr popupWindowStyle 0x0
 int attr porterduffxfermode 0x0
@@ -1463,7 +1465,6 @@ int attr progressBarImage 0x0
 int attr progressBarImageScaleType 0x0
 int attr progressBarPadding 0x0
 int attr progressBarStyle 0x0
-int attr prompt 0x0
 int attr pv_autostart 0x0
 int attr pv_circular 0x0
 int attr pv_progress 0x0
@@ -1616,14 +1617,6 @@ int attr searchViewStyle 0x0
 int attr seekBarStyle 0x0
 int attr selectableItemBackground 0x0
 int attr selectableItemBackgroundBorderless 0x0
-int attr selected_color 0x0
-int attr selected_drawable 0x0
-int attr selected_height 0x0
-int attr selected_padding_bottom 0x0
-int attr selected_padding_left 0x0
-int attr selected_padding_right 0x0
-int attr selected_padding_top 0x0
-int attr selected_width 0x0
 int attr selectionRequired 0x0
 int attr selectorSize 0x0
 int attr sendBtnBackgroundTint 0x0
@@ -1631,7 +1624,6 @@ int attr sendBtnIcon 0x0
 int attr sendBtnIconTint 0x0
 int attr setsTag 0x0
 int attr shadowHeight 0x0
-int attr shape 0x0
 int attr shapeAppearance 0x0
 int attr shapeAppearanceCornerExtraLarge 0x0
 int attr shapeAppearanceCornerExtraSmall 0x0
@@ -1718,6 +1710,25 @@ int attr sl_trackSize 0x0
 int attr sl_transformAnimDuration 0x0
 int attr sl_travelAnimDuration 0x0
 int attr sl_value 0x0
+int attr sliderAnimationDuration 0x0
+int attr sliderAutoCycleDirection 0x0
+int attr sliderAutoCycleEnabled 0x0
+int attr sliderIndicatorAnimationDuration 0x0
+int attr sliderIndicatorEnabled 0x0
+int attr sliderIndicatorGravity 0x0
+int attr sliderIndicatorMargin 0x0
+int attr sliderIndicatorMarginBottom 0x0
+int attr sliderIndicatorMarginLeft 0x0
+int attr sliderIndicatorMarginRight 0x0
+int attr sliderIndicatorMarginTop 0x0
+int attr sliderIndicatorOrientation 0x0
+int attr sliderIndicatorPadding 0x0
+int attr sliderIndicatorRadius 0x0
+int attr sliderIndicatorRtlMode 0x0
+int attr sliderIndicatorSelectedColor 0x0
+int attr sliderIndicatorUnselectedColor 0x0
+int attr sliderScrollTimeInSec 0x0
+int attr sliderStartAutoCycle 0x0
 int attr sliderStyle 0x0
 int attr snackbarButtonStyle 0x0
 int attr snackbarStyle 0x0
@@ -1725,7 +1736,6 @@ int attr snackbarTextViewStyle 0x0
 int attr spanCount 0x0
 int attr spinBars 0x0
 int attr spinnerDropDownItemStyle 0x0
-int attr spinnerMode 0x0
 int attr spinnerStyle 0x0
 int attr splitTrack 0x0
 int attr splitWidth 0x0
@@ -1976,7 +1986,6 @@ int attr tooltipForegroundColor 0x0
 int attr tooltipFrameBackground 0x0
 int attr tooltipStyle 0x0
 int attr tooltipText 0x0
-int attr topBottomBarArrowSize 0x0
 int attr topInsetScrimEnabled 0x0
 int attr touchAnchorId 0x0
 int attr touchAnchorSide 0x0
@@ -2034,14 +2043,6 @@ int attr triggerReceiver 0x0
 int attr triggerSlack 0x0
 int attr ttcIndex 0x0
 int attr tv_fontFamily 0x0
-int attr unselected_color 0x0
-int attr unselected_drawable 0x0
-int attr unselected_height 0x0
-int attr unselected_padding_bottom 0x0
-int attr unselected_padding_left 0x0
-int attr unselected_padding_right 0x0
-int attr unselected_padding_top 0x0
-int attr unselected_width 0x0
 int attr upDuration 0x0
 int attr useCompatPadding 0x0
 int attr useDrawerArrowDrawable 0x0
@@ -2056,7 +2057,6 @@ int attr viewTransitionMode 0x0
 int attr viewTransitionOnCross 0x0
 int attr viewTransitionOnNegativeCross 0x0
 int attr viewTransitionOnPositiveCross 0x0
-int attr visibility 0x0
 int attr visibilityMode 0x0
 int attr voiceIcon 0x0
 int attr warmth 0x0
@@ -2977,8 +2977,6 @@ int color lime_A100 0x0
 int color lime_A200 0x0
 int color lime_A400 0x0
 int color lime_A700 0x0
-int color link_text_material_dark 0x0
-int color link_text_material_light 0x0
 int color m3_appbar_overlay_color 0x0
 int color m3_assist_chip_icon_tint_color 0x0
 int color m3_assist_chip_stroke_color 0x0
@@ -4665,11 +4663,9 @@ int dimen abc_action_bar_content_inset_material 0x0
 int dimen abc_action_bar_content_inset_with_nav 0x0
 int dimen abc_action_bar_default_height_material 0x0
 int dimen abc_action_bar_default_padding_end_material 0x0
-int dimen abc_action_bar_default_padding_material 0x0
 int dimen abc_action_bar_default_padding_start_material 0x0
 int dimen abc_action_bar_elevation_material 0x0
 int dimen abc_action_bar_icon_vertical_padding_material 0x0
-int dimen abc_action_bar_navigation_padding_start_material 0x0
 int dimen abc_action_bar_overflow_padding_end_material 0x0
 int dimen abc_action_bar_overflow_padding_start_material 0x0
 int dimen abc_action_bar_progress_bar_size 0x0
@@ -4854,10 +4850,6 @@ int dimen design_tab_scrollable_min_width 0x0
 int dimen design_tab_text_size 0x0
 int dimen design_tab_text_size_2line 0x0
 int dimen design_textinput_caption_translate_y 0x0
-int dimen dialog_fixed_height_major 0x0
-int dimen dialog_fixed_height_minor 0x0
-int dimen dialog_fixed_width_major 0x0
-int dimen dialog_fixed_width_minor 0x0
 int dimen disabled_alpha_material_dark 0x0
 int dimen disabled_alpha_material_light 0x0
 int dimen emui_master_body_2 0x0
@@ -5640,7 +5632,6 @@ int drawable abc_switch_track_mtrl_alpha 0x0
 int drawable abc_tab_indicator_material 0x0
 int drawable abc_tab_indicator_mtrl_alpha 0x0
 int drawable abc_text_cursor_material 0x0
-int drawable abc_text_cursor_mtrl_alpha 0x0
 int drawable abc_text_select_handle_left_mtrl 0x0
 int drawable abc_text_select_handle_left_mtrl_dark 0x0
 int drawable abc_text_select_handle_left_mtrl_light 0x0
@@ -6160,7 +6151,6 @@ int drawable ic_zoom_in 0x0
 int drawable icon_filter 0x0
 int drawable icon_video_disp 0x0
 int drawable img_face 0x0
-int drawable indicator_corner_bg 0x0
 int drawable information 0x0
 int drawable ipad_mini 0x0
 int drawable iphone_mask 0x0
@@ -6461,33 +6451,24 @@ int font pnuregular 0x0
 int font quicksand 0x0
 int id ADD 0x0
 int id ALWAYS 0x0
-int id Accordion 0x0
 int id BOTTOM_END 0x0
 int id BOTTOM_START 0x0
-int id Background2Foreground 0x0
 int id ButtonCancelPick 0x0
 int id CIRCLE 0x0
 int id CLEAR 0x0
 int id ChasingDots 0x0
 int id Circle 0x0
 int id CubeGrid 0x0
-int id CubeIn 0x0
 int id DARKEN 0x0
 int id DST 0x0
 int id DST_ATOP 0x0
 int id DST_IN 0x0
 int id DST_OUT 0x0
 int id DST_OVER 0x0
-int id Default 0x0
-int id DepthPage 0x0
 int id DoubleBounce 0x0
 int id FLOWER 0x0
-int id Fade 0x0
 int id FadingCircle 0x0
-int id FlipHorizontal 0x0
-int id FlipPage 0x0
 int id FoldingCube 0x0
-int id Foreground2Background 0x0
 int id LIGHTEN 0x0
 int id MULTIPLY 0x0
 int id MultiplePulse 0x0
@@ -6499,8 +6480,6 @@ int id OVERLAY 0x0
 int id Pulse 0x0
 int id PulseRing 0x0
 int id RelativeLayout1 0x0
-int id RotateDown 0x0
-int id RotateUp 0x0
 int id RotatingCircle 0x0
 int id RotatingPlane 0x0
 int id SCREEN 0x0
@@ -6512,18 +6491,13 @@ int id SRC_ATOP 0x0
 int id SRC_IN 0x0
 int id SRC_OUT 0x0
 int id SRC_OVER 0x0
-int id Stack 0x0
 int id TOP_END 0x0
 int id TOP_START 0x0
-int id Tablet 0x0
 int id ThreeBounce 0x0
 int id UNDER 0x0
 int id WanderingCubes 0x0
 int id Wave 0x0
 int id XOR 0x0
-int id ZoomIn 0x0
-int id ZoomOut 0x0
-int id ZoomOutSlide 0x0
 int id _byte 0x0
 int id _double 0x0
 int id _float 0x0
@@ -6634,6 +6608,7 @@ int id autoCompleteToEnd 0x0
 int id autoCompleteToStart 0x0
 int id automatic 0x0
 int id back 0x0
+int id back_and_forth 0x0
 int id background 0x0
 int id background_back 0x0
 int id background_edit 0x0
@@ -6776,6 +6751,7 @@ int id clockwise 0x0
 int id close 0x0
 int id closest 0x0
 int id collapseActionView 0x0
+int id color 0x0
 int id color_indicator 0x0
 int id com_facebook_body_frame 0x0
 int id com_facebook_button_xout 0x0
@@ -6809,23 +6785,14 @@ int id cropImageView 0x0
 int id currentState 0x0
 int id custom 0x0
 int id customPanel 0x0
-int id custom_indicator 0x0
 int id cut 0x0
-int id daimajia_indicator_wrapper 0x0
 int id daimajia_slider_image 0x0
-int id daimajia_slider_viewpager 0x0
 int id dark 0x0
 int id date_picker_actions 0x0
 int id decelerate 0x0
 int id decelerateAndComplete 0x0
 int id decor_content_parent 0x0
 int id default_activity_button 0x0
-int id default_bottom_left_indicator 0x0
-int id default_bottom_right_indicator 0x0
-int id default_center_bottom_indicator 0x0
-int id default_center_top_indicator 0x0
-int id default_center_top_left_indicator 0x0
-int id default_center_top_right_indicator 0x0
 int id default_home_screen_panel 0x0
 int id delete_address 0x0
 int id deltaRelative 0x0
@@ -6837,7 +6804,6 @@ int id design_menu_item_action_area_stub 0x0
 int id design_menu_item_text 0x0
 int id design_navigation_view 0x0
 int id determinate 0x0
-int id dialog 0x0
 int id dialog_back_image_view 0x0
 int id dialog_button 0x0
 int id dialog_constraint_layout 0x0
@@ -6859,7 +6825,7 @@ int id dragLeft 0x0
 int id dragRight 0x0
 int id dragStart 0x0
 int id dragUp 0x0
-int id dropdown 0x0
+int id drop 0x0
 int id dropdown_menu 0x0
 int id easeIn 0x0
 int id easeInOut 0x0
@@ -6962,6 +6928,7 @@ int id hms_progress_text 0x0
 int id home 0x0
 int id homeAsUp 0x0
 int id honorRequest 0x0
+int id horizontal 0x0
 int id horizontal_only 0x0
 int id hour 0x0
 int id icon 0x0
@@ -7082,6 +7049,7 @@ int id item1 0x0
 int id item2 0x0
 int id item_touch_helper_previous_elevation 0x0
 int id ivBack 0x0
+int id ivBanner 0x0
 int id ivDelete 0x0
 int id ivDone 0x0
 int id ivImage 0x0
@@ -7539,7 +7507,6 @@ int id rd_btn_price_high_low 0x0
 int id rd_btn_price_low_high 0x0
 int id rd_btn_rating 0x0
 int id rd_btn_whats_new 0x0
-int id rect 0x0
 int id rectangle 0x0
 int id rectangles 0x0
 int id recyclerView 0x0
@@ -7626,6 +7593,7 @@ int id save_scale_type 0x0
 int id savelayout 0x0
 int id sawtooth 0x0
 int id scale 0x0
+int id scale_down 0x0
 int id screen 0x0
 int id scroll 0x0
 int id scrollIndicatorDown 0x0
@@ -7730,6 +7698,7 @@ int id stop 0x0
 int id stretch 0x0
 int id submenuarrow 0x0
 int id submit_area 0x0
+int id swap 0x0
 int id swipeContainer 0x0
 int id swipeRefreshLayout 0x0
 int id swipyrefreshlayout 0x0
@@ -7772,6 +7741,7 @@ int id textinput_helper_text 0x0
 int id textinput_placeholder 0x0
 int id textinput_prefix_text 0x0
 int id textinput_suffix_text 0x0
+int id thinWorm 0x0
 int id third_app_dl_progress_text 0x0
 int id third_app_dl_progressbar 0x0
 int id third_app_warn_text 0x0
@@ -7942,6 +7912,7 @@ int id user_data 0x0
 int id verify 0x0
 int id version_layout 0x0
 int id version_textview 0x0
+int id vertical 0x0
 int id vertical_only 0x0
 int id videoView 0x0
 int id view 0x0
@@ -7965,6 +7936,7 @@ int id wide 0x0
 int id withText 0x0
 int id with_icon 0x0
 int id withinBounds 0x0
+int id worm 0x0
 int id wrap 0x0
 int id wrap_content 0x0
 int id wrap_content_constrained 0x0
@@ -8095,7 +8067,6 @@ int layout abc_screen_toolbar 0x0
 int layout abc_search_dropdown_item_icons_2line 0x0
 int layout abc_search_view 0x0
 int layout abc_select_dialog_material 0x0
-int layout abc_simple_dropdown_hint 0x0
 int layout abc_tooltip 0x0
 int layout activity_album_photo 0x0
 int layout activity_albumimages 0x0
@@ -8260,7 +8231,6 @@ int layout hwpush_trans_activity 0x0
 int layout image_view_zoom_bottom_sheet_layout 0x0
 int layout ime_base_split_test_activity 0x0
 int layout ime_secondary_split_test_activity 0x0
-int layout indicator_layout 0x0
 int layout item_facebook_album 0x0
 int layout item_facebook_album_photo 0x0
 int layout item_list 0x0
@@ -8406,8 +8376,8 @@ int layout other_dynamic_fragment 0x0
 int layout otp_fragment 0x0
 int layout overview_panel 0x0
 int layout pager_item 0x0
+int layout printphoto_slider_layout 0x0
 int layout region_name_item 0x0
-int layout render_type_default 0x0
 int layout render_type_text 0x0
 int layout request_name_item 0x0
 int layout row_background 0x0
@@ -8437,7 +8407,6 @@ int layout select_dialog_multichoice_material 0x0
 int layout select_dialog_singlechoice_material 0x0
 int layout shipper_set_activity 0x0
 int layout simple_spinner_item 0x0
-int layout slider_layout 0x0
 int layout sp_example 0x0
 int layout ssp_example 0x0
 int layout sub_row_mall 0x0
@@ -9437,9 +9406,6 @@ int string zipcode 0x0
 int style AdsAppTheme 0x0
 int style AlertDialog_AppCompat 0x0
 int style AlertDialog_AppCompat_Light 0x0
-int style AndroidImageSlider_Attractive_Rect_Blue 0x0
-int style AndroidImageSlider_Corner_Oval_Orange 0x0
-int style AndroidImageSlider_Magnifier_Oval_Black 0x0
 int style Animation_AppCompat_Dialog 0x0
 int style Animation_AppCompat_DropDownUp 0x0
 int style Animation_AppCompat_Tooltip 0x0
@@ -9696,7 +9662,6 @@ int style Base_Widget_AppCompat_SearchView_ActionBar 0x0
 int style Base_Widget_AppCompat_SeekBar 0x0
 int style Base_Widget_AppCompat_SeekBar_Discrete 0x0
 int style Base_Widget_AppCompat_Spinner 0x0
-int style Base_Widget_AppCompat_Spinner_DropDown_ActionBar 0x0
 int style Base_Widget_AppCompat_Spinner_Underlined 0x0
 int style Base_Widget_AppCompat_TextView 0x0
 int style Base_Widget_AppCompat_TextView_SpinnerItem 0x0
@@ -9870,8 +9835,6 @@ int style Platform_ThemeOverlay_AppCompat_Dark 0x0
 int style Platform_ThemeOverlay_AppCompat_Light 0x0
 int style Platform_V11_AppCompat 0x0
 int style Platform_V11_AppCompat_Light 0x0
-int style Platform_V12_AppCompat 0x0
-int style Platform_V12_AppCompat_Light 0x0
 int style Platform_V14_AppCompat 0x0
 int style Platform_V14_AppCompat_Light 0x0
 int style Platform_V21_AppCompat 0x0
@@ -9881,7 +9844,6 @@ int style Platform_V25_AppCompat_Light 0x0
 int style Platform_Widget_AppCompat_Spinner 0x0
 int style RtlOverlay_DialogWindowTitle_AppCompat 0x0
 int style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem 0x0
-int style RtlOverlay_Widget_AppCompat_ActionButton_Overflow 0x0
 int style RtlOverlay_Widget_AppCompat_DialogTitle_Icon 0x0
 int style RtlOverlay_Widget_AppCompat_PopupMenuItem 0x0
 int style RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup 0x0
@@ -9895,7 +9857,6 @@ int style RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 0x0
 int style RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 0x0
 int style RtlOverlay_Widget_AppCompat_Search_DropDown_Query 0x0
 int style RtlOverlay_Widget_AppCompat_Search_DropDown_Text 0x0
-int style RtlOverlay_Widget_AppCompat_Toolbar_Button_Navigation 0x0
 int style RtlUnderlay_Widget_AppCompat_ActionButton 0x0
 int style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow 0x0
 int style ShapeAppearanceOverlay 0x0
@@ -12011,18 +11972,15 @@ int styleable Dialog_di_titleTextAppearance 32
 int styleable Dialog_di_titleTextColor 33
 int[] styleable Drag { 0x0 }
 int styleable Drag_handle_id 0
-int[] styleable DrawerArrowToggle { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int[] styleable DrawerArrowToggle { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable DrawerArrowToggle_arrowHeadLength 0
 int styleable DrawerArrowToggle_arrowShaftLength 1
 int styleable DrawerArrowToggle_barLength 2
-int styleable DrawerArrowToggle_barSize 3
-int styleable DrawerArrowToggle_color 4
-int styleable DrawerArrowToggle_drawableSize 5
-int styleable DrawerArrowToggle_gapBetweenBars 6
-int styleable DrawerArrowToggle_middleBarArrowSize 7
-int styleable DrawerArrowToggle_spinBars 8
-int styleable DrawerArrowToggle_thickness 9
-int styleable DrawerArrowToggle_topBottomBarArrowSize 10
+int styleable DrawerArrowToggle_color 3
+int styleable DrawerArrowToggle_drawableSize 4
+int styleable DrawerArrowToggle_gapBetweenBars 5
+int styleable DrawerArrowToggle_spinBars 6
+int styleable DrawerArrowToggle_thickness 7
 int[] styleable DrawerLayout { 0x0 }
 int styleable DrawerLayout_elevation 0
 int[] styleable EditText { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
@@ -12879,29 +12837,23 @@ int styleable OnSwipe_springStopThreshold 15
 int styleable OnSwipe_touchAnchorId 16
 int styleable OnSwipe_touchAnchorSide 17
 int styleable OnSwipe_touchRegionId 18
-int[] styleable PagerIndicator { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
-int styleable PagerIndicator_padding_bottom 0
-int styleable PagerIndicator_padding_left 1
-int styleable PagerIndicator_padding_right 2
-int styleable PagerIndicator_padding_top 3
-int styleable PagerIndicator_selected_color 4
-int styleable PagerIndicator_selected_drawable 5
-int styleable PagerIndicator_selected_height 6
-int styleable PagerIndicator_selected_padding_bottom 7
-int styleable PagerIndicator_selected_padding_left 8
-int styleable PagerIndicator_selected_padding_right 9
-int styleable PagerIndicator_selected_padding_top 10
-int styleable PagerIndicator_selected_width 11
-int styleable PagerIndicator_shape 12
-int styleable PagerIndicator_unselected_color 13
-int styleable PagerIndicator_unselected_drawable 14
-int styleable PagerIndicator_unselected_height 15
-int styleable PagerIndicator_unselected_padding_bottom 16
-int styleable PagerIndicator_unselected_padding_left 17
-int styleable PagerIndicator_unselected_padding_right 18
-int styleable PagerIndicator_unselected_padding_top 19
-int styleable PagerIndicator_unselected_width 20
-int styleable PagerIndicator_visibility 21
+int[] styleable PageIndicatorView { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable PageIndicatorView_piv_animationDuration 0
+int styleable PageIndicatorView_piv_animationType 1
+int styleable PageIndicatorView_piv_autoVisibility 2
+int styleable PageIndicatorView_piv_count 3
+int styleable PageIndicatorView_piv_dynamicCount 4
+int styleable PageIndicatorView_piv_interactiveAnimation 5
+int styleable PageIndicatorView_piv_orientation 6
+int styleable PageIndicatorView_piv_padding 7
+int styleable PageIndicatorView_piv_radius 8
+int styleable PageIndicatorView_piv_rtl_mode 9
+int styleable PageIndicatorView_piv_scaleFactor 10
+int styleable PageIndicatorView_piv_select 11
+int styleable PageIndicatorView_piv_selectedColor 12
+int styleable PageIndicatorView_piv_strokeWidth 13
+int styleable PageIndicatorView_piv_unselectedColor 14
+int styleable PageIndicatorView_piv_viewPager 15
 int[] styleable Pinview { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable Pinview_cursorVisible 0
 int styleable Pinview_forceKeyboard 1
@@ -13192,11 +13144,26 @@ int styleable Slider_trackColor 44
 int styleable Slider_trackColorActive 45
 int styleable Slider_trackColorInactive 46
 int styleable Slider_trackHeight 47
-int[] styleable SliderLayout { 0x0, 0x0, 0x0, 0x0 }
-int styleable SliderLayout_auto_cycle 0
-int styleable SliderLayout_indicator_visibility 1
-int styleable SliderLayout_pager_animation 2
-int styleable SliderLayout_pager_animation_span 3
+int[] styleable SliderView { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable SliderView_sliderAnimationDuration 0
+int styleable SliderView_sliderAutoCycleDirection 1
+int styleable SliderView_sliderAutoCycleEnabled 2
+int styleable SliderView_sliderIndicatorAnimationDuration 3
+int styleable SliderView_sliderIndicatorEnabled 4
+int styleable SliderView_sliderIndicatorGravity 5
+int styleable SliderView_sliderIndicatorMargin 6
+int styleable SliderView_sliderIndicatorMarginBottom 7
+int styleable SliderView_sliderIndicatorMarginLeft 8
+int styleable SliderView_sliderIndicatorMarginRight 9
+int styleable SliderView_sliderIndicatorMarginTop 10
+int styleable SliderView_sliderIndicatorOrientation 11
+int styleable SliderView_sliderIndicatorPadding 12
+int styleable SliderView_sliderIndicatorRadius 13
+int styleable SliderView_sliderIndicatorRtlMode 14
+int styleable SliderView_sliderIndicatorSelectedColor 15
+int styleable SliderView_sliderIndicatorUnselectedColor 16
+int styleable SliderView_sliderScrollTimeInSec 17
+int styleable SliderView_sliderStartAutoCycle 18
 int[] styleable SmileRating { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable SmileRating_angryColor 0
 int styleable SmileRating_drawingColor 1
@@ -13255,44 +13222,36 @@ int styleable SnackbarLayout_shapeAppearanceOverlay 9
 int[] styleable SpinKitView { 0x0, 0x0 }
 int styleable SpinKitView_SpinKit_Color 0
 int styleable SpinKitView_SpinKit_Style 1
-int[] styleable Spinner { 0x10100d4, 0x10102ac, 0x1010175, 0x10102ad, 0x1010262, 0x10100b2, 0x10100af, 0x1010140, 0x101013f, 0x1010176, 0x101017b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
-int styleable Spinner_android_background 0
-int styleable Spinner_android_dropDownHorizontalOffset 1
-int styleable Spinner_android_dropDownSelector 2
-int styleable Spinner_android_dropDownVerticalOffset 3
-int styleable Spinner_android_dropDownWidth 4
-int styleable Spinner_android_entries 5
-int styleable Spinner_android_gravity 6
-int styleable Spinner_android_minHeight 7
-int styleable Spinner_android_minWidth 8
-int styleable Spinner_android_popupBackground 9
-int styleable Spinner_android_prompt 10
-int styleable Spinner_disableChildrenWhenDisabled 11
-int styleable Spinner_popupPromptView 12
-int styleable Spinner_popupTheme 13
-int styleable Spinner_prompt 14
-int styleable Spinner_spinnerMode 15
-int styleable Spinner_spn_arrowAnimClockwise 16
-int styleable Spinner_spn_arrowAnimDuration 17
-int styleable Spinner_spn_arrowColor 18
-int styleable Spinner_spn_arrowInterpolator 19
-int styleable Spinner_spn_arrowPadding 20
-int styleable Spinner_spn_arrowSize 21
-int styleable Spinner_spn_arrowSwitchMode 22
-int styleable Spinner_spn_disableChildrenWhenDisabled 23
-int styleable Spinner_spn_dividerAnimDuration 24
-int styleable Spinner_spn_dividerColor 25
-int styleable Spinner_spn_dividerHeight 26
-int styleable Spinner_spn_dividerPadding 27
-int styleable Spinner_spn_label 28
-int styleable Spinner_spn_labelEllipsize 29
-int styleable Spinner_spn_labelEnable 30
-int styleable Spinner_spn_labelPadding 31
-int styleable Spinner_spn_labelTextAppearance 32
-int styleable Spinner_spn_labelTextColor 33
-int styleable Spinner_spn_labelTextSize 34
-int styleable Spinner_spn_popupItemAnimOffset 35
-int styleable Spinner_spn_popupItemAnimation 36
+int[] styleable Spinner { 0x1010262, 0x10100b2, 0x10100af, 0x1010140, 0x101013f, 0x1010176, 0x101017b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable Spinner_android_dropDownWidth 0
+int styleable Spinner_android_entries 1
+int styleable Spinner_android_gravity 2
+int styleable Spinner_android_minHeight 3
+int styleable Spinner_android_minWidth 4
+int styleable Spinner_android_popupBackground 5
+int styleable Spinner_android_prompt 6
+int styleable Spinner_popupTheme 7
+int styleable Spinner_spn_arrowAnimClockwise 8
+int styleable Spinner_spn_arrowAnimDuration 9
+int styleable Spinner_spn_arrowColor 10
+int styleable Spinner_spn_arrowInterpolator 11
+int styleable Spinner_spn_arrowPadding 12
+int styleable Spinner_spn_arrowSize 13
+int styleable Spinner_spn_arrowSwitchMode 14
+int styleable Spinner_spn_disableChildrenWhenDisabled 15
+int styleable Spinner_spn_dividerAnimDuration 16
+int styleable Spinner_spn_dividerColor 17
+int styleable Spinner_spn_dividerHeight 18
+int styleable Spinner_spn_dividerPadding 19
+int styleable Spinner_spn_label 20
+int styleable Spinner_spn_labelEllipsize 21
+int styleable Spinner_spn_labelEnable 22
+int styleable Spinner_spn_labelPadding 23
+int styleable Spinner_spn_labelTextAppearance 24
+int styleable Spinner_spn_labelTextColor 25
+int styleable Spinner_spn_labelTextSize 26
+int styleable Spinner_spn_popupItemAnimOffset 27
+int styleable Spinner_spn_popupItemAnimation 28
 int[] styleable State { 0x10100d0, 0x0 }
 int styleable State_android_id 0
 int styleable State_constraints 1
@@ -13666,9 +13625,6 @@ int[] styleable ThemeEnforcement { 0x1010034, 0x0, 0x0 }
 int styleable ThemeEnforcement_android_textAppearance 0
 int styleable ThemeEnforcement_enforceMaterialTheme 1
 int styleable ThemeEnforcement_enforceTextAppearance 2
-int[] styleable Themes { 0x0, 0x0 }
-int styleable Themes_PagerIndicatorStyle 0
-int styleable Themes_SliderStyle 1
 int[] styleable TimePicker { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable TimePicker_tp_24Hour 0
 int styleable TimePicker_tp_animDuration 1
@@ -13778,7 +13734,7 @@ int styleable VerticalSlidingPanel_overlay 3
 int styleable VerticalSlidingPanel_panelHeight 4
 int styleable VerticalSlidingPanel_parallaxOffset 5
 int styleable VerticalSlidingPanel_shadowHeight 6
-int[] styleable View { 0x10100d4, 0x101046b, 0x101046c, 0x1010440, 0x10102aa, 0x10100e0, 0x10100da, 0x10103b2, 0x1010140, 0x101013f, 0x10100d5, 0x10100d9, 0x10103b4, 0x10100d6, 0x10100d8, 0x10103b3, 0x10100d7, 0x10103a5, 0x10102a9, 0x10102a8, 0x1010063, 0x101007f, 0x1010215, 0x1010119, 0x10103b1, 0x10103b0, 0x1010000, 0x10100dc, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int[] styleable View { 0x10100d4, 0x101046b, 0x101046c, 0x1010440, 0x10102aa, 0x10100e0, 0x10100da, 0x10103b2, 0x1010140, 0x101013f, 0x10100d5, 0x10100d9, 0x10103b4, 0x10100d6, 0x10100d8, 0x10103b3, 0x10100d7, 0x10103a5, 0x10102a9, 0x10102a8, 0x1010063, 0x101007f, 0x1010215, 0x1010119, 0x10103b1, 0x10103b0, 0x1010000, 0x10100dc, 0x0, 0x0, 0x0 }
 int styleable View_android_background 0
 int styleable View_android_backgroundTint 1
 int styleable View_android_backgroundTintMode 2
@@ -13807,11 +13763,9 @@ int styleable View_android_textAlignment 24
 int styleable View_android_textDirection 25
 int styleable View_android_theme 26
 int styleable View_android_visibility 27
-int styleable View_backgroundTint 28
-int styleable View_backgroundTintMode 29
-int styleable View_paddingEnd 30
-int styleable View_paddingStart 31
-int styleable View_theme 32
+int styleable View_paddingEnd 28
+int styleable View_paddingStart 29
+int styleable View_theme 30
 int[] styleable ViewBackgroundHelper { 0x10100d4, 0x0, 0x0 }
 int styleable ViewBackgroundHelper_android_background 0
 int styleable ViewBackgroundHelper_backgroundTint 1
