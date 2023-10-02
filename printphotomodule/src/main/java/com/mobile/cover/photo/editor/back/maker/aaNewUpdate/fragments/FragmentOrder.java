@@ -37,7 +37,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.ads.narayan.ads.nativeAds.NarayanNativeAdView;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
@@ -70,7 +69,6 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 
 public class FragmentOrder extends Fragment {
     ProgressDialog progressDialog;
-    NarayanNativeAdView aperoNativeAds;
     LinearLayout id_text_view, id_ll_sign_in, ll_sign_in_text, id_ll;
     TextView id_text_view_messess, tv_login1, tv_login;
     RecyclerView recyclerview;
@@ -100,14 +98,9 @@ public class FragmentOrder extends Fragment {
         findViews(v);
         setDimens();
         intView();
-        loadNativeads(v);
         Share.upload_success = false;
         return v;
 
-    }
-
-    private void loadNativeads(View view) {
-        aperoNativeAds.loadNativeAd(getActivity(), getString(R.string.native_ad_unit_id));
     }
 
 
@@ -137,7 +130,6 @@ public class FragmentOrder extends Fragment {
         if (SharedPrefs.getBoolean(getContext(), Share.key_reg_suc)) {
             id_ll_sign_in.setVisibility(View.GONE);
             ll_sign_in_text.setVisibility(View.GONE);
-            aperoNativeAds.setVisibility(View.GONE);
 //            if (Share.order_simplerespons != null) {
 //                id_ll_sign_in.setVisibility(View.GONE);
 //                id_text_view.setVisibility(View.VISIBLE);
@@ -148,7 +140,6 @@ public class FragmentOrder extends Fragment {
             getorder();
 //            }
         } else {
-            aperoNativeAds.setVisibility(View.VISIBLE);
             id_ll_sign_in.setVisibility(View.VISIBLE);
             ll_sign_in_text.setVisibility(View.VISIBLE);
         }
@@ -405,7 +396,6 @@ public class FragmentOrder extends Fragment {
 
     private void findViews(View v) {
         id_text_view = v.findViewById(R.id.id_text_view);
-        aperoNativeAds = v.findViewById(R.id.aperoNativeAds);
         tv_login = v.findViewById(R.id.tv_login);
         tv_login.setOnClickListener(new View.OnClickListener() {
             @Override

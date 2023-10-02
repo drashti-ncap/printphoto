@@ -36,11 +36,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 
-import com.ads.narayan.admob.AppOpenManager;
-import com.ads.narayan.ads.NarayanAd;
-import com.ads.narayan.ads.NarayanAdCallback;
-import com.ads.narayan.ads.wrapper.NarayanAdError;
-import com.ads.narayan.ads.wrapper.NarayanInterstitialAd;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
@@ -106,7 +101,6 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     private PendingIntent pendingIntent;
     private Context mContext;
     private ProgressDialog pd = null;
-    public static NarayanInterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,15 +109,6 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_main);
         mContext = HomeMainActivity.this;
-        AppOpenManager.getInstance().setEnableScreenContentCallback(true);
-        AppOpenManager.getInstance().setFullScreenContentCallback(new FullScreenContentCallback() {
-            @Override
-            public void onAdShowedFullScreenContent() {
-                super.onAdShowedFullScreenContent();
-                Log.e("AppOpenManager", "onAdShowedFullScreenContent: ");
-
-            }
-        });
         findViews();
         toolbar = findViewById(R.id.toolbar);
         toolbar.setVisibility(View.GONE);
@@ -211,10 +196,6 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
-    }
-
-    private void loadAdInterstitial() {
-        mInterstitialAd = NarayanAd.getInstance().getInterstitialAds(this, getString(R.string.inter_ad_unit_id));
     }
 
     private void handelMainData(new_main_model new_main_model) {
@@ -426,7 +407,6 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onResume() {
         super.onResume();
-        loadAdInterstitial();
         fragment_onresume_selection();
         nudge_count();
         Log.e("USERPROFILE", "onResume: " + Share.upload_success);
@@ -472,6 +452,14 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             cartclick();
+        }else {
+            selected = 0;
+            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            homeclick();
         }
     }
 
@@ -717,36 +705,11 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void call_interestial_ads() {
-        if (mInterstitialAd.isReady()) {
-            NarayanAd.getInstance().forceShowInterstitial(this, mInterstitialAd, new NarayanAdCallback() {
-                @Override
-                public void onNextAction() {
-                    finish();
-                    ActivityCompat.finishAffinity(HomeMainActivity.this);
-                    Intent intent = new Intent(HomeMainActivity.this, finished_activity.class);
-                    startActivity(intent);
-                }
-
-                @Override
-                public void onAdFailedToShow(@Nullable NarayanAdError adError) {
-                    super.onAdFailedToShow(adError);
-                    Log.i(TAG, "onAdFailedToShow:" + adError.getMessage());
-                }
-
-                @Override
-                public void onInterstitialShow() {
-                    super.onInterstitialShow();
-                    Log.d(TAG, "onInterstitialShow");
-                }
-            }, true);
-        } else {
-            loadAdInterstitial();
             finish();
             ActivityCompat.finishAffinity(HomeMainActivity.this);
             Intent intent = new Intent(HomeMainActivity.this, finished_activity.class);
             startActivity(intent);
 
-        }
     }
 
     private void rate_app() {

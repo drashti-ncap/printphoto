@@ -53,7 +53,7 @@ android {
     }
     ndkVersion '23.0.7123448'
 
-    flavorDimensions "default"
+   /* flavorDimensions "default"
     productFlavors {
         appDev {
             //use id test when dev
@@ -75,28 +75,28 @@ android {
             buildConfigField "String", "ads_open_app", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "Boolean", "env_dev", "false"
         }
-    }
+    }*/
 }
-afterEvaluate {
-    println(components*.name)
-    publishing {
-        publications {
-            appDevDebug(MavenPublication) {
-                from components.appDevDebug
-
-                groupId = group = 'com.github.drashti-ncap'
-                artifactId = 'printphotomodule'
-            }
-
-//            appProdRelease(MavenPublication) {
-//                from components.appProdRelease
+//afterEvaluate {
+//    println(components*.name)
+//    publishing {
+//        publications {
+//            appDevDebug(MavenPublication) {
+//                from components.appDevDebug
 //
 //                groupId = group = 'com.github.drashti-ncap'
 //                artifactId = 'printphotomodule'
 //            }
-        }
-    }
-}
+//
+////            appProdRelease(MavenPublication) {
+////                from components.appProdRelease
+////
+////                groupId = group = 'com.github.drashti-ncap'
+////                artifactId = 'printphotomodule'
+////            }
+//        }
+//    }
+//}
 
 ext {
     permissionsDispatcherVersion = '2.1.2'
@@ -108,7 +108,7 @@ dependencies {
 
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 //    implementation 'apero-inhouse:apero-ads:1.8.0-alpha01'
-    implementation 'com.github.Ashwani-dev123:NarayanAds:1.0.6'
+//    implementation 'com.github.Ashwani-dev123:NarayanAds:1.0.6'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

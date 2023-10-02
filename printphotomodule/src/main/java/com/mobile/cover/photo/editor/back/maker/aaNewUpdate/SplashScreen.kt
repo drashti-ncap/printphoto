@@ -17,7 +17,6 @@ import android.text.format.Formatter
 import android.util.Base64
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.ads.narayan.admob.AppOpenManager
 import com.facebook.applinks.AppLinkData
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -83,7 +82,6 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
         if(intent!=null) {
             isOffer = intent.getBooleanExtra(ARG_IS_OFFER, false)
         }
-        AppOpenManager.getInstance().setEnableScreenContentCallback(true)
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context)
         OneSignal.addPermissionObserver(this);
         loggers()
@@ -283,15 +281,14 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
                 .equals("", ignoreCase = true)
         ) {
             val intent = Intent(context, Select_region::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+           // intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.putExtra(ARG_IS_CART, isCart)
             intent.putExtra(ARG_IS_OFFER, isOffer)
             context.startActivity(intent)
         } else {
-            Share.countryCodeValue =
-                SharedPrefs.getString(context, SharedPrefs.country_code)
+            Share.countryCodeValue = SharedPrefs.getString(context, SharedPrefs.country_code)
             val intent = Intent(context, HomeMainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.putExtra(ARG_IS_CART, isCart)
             intent.putExtra(ARG_IS_OFFER, isOffer)
             context.startActivity(intent)

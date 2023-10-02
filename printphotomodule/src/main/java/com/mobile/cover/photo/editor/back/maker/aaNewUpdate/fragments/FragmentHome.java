@@ -37,10 +37,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import com.ads.narayan.ads.NarayanAd;
-import com.ads.narayan.ads.NarayanAdCallback;
-import com.ads.narayan.ads.wrapper.NarayanAdError;
 import com.bumptech.glide.Glide;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
@@ -87,7 +83,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.mInterstitialAd;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.UtilsKt.sendWhatsappDirectMessageHome;
 
@@ -125,9 +120,6 @@ public class FragmentHome extends Fragment {
         HomeMainActivity.iv_logout.setVisibility(View.GONE);
         findViews(v);
         getMainData();
-
-
-        configMediationProvider();
         iv_help_wa.setOnClickListener(new OnSingleClickListener() {
             @Override
             public void onSingleClick(View v) {
@@ -144,9 +136,9 @@ public class FragmentHome extends Fragment {
         Share.mall_main_category_data.clear();
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
-        Log.e(TAG, "getMainData: 1=="+SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
-        Log.e(TAG, "getMainData: 2=="+SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id));
-        Log.e(TAG, "getMainData: 3=="+Locale.getDefault().getLanguage());
+        Log.e(TAG, "getMainData: 1==" + SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+        Log.e(TAG, "getMainData: 2==" + SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id));
+        Log.e(TAG, "getMainData: 3==" + Locale.getDefault().getLanguage());
         Call<new_main_model> call = apiService.get_new_MainCatagaries(SharedPrefs.getString(getActivity(), SharedPrefs.country_code), SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id), Locale.getDefault().getLanguage());
 
         call.enqueue(new Callback<new_main_model>() {
@@ -155,15 +147,15 @@ public class FragmentHome extends Fragment {
             public void onResponse(Call<new_main_model> call, Response<new_main_model> response) {
                 if (response.code() == 200) {
                     new_main_model new_main_model = (com.mobile.cover.photo.editor.back.maker.model.new_main_model) response.body();
-                    Log.e("MAINRESPONSE", "onResponse: "+new_main_model.getResponseCode());
+                    Log.e("MAINRESPONSE", "onResponse: " + new_main_model.getResponseCode());
                     if (new_main_model.getResponseCode().equalsIgnoreCase("1")) {
                         Share.main_category_data = new_main_model.getAllChilds();
                         Share.isinternational = new_main_model.getIs_international();
                         Share.symbol = new_main_model.getCurrency_symbol();
 
-                        Log.e("datasize", "onResponse: "+Share.main_category_data.size());
-                        Log.e("datasize", "onResponse: "+Share.isinternational);
-                        Log.e("datasize", "onResponse: "+Share.symbol);
+                        Log.e("datasize", "onResponse: " + Share.main_category_data.size());
+                        Log.e("datasize", "onResponse: " + Share.isinternational);
+                        Log.e("datasize", "onResponse: " + Share.symbol);
                         Share.maincategoryname.clear();
                         Share.click_positions.clear();
                         setHeader();
@@ -301,7 +293,7 @@ public class FragmentHome extends Fragment {
             Intent intent = new Intent(getContext(), ModelListActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
-            DataHelperKt.saveProductId(requireActivity(),Share.notification_category_id);
+            DataHelperKt.saveProductId(requireActivity(), Share.notification_category_id);
 
             intent.putExtra("name", Share.notification_category_name);
             startActivity(intent);
@@ -389,46 +381,12 @@ public class FragmentHome extends Fragment {
     }
 
     public void call_interestial_ads() {
-        Log.e(TAG, "call_interestial_ads: here_frag" );
-        if (mInterstitialAd.isReady()) {
-            NarayanAd.getInstance().forceShowInterstitial(getActivity(), mInterstitialAd, new NarayanAdCallback() {
-                @Override
-                public void onNextAction() {
-                    Log.i(TAG, "onAdClosed: start content and finish main");
-                    getActivity().finish();
-                    ActivityCompat.finishAffinity(getActivity());
-                    Intent intent = new Intent(getActivity(), finished_activity.class);
-                    startActivity(intent);
-                }
-
-                @Override
-                public void onAdFailedToShow(@Nullable NarayanAdError adError) {
-                    super.onAdFailedToShow(adError);
-                    Log.i(TAG, "onAdFailedToShow:" + adError.getMessage());
-                }
-
-                @Override
-                public void onInterstitialShow() {
-                    super.onInterstitialShow();
-                    Log.d(TAG, "onInterstitialShow");
-                }
-            }, true);
-        } else {
-            getActivity().finish();
-            ActivityCompat.finishAffinity(getActivity());
-            Intent intent = new Intent(getActivity(), finished_activity.class);
-            startActivity(intent);
-        }
+        Log.e(TAG, "call_interestial_ads: here_frag");
+        getActivity().finish();
+        ActivityCompat.finishAffinity(getActivity());
+        Intent intent = new Intent(getActivity(), finished_activity.class);
+        startActivity(intent);
     }
-
-    private void
-    configMediationProvider() {
-        idBanner = BuildConfig.ad_banner;
-        idNative = BuildConfig.ad_native;
-        idInter = BuildConfig.ad_interstitial_splash;
-    }
-
-
     private void displayalert() {
         final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -531,8 +489,6 @@ public class FragmentHome extends Fragment {
                 Log.e("data", "DATA LENGTH==>" + Share.main_category_data.size());
 
 
-
-
                 mHomeAdapter = new HomeAdapter(getContext(), Share.main_category_data, (v, position) -> {
                     onItemClick(position);
                 });
@@ -588,7 +544,7 @@ public class FragmentHome extends Fragment {
                 Share.brand_name = Share.main_category_data.get(position).getName();
                 Intent intent = new Intent(getContext(), ModelListActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                DataHelperKt.saveProductId(requireActivity(),Share.main_category_data.get(position).getId());
+                DataHelperKt.saveProductId(requireActivity(), Share.main_category_data.get(position).getId());
                 intent.putExtra("name", Share.main_category_data.get(position).getName());
                 startActivity(intent);
             }
@@ -612,7 +568,7 @@ public class FragmentHome extends Fragment {
                 Share.header_name = Share.main_category_data.get(position).getName();
                 Intent intent = new Intent(getContext(), ModelListActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                DataHelperKt.saveProductId(requireActivity(),Share.main_category_data.get(position).getId());
+                DataHelperKt.saveProductId(requireActivity(), Share.main_category_data.get(position).getId());
                 intent.putExtra("name", Share.main_category_data.get(position).getName());
                 startActivity(intent);
             }
@@ -672,7 +628,7 @@ public class FragmentHome extends Fragment {
                             Share.isinternational = mall_new_main_model.getIs_international();
                             Share.mall_main_category_data = mall_new_main_model.getAllChilds();
 
-                            Log.e(TAG, "onResponse: "+Share.mall_main_category_data );
+                            Log.e(TAG, "onResponse: " + Share.mall_main_category_data);
 
                             setUpMallData();
                         } else {
@@ -709,7 +665,7 @@ public class FragmentHome extends Fragment {
         if (Share.mall_main_category_data != null && !Share.mall_main_category_data.isEmpty()) {
 
             mall_AllChild topPos = Share.mall_main_category_data.get(0);
-            Log.e(TAG, "setUpMallData: "+topPos.getName());
+            Log.e(TAG, "setUpMallData: " + topPos.getName());
             Share.mall_main_category_data.remove(0);
 
             if (topPos.getInternational_app_mall_image() != null) {
@@ -748,7 +704,7 @@ public class FragmentHome extends Fragment {
             mAdapter = new HomeMallAdapter(getActivity(), Share.mall_main_category_data, (v1, position) -> {
                 Share.click_positions.clear();
                 Share.click_positions.add(position);
-                Log.e(TAG, "setUpMallData: "+Share.click_positions);
+                Log.e(TAG, "setUpMallData: " + Share.click_positions);
                 if (Share.mall_main_category_data.get(position).getAllChilds() != null && Share.mall_main_category_data.get(position).getAllChilds().size() > 0) {
                     Share.header_name = Share.mall_main_category_data.get(position).getName();
                     Log.e("LEVEL", "onItemClickLister: " + Share.mall_main_category_data.get(position).getLevel());
@@ -764,7 +720,7 @@ public class FragmentHome extends Fragment {
 
             rv_offer.setVisibility(View.VISIBLE);
             main_card.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             intView();
         }
 

@@ -32,10 +32,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ads.narayan.ads.nativeAds.NarayanNativeAdView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.mobile.cover.photo.editor.back.maker.Alarm_notification.CAlarmReceiver;
-import com.mobile.cover.photo.editor.back.maker.BuildConfig;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.check_stock_main_response;
@@ -82,7 +80,6 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
     int gift1;
     AlarmManager alarmManager;
     FirebaseAnalytics firebaseAnalytics;
-    NarayanNativeAdView aperoNativeAds;
     private PendingIntent pendingIntent;
     private long mLastClickTime;
 
@@ -109,14 +106,10 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
         findViews(v);
         setDimens();
         intView();
-        loadNativeads(v);
         return v;
 
     }
 
-    private void loadNativeads(View view) {
-        aperoNativeAds.loadNativeAd(getActivity(), getString(R.string.native_ad_unit_id));
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -200,7 +193,6 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
         Log.e("key_reg_suc", "intView: ======>" + SharedPrefs.getBoolean(getContext(), Share.key_reg_suc));
         if (SharedPrefs.getBoolean(getContext(), Share.key_reg_suc)) {
             id_ll.setVisibility(View.GONE);
-            aperoNativeAds.setVisibility(View.GONE);
             Share.CartItem_data = null;
             if (Share.CartItem_data != null) {
                 if (upload) {
@@ -282,7 +274,6 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
         } else {
             id_text_view.setVisibility(View.VISIBLE);
-            aperoNativeAds.setVisibility(View.VISIBLE);
             id_ll.setVisibility(View.GONE);
             id_ll_sign_in.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -624,7 +615,6 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
     private void findViews(View v) {
         recyclerview = v.findViewById(R.id.recyclerview);
-        aperoNativeAds = v.findViewById(R.id.aperoNativeAds);
 //        recyclerview.setHasFixedSize(true);
 //        recyclerview.setItemViewCacheSize(25);
 //        recyclerview.setDrawingCacheEnabled(true);

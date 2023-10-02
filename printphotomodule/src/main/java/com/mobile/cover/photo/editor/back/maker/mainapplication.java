@@ -28,15 +28,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.multidex.MultiDexApplication;
 
-import com.ads.narayan.admob.Admob;
-import com.ads.narayan.admob.AppOpenManager;
-import com.ads.narayan.ads.NarayanAd;
-import com.ads.narayan.application.AdsMultiDexApplication;
-import com.ads.narayan.config.AdjustConfig;
-import com.ads.narayan.config.AppsflyerConfig;
-import com.ads.narayan.config.NarayanAdConfig;
-import com.ads.narayan.util.AppUtil;
-import com.ads.narayan.util.SharePreferenceUtils;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.facebook.AccessToken;
@@ -65,7 +56,6 @@ public abstract class mainapplication extends MultiDexApplication {
 
     private static final String APPSFLYER_TOKEN = "rAygu6MHr2HZbf2B2hUhZm";
     public static mainapplication sInstance;
-    protected NarayanAdConfig narayanAdConfig;
     protected List<String> listTestDevice;
 
     public static ArrayList<ImageData> org_selectedImages = new ArrayList();
@@ -148,16 +138,13 @@ public abstract class mainapplication extends MultiDexApplication {
         sInstance = this;
 
         this.listTestDevice = new ArrayList();
-        this.narayanAdConfig = new NarayanAdConfig(this);
-        if (SharePreferenceUtils.getInstallTime(this) == 0L) {
+
+       /* if (SharePreferenceUtils.getInstallTime(this) == 0L) {
             SharePreferenceUtils.setInstallTime(this);
         }
 
-        AppUtil.currentTotalRevenue001Ad = SharePreferenceUtils.getCurrentTotalRevenue001Ad(this);
+        AppUtil.currentTotalRevenue001Ad = SharePreferenceUtils.getCurrentTotalRevenue001Ad(this);*/
 
-        AppOpenManager.getInstance().disableAppResumeWithActivity(SplashScreen.class);
-        Admob.getInstance().setNumToShowAds(0);
-        initApero();
         try {
 
             FirebaseMessaging.getInstance().getToken()
@@ -276,47 +263,6 @@ public abstract class mainapplication extends MultiDexApplication {
             e.printStackTrace();
         }
 
-    }
-
-    private void initApero() {
-        String environment = BuildConfig.env_dev ? NarayanAdConfig.ENVIRONMENT_DEVELOP : NarayanAdConfig.ENVIRONMENT_PRODUCTION;
-        Log.e("ENVIRONMENT", "initApero: "+environment);
-        narayanAdConfig = new NarayanAdConfig(this, NarayanAdConfig.PROVIDER_ADMOB, environment);
-
-        // Optional: setup Adjust event
-        AdjustConfig adjustConfig = new AdjustConfig(/*ADJUST_TOKEN*/true);
-        adjustConfig.setEventAdImpression(EVENT_AD_IMPRESSION_ADJUST);
-        adjustConfig.setEventNamePurchase(EVENT_PURCHASE_ADJUST);
-        narayanAdConfig.setAdjustConfig(adjustConfig);
-
-        // Optional: setup Appsflyer event
-        AppsflyerConfig appsflyerConfig = new AppsflyerConfig(true,APPSFLYER_TOKEN);
-        narayanAdConfig.setAppsflyerConfig(appsflyerConfig);
-
-        // Optional: enable ads resume
-        try{
-            if (Share.CityState.getRegion().equalsIgnoreCase("GJ") || Share.CityState.getRegion().equalsIgnoreCase("Gujarat")) {
-
-            }else {
-                narayanAdConfig.setIdAdResume(sInstance.getString(R.string.app_open));
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-
-
-
-        // Optional: setup list device test - recommended to use
-        listTestDevice.add("DEVICE_ID_TEST");
-        narayanAdConfig.setListDeviceTest(listTestDevice);
-
-        NarayanAd.getInstance().init(this, narayanAdConfig, false);
-
-        // Auto disable ad resume after user click ads and back to app
-        Admob.getInstance().setDisableAdResumeWhenClickAds(true);
-        // If true -> onNextAction() is called right after Ad Interstitial showed
-        Admob.getInstance().setOpenActivityAfterShowInterAds(false);
     }
 
     public CallbackManager getCallbackManager() {
