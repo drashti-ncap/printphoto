@@ -88,12 +88,12 @@ afterEvaluate {
                 artifactId = 'printphotomodule'
             }
 
-            appProdRelease(MavenPublication) {
-                from components.appProdRelease
-
-                groupId = group = 'com.github.drashti-ncap'
-                artifactId = 'printphotomodule'
-            }
+//            appProdRelease(MavenPublication) {
+//                from components.appProdRelease
+//
+//                groupId = group = 'com.github.drashti-ncap'
+//                artifactId = 'printphotomodule'
+//            }
         }
     }
 }
