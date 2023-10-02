@@ -81,6 +81,13 @@ afterEvaluate {
     println(components*.name)
     publishing {
         publications {
+            appDevDebug(MavenPublication) {
+                from components.appDevDebug
+
+                groupId = group = 'com.github.drashti-ncap'
+                artifactId = 'printphotomodule'
+            }
+
             appProdRelease(MavenPublication) {
                 from components.appProdRelease
 
