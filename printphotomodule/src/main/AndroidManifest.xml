@@ -30,8 +30,7 @@
 
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
-    <application
-        android:supportsRtl="true">
+    <application android:supportsRtl="true">
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -328,6 +327,7 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
         <activity
             android:name=".activity.Usefull.Default_image_activity"
             android:screenOrientation="portrait" />
@@ -382,7 +382,7 @@
 
         <activity
             android:name=".activity.Testing.testing_case_image_activity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.Usefull.Feedback_activity"
             android:screenOrientation="portrait" />
@@ -414,9 +414,9 @@
             android:name=".activity.Usefull.frame_Dynamic_EditActivity"
             android:screenOrientation="portrait" />
 
-<!--        <meta-data-->
-<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
-<!--            android:value="@string/app_id" />-->
+        <!--        <meta-data-->
+        <!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+        <!--            android:value="@string/app_id" />-->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -487,8 +487,9 @@
         <meta-data
             android:name="applovin.sdk.key"
             android:value="3N4Mt8SNhOzkQnGb9oHsRRG1ItybcZDpJWN1fVAHLdRagxP-_k_ZXVaMAdMe5Otsmp6qJSXskfsrtakfRmPAGW" />
-<!--        <meta-data android:name="com.facebook.sdk.ClientToken"-->
-<!--            android:value="121yu23y3u21"/>-->
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="121yu23y3u21" />
     </application>
 
 </manifest>
