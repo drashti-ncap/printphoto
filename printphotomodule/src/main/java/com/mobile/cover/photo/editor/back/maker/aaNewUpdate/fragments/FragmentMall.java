@@ -241,6 +241,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                                 rl_offers.setVisibility(View.VISIBLE);
                             }
 
+                            list.clear();
                             for (int i = 0; i < datumList.size(); i++) {
                                 if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code,"IN").equalsIgnoreCase("IN")) {
                                     rl_offers.setVisibility(View.VISIBLE);
