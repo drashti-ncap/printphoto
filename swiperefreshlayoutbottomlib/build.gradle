@@ -22,7 +22,7 @@ android {
         abortOnError false
     }
 }
-/*afterEvaluate {
+afterEvaluate {
     println(components*.name)
     publishing {
         publications {
@@ -34,7 +34,7 @@ android {
             }
         }
     }
-}*/
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

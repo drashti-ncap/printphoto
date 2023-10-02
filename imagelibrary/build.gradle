@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 
 assemble.dependsOn('lint')
 
-/*afterEvaluate {
+afterEvaluate {
     println(components*.name)
     publishing {
         publications {
@@ -15,7 +15,7 @@ assemble.dependsOn('lint')
             }
         }
     }
-}*/
+}
 android {
     compileSdkVersion 33
 
