@@ -108,7 +108,7 @@ dependencies {
 
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 //    implementation 'apero-inhouse:apero-ads:1.8.0-alpha01'
-//    implementation 'com.github.Ashwani-dev123:NarayanAds:1.0.6'
+    implementation 'com.github.Ashwani-dev123:NarayanAds:1.0.6'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

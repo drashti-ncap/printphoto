@@ -28,6 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.multidex.MultiDexApplication;
 
+import com.ads.narayan.application.AdsMultiDexApplication;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.facebook.AccessToken;
@@ -52,7 +53,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.onesignal.OneSignal;
 
 
-public abstract class mainapplication extends MultiDexApplication {
+public abstract class mainapplication extends AdsMultiDexApplication {
 
     private static final String APPSFLYER_TOKEN = "rAygu6MHr2HZbf2B2hUhZm";
     public static mainapplication sInstance;
