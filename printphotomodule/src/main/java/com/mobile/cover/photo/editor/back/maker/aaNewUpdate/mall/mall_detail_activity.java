@@ -56,6 +56,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.main_respon
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_category_response_click_data;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
@@ -98,7 +99,7 @@ import static com.mobile.cover.photo.editor.back.maker.BuildConfig.DEBUG;
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.mall.mall_category_activity.sort_value;
 
-public class mall_detail_activity extends AppCompatActivity implements View.OnClickListener {
+public class mall_detail_activity extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     private static final long MIN_CLICK_INTERVAL = 1500;
     private static final int REQ_SIGNIN = 110;
@@ -112,7 +113,7 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
     EditText ed_pincode_search;
     TextView tv_pro_name, tv_original_price, tv_dummy_price, tv_discount, tv_pincode_status, tv_seller_name, title, tv_product_description, tv_you_save, tv_check_pincode_text;
     Button btn_search, btn_change, btn_add_to_cart;
-    ProgressDialog pd, progress;
+  //  ProgressDialog pd, progress;
     FirebaseAnalytics firebaseAnalytics;
     AppEventsLogger logger;
     ArrayList<Uri> image_list_uri = new ArrayList<>();
@@ -287,7 +288,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
     private void wishlist(final String pro_id) {
         isUpdate = true;
 
-        pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(mall_detail_activity.this);
 
         APIService apiService = new MainApiClient(mall_detail_activity.this).getApiInterface();
         Log.e("WISH", "wishlist: " + pro_id);
@@ -297,7 +299,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
         call.enqueue(new Callback<main_response>() {
             @Override
             public void onResponse(Call<main_response> call, Response<main_response> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.isSuccessful()) {
                     Log.e("PRO_ID", "onResponse: " + pro_id);
                     Log.e("PRO_ID", "onResponse: " + response.body().getResponseCode());
@@ -326,7 +329,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
             @Override
             public void onFailure(Call<main_response> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(mall_detail_activity.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));
@@ -360,7 +364,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
     private void check_pincode_service_availablity(final Integer pincode) {
 
 
-        pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(mall_detail_activity.this);
 
         APIService apiService = new MainApiClient(mall_detail_activity.this).getApiInterface();
         Call<main_response> call = apiService.check_pincode_service(pincode, Locale.getDefault().getLanguage());
@@ -368,7 +373,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
         call.enqueue(new Callback<main_response>() {
             @Override
             public void onResponse(Call<main_response> call, Response<main_response> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         if (response.body().getData().getPrepaidServiceable()) {
@@ -396,7 +402,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
             @Override
             public void onFailure(Call<main_response> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(mall_detail_activity.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));
@@ -653,7 +660,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
 
 
     private void filter(final String filter) {
-        pd = ProgressDialog.show(this, "", this.getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(this, "", this.getString(R.string.loading), true, false);
+        showProgressDialog(this);
         int user_id;
         if (!SharedPrefs.getBoolean(mall_detail_activity.this, Share.key_reg_suc)) {
             user_id = 0000;
@@ -673,7 +681,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
                 new com.android.volley.Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Gson gson = new Gson();
                         final mall_main_category_response_click_data mall_main_category_response_click_data = gson.fromJson(response, mall_main_category_response_click_data.class);
                         if (mall_main_category_response_click_data.getResponseCode().equalsIgnoreCase("1")) {
@@ -816,7 +825,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onErrorResponse(VolleyError t) {
                         if (t != null) {
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             Log.e("Error", "Message=====>" + t.getLocalizedMessage());
                             Log.e("Error", "Message=====>" + t.getMessage());
                             if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
@@ -1103,7 +1113,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+            //progress = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(mall_detail_activity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -1113,7 +1124,6 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
            /* if (progress != null && progress.isShowing())
                 progress.dismiss();*/
 
-
             if (builder != null) {
                 MultipartBody multipartBody = builder.build();
                 APIService apiService = new MainApiClient(mall_detail_activity.this).getApiInterface();
@@ -1122,8 +1132,9 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onResponse(Call<Cart> call, Response<Cart> response) {
 
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (response != null) {
                             if (response.body().getcart_data().getStatus() == 1) {
@@ -1169,8 +1180,9 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.d("response", "Failed==>" + t.toString());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(mall_detail_activity.this).create();
@@ -1235,7 +1247,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
             user_id = Integer.valueOf(SharedPrefs.getString(mall_detail_activity.this, Share.key_ + RegReq.id));
         }
 
-        pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(mall_detail_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(mall_detail_activity.this);
 
         APIService apiService = new MainApiClient(mall_detail_activity.this).getApiInterface();
         Call<mall_main_category_response_click_data> call = apiService.wishlist(user_id, Share.countryCodeValue, "1", Locale.getDefault().getLanguage());
@@ -1243,7 +1256,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
         call.enqueue(new Callback<mall_main_category_response_click_data>() {
             @Override
             public void onResponse(Call<mall_main_category_response_click_data> call, Response<mall_main_category_response_click_data> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         Share.isinternational = response.body().getIs_international();
@@ -1270,7 +1284,8 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
             @Override
             public void onFailure(Call<mall_main_category_response_click_data> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
             }
         });
 
@@ -1288,8 +1303,9 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-        pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false);
-        pd.show();
+//        pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false);
+//        pd.show();
+        showProgressDialog(mActivity);
 
 
         APIService apiService = new MainApiClient(mActivity).getApiInterface();
@@ -1298,15 +1314,17 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
         regResponseCall.enqueue(new Callback<RegResponse>() {
             @Override
             public void onResponse(Call<RegResponse> call, Response<RegResponse> response) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
+//                if (pd != null && pd.isShowing()) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
 
 
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         SharedPrefs.save(mActivity, SharedPrefs.CART_COUNT, response.body().getCart_count());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mActivity, SharedPrefs.CART_COUNT));
@@ -1393,9 +1411,10 @@ public class mall_detail_activity extends AppCompatActivity implements View.OnCl
 
             @Override
             public void onFailure(Call<RegResponse> call, Throwable t) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
+//                if (pd != null && pd.isShowing()) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
                     AlertDialog alertDialog = new AlertDialog.Builder(mActivity).create();

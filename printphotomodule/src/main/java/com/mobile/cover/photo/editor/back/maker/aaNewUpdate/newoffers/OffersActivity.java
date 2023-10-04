@@ -18,6 +18,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Offer;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.getofferresponse;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.model.getdata;
@@ -32,8 +33,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class OffersActivity extends AppCompatActivity {
-    ProgressDialog pd;
+public class OffersActivity extends PrintPhotoBaseActivity {
+  //  ProgressDialog pd;
     RecyclerView rv_offer;
     OfferAdapter mAdapter;
     ImageView id_back;
@@ -77,7 +78,8 @@ public class OffersActivity extends AppCompatActivity {
         sqlist.clear();
         sqlist2.clear();
         sqlist3.clear();
-        pd = ProgressDialog.show(OffersActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(OffersActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
 
         APIService api = new MainApiClient(OffersActivity.this).getApiInterface();
         Call<getofferresponse> call;
@@ -122,13 +124,16 @@ public class OffersActivity extends AppCompatActivity {
                         if (sqlist.size() == 0) {
                             Toast.makeText(OffersActivity.this, getString(R.string.no_offer_available), Toast.LENGTH_SHORT).show();
                         }
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(getApplicationContext(), responseData.getResponseMessage(), Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getApplicationContext(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -136,7 +141,8 @@ public class OffersActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<getofferresponse> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

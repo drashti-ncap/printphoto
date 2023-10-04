@@ -35,6 +35,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.mug_image_response_data;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mug_image_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mug_image_adapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -55,10 +56,10 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
-public class Mug_images_category_activity extends AppCompatActivity {
+public class Mug_images_category_activity extends PrintPhotoBaseActivity {
     public static Activity mActivity;
     AlertDialog alertDialog;
-    ProgressDialog pd;
+//    ProgressDialog pd;
     RecyclerView rv_list;
     mug_image_adapter default_image_adapter;
     LinearLayout ll_test;
@@ -292,7 +293,8 @@ public class Mug_images_category_activity extends AppCompatActivity {
 
     private void getMainData() {
 
-        pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false);
+        showProgressDialog(mActivity);
         Share.mall_main_category_data.clear();
 
         APIService apiService = new MainApiClient(mActivity).getApiInterface();
@@ -302,7 +304,8 @@ public class Mug_images_category_activity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) {
                 if (response.code() == 200) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     mug_image_response mall_new_main_model = (mug_image_response) response.body();
                     if (mall_new_main_model.getSuccess()) {
                         Share.mug_image_array.addAll(mall_new_main_model.getData());
@@ -333,7 +336,8 @@ public class Mug_images_category_activity extends AppCompatActivity {
                         Toast.makeText(mActivity, mall_new_main_model.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (alertDialog != null) {
                         alertDialog.dismiss();
                     }
@@ -361,7 +365,8 @@ public class Mug_images_category_activity extends AppCompatActivity {
     }
 
     public void error_dialogs(Throwable t) {
-        pd.dismiss();
+        //pd.dismiss();
+        hideProgressDialog();
         Log.e("MESSAGE", "error_dialogs: " + t.getMessage());
         Log.e("MESSAGE", "error_dialogs: " + t.getLocalizedMessage());
         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {

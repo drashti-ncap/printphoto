@@ -32,6 +32,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.transactionDetailResponse;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.TransactionWithdrawResponse;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.transactionadapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -47,13 +48,13 @@ import retrofit2.Callback;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class SellerWalletActivity extends AppCompatActivity implements View.OnClickListener {
+public class SellerWalletActivity extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     public static List<transaction> sqlist = new ArrayList<>();
     ImageView id_back, iv_share_sellercode, id_info_policy, iv_share_now;
     CardView card_share;
     Bitmap share_bitmap;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     RelativeLayout rl_request;
     RecyclerView recyclerview;
     transactionadapter mAdapter;
@@ -254,7 +255,8 @@ public class SellerWalletActivity extends AppCompatActivity implements View.OnCl
     private void gettransacthistory() {
 
 
-        pd = ProgressDialog.show(SellerWalletActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(SellerWalletActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
 
         sqlist.clear();
         APIService api = new MainApiClient(SellerWalletActivity.this).getApiInterface();
@@ -293,17 +295,21 @@ public class SellerWalletActivity extends AppCompatActivity implements View.OnCl
                         Log.e(TAG, "onResponse:==================> " + sum);
                         sum = responseData.getCase() - responseData.getWithdraw();
                         tv_rate.setText(getString(R.string.rs_icon) + " " + sum + ".00");
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     } else if (responseData.getResponseCode().equalsIgnoreCase("0")) {
 //                        tv_transact.setText(responseData.getResponseMessage());
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     } else {
                         Toast.makeText(SellerWalletActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     }
 
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(SellerWalletActivity.this, "Error==>2", Toast.LENGTH_LONG).show();
                 }
 
@@ -311,7 +317,8 @@ public class SellerWalletActivity extends AppCompatActivity implements View.OnCl
 
             @Override
             public void onFailure(Call<TransactionWithdrawResponse> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -324,7 +331,6 @@ public class SellerWalletActivity extends AppCompatActivity implements View.OnCl
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
                             gettransacthistory();
-
                         }
                     });
                     alertDialog.show();

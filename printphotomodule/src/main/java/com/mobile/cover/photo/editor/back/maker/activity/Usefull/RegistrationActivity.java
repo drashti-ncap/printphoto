@@ -28,6 +28,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Country_state_city_code_response;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.new_numberverify;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.auth.PhoneAuthActivity;
@@ -41,7 +42,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class RegistrationActivity extends PrintPhotoBaseActivity {
     LinearLayout id_ll_print_photo, id_ll_register, id_ll_firstname, id_ll_lastname, id_ll_mobile_no, id_ll_passwoerd, ll_city, ll_state;
     ImageView im_printphoto, im_user, im_key, id_reset;
     EditText id_ed_fname, id_ed_lname, id_ed_mobile_no, id_ed_password, id_ed_email_id, id_ed_re_password;
@@ -53,7 +54,7 @@ public class RegistrationActivity extends AppCompatActivity {
     ArrayList<String> temp_spinnercodeArray = new ArrayList<String>();
     Spinner sp_country, sp_states, sp_district, sp_code;
     int countrypos, statepos, mobilecode, country_code_position;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     String country_code, country_sort_num, Country_reg = "", State_reg = "", City_reg = "";
     ArrayList<Address> addressArrayList = new ArrayList<>();
     Runnable runnable;
@@ -193,7 +194,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private void verify(final String email) {
 
 
-        pd = ProgressDialog.show(RegistrationActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(RegistrationActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
 
         APIService api = new MainApiClient(RegistrationActivity.this).getApiInterface();
 
@@ -361,7 +363,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         Share.Country_state_city.clear();
-        pd = ProgressDialog.show(RegistrationActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(RegistrationActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
         APIService api = new MainApiClient(RegistrationActivity.this).getApiInterface();
 
 
@@ -489,13 +492,13 @@ public class RegistrationActivity extends AppCompatActivity {
         sp_code = findViewById(R.id.sp_code);
         sp_district = findViewById(R.id.sp_district);
 
-        final ArrayAdapter<String> country_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercountryArray);
+        final ArrayAdapter<String> country_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercountryArray);
         sp_country.setAdapter(country_adapter);
         int spinnerpos1 = country_adapter.getPosition(country_code);
         sp_country.setSelection(spinnerpos1);
 
 
-        final ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercodeArray);
+        final ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercodeArray);
         sp_code.setAdapter(code_adapter);
         int spinnerpos = code_adapter.getPosition(country_sort_num);
         sp_code.setSelection(spinnerpos);
@@ -584,7 +587,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     } else {
                         Country_reg = "0";
                     }
-                    ArrayAdapter<String> state_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnerstateArray);
+                    ArrayAdapter<String> state_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnerstateArray);
                     sp_states.setAdapter(state_adapter);
                 } catch (Exception e) {
                     Log.e("Error", e.toString());
@@ -613,7 +616,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         spinnercitiesArray.add(Share.Country_state_city.get(countrypos).getStates().get(position).getCities().get(cities).getName());
                     }
                 }
-                ArrayAdapter<String> city_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercitiesArray);
+                ArrayAdapter<String> city_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercitiesArray);
                 sp_district.setAdapter(city_adapter);
                 Log.e("ERROR", "onItemSelected: " + countrypos);
                 Log.e("ERROR", "onItemSelected: " + Share.Country_state_city.get(countrypos).getStates());
@@ -720,9 +723,10 @@ public class RegistrationActivity extends AppCompatActivity {
             if (isDestroyed()) {
                 return;
             }
-            if (pd != null && pd.isShowing()) {
-                pd.dismiss();
-            }
+//            if (pd != null && pd.isShowing()) {
+//                pd.dismiss();
+//            }
+            hideProgressDialog();
         } catch (Exception e) {
             Log.e("Dismiss Dialog", e.toString());
         }

@@ -49,6 +49,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.ProductType;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_category_response_click_data;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeMallAdapter;
@@ -86,14 +87,14 @@ import retrofit2.Response;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.UtilsKt.sendWhatsappDirectMessageHome;
 
-public class FragmentHome extends Fragment {
+public class FragmentHome extends PrintPhotoBaseFragment {
     private static final String TAG = "HOME";
     HomeAdapter mHomeAdapter;
     RecyclerView mHomeRecyclerview;
     OfferMain[] offer;
     LinearLayout ll_main;
     SelectCompany selectCompany;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     AlarmManager alarmManager;
     AlertDialog alertDialog;
     private PendingIntent pendingIntent;
@@ -132,7 +133,8 @@ public class FragmentHome extends Fragment {
 
     private void getMainData() {
 
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         Share.mall_main_category_data.clear();
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
@@ -158,19 +160,21 @@ public class FragmentHome extends Fragment {
                         Log.e("datasize", "onResponse: " + Share.symbol);
                         Share.maincategoryname.clear();
                         Share.click_positions.clear();
-                        setHeader();
+                       // setHeader();
                         getDisplaySize();
 
                         try {
                             String cCode = SharedPrefs.getString(getActivity(), SharedPrefs.country_code);
                             if (cCode != null && cCode.equalsIgnoreCase("SA")) {
-                                pd.dismiss();
+                                //pd.dismiss();
+                                hideProgressDialog();
                                 intView();
                             } else {
                                 getMallData();
                             }
                         } catch (Exception e) {
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             intView();
                             Log.e("TAGGGG", e.toString());
                         }
@@ -179,11 +183,13 @@ public class FragmentHome extends Fragment {
                         //
                     } else {
                         showWhatsAppHelp();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(getActivity(), new_main_model.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    pd.dismiss();
+//                    pd.dismiss();
+                    hideProgressDialog();
                     if (alertDialog != null) {
                         alertDialog.dismiss();
                     }
@@ -212,7 +218,8 @@ public class FragmentHome extends Fragment {
     }
 
     public void error_dialogs(Throwable t) {
-        pd.dismiss();
+        //pd.dismiss();
+        hideProgressDialog();
         Log.e("MESSAGE", "error_dialogs: " + t.getMessage());
         Log.e("MESSAGE", "error_dialogs: " + t.getLocalizedMessage());
         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
@@ -268,7 +275,7 @@ public class FragmentHome extends Fragment {
                 Share.maincategoryname.clear();
                 Share.click_positions.clear();
                 try {
-                    setHeader();
+               //     setHeader();
                     getDisplaySize();
                     intView();
                 } catch (Exception e) {
@@ -520,12 +527,12 @@ public class FragmentHome extends Fragment {
                 Share.search_dynamic_sub_category_list = Share.main_category_data.get(position).getAllChilds();
                 Share.dynamic_sub_category_list = Share.main_category_data.get(position).getAllChilds();
 
-                Collections.sort(Share.dynamic_sub_category_list, new Comparator<AllChild>() {
-                    @Override
-                    public int compare(AllChild p1, AllChild p2) {
-                        return p1.getName().compareTo(p2.getName());
-                    }
-                });
+//                Collections.sort(Share.dynamic_sub_category_list, new Comparator<AllChild>() {
+//                    @Override
+//                    public int compare(AllChild p1, AllChild p2) {
+//                        return p1.getName().compareTo(p2.getName());
+//                    }
+//                });
 
                 for (int i = 0; i < Share.dynamic_sub_category_list.size(); i++) {
                     if (Share.dynamic_sub_category_list.get(i).getName().equalsIgnoreCase("Looking For Other Brand")) {
@@ -635,25 +642,28 @@ public class FragmentHome extends Fragment {
                             Toast.makeText(getActivity(), mall_new_main_model.getResponseMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
-                    if (pd != null) {
-                        pd.dismiss();
-                    }
+//                    if (pd != null) {
+//                        pd.dismiss();
+//                    }
+                    hideProgressDialog();
 
                     showWhatsAppHelp();
                 }
 
                 @Override
                 public void onFailure(Call<mall_new_main_model> call, Throwable t) {
-                    if (pd != null) {
-                        pd.dismiss();
-                    }
+//                    if (pd != null) {
+//                        pd.dismiss();
+//                    }
+                    hideProgressDialog();
                     showWhatsAppHelp();
                 }
             });
         } catch (Exception e) {
-            if (pd != null) {
-                pd.dismiss();
-            }
+//            if (pd != null) {
+//                pd.dismiss();
+//            }
+            hideProgressDialog();
             e.printStackTrace();
             showWhatsAppHelp();
         }
@@ -728,10 +738,12 @@ public class FragmentHome extends Fragment {
     }
 
     private void get_other_category(mall_AllChild mall_allChild) {
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         int user_id;
@@ -745,10 +757,11 @@ public class FragmentHome extends Fragment {
         call.enqueue(new Callback<mall_main_category_response_click_data>() {
             @Override
             public void onResponse(Call<mall_main_category_response_click_data> call, Response<mall_main_category_response_click_data> response) {
-                if (pd != null) {
-                    pd.dismiss();
-                }
-                pd.dismiss();
+//                if (pd != null) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
+//                pd.dismiss();
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         Share.isinternational = response.body().getIs_international();
@@ -778,9 +791,10 @@ public class FragmentHome extends Fragment {
             @Override
             public void onFailure(Call<mall_main_category_response_click_data> call, Throwable t) {
                 t.printStackTrace();
-                if (pd != null) {
-                    pd.dismiss();
-                }
+//                if (pd != null) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     if (alertDialog != null) {
                         alertDialog.dismiss();

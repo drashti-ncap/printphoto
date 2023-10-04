@@ -35,6 +35,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.new_numberverify;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.auth.PhoneAuthActivity;
@@ -54,12 +55,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivity extends PrintPhotoBaseActivity {
     public static LogInActivity logInActivity;
     LinearLayout id_ll_register, id_ll_sign_in, id_ll_password, id_ll_mobile_no, id_signIn, id_signOut, id_ll_email_id;
     RelativeLayout id_ll_print_photo;
     ImageView im_printphoto, im_user, im_key, id_iv_forget_password;
-    ProgressDialog pd;
+//    ProgressDialog pd;
     EditText id_mobile_number, id_password, id_email_id;
     AlertDialog alertDialog;
     ArrayList<String> spinnercodeArray = new ArrayList<String>();
@@ -190,8 +191,9 @@ public class LogInActivity extends AppCompatActivity {
 
     private void callSignInAPI(String cred, String password) {
 
-        pd = ProgressDialog.show(LogInActivity.this, "", getString(R.string.loading), true, false);
-        pd.show();
+//        pd = ProgressDialog.show(LogInActivity.this, "", getString(R.string.loading), true, false);
+//        pd.show();
+        showProgressDialog(LogInActivity.this);
 
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
@@ -324,7 +326,7 @@ public class LogInActivity extends AppCompatActivity {
     private void findViews() {
         id_ll_print_photo = findViewById(R.id.id_ll_print_photo);
         sp_country = findViewById(R.id.sp_country);
-        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(LogInActivity.this, R.layout.simple_spinner_item, spinnercountryArray);
+        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(LogInActivity.this, R.layout.simple_spinner_print_item, spinnercountryArray);
         sp_country.setAdapter(code_adapter);
         for (int i = 0; i < temp_spinnercodeArray.size(); i++) {
             if (temp_spinnercodeArray.get(i).equalsIgnoreCase(SharedPrefs.getString(LogInActivity.this, SharedPrefs.country_code))) {
@@ -393,7 +395,7 @@ public class LogInActivity extends AppCompatActivity {
                 final LinearLayout above = dialog.findViewById(R.id.above);
                 final Spinner sp_code = dialog.findViewById(R.id.sp_code);
 
-                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercodeArray);
+                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercodeArray);
                 sp_code.setAdapter(code_adapter);
 
 
@@ -547,7 +549,8 @@ public class LogInActivity extends AppCompatActivity {
     private void verify(final String number, final String email, final Dialog dialog, final String code) {
 
 
-        pd = ProgressDialog.show(LogInActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(LogInActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(LogInActivity.this);
 
         APIService api = new MainApiClient(LogInActivity.this).getApiInterface();
 
@@ -798,9 +801,10 @@ public class LogInActivity extends AppCompatActivity {
             if (isDestroyed()) {
                 return;
             }
-            if (pd != null && pd.isShowing()) {
-                pd.dismiss();
-            }
+//            if (pd != null && pd.isShowing()) {
+//                pd.dismiss();
+//            }
+            hideProgressDialog();
         } catch (Exception e) {
             Log.e("Dismiss Dialog", e.toString());
         }

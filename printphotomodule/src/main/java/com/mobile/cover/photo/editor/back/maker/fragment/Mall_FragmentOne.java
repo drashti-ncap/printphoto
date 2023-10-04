@@ -32,6 +32,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_category_response_click_data;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentHome;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentMall;
@@ -60,8 +61,8 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_order;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 
-public class Mall_FragmentOne extends Fragment {
-    ProgressDialog pd;
+public class Mall_FragmentOne extends PrintPhotoBaseFragment {
+   // ProgressDialog pd;
     RecyclerView rv_offer;
     mall_sub_category_data myRecyclerAdapter;
     ImageView id_back;
@@ -188,7 +189,8 @@ public class Mall_FragmentOne extends Fragment {
     public void get_other_category(final Integer id, final Integer position) {
 
 
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         int user_id;
@@ -202,7 +204,8 @@ public class Mall_FragmentOne extends Fragment {
         call.enqueue(new Callback<mall_main_category_response_click_data>() {
             @Override
             public void onResponse(Call<mall_main_category_response_click_data> call, Response<mall_main_category_response_click_data> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         Share.isinternational = response.body().getIs_international();
@@ -237,7 +240,8 @@ public class Mall_FragmentOne extends Fragment {
             @Override
             public void onFailure(Call<mall_main_category_response_click_data> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     if (alertDialog != null) {
                         alertDialog.dismiss();

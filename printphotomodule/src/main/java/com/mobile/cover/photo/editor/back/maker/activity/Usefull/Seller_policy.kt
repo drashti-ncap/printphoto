@@ -9,14 +9,15 @@ import android.util.Base64
 import androidx.appcompat.app.AppCompatActivity
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.policy_response_dashboard
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import kotlinx.android.synthetic.main.activity_seller_policy.*
 import retrofit2.Call
 import retrofit2.Callback
 import java.nio.charset.StandardCharsets
 
-class Seller_policy : AppCompatActivity() {
-    internal lateinit var pd: ProgressDialog
+class Seller_policy : PrintPhotoBaseActivity() {
+  //  internal lateinit var pd: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,8 @@ class Seller_policy : AppCompatActivity() {
     private fun getMainData() {
 
 
-        pd = ProgressDialog.show(this@Seller_policy, "", getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(this@Seller_policy, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@Seller_policy)
         val api = MainApiClient(this@Seller_policy).apiInterface
 
 
@@ -50,7 +52,8 @@ class Seller_policy : AppCompatActivity() {
                     } else {
                         tv_policy.text = Html.fromHtml(text)
                     }
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
 
                 }
             }
@@ -63,7 +66,8 @@ class Seller_policy : AppCompatActivity() {
                     alertDialog.setMessage(getString(R.string.connect_time_out))
                     alertDialog.setButton(getString(R.string.ok)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                         getMainData()
                     }
                     alertDialog.show()
@@ -74,12 +78,14 @@ class Seller_policy : AppCompatActivity() {
                     alertDialog.setMessage(getString(R.string.slow_connect))
                     alertDialog.setPositiveButton(getString(R.string.retry)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                         getMainData()
                     }
                     alertDialog.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                     }
                     alertDialog.show()
                 }

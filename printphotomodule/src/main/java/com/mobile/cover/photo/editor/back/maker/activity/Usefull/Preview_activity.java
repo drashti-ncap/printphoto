@@ -16,6 +16,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.constraint.RegReq;
@@ -36,11 +37,11 @@ import static com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEdit
 import static com.mobile.cover.photo.editor.back.maker.activity.Usefull.CaseEditActivity.preview_bitmap;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class Preview_activity extends AppCompatActivity implements View.OnClickListener {
+public class Preview_activity extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     Button btn_submit;
     ImageView background, up, id_back;
-    ProgressDialog progress;
+  //  ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +105,8 @@ public class Preview_activity extends AppCompatActivity implements View.OnClickL
     }
 
     private void senddata() {
-        progress = ProgressDialog.show(Preview_activity.this, "", getString(R.string.loading), true, false);
+        //progress = ProgressDialog.show(Preview_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Preview_activity.this);
 
         try {
             new crateReq().execute();
@@ -128,7 +130,8 @@ public class Preview_activity extends AppCompatActivity implements View.OnClickL
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress.show();
+            //progress.show();
+            showProgressDialog(Preview_activity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -150,7 +153,8 @@ public class Preview_activity extends AppCompatActivity implements View.OnClickL
                                 mStickers.clear();
                                 Share.resultbitmap = null;
                                 Share.final_result_bitmap = null;
-                                progress.dismiss();
+                                //progress.dismiss();
+                                hideProgressDialog();
                                 if (Default_image_activity.Companion.getActivity() != null) {
                                     Default_image_activity.Companion.getActivity().finish();
                                 }
@@ -170,7 +174,8 @@ public class Preview_activity extends AppCompatActivity implements View.OnClickL
                                 alertDialog.setMessage("Something went to wrong. Please try again Later");
                                 alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        progress.dismiss();
+                                        //progress.dismiss();
+                                        hideProgressDialog();
                                         dialog.dismiss();
                                     }
                                 });
@@ -184,8 +189,9 @@ public class Preview_activity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.d("response", "Failed==>" + t.toString());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(Preview_activity.this).create();

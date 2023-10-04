@@ -29,6 +29,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.otp_response_data
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.registration_main_response
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.autodetectionotp.AutoDetectOTP
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.getSendPriority
@@ -46,12 +47,12 @@ import java.util.concurrent.TimeUnit
 private const val TAG = "PhoneAuthActivity"
 private const val KEY_VERIFY_IN_PROGRESS = "key_verify_in_progress"
 
-class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
+class PhoneAuthActivity : PrintPhotoBaseActivity(), View.OnClickListener {
 
 
     private var phoneNumber: String = ""
     private var mEmail: String = ""
-    private var pd: ProgressDialog? = null
+   // private var pd: ProgressDialog? = null
     private var bulkOTP = 0
     private var isInternational = 1
     private var mAuth: FirebaseAuth? = null
@@ -117,7 +118,8 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.new_activity_phone_auth)
         savedInstanceState?.let { onRestoreInstanceState(it) }
         autoDetectOTP = AutoDetectOTP(this)
-
+        initData()
+        initActions()
         getOtpMessage()
     }
 
@@ -129,17 +131,17 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
     private fun getOtpMessage() {
         autoDetectOTP.startSmsRetriver(object : AutoDetectOTP.SmsCallback {
             override fun connectionFailed() {
-              Toast.makeText(mContext, "Failed", Toast.LENGTH_SHORT).show()
+              Toast.makeText(this@PhoneAuthActivity, "Failed", Toast.LENGTH_SHORT).show()
             }
 
             override fun connectionSuccess(aVoid: Void) {
-                Toast.makeText(mContext, "Success", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PhoneAuthActivity, "Success", Toast.LENGTH_SHORT).show()
             }
 
             override fun smsCallback(sms: String) {
                 if (sms.contains(":") && sms.contains(".")) {
                     var receivedOtp = sms.substring(sms.indexOf(":") + 1, sms.indexOf(".")).trim { it <= ' ' }
-                    Toast.makeText(mContext, "Success:$receivedOtp", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@PhoneAuthActivity, "Success:$receivedOtp", Toast.LENGTH_SHORT).show()
                 }
             }
         })
@@ -150,11 +152,9 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
         autoDetectOTP.stopSmsReciever()
     }
 
-    override fun getContext(): Activity {
-        return this@PhoneAuthActivity
-    }
 
-    override fun initActions() {
+
+    fun initActions() {
         id_back.setOnClickListener(this)
         id_reset.setOnClickListener(this)
         buttonVerifyPhone.setOnClickListener(this)
@@ -162,11 +162,8 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
 
     }
 
-    override fun initAds() {
 
-    }
-
-    override fun initData() {
+    fun initData() {
 
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         hideKeyBoard(tv_title, this@PhoneAuthActivity)
@@ -350,8 +347,9 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
 
         isBultOTP = true
 
-        if (pd == null)
-            pd = ProgressDialog.show(this@PhoneAuthActivity, "", getString(R.string.loading), true, false)
+//        if (pd == null)
+//            pd = ProgressDialog.show(this@PhoneAuthActivity, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@PhoneAuthActivity)
 
 
         val api = MainApiClient(this@PhoneAuthActivity).apiInterface
@@ -398,14 +396,16 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun dismisDialog() {
-        if (pd != null)
-            pd?.dismiss()
-        pd = null
+//        if (pd != null)
+//            pd?.dismiss()
+//        pd = null
+        hideProgressDialog()
     }
 
     private fun sendFirebaseOTP(isResend: Boolean) {
         Log.e("CHECKOTP", "send:===========>>>>>>>Sending OTP ")
-        pd = ProgressDialog.show(this@PhoneAuthActivity, "", getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(this@PhoneAuthActivity, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@PhoneAuthActivity)
         if (isResend) {
             PhoneAuthProvider.getInstance().verifyPhoneNumber(phoneNumber, 60, TimeUnit.SECONDS, this, mCallbacks, mResendToken)
         } else {
@@ -547,11 +547,11 @@ class PhoneAuthActivity : BaseActivity(), View.OnClickListener {
         //risk@ccavenue.com
 
 
-        pd = ProgressDialog.show(this@PhoneAuthActivity, "", resources.getString(R.string.registring), true, false)
+        //pd = ProgressDialog.show(this@PhoneAuthActivity, "", resources.getString(R.string.registring), true, false)
+        showProgressDialog(this@PhoneAuthActivity)
 
         val apiService = MainApiClient(this@PhoneAuthActivity).apiInterface
-        val regResponseCall: Call<registration_main_response?>?
-        regResponseCall = apiService.getRegResponse("$fname $lname", "" + emailid, "", mobile_no, "", intent.getStringExtra("city"), "", password, android_id, TimeZone.getDefault().id, Locale.getDefault().language)
+        val regResponseCall: Call<registration_main_response?>? = apiService.getRegResponse("$fname $lname", "" + emailid, "", mobile_no, "", intent.getStringExtra("city"), "", password, android_id, TimeZone.getDefault().id, Locale.getDefault().language)
         regResponseCall!!.enqueue(object : Callback<registration_main_response?> {
             override fun onResponse(call: Call<registration_main_response?>, response: Response<registration_main_response?>) {
                 dismisDialog()

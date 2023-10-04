@@ -29,6 +29,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_category_response_click_data;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.search_adapter;
@@ -44,11 +45,11 @@ import retrofit2.Response;
 
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt.SEARCH_SHOPPING_MALL;
 
-public class MallSearchActivity extends AppCompatActivity implements View.OnClickListener {
+public class MallSearchActivity extends PrintPhotoBaseActivity implements View.OnClickListener {
     public static Activity activity;
     EditText ed_search;
     RecyclerView rv_search_list;
-    ProgressDialog pd;
+//    ProgressDialog pd;
     search_adapter mAdapter;
     ImageView id_back, id_cart_display;
     Button btn_count;

@@ -30,6 +30,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.setting_respon
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.cart_address_check_model;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.save_address_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.adapter.SelectAddressAdapter;
@@ -46,7 +47,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SelectAddressActivity extends AppCompatActivity implements View.OnClickListener {
+public class SelectAddressActivity extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     public static int REQ_ADD_UPDATE = 101;
 
@@ -57,7 +58,7 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
     RecyclerView rv_address;
     LinearLayout ll_address_availablity;
     SelectAddressAdapter addressRecyclerAdapter;
-    ProgressDialog pd;
+    //ProgressDialog pd;
     EditText ed_search;
     TextView tv_continue;
     private long mLastClickTime;
@@ -185,7 +186,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
     private void getaddress_data() {
 
 
-        pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(SelectAddressActivity.this);
 
         APIService api = new MainApiClient(SelectAddressActivity.this).getApiInterface();
         Log.e("USERID", "getaddress_data: " + SharedPrefs.getString(activity, SharedPrefs.uid));
@@ -199,7 +201,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                 Log.e("RESPONSE", "onResponse: " + response.isSuccessful());
                 Log.e("RESPONSE", "onResponse: " + response.message());
                 if (response.body().getSuccess()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (address_response.getData().size() != 0) {
                         Share.saved_address_list = address_response.getData();
                         Share.saved_address_list.get(0).setIsSelect(true);
@@ -228,7 +231,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
 
                         }
@@ -242,7 +246,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
                         }
                     });
@@ -250,7 +255,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();
@@ -266,10 +272,12 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
     private void deleteaddress(int type) {
 
 
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(SelectAddressActivity.this);
 
 
         APIService api = new MainApiClient(SelectAddressActivity.this).getApiInterface();
@@ -282,7 +290,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
             public void onResponse(Call<save_address_response> call, retrofit2.Response<save_address_response> response) {
                 if (response.body().getSuccess()) {
                     save_address_response address_response = response.body();
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Share.saved_address_list.clear();
                     Share.search_saved_address_list.clear();
                     Share.saved_address_list = address_response.getData();
@@ -308,7 +317,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
 
                         }
@@ -322,7 +332,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
                         }
                     });
@@ -330,7 +341,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();
@@ -345,7 +357,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
     private void check_cod() {
 
 
-        pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(SelectAddressActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(SelectAddressActivity.this);
 
         Log.e("PARAMTERS", "check_cod: ======>" + Share.address_id);
         Log.e("PARAMTERS", "check_cod: ======>" + getIntent().getStringExtra("cart_id"));
@@ -360,7 +373,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
             public void onResponse(Call<cart_address_check_model> call, Response<cart_address_check_model> response) {
                 Log.e(TAG, "onResponse: " + response.isSuccessful());
                 if (response.isSuccessful()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     cart_address_check_model responseData = response.body();
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         if (responseData.getData().getStatus() == 1) {
@@ -423,7 +437,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
                     }
 
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(activity, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -431,7 +446,8 @@ public class SelectAddressActivity extends AppCompatActivity implements View.OnC
 
             @Override
             public void onFailure(Call<cart_address_check_model> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

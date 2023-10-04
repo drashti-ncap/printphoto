@@ -28,6 +28,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.mug_image_response_data
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mug_image_response
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.sipper.adapter.ShipperAdapter
 import com.mobile.cover.photo.editor.back.maker.mainapplication
@@ -40,9 +41,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.net.URISyntaxException
 
-class ShipperCategoryActivity : AppCompatActivity() {
+class ShipperCategoryActivity : PrintPhotoBaseActivity() {
     internal var alertDialog: AlertDialog? = null
-    internal lateinit var pd: ProgressDialog
+//    internal lateinit var pd: ProgressDialog
     internal lateinit var shipperAdapter: ShipperAdapter
     private var application: mainapplication? = null
 
@@ -327,7 +328,9 @@ class ShipperCategoryActivity : AppCompatActivity() {
 
     private fun getMainData() {
 
-        pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(mActivity, "", getString(R.string.loading), true, false)
+        showProgressDialog(mActivity)
+
         Share.mall_main_category_data.clear()
 
         val apiService = MainApiClient(mActivity!!).apiInterface
@@ -339,7 +342,8 @@ class ShipperCategoryActivity : AppCompatActivity() {
                 response: Response<mug_image_response?>
             ) {
                 if (response.code() == 200) {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
                     val mall_new_main_model = response.body()
                     if (mall_new_main_model!!.success!!) {
                         Share.shipper_bottle_image_array.addAll(mall_new_main_model.data)
@@ -369,7 +373,8 @@ class ShipperCategoryActivity : AppCompatActivity() {
                             .show()
                     }
                 } else {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
                     if (alertDialog != null) {
                         alertDialog!!.dismiss()
                     }
@@ -458,7 +463,8 @@ class ShipperCategoryActivity : AppCompatActivity() {
     }
 
     fun error_dialogs(t: Throwable) {
-        pd.dismiss()
+        //pd.dismiss()
+        hideProgressDialog()
         Log.e("MESSAGE", "error_dialogs: " + t.message)
         Log.e("MESSAGE", "error_dialogs: " + t.localizedMessage)
         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {

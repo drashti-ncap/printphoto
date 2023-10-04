@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mobile.cover.photo.editor.back.maker.Commen.Share
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.sticker_main_response
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.StickerAdapter
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.model.StickerModel
@@ -30,9 +31,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class StickerActivity : AppCompatActivity() {
+class StickerActivity : PrintPhotoBaseActivity() {
     internal lateinit var stickerAdapter: StickerAdapter
-    internal lateinit var pd: ProgressDialog
+   // internal lateinit var pd: ProgressDialog
     private var assetManager: AssetManager? = null
     private val stickerModels = ArrayList<new_StickerModel>()
     private val sqlist = ArrayList<new_getdefault_images>()
@@ -95,7 +96,8 @@ class StickerActivity : AppCompatActivity() {
 
             sqlist.clear()
             Share.stickerlist.clear()
-            pd = ProgressDialog.show(activity, "", getString(R.string.loading), true, false)
+            //pd = ProgressDialog.show(activity, "", getString(R.string.loading), true, false)
+        showProgressDialog(activity)
         val api = MainApiClient(this@StickerActivity).apiInterface
 
 
@@ -108,7 +110,8 @@ class StickerActivity : AppCompatActivity() {
                     val customimage_response = response.body()
                     Log.e("RESPONE", "onResponse: " + response.body()!!.responseCode)
                     if (customimage_response!!.responseCode.equals("1", ignoreCase = true)) {
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
 
                         val datumList = customimage_response.data
                         for (datum in datumList) {
@@ -127,7 +130,8 @@ class StickerActivity : AppCompatActivity() {
                         alertDialog.setMessage(getString(R.string.connect_time_out))
                         alertDialog.setButton(getString(R.string.ok)) { dialog, which ->
                             dialog.dismiss()
-                            pd.dismiss()
+                            //pd.dismiss()
+                            hideProgressDialog()
                             getMainData()
                         }
                         alertDialog.show()
@@ -138,7 +142,8 @@ class StickerActivity : AppCompatActivity() {
                         alertDialog.setMessage(getString(R.string.slow_connect))
                         alertDialog.setButton(getString(R.string.retry)) { dialog, which ->
                             dialog.dismiss()
-                            pd.dismiss()
+                            //pd.dismiss()
+                            hideProgressDialog()
                             getMainData()
                         }
                         alertDialog.show()

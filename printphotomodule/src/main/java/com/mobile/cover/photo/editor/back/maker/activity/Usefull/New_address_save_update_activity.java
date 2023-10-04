@@ -27,6 +27,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Country_state_city_code_response;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.save_address_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.UtilsKt;
@@ -39,7 +40,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class New_address_save_update_activity extends AppCompatActivity implements View.OnClickListener {
+public class New_address_save_update_activity extends PrintPhotoBaseActivity implements View.OnClickListener {
     private static final long MIN_CLICK_INTERVAL = 2500;
     LinearLayout id_ll_save, ll_city, ll_state;
     Spinner sp_country, sp_states, sp_district, sp_code;
@@ -52,7 +53,7 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
     ArrayList<String> spinnercitiesArray = new ArrayList<String>();
     Activity activity;
     int countrypos, statepos, mobilecode;
-    ProgressDialog pd;
+//    ProgressDialog pd;
     boolean country_selection = false, code_selection = false;
     String country_code, country_sort_num, country_name, state_name, city_name, Country_reg = "", State_reg = "", City_reg = "";
     private long mLastClickTime;
@@ -81,7 +82,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
 
     private void getcountry_states_cities_code() {
 
-        pd = ProgressDialog.show(New_address_save_update_activity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(New_address_save_update_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(New_address_save_update_activity.this);
 
         APIService api = new MainApiClient(New_address_save_update_activity.this).getApiInterface();
 
@@ -93,7 +95,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
             @Override
             public void onResponse(Call<Country_state_city_code_response> call, Response<Country_state_city_code_response> response) {
                 if (response.isSuccessful()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Country_state_city_code_response customimage_response = response.body();
                     Share.Country_state_city.addAll(customimage_response.getData());
                     initviews();
@@ -106,14 +109,16 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
 //                        ll_state.setVisibility(View.GONE);
 //                    }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(activity, response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Country_state_city_code_response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
@@ -123,7 +128,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getcountry_states_cities_code();
                         }
                     });
@@ -136,7 +142,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             finish();
                         }
                     });
@@ -150,7 +157,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getcountry_states_cities_code();
 
                         }
@@ -159,7 +167,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             finish();
                         }
                     });
@@ -267,7 +276,7 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
             }
         }
 
-        ArrayAdapter<String> country_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercountryArray);
+        ArrayAdapter<String> country_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercountryArray);
         sp_country.setAdapter(country_adapter);
         if (getIntent().getStringExtra("addresstype").equalsIgnoreCase("edit")) {
             int spinnerpos1 = country_adapter.getPosition(country_name);
@@ -279,7 +288,7 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
         }
 
 
-        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercodeArray);
+        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercodeArray);
         sp_code.setAdapter(code_adapter);
         int spinnerpos = code_adapter.getPosition(country_sort_num);
         sp_code.setSelection(spinnerpos);
@@ -328,7 +337,7 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     }
                 }
 
-                ArrayAdapter<String> state_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnerstateArray);
+                ArrayAdapter<String> state_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnerstateArray);
                 sp_states.setAdapter(state_adapter);
                 if (getIntent().getStringExtra("addresstype").equalsIgnoreCase("edit")) {
                     int spinnerpos = state_adapter.getPosition(state_name);
@@ -364,7 +373,7 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                         spinnercitiesArray.add(Share.Country_state_city.get(countrypos).getStates().get(position).getCities().get(cities).getName());
                     }
                 }
-                ArrayAdapter<String> city_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnercitiesArray);
+                ArrayAdapter<String> city_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnercitiesArray);
                 sp_district.setAdapter(city_adapter);
 
                 if (getIntent().getStringExtra("addresstype").equalsIgnoreCase("edit")) {
@@ -509,11 +518,12 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
 
 
         Share.hideKeyboard(New_address_save_update_activity.this);
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(New_address_save_update_activity.this, "", getString(R.string.loading), true, false);
-
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(New_address_save_update_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(New_address_save_update_activity.this);
         String addressid;
         if (getIntent().getStringExtra("addresstype").equalsIgnoreCase("edit")) {
             addressid = String.valueOf(Share.address_id);
@@ -551,7 +561,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
             @Override
             public void onResponse(Call<save_address_response> call, retrofit2.Response<save_address_response> response) {
                 save_address_response address_response = response.body();
-                pd.dismiss();
+//                pd.dismiss();
+                hideProgressDialog();
                 if (response.body().getSuccess()) {
                     address_response.getData().get(0).setIsSelect(true);
                     Log.e("RESPONSE_SIZE", "onResponse: " + address_response.getData().size());
@@ -578,7 +589,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             Save_address();
 
                         }
@@ -592,7 +604,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             Save_address();
                         }
                     });
@@ -600,7 +613,8 @@ public class New_address_save_update_activity extends AppCompatActivity implemen
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+//                            pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();

@@ -45,6 +45,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Orderdetails;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.getorderresponse;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.OrderAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -67,13 +68,13 @@ import retrofit2.Response;
 
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_offer;
 
-public class FragmentOrder extends Fragment {
-    ProgressDialog progressDialog;
+public class FragmentOrder extends PrintPhotoBaseFragment {
+  //  ProgressDialog progressDialog;
     LinearLayout id_text_view, id_ll_sign_in, ll_sign_in_text, id_ll;
     TextView id_text_view_messess, tv_login1, tv_login;
     RecyclerView recyclerview;
     SwipeRefreshLayout mySwipeRefreshLayout;
-    ProgressDialog pd;
+    //ProgressDialog pd;
     OrderAdapter mAdapter;
     private List<Orderdetails> sqlist = new ArrayList<Orderdetails>();
     private List<getorderdetails> sqlist1 = new ArrayList<>();
@@ -215,8 +216,9 @@ public class FragmentOrder extends Fragment {
         id_ll_sign_in.setVisibility(View.GONE);
         ll_sign_in_text.setVisibility(View.GONE);
         id_text_view.setVisibility(View.VISIBLE);
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
 
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
@@ -235,8 +237,9 @@ public class FragmentOrder extends Fragment {
                     getorderresponse responseData = response.body();
                     Log.e("RESPONSE", "onResponse: " + responseData.getResponseCode());
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
                         id_ll_sign_in.setVisibility(View.GONE);
                         ll_sign_in_text.setVisibility(View.GONE);
                         recyclerview.setVisibility(View.VISIBLE);
@@ -263,8 +266,9 @@ public class FragmentOrder extends Fragment {
                         }
 //                        }
                     } else {
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
                         mySwipeRefreshLayout.setRefreshing(false);
                         id_ll_sign_in.setVisibility(View.GONE);
                         ll_sign_in_text.setVisibility(View.GONE);
@@ -274,7 +278,8 @@ public class FragmentOrder extends Fragment {
                         id_text_view_messess.setText(response.body().getResponseMessage());
                     }
                 } else {
-                    progressDialog.dismiss();
+                    //progressDialog.dismiss();
+                    hideProgressDialog();
                     mySwipeRefreshLayout.setRefreshing(false);
                     Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
@@ -289,10 +294,11 @@ public class FragmentOrder extends Fragment {
 
                 Log.e(TAG, "onFailure: " + t.getLocalizedMessage());
                 Log.e(TAG, "onFailure: " + t.getMessage());
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+                hideProgressDialog();
                     mySwipeRefreshLayout.setRefreshing(false);
-                }
+//                }
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
@@ -487,8 +493,9 @@ public class FragmentOrder extends Fragment {
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         Call<RegResponse> regResponseCall = apiService.getRegResponseLogin(cred, password, androidId, "android", TimeZone.getDefault().getID(), Locale.getDefault().getLanguage());
@@ -496,15 +503,17 @@ public class FragmentOrder extends Fragment {
         regResponseCall.enqueue(new Callback<RegResponse>() {
             @Override
             public void onResponse(Call<RegResponse> call, Response<RegResponse> response) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
 
 
-                    progressDialog.dismiss();
+                    //progressDialog.dismiss();
+                    hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         SharedPrefs.save(getContext(), SharedPrefs.CART_COUNT, response.body().getCart_count());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
@@ -595,9 +604,10 @@ public class FragmentOrder extends Fragment {
 
             @Override
             public void onFailure(Call<RegResponse> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
                     AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();

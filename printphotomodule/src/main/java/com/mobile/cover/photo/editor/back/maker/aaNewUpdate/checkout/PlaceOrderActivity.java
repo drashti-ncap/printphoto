@@ -40,6 +40,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.ResponseDas
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.apply_code_response;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.response_order_initate;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.RetrofitClient2;
@@ -67,7 +68,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PlaceOrderActivity extends AppCompatActivity implements PaymentResultWithDataListener {
+public class PlaceOrderActivity extends PrintPhotoBaseActivity implements PaymentResultWithDataListener {
     private static final int CHROME_CUSTOM_TAB_REQUEST_CODE = 100;
     private static final long MIN_CLICK_INTERVAL = 1000;
     public static Activity activity;
@@ -85,7 +86,7 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
     public static boolean codeNotApplied = true;
     public String temp_offer_code = "PREPAIDOFFER";
     public static CheckBox ch_gift;
-    ProgressDialog pd;
+    //  ProgressDialog pd;
     LinearLayout id_ll_gift;
     RecyclerView recyclerview;
     Button btn_apply;
@@ -168,7 +169,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
     private void applycode(final String code, boolean doCheckout) {
 
 
-        pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(PlaceOrderActivity.this);
 
         APIService api = new MainApiClient(PlaceOrderActivity.this).getApiInterface();
 
@@ -190,7 +192,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
             public void onResponse(Call<apply_code_response> call, Response<apply_code_response> response) {
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
 
                         final apply_code_response loCouponCodeRes = response.body();
 
@@ -280,7 +283,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
                             }
                         }
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         AlertDialog alertDialog = new AlertDialog.Builder(PlaceOrderActivity.this).create();
                         alertDialog.setTitle(getString(R.string.alert));
                         alertDialog.setMessage(response.body().getResponseMessage());
@@ -294,7 +298,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
                     }
 
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(PlaceOrderActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
                 }
 
@@ -303,7 +308,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
 
             @Override
             public void onFailure(Call<apply_code_response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -760,11 +766,13 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
     private void pay(final String transactiontype) {
 
 
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
 
+        showProgressDialog(PlaceOrderActivity.this);
 
         APIService api = new MainApiClient(PlaceOrderActivity.this).getApiInterface();
 
@@ -791,12 +799,14 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
                     response_order_initate responseData = response.body();
                     Log.e("RESPONSE", "onResponse: " + responseData.getResponseCode());
                     if (responseData.getResponseCode().equalsIgnoreCase("0")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(activity, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     } else {
                         if (responseData.getData().getStatus() == 1) {
                             Log.e("SUCCESS", "onSUCCESS: ");
-                            pd.dismiss();
+//                            pd.dismiss();
+                            hideProgressDialog();
                             Log.e("Payment_Type", "Payment code:" + Share.paymenttype);
                             Log.e(TAG, "onResponse: " + responseData.getData().getTransactionId());
                             Log.e(TAG, "onResponse: " + responseData.getData().getTransactionType());
@@ -850,18 +860,21 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
 
                         } else {
                             Toast.makeText(PlaceOrderActivity.this, responseData.getData().getMessage(), Toast.LENGTH_SHORT).show();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(PlaceOrderActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<response_order_initate> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -900,7 +913,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
     private void generatechecksum(final String transaction_id) {
 
 
-        pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(PlaceOrderActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(PlaceOrderActivity.this);
 
 
         APIService apiService = new RetrofitClient2(PlaceOrderActivity.this).getApiInterface();
@@ -919,7 +933,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
                 if (response.isSuccessful()) {
                     ResponseDashboard responseData = response.body();
                     if (responseData.getResponseStatus().equalsIgnoreCase("1")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Log.e("BEFORE", "onResponse: " + (double) total_charge);
 
                         if (responseData.getCHECKSUMHASH() != null && !responseData.getCHECKSUMHASH().trim().isEmpty()) {
@@ -930,12 +945,14 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
                         }
 
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(PlaceOrderActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                     }
 
                 } else {
-                    pd.dismiss();
+//                    pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(PlaceOrderActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -943,7 +960,8 @@ public class PlaceOrderActivity extends AppCompatActivity implements PaymentResu
 
             @Override
             public void onFailure(Call<ResponseDashboard> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Toast.makeText(PlaceOrderActivity.this, getString(R.string.something_went_wrong) + t, Toast.LENGTH_LONG).show();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());

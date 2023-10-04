@@ -30,6 +30,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentHome;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.DataHelperKt;
@@ -46,16 +47,16 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 
-public class CoverStyle extends Fragment {
+public class CoverStyle extends PrintPhotoBaseFragment {
 
     TextView id_dummy_price, id_price, id_model, id_size, id_discription, tv_select_case;
     ImageView img_cover;
     LinearLayout layout1, layout2, layout3, layout4, layout5;
-    ProgressDialog progressDialog;
+//    ProgressDialog progressDialog;
     String total_amount = "100";
     String discount = "10";
     String paid_amount = "100";
-    private ProgressDialog pDialog;
+//    private ProgressDialog pDialog;
     private String[] str = new String[3];
 
     @Override
@@ -326,8 +327,9 @@ public class CoverStyle extends Fragment {
         protected void onPreExecute() {
             super.onPreExecute();
             Log.e("TAG", "onPreExecute: =======>excute");
-            progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-            progressDialog.show();
+//            progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//            progressDialog.show();
+            showProgressDialog(getActivity());
         }
 
         @Override
@@ -350,9 +352,10 @@ public class CoverStyle extends Fragment {
         @Override
         protected void onPostExecute(ArrayList<Bitmap> bitmaps) {
             super.onPostExecute(bitmaps);
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
+//            if (progressDialog != null && progressDialog.isShowing()) {
+//                progressDialog.dismiss();
+//            }
+            hideProgressDialog();
 
 
             if (bitmaps.size() == 3 && bitmaps.get(0) != null && bitmaps.get(1) != null && bitmaps.get(2) != null) {

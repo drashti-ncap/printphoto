@@ -22,6 +22,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_category_response_click_data;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.mall_wishlist_adapter;
@@ -33,14 +34,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Mall_wishlist extends AppCompatActivity implements View.OnClickListener {
+public class Mall_wishlist extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     public static TextView title, tv_no_fnd;
     public static Activity activity;
     RecyclerView rv_wish_list;
     ImageView id_back;
     mall_wishlist_adapter mAdapter;
-    ProgressDialog pd;
+   // ProgressDialog pd;
 
     AlertDialog alertDialog = null;
 
@@ -90,7 +91,8 @@ public class Mall_wishlist extends AppCompatActivity implements View.OnClickList
             user_id = Integer.valueOf(SharedPrefs.getString(Mall_wishlist.this, Share.key_ + RegReq.id));
         }
 
-        pd = ProgressDialog.show(Mall_wishlist.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(Mall_wishlist.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Mall_wishlist.this);
 
         APIService apiService = new MainApiClient(Mall_wishlist.this).getApiInterface();
         Call<mall_main_category_response_click_data> call = apiService.wishlist(user_id, Share.countryCodeValue, "1", Locale.getDefault().getLanguage());
@@ -98,7 +100,8 @@ public class Mall_wishlist extends AppCompatActivity implements View.OnClickList
         call.enqueue(new Callback<mall_main_category_response_click_data>() {
             @Override
             public void onResponse(Call<mall_main_category_response_click_data> call, Response<mall_main_category_response_click_data> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.isSuccessful()) {
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         Share.isinternational = response.body().getIs_international();
@@ -137,7 +140,8 @@ public class Mall_wishlist extends AppCompatActivity implements View.OnClickList
             @Override
             public void onFailure(Call<mall_main_category_response_click_data> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(Mall_wishlist.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));

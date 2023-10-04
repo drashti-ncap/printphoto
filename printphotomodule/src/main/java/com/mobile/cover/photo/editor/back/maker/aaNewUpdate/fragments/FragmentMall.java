@@ -1,7 +1,9 @@
 package com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -32,6 +34,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.Offer;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.getofferresponse;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.SliderAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -58,8 +61,8 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_order;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 
-public class FragmentMall extends Fragment implements View.OnClickListener {
-    ProgressDialog pd;
+public class FragmentMall extends PrintPhotoBaseFragment implements View.OnClickListener {
+   // ProgressDialog pd;
     RecyclerView rv_offer;
     OfferAdapter mAdapter;
     ImageView id_back;
@@ -76,6 +79,13 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
     private List<getpromodata> sqlist2 = new ArrayList<>();
     private List<getpromodetail> sqlist3 = new ArrayList<>();
 
+    private Activity mContext;
+
+    // Define a method to set the context
+    public void setContext(Activity context) {
+        mContext = context;
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_offeractivity, container, false);
@@ -88,17 +98,17 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
         banner_slider = v.findViewById(R.id.banner_slider);
         rl_offers = v.findViewById(R.id.rl_offers);
         Share.click_positions.clear();
-        firebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
-        logger = AppEventsLogger.newLogger(getActivity());
+        firebaseAnalytics = FirebaseAnalytics.getInstance(mContext);
+        logger = AppEventsLogger.newLogger(mContext);
       //  banner_slider.setCustomIndicator(v.findViewById(R.id.custom_indicator));
         Bundle params = new Bundle();
         params.putInt("mall_visited", 1);
         firebaseAnalytics.logEvent("mall_visit", params);
-        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
+        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
             btn_count.setVisibility(View.GONE);
         } else {
             btn_count.setVisibility(View.VISIBLE);
-            btn_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
+            btn_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
         }
         HomeMainActivity.iv_logout.setImageDrawable(getResources().getDrawable(R.drawable.ic_shopping_cart));
         HomeMainActivity.iv_logout.setOnClickListener(new View.OnClickListener() {
@@ -106,11 +116,11 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
             public void onClick(View v) {
                 if (selected != 2) {
                     selected = 2;
-                    id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                    id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                    id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                    id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                    id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                    id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                    id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                    id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                    id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                    id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frg_main, new FragmentCart());
                     fragmentTransaction.commit();
@@ -130,20 +140,20 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
 
 
     private void setHeader() {
-        final TextView title = getActivity().findViewById(R.id.title);
+        final TextView title = mContext.findViewById(R.id.title);
 
         title.setText(getString(R.string.new_offers));
 
-        ImageView imageView = getActivity().findViewById(R.id.id_back);
+        ImageView imageView = mContext.findViewById(R.id.id_back);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeMainActivity.selected = 0;
-                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
                 fragmentTransaction.commit();
@@ -153,20 +163,20 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
 
     private void intView() {
         selected = 11;
-        ImageView id_home = getActivity().findViewById(R.id.id_home);
-        ImageView id_order = getActivity().findViewById(R.id.id_order);
-        ImageView id_cart = getActivity().findViewById(R.id.id_cart);
-        ImageView id_account = getActivity().findViewById(R.id.id_account);
-        id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+        ImageView id_home = mContext.findViewById(R.id.id_home);
+        ImageView id_order = mContext.findViewById(R.id.id_order);
+        ImageView id_cart = mContext.findViewById(R.id.id_cart);
+        ImageView id_account = mContext.findViewById(R.id.id_account);
+        id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
 
 
         sqlist = new ArrayList<>();
-        mAdapter = new OfferAdapter(getActivity(), sqlist, sqlist2, sqlist3);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        mAdapter = new OfferAdapter(mContext, sqlist, sqlist2, sqlist3);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
         rv_offer.setLayoutManager(mLayoutManager);
         rv_offer.setItemAnimator(new DefaultItemAnimator());
         rv_offer.setAdapter(mAdapter);
@@ -196,20 +206,21 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == ed_search) {
-            Intent intent = new Intent(getActivity(), MallSearchActivity.class);
+            Intent intent = new Intent(mContext, MallSearchActivity.class);
             startActivity(intent);
         }
     }
 
     private void getoffer() {
-        APIService api = new MainApiClient(getActivity()).getApiInterface();
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        APIService api = new MainApiClient(mContext).getApiInterface();
+        //pd = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+        showProgressDialog(mContext);
         Call<getofferresponse> call;
         try {
-            if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase("IN")) {
-                call = api.getoffer("1", "0", SharedPrefs.getString(getActivity(), SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+            if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase("IN")) {
+                call = api.getoffer("1", "0", SharedPrefs.getString(mContext, SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(mContext, SharedPrefs.country_code));
             } else {
-                call = api.getoffer("1", "1", SharedPrefs.getString(getActivity(), SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+                call = api.getoffer("1", "1", SharedPrefs.getString(mContext, SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(mContext, SharedPrefs.country_code));
             }
 
             call.enqueue(new Callback<getofferresponse>() {
@@ -243,7 +254,8 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
 
                             list.clear();
                             for (int i = 0; i < datumList.size(); i++) {
-                                if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code,"IN").equalsIgnoreCase("IN")) {
+                                Log.e("CHECKCONTEXT", "onResponse: getContext()==>"+mContext);
+                                if (SharedPrefs.getString(mContext, SharedPrefs.country_code,"IN").equalsIgnoreCase("IN")) {
                                     rl_offers.setVisibility(View.VISIBLE);
 //                                    TextSliderView textSliderView = new TextSliderView(getContext());
 //                                    textSliderView
@@ -274,23 +286,26 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
 
                             getoffer2();
                         } else {
-                            if (pd != null) {
-                                pd.dismiss();
-                            }
-                            Toast.makeText(getActivity(), response.body().getResponseMessage(), Toast.LENGTH_LONG).show();
+//                            if (pd != null) {
+//                                pd.dismiss();
+//                            }
+                            hideProgressDialog();
+                            Toast.makeText(mContext, response.body().getResponseMessage(), Toast.LENGTH_LONG).show();
                         }
                     } else {
-                        if (pd != null) {
-                            pd.dismiss();
-                        }
-                        Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+//                        if (pd != null) {
+//                            pd.dismiss();
+//                        }
+                        hideProgressDialog();
+                        Toast.makeText(mContext, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                     }
 
                 }
 
                 @Override
                 public void onFailure(Call<getofferresponse> call, Throwable t) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Log.e(TAG, "onFailure: ======>" + t);
                     Log.e(TAG, "onFailure: ======>" + t.getMessage());
                     Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -298,7 +313,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                         if (alertDialog != null) {
                             alertDialog.dismiss();
                         }
-                        alertDialog = new AlertDialog.Builder(getActivity()).create();
+                        alertDialog = new AlertDialog.Builder(mContext).create();
                         alertDialog.setTitle(getString(R.string.time_out));
                         alertDialog.setMessage(getString(R.string.connect_time_out));
                         alertDialog.setCancelable(false);
@@ -313,8 +328,8 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                         if (alertDialog != null) {
                             alertDialog.dismiss();
                         }
-                        if (getActivity() != null) {
-                            alertDialog = new AlertDialog.Builder(getActivity()).create();
+                        if (mContext != null) {
+                            alertDialog = new AlertDialog.Builder(mContext).create();
                             alertDialog.setTitle(getString(R.string.internet_connection));
                             alertDialog.setCancelable(false);
                             alertDialog.setMessage(getString(R.string.slow_connect));
@@ -354,13 +369,13 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
         sqlist3.clear();
 
 
-        APIService api = new MainApiClient(getActivity()).getApiInterface();
+        APIService api = new MainApiClient(mContext).getApiInterface();
 
         Call<getofferresponse> call;
-        if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase("IN")) {
-            call = api.getoffer("", "0", SharedPrefs.getString(getActivity(), SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+        if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase("IN")) {
+            call = api.getoffer("", "0", SharedPrefs.getString(mContext, SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(mContext, SharedPrefs.country_code));
         } else {
-            call = api.getoffer("", "1", SharedPrefs.getString(getActivity(), SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+            call = api.getoffer("", "1", SharedPrefs.getString(mContext, SharedPrefs.uid), Locale.getDefault().getLanguage(), SharedPrefs.getString(mContext, SharedPrefs.country_code));
         }
 
         call.enqueue(new Callback<getofferresponse>() {
@@ -377,7 +392,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                         List<Offer> datumList = responseData.getOffer();
                         for (Offer datum : datumList) {
                             Log.e(TAG, "onResponse: " + datum.getOfferCode());
-                            if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase("IN")) {
+                            if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase("IN")) {
                                 getdata getdata = new getdata("" + datum.getId(), "" + datum.getOfferCode(), "" + datum.getNOfferImage(), "" + datum.getNOfferNewImage(), "" + datum.getDescription(),
                                         "" + datum.getAmount(), "" + datum.getStatus(), "" + datum.getExpiryText(), "" + datum.getTermsCondition(), "" + datum.getDisplay_message());
                                 sqlist.add(getdata);
@@ -392,28 +407,32 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                             }
                         }
                         if (sqlist.size() == 0) {
-                            Toast.makeText(getActivity(), getString(R.string.no_offer_available), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, getString(R.string.no_offer_available), Toast.LENGTH_SHORT).show();
                         }
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     } else {
-                        pd.dismiss();
-                        Toast.makeText(getActivity(), responseData.getResponseMessage(), Toast.LENGTH_LONG).show();
+                        //pd.dismiss();
+                        hideProgressDialog();
+                        Toast.makeText(mContext, responseData.getResponseMessage(), Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    pd.dismiss();
-                    Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    //pd.dismiss();
+                    hideProgressDialog();
+                    Toast.makeText(mContext, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<getofferresponse> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
@@ -424,7 +443,7 @@ public class FragmentMall extends Fragment implements View.OnClickListener {
                     });
                     alertDialog.show();
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setMessage(getString(R.string.slow_connect));
                     alertDialog.setButton(getString(R.string.retry), new DialogInterface.OnClickListener() {

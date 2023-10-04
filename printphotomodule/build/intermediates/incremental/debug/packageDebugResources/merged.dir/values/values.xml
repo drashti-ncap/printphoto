@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Country_Type">
+        <item>@string/india</item>
+    </string-array>
+    <string-array name="selectAction">
+        <item>Resend OTP</item>
+        <item>Enter OTP Manually</item>
+    </string-array>
+    <color name="background">#263238</color>
+    <color name="background_dup">#3253575E</color>
+    <color name="bg">#e5e5e5</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <color name="colorAccent">#0ABAD4</color>
+    <color name="colorPrimary">#0ABAD4</color>
+    <color name="colorPrimaryDark">#0ABAD4</color>
+    <color name="color_green">#53EC2F</color>
+    <color name="color_red">#EC2F2F</color>
+    <color name="colorbutton">#0498E1</color>
+    <color name="colortitle1">#0ABAD4</color>
+    <color name="colortitle2">#4BD559</color>
+    <color name="divider">#333333</color>
+    <color name="dummyprice">#b2b2b2</color>
+    <color name="grey_500">#BDBDBD</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="placeholder_grey_20">#33AAADC4</color>
+    <color name="progress_background">#0D000000</color>
+    <color name="searchbg">#E5E5E5</color>
+    <color name="textColorPrimary">#FFFFFB</color>
+    <color name="text_color">#646464</color>
+    <color name="tint_blue_select">#0ABAD4</color>
+    <color name="tint_grey_unselect">#767676</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">#ffffff</color>
+    <color name="windowBackground">#1C1C1C</color>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_margin_content">24dp</dimen>
+    <dimen name="activity_margin_half">8dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <item name="fab_expand_menu_button" type="id"/>
+    <item name="fab_label" type="id"/>
+    <integer name="anim_length">3000</integer>
+    <integer name="anim_length_half">1500</integer>
+    <string name="Bahrain" translatable="false">+973</string>
+    <string name="Egypt" translatable="false">+966</string>
+    <string name="Instagram">Instagram</string>
+    <string name="Jordan" translatable="false">+962</string>
+    <string name="Kuwait" translatable="false">+965</string>
+    <string name="Oman" translatable="false">+968</string>
+    <string name="Photo">Choose Photo</string>
+    <string name="Saudi" translatable="false">+966</string>
+    <string name="UAE" translatable="false">+971</string>
+    <string name="_50">₹50</string>
+    <string name="account">Account</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="add">Add</string>
+    <string name="add_image_if_required">Add Image(if required):</string>
+    <string name="add_image_sticker">Add image or stickers</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="add_to_cart">Add to cart?</string>
+    <string name="add_to_cart2">Add to cart</string>
+    <string name="add_to_cart_btn">Add To Cart</string>
+    <string name="address">Address</string>
+    <string name="address_1">Address 1</string>
+    <string name="address_2">Address 2</string>
+    <string name="address_not_available">Address not available</string>
+    <string name="adhaar_number">Aadhaar Number</string>
+    <string name="alert">Alert</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="alternate_mobile_no">Alternate Mobile No. :</string>
+    <string name="alternate_mobile_no_required">Alternate Mobile No.(Required)</string>
+    <string name="amount_val">Amount :</string>
+    <string name="app_id" translatable="false">ca-app-pub-9649256815954059~7543091324</string>
+    <string name="app_not_installed">App not Installed</string>
+    <string name="app_open" translatable="false">ca-app-pub-9649256815954059/1339563487</string>
+    <string name="apply">Apply</string>
+    <string name="apply_promocode_amp_get_discount">Apply Promo code &amp; Get Discount</string>
+    <string name="are_u_sure_del">Are you sure to delete this address?</string>
+    <string name="are_u_sure_want_delete_cart">Are you sure to delete this item from cart?</string>
+    <string name="are_you_exit">Are you sure you want to exit?</string>
+    <string name="are_you_sure_want_to_purchase_using_cash_on_delivery">Are you sure you want to purchase this product using cash on delivery?</string>
+    <string name="are_you_to_cancel_order">Are you sure you want to cancel this order?</string>
+    <string name="atleast_three_image">At least 3 images require</string>
+    <string name="back_pressed_transaction_cancel">Back pressed. Transaction cancelled</string>
+    <string name="background">Background</string>
+    <string name="base_url_live" translatable="false">aHR0cHM6Ly9wcmludHBob3RvLmluL1Bob3RvX2Nhc2UvYXBpLw==</string>
+    <string name="base_url_paytm" translatable="false">aHR0cHM6Ly9wcmludHBob3RvLmluL1Bob3RvX2Nhc2UvcGF5dG0v</string>
+    <string name="base_url_test" translatable="false">aHR0cHM6Ly9hZG1pbi1yZWxlYXNlLnByaW50cGhvdG8uaW4vYXBpLw==</string>
+    <string name="browse">Browse…</string>
+    <string name="bulk">Bulk</string>
+    <string name="bulk_order">Bulk Order</string>
+    <string name="business">Business</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="buy_one_get_one_keychain">Buy One Get One Keychain</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="cart">Cart</string>
+    <string name="cash_on_delivery">Cash On Delivery</string>
+    <string name="category_not_available">Category not available</string>
+    <string name="change">Change</string>
+    <string name="change_confirm_pass">Please Enter Confirm Password.</string>
+    <string name="change_enter_new_pass">Please Enter New Password.</string>
+    <string name="change_enter_old_pass">Please Enter old Password.</string>
+    <string name="change_password">Change Password</string>
+    <string name="check_out">CHECK OUT</string>
+    <string name="choose_color">Choose color</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="choose_sticker">Choose Sticker</string>
+    <string name="clear">Clear</string>
+    <string name="clear_history">Clear History</string>
+    <string name="click_here">Click here!!</string>
+    <string name="code">CODE: </string>
+    <string name="code_val">  Code</string>
+    <string name="color_amp_size">Color &amp; Size</string>
+    <string name="comming_soon">Coming Soon</string>
+    <string name="complain">Complain</string>
+    <string name="complaint">Complaint:</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="connect_time_out">Connect timed out. Please try again later.</string>
+    <string name="contact">Contact</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="continue__">Continue</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="continue_val">CONTINUE</string>
+    <string name="country">Country</string>
+    <string name="cover">Cover</string>
+    <string name="cover_disp_sentence">Our phone cases are made of hard polycarbonate material, all of our phone case are hard and durable which can ensure optimum protection for your phone.Design yourself and get your stylish look cover.</string>
+    <string name="cover_style">Cover Style</string>
+    <string name="custom">Custom</string>
+    <string name="date">Date:</string>
+    <string name="default_val">Default</string>
+    <string name="default_web_client_id" translatable="false">994538272236-hr4i4s8tdhd8l1htle7ipa6060ai4bgb.apps.googleusercontent.com</string>
+    <string name="delete">Delete</string>
+    <string name="delete_address_sentence">Are you sure to delete this address?</string>
+    <string name="delivery">Delivery</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="delivery_available">Delivery available</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="delivery_not_available">Delivery not available</string>
+    <string name="delivery_status">Delivery Status</string>
+    <string name="delivery_to">Delivery To :</string>
+    <string name="delivery_within_15_working_days_after_order_n_confirmation">Delivery within 4–5 working days after order confirmation</string>
+    <string name="description">Description…</string>
+    <string name="description_val">Description:</string>
+    <string name="design_cover">Design Cover</string>
+    <string name="design_shipper_bottle">Design Shipper Bottle</string>
+    <string name="details">Details</string>
+    <string name="didn_t_recieve_your_otp_code">Didn\'t receive your OTP code!!</string>
+    <string name="discount_amount">Discount Amount</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="dismiss_dialog">Dismiss</string>
+    <string name="do_you_want_to_exit">Do you want to exit?</string>
+    <string name="download_failed">Download Failed</string>
+    <string name="edit">Edit</string>
+    <string name="editor">Editor</string>
+    <string name="email_id">Email ID</string>
+    <string name="enter_adhar">Enter Aadhaar</string>
+    <string name="enter_another_name">Enter Another Name</string>
+    <string name="enter_brand_model">Enter Brand and Model name</string>
+    <string name="enter_brand_model_name">Enter Brand and Model name</string>
+    <string name="enter_business_name_type">Enter Business Name/Type</string>
+    <string name="enter_correct_email">Enter correct EmailID</string>
+    <string name="enter_correct_number">Enter correct number</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="enter_email_id_val">Enter Email ID</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_mobile">Please enter mobile number</string>
+    <string name="enter_mobile_no">Enter Mobile No.</string>
+    <string name="enter_mobile_number">Enter Mobile number</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_pass">Enter Password</string>
+    <string name="enter_promocode">Enter Promo code</string>
+    <string name="enter_text">Enter text</string>
+    <string name="enter_your_complain">Enter your Complain</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="exit">EXIT</string>
+    <string name="facebook_app_id" translatable="false">6173097026129479</string>
+    <string name="failed_to_delete">Failed To Delete</string>
+    <string name="failure">Order Failure</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2127267220654385</string>
+    <string name="feedback_complain">Feedback/Complain</string>
+    <string name="filter">Filter</string>
+    <string name="first_name">First Name</string>
+    <string name="flat">Flat</string>
+    <string name="font">Font</string>
+    <string name="for_men">For Men</string>
+    <string name="for_women">For Women</string>
+    <string name="forget">Forget</string>
+    <string name="full_name">Full Name</string>
+    <string name="gallery">Gallery</string>
+    <string name="gcm_defaultSenderId" translatable="false">994538272236</string>
+    <string name="gift_amount">Gift Amount</string>
+    <string name="gift_wrap">Gift Wrap</string>
+    <string name="google_api_key" translatable="false">AIzaSyBKnN3WVJhPuJj092GkYAkYaJeXWRE34Y4</string>
+    <string name="google_app_id" translatable="false">1:994538272236:android:8582401c4aecf38dd67cc9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBKnN3WVJhPuJj092GkYAkYaJeXWRE34Y4</string>
+    <string name="google_storage_bucket" translatable="false">printphoto-764da.appspot.com</string>
+    <string name="gst_charges">GST Charges</string>
+    <string name="have_you_find_your_brand_or_model_if_not">Have you find your brand or model? if not</string>
+    <string name="history">History</string>
+    <string name="image">image</string>
+    <string name="image1">image1</string>
+    <string name="image2">image2</string>
+    <string name="image_corrupt_or_not_support">Image corrupted or not support.</string>
+    <string name="image_not_exist">Image not exist anymore</string>
+    <string name="image_processing">Image is processing…</string>
+    <string name="image_toast">image.</string>
+    <string name="images">Images</string>
+    <string name="images_can_be_select">images can be select</string>
+    <string name="images_n">Images</string>
+    <string name="inch_val">INCH</string>
+    <string name="india" translatable="false">+91</string>
+    <string name="information">Information</string>
+    <string name="instagram_client_id" translatable="false">3faa6c1b85a44436aea28432f6b9d04c</string>
+    <string name="instagram_login">Instagram Login</string>
+    <string name="instagram_redirect" translatable="false">http://admin.vasundharavision.com/art_work/loader.html</string>
+    <string name="instagram_secret" translatable="false">9fc189c74d8f4c72b601943f229a7b4e</string>
+    <string name="install_google_map">Enable or Install the Google Map!!</string>
+    <string name="instant_off">Get Instant Off on Pre-Paid</string>
+    <string name="inter_ad_unit_id" translatable="false">ca-app-pub-9649256815954059/1531135178</string>
+    <string name="internet_connection">Internet Connection</string>
+    <string name="invalid_email_id">Invalid Email ID</string>
+    <string name="invalid_mobile_num">Invalid phone number.</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="item_cancelled">Item Cancelled</string>
+    <string name="item_delete_successfully">Item deleted successfully.</string>
+    <string name="item_not_available">Item not available</string>
+    <string name="last_name">Last Name</string>
+    <string name="learn_how_to_edit_mobile_cover">Learn How To Edit Mobile Cover</string>
+    <string name="learn_video">If you want to learn how to edit the cover. Please Press Yes</string>
+    <string name="loading">Loading…</string>
+    <string name="location">Location:</string>
+    <string name="log_in">Log In</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="logout_sentence">Do you want to logout?</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="mall_code_copied">mall Code Copied</string>
+    <string name="max">Maximum</string>
+    <string name="max_price">Max Price</string>
+    <string name="merchant">Merchant</string>
+    <string name="min_fifty_character">Please enter the description properly and enter min 50 characters!!</string>
+    <string name="min_price">Min Price</string>
+    <string name="mobile">Mobile</string>
+    <string name="mobile_cover">MobileCover</string>
+    <string name="mobile_no_optional">Mobile No. (Optional)</string>
+    <string name="mobile_no_val">Mobile No. :</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="model">model…</string>
+    <string name="model_not_available">Model not available</string>
+    <string name="model_request">Model Request</string>
+    <string name="model_val">Model</string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+    <string name="mug_fancy_image">Mug Fancy Images</string>
+    <string name="must_six_char">Password must have 6 or more characters</string>
+    <string name="my_account">My Account</string>
+    <string name="my_order">My Order</string>
+    <string name="name">Name</string>
+    <string name="native_ad_unit_id" translatable="false">ca-app-pub-9649256815954059/6867222338</string>
+    <string name="need_help">Need Help?</string>
+    <string name="need_login">Need to log in first</string>
+    <string name="new_offers">New Offers</string>
+    <string name="new_password">New Password</string>
+    <string name="next">Next</string>
+    <string name="no">no</string>
+    <string name="no_address_available">No address available</string>
+    <string name="no_app_available">No app available to perform this action!!!</string>
+    <string name="no_images_available">No images available</string>
+    <string name="no_item_available">No items available</string>
+    <string name="no_more_data">No more data</string>
+    <string name="no_offer_available">No offers available</string>
+    <string name="no_order_available">No order available</string>
+    <string name="no_product_available">No product available</string>
+    <string name="no_transaction">No Transaction</string>
+    <string name="not_available">Not Available</string>
+    <string name="not_support_device">This product is not supported for your device to make it customize.</string>
+    <string name="number_has_already_registered">Number has already been registered!!!!</string>
+    <string name="off">off</string>
+    <string name="offer">Offer</string>
+    <string name="offer_code_copied">Offer Code Copied</string>
+    <string name="offer_sentence">Buy 1 get 1 keychain free by applying KEYCHAIN promo code!!</string>
+    <string name="office_address">304, Heny Arcade, Near Dabholi Gam BRTS Bus stand, Katargam, Surat-396004</string>
+    <string name="ok">OK</string>
+    <string name="old_password">Old Password</string>
+    <string name="order">Order</string>
+    <string name="order_cancelation">Order Cancellation</string>
+    <string name="order_cancelled">Order Cancelled</string>
+    <string name="order_date">Order Date :</string>
+    <string name="order_details">Order Details</string>
+    <string name="order_dispatch">Order Dispatch</string>
+    <string name="order_id">Order ID :</string>
+    <string name="order_id_new">Order ID</string>
+    <string name="order_is_delivered">Your order is Delivered</string>
+    <string name="order_place">Order Placed</string>
+    <string name="order_received">Order Received</string>
+    <string name="otp_has_been_send_email">OTP has been send to your  EmailID</string>
+    <string name="out_of_stock">Requested item is out of stock, It will be available soon!!</string>
+    <string name="out_of_stock_item_val">Requested item is out of stock, It will be available soon!!</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="pass_change_successfully">Password changed Successfully</string>
+    <string name="pass_does_not_match">Password Does not match.</string>
+    <string name="pass_limit">New password required at least 6 digit.</string>
+    <string name="password">Password</string>
+    <string name="payable_amount">Payable Amount</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="payment_successfull">Order Received</string>
+    <string name="payment_trans_failed">Payment Transaction Failed</string>
+    <string name="paytm_mobile_number">Paytm Mobile Number</string>
+    <string name="permission_crop_rationale">WRITE_EXTERNAL_STORAGE permission is needed to save cropped image.</string>
+    <string name="permission_pick_rationale">READ_EXTERNAL_STORAGE permission is needed to pick image.</string>
+    <string name="permission_required">Permissions Required</string>
+    <string name="permission_sentence">Please allow permission for camera.</string>
+    <string name="permission_sentence_storage">Please allow permission for storage.</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="personal_info">Personal Information:</string>
+    <string name="phone_case">Phone Case</string>
+    <string name="photoframe">PhotoFrame</string>
+    <string name="picture">Picture :</string>
+    <string name="pincode">Pincode</string>
+    <string name="pincode_check_delivery">Pin code (Check Delivery)</string>
+    <string name="place">Place</string>
+    <string name="place_order">Place Order</string>
+    <string name="placed_on">Placed on :</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_mug">Please add high resolution image to get high clarity mug</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_phone_cover">Please add high resolution image to get high clarity phone cover</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_product">Please add high resolution image to get high clarity product</string>
+    <string name="please_enter_email">Please enter email id</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="please_enter_otp">Please enter OTP</string>
+    <string name="please_enter_text">Please enter text</string>
+    <string name="please_enter_valid_otp">Please Enter Valid OTP</string>
+    <string name="please_enter_your_brand_name">Please enter your brand</string>
+    <string name="please_enter_your_pincode">Please Enter Your Pin code</string>
+    <string name="please_select_country">PLease Select Currency</string>
+    <string name="please_select_image">Please select image</string>
+    <string name="please_select_qty">Please select quantity</string>
+    <string name="please_sign_in_yourself">Please Signing yourself</string>
+    <string name="please_wait">Please wait</string>
+    <string name="pls_enter_address">Please enter address</string>
+    <string name="pls_enter_first_name">Please enter first name</string>
+    <string name="pls_enter_last_name">Please enter last name</string>
+    <string name="pls_enter_pass">Please enter password</string>
+    <string name="pls_enter_pin">Please enter correct pin code</string>
+    <string name="pls_enter_six_pin">Please enter 6 digit pin code</string>
+    <string name="pls_enter_valid_mobile_no">Please enter valid mobile number</string>
+    <string name="pls_enter_valid_mobile_no_10">Mobile number must be 10 digit only</string>
+    <string name="pls_enter_valid_mobile_no_9">Mobile number must be 9 digit only</string>
+    <string name="pls_paytm_num">Enter paytm mobile number</string>
+    <string name="pls_re_enter">Please enter re-password</string>
+    <string name="pls_select_city">Please select city!!</string>
+    <string name="pls_select_country">Please select country!!</string>
+    <string name="pls_select_state">Please select state!!</string>
+    <string name="policies">Policies</string>
+    <string name="prepaid_best_offer">Prepaid Best Offer</string>
+    <string name="price">Price</string>
+    <string name="price_high_to_low">Price High To Low</string>
+    <string name="price_low_to_high">Price Low To High</string>
+    <string name="privacy_amp_policy">Privacy &amp; Policy</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="product_description">Product Description:</string>
+    <string name="product_details">Product Details:</string>
+    <string name="product_information">Product Information</string>
+    <string name="product_list">Product List</string>
+    <string name="project_id" translatable="false">printphoto-764da</string>
+    <string name="promocode_validation_sentence">Please enter promo code properly</string>
+    <string name="provide_correct_adhar">Provide Correct Aadhaar Number</string>
+    <string name="provide_pincode">Please provide proper pincode</string>
+    <string name="qty_cannot_less">Quantity cannot be less then 1!!</string>
+    <string name="quantity_val">Quantity :</string>
+    <string name="rate_app">Rate App..</string>
+    <string name="re_enter_password">Re Enter Password</string>
+    <string name="reason">Reason*</string>
+    <string name="refund_amp_cancellation_policy">Refund &amp; Cancellation Policy</string>
+    <string name="region_not_available">Region not available</string>
+    <string name="register">Register</string>
+    <string name="registration">Registration</string>
+    <string name="registration_successfull">Registration successful.</string>
+    <string name="registring">Registering..</string>
+    <string name="remove_image_sentence">if you want to remove this images than add more images.</string>
+    <string name="request_brand_or_model">Request Brand or Model..</string>
+    <string name="request_for_money_to_paytm_wallet">Request for money to paytm wallet</string>
+    <string name="request_model_already_available">Requested Model is already available, Want to proceed for Editing ?</string>
+    <string name="request_model_brand">Request Brand/Model</string>
+    <string name="request_sent_successfull">Request Sent Successfully</string>
+    <string name="request_your_device">Request your device</string>
+    <string name="retry">Retry</string>
+    <string name="rs_icon">₹</string>
+    <string name="save_address">Save Address</string>
+    <string name="search">Search ..</string>
+    <string name="search_for">Search for</string>
+    <string name="search_for_product">Search for product..</string>
+    <string name="search_phone_brand">Search for phone brand..</string>
+    <string name="second_remaining">seconds remaining:</string>
+    <string name="security_amp_privacy">Security &amp; Privacy:</string>
+    <string name="security_amp_settings">Security &amp; Settings</string>
+    <string name="select">Select</string>
+    <string name="select_any_prod">Please select any product</string>
+    <string name="select_atleast">Select at-least</string>
+    <string name="select_brand">Select Brand</string>
+    <string name="select_cancel_reason">Select a reason</string>
+    <string name="select_case">Select Case</string>
+    <string name="select_city">Select City</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_high_resolution_image">Please select high resolution image</string>
+    <string name="select_image">Select Image</string>
+    <string name="select_model">Select Model</string>
+    <string name="select_product">Select product</string>
+    <string name="select_quantity">Select quantity</string>
+    <string name="select_region">Please select at-least one region!!</string>
+    <string name="select_state">Select State</string>
+    <string name="select_valid_reason">Please select a valid reason</string>
+    <string name="seller">Seller</string>
+    <string name="seller_account_created_success">Your Seller account has been created Successfully</string>
+    <string name="seller_id">Seller ID :</string>
+    <string name="seller_id_new">Seller ID :</string>
+    <string name="seller_information">Seller Information:</string>
+    <string name="seller_name">Seller Name</string>
+    <string name="seller_promocode">Seller Promo-code</string>
+    <string name="seller_registration_succes">Seller Registered Successfully</string>
+    <string name="seller_wallet">Seller Wallet</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="send_request">Send Request</string>
+    <string name="sent_to">Sent to</string>
+    <string name="server_error">Server Error</string>
+    <string name="server_under_maintenance">Server under maintenance!!! Try after sometime</string>
+    <string name="share_your_promo_code_in_review">Share your promo code in review</string>
+    <string name="share_your_promocode_amp_get_50_in_wallet">Share Your Promo code &amp; Get ₹ 0 in Wallet</string>
+    <string name="shipper_bottle">Shipper Bottle Fancy Images</string>
+    <string name="shipping_amount">Shipping Amount</string>
+    <string name="shopping">Shopping</string>
+    <string name="shopping_mall">Shopping Mall</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="size">Size</string>
+    <string name="size_val">Size :</string>
+    <string name="skip">Skip</string>
+    <string name="slow_connect">Internet is slow. Please check internet connection.</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="something_went_wrong_try_agaian">Something went to wrong. Please try again Later</string>
+    <string name="sort">Sort</string>
+    <string name="sort_by_newest_first">Sort by newest first</string>
+    <string name="sort_by_popularity">Sort by popularity</string>
+    <string name="splash_text">Keep it stylish with Mobile Skins for your cell phone. Printphoto.in provides you the best quality customized mobile skins. </string>
+    <string name="sticker">Sticker</string>
+    <string name="subject">Subject:</string>
+    <string name="submit">Submit</string>
+    <string name="support_timing">Support Timing</string>
+    <string name="sure_to_cancel_order">Are you sure you want to cancel this order?</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="tap_to_reload">Tap to reload</string>
+    <string name="term_cond_sentence">Promo codes and offers are not applicable on cash on delivery. Applicable promo codes or offers will be automatically removed.</string>
+    <string name="term_of_use">Terms of Use</string>
+    <string name="terms_amp_conditions">Terms &amp; Conditions</string>
+    <string name="terms_cond">Terms &amp; Conditions</string>
+    <string name="text_error">Error while encoding your text message</string>
+    <string name="text_null">Enter text first</string>
+    <string name="the_item_which_are_there_in_your_cart_will_look_good_in_your_hand_n_ngo_and_buy_your_product">The item which are there in your cart will look good in your hand.   Go and Buy your product!!!</string>
+    <string name="time_out">Time Out</string>
+    <string name="time_remaining">Time remaining:</string>
+    <string name="title_activity_status">CCAvenueMobile</string>
+    <string name="today_offer">Offers</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="total_amount_payable">Total Amount Payable</string>
+    <string name="total_payable_amount">Total Payable Amount</string>
+    <string name="trackorder">Track Order</string>
+    <string name="transaction">Transaction</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="type_complaint">Type Complaint</string>
+    <string name="update">Update</string>
+    <string name="update_fail">Update Failed</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="update_success">Update successfully</string>
+    <string name="update_whatsapp">Please install latest update for WhatsApp to begin</string>
+    <string name="upload_fail">Upload Failed</string>
+    <string name="us">Us</string>
+    <string name="use_code_val">Use Code :</string>
+    <string name="use_this_promocode_amp_get_50_inr_instant_discount">Use This Promo code &amp; Get ₹0 INR Instant Discount:</string>
+    <string name="valid_business">Please enter valid business name</string>
+    <string name="valid_email">Please enter valid email id</string>
+    <string name="valid_mobile">Please enter valid mobile number</string>
+    <string name="valid_pincode">Please enter valid pin code!!</string>
+    <string name="valid_zipcode">Please enter valid zipcode!!</string>
+    <string name="verification">Verification</string>
+    <string name="verify">Verify</string>
+    <string name="visit_our_website">Visit Our Website</string>
+    <string name="visit_website_dialog">Please visit printphoto.in website on laptop or desktop for more phone case design.</string>
+    <string name="wallet">Wallet</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="want_to_become_a_seller">Want To Become a Seller</string>
+    <string name="want_to_become_seller">Want to become a seller?</string>
+    <string name="want_to_save">Want to save?</string>
+    <string name="we_sent_you_code_to_nverify_your_mobile_number">OTP has been send to your \nmobile number</string>
+    <string name="what_s_new">What\'s New</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="would_like">Would like to rate us on play store?</string>
+    <string name="write_feedback">Write your feedback</string>
+    <string name="write_your_request">Write Your Request</string>
+    <string name="yes">yes</string>
+    <string name="youAreNotUpdatedMessage">A new version of Print photo is available. Please update to latest version now!!</string>
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="your_order_is_delivered">Your order is Delivered</string>
+    <string name="your_order_will_be_confirm_within_48_hours">Your order will be confirm within 24 hours</string>
+    <string name="zipcode">Zipcode</string>
+    <style name="AppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/new_spalsh</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">"Ad"</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:width">20dp</item>
+        <item name="android:height">20dp</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+    <style name="AppTheme.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:minHeight">@dimen/_48sdp</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/transparent</item>
+        <item name="android:bottomDark">@color/transparent</item>
+        <item name="android:bottomMedium">@color/transparent</item>
+        <item name="android:centerBright">@color/transparent</item>
+        <item name="android:centerDark">@color/transparent</item>
+        <item name="android:centerMedium">@color/transparent</item>
+        <item name="android:fullBright">@color/transparent</item>
+        <item name="android:fullDark">@color/transparent</item>
+        <item name="android:topBright">@color/transparent</item>
+        <item name="android:topDark">@color/transparent</item>
+    </style>
+    <style name="ExitingAppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_showAnimation">@anim/jump_from_down</item>
+        <item name="fab_hideAnimation">@anim/jump_to_down</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorNormal">@color/black_semi_transparent</item>
+        <item name="fab_colorPressed">@color/transparent</item>
+        <item name="fab_colorRipple">@color/transparent</item>
+    </style>
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/icon_filter</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:paddingRight">@dimen/_5sdp</item>
+        <item name="android:contentDescription">"Lala"</item>
+    </style>
+    <style name="MyTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">#000000</item>
+        
+    </style>
+    <style name="TextAppearance.Widget.Event.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_17sdp</item>
+    </style>
+    <style name="ToolBarStyle" parent="ToolBarStyle.Base">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+    <style name="ToolBarStyle.Base" parent="">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+    <style name="ToolBarStyle.Event" parent="ToolBarStyle">
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.Event.Toolbar.Title</item>
+    </style>
+    <style name="WideDialog" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:paddingRight">@dimen/_5sdp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:hint">Select item</item>
+    </style>
+    <style name="spinnerItemStyle_new" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:hint">Select item</item>
+    </style>
+    <style name="test_AppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <declare-styleable name="ChatView">
+        <attr format="color" name="backgroundColor"/>
+        <attr format="color" name="inputBackgroundColor"/>
+        <attr format="boolean" name="inputUseEditorAction"/>
+        <attr format="reference" name="inputTextAppearance"/>
+        <attr format="dimension" name="inputTextSize"/>
+        <attr format="color" name="inputTextColor"/>
+        <attr format="string" name="inputHint"/>
+        <attr format="color" name="inputHintColor"/>
+        <attr format="reference" name="sendBtnIcon"/>
+        <attr format="color" name="sendBtnIconTint"/>
+        <attr format="color" name="sendBtnBackgroundTint"/>
+        <attr format="color" name="backgroundRcv"/>
+        <attr format="color" name="backgroundSend"/>
+        <attr format="color" name="bubbleBackgroundRcv"/>
+        <attr format="color" name="bubbleBackgroundSend"/>
+        <attr name="bubbleElevation">
+            <enum name="flat" value="0"/>
+            <enum name="elevated" value="1"/>
+        </attr>
+        <attr format="reference" name="messageTextAppearance"/>
+        <attr format="color" name="messageTextColorSend"/>
+        <attr format="color" name="messageTextColorRcv"/>
+        <attr format="dimension" name="messageTextSize"/>
+        <attr format="reference" name="tStampTextAppearance"/>
+        <attr format="color" name="tStampTextColorSend"/>
+        <attr format="color" name="tStampTextColorRcv"/>
+        <attr format="dimension" name="tStampTextSize"/>
+    </declare-styleable>
+    <declare-styleable name="ChatViewInputTextAppearance">
+        <attr name="inputTextSize"/>
+        <attr name="inputTextColor"/>
+        <attr name="inputHintColor"/>
+    </declare-styleable>
+    <declare-styleable name="ChatViewMessageTextAppearance">
+        <attr name="messageTextSize"/>
+        <attr name="messageTextColorSend"/>
+        <attr name="messageTextColorRcv"/>
+    </declare-styleable>
+    <declare-styleable name="ChatViewTStampTextAppearance">
+        <attr name="tStampTextSize"/>
+        <attr name="tStampTextColorSend"/>
+        <attr name="tStampTextColorRcv"/>
+    </declare-styleable>
+    <declare-styleable name="Drag">
+        <attr format="integer" name="handle_id"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandIconView">
+        <attr format="boolean" name="eiv_roundedCorners"/>
+        <attr format="boolean" name="eiv_switchColor"/>
+        <attr format="color" name="eiv_color"/>
+        <attr format="color" name="eiv_colorMore"/>
+        <attr format="color" name="eiv_colorLess"/>
+        <attr format="color" name="eiv_colorIntermediate"/>
+        <attr format="integer" name="eiv_animationDuration"/>
+        <attr format="dimension" name="eiv_padding"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionButton">
+        <attr format="color" name="fab_colorPressed"/>
+        <attr format="color" name="fab_colorDisabled"/>
+        <attr format="color" name="fab_colorNormal"/>
+        <attr format="reference" name="fab_icon"/>
+        <attr format="enum" name="fab_size">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr format="string" name="fab_title"/>
+        <attr format="boolean" name="fab_stroke_visible"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr format="color" name="fab_addButtonColorPressed"/>
+        <attr format="color" name="fab_addButtonColorNormal"/>
+        <attr format="enum" name="fab_addButtonSize">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr format="color" name="fab_addButtonPlusIconColor"/>
+        <attr format="boolean" name="fab_addButtonStrokeVisible"/>
+        <attr format="reference" name="fab_labelStyle"/>
+        <attr format="enum" name="fab_labelsPosition">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr format="enum" name="fab_expandDirection">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MaskableLayout">
+        <attr format="reference" name="mask"/>
+        <attr name="porterduffxfermode">
+            <enum name="ADD" value="0"/>
+            <enum name="CLEAR" value="1"/>
+            <enum name="DARKEN" value="2"/>
+            <enum name="DST" value="3"/>
+            <enum name="DST_ATOP" value="4"/>
+            <enum name="DST_IN" value="5"/>
+            <enum name="DST_OUT" value="6"/>
+            <enum name="DST_OVER" value="7"/>
+            <enum name="LIGHTEN" value="8"/>
+            <enum name="MULTIPLY" value="9"/>
+            <enum name="OVERLAY" value="10"/>
+            <enum name="SCREEN" value="11"/>
+            <enum name="SRC" value="12"/>
+            <enum name="SRC_ATOP" value="13"/>
+            <enum name="SRC_IN" value="14"/>
+            <enum name="SRC_OUT" value="15"/>
+            <enum name="SRC_OVER" value="16"/>
+            <enum name="XOR" value="17"/>
+        </attr>
+        <attr format="boolean" name="anti_aliasing"/>
+    </declare-styleable>
+    <declare-styleable name="MyGallery">
+        <attr name="android:galleryItemBackground"/>
+    </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+        <attr format="dimension" name="riv_corner_radius"/>
+        <attr format="dimension" name="riv_border_width"/>
+        <attr format="color" name="riv_border_color"/>
+        <attr format="boolean" name="riv_mutate_background"/>
+        <attr format="boolean" name="riv_oval"/>
+        <attr name="android:scaleType"/>
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ScaleCardLayout">
+        <attr format="integer" name="aspectRatioWidth"/>
+        <attr format="integer" name="aspectRatioHeight"/>
+    </declare-styleable>
+    <declare-styleable name="SelectableRoundedImageView">
+        <attr format="dimension" name="sriv_left_top_corner_radius"/>
+        <attr format="dimension" name="sriv_right_top_corner_radius"/>
+        <attr format="dimension" name="sriv_left_bottom_corner_radius"/>
+        <attr format="dimension" name="sriv_right_bottom_corner_radius"/>
+        <attr format="dimension" name="sriv_border_width"/>
+        <attr format="color" name="sriv_border_color"/>
+        <attr format="boolean" name="sriv_oval"/>
+        <attr name="android:scaleType"/>
+    </declare-styleable>
+    <declare-styleable name="SendFloatingActionButton">
+        <attr format="color" name="fab_plusIconColor"/>
+    </declare-styleable>
+    <declare-styleable name="VerticalLabelView">
+        <attr format="string" name="text"/>
+        <attr format="color" name="textColor"/>
+        <attr format="dimension" name="textSize"/>
+    </declare-styleable>
+    <declare-styleable name="VerticalSlidingPanel">
+        <attr format="dimension" name="panelHeight"/>
+        <attr format="dimension" name="shadowHeight"/>
+        <attr format="dimension" name="parallaxOffset"/>
+        <attr format="color" name="fadeColor"/>
+        <attr format="integer" name="flingVelocity"/>
+        <attr format="reference" name="dragView"/>
+        <attr format="boolean" name="overlay"/>
+    </declare-styleable>
+    <declare-styleable name="WaitingDots">
+        <attr format="color" name="dotsColor"/>
+        <attr format="integer" name="period"/>
+        <attr format="integer" name="jumpHeight"/>
+        <attr format="boolean" name="autoplay"/>
+    </declare-styleable>
+</resources>

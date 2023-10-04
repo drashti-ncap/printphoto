@@ -33,6 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments.FragmentCart;
@@ -64,10 +65,10 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_order;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 
-public class FragmentPhoneCover extends Fragment {
+public class FragmentPhoneCover extends PrintPhotoBaseFragment {
     private static final long MIN_CLICK_INTERVAL = 1000;
     public static TextView tv_no_fnd;
-    ProgressDialog pd;
+  //  ProgressDialog pd;
     RecyclerView rv_offer;
     CompanyRecyclerAdapter myRecyclerAdapter;
     ImageView id_back;
@@ -291,7 +292,8 @@ public class FragmentPhoneCover extends Fragment {
 
 
 
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         Log.e("CATEGORYID", "load_data: " + Share.category_id);
@@ -307,7 +309,8 @@ public class FragmentPhoneCover extends Fragment {
         call.enqueue(new Callback<sub_category_model_details>() {
             @Override
             public void onResponse(Call<sub_category_model_details> call, Response<sub_category_model_details> response) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                     Share.isinternational = response.body().getIs_international();
                     fragOne_ed_search.setText("");
@@ -325,7 +328,8 @@ public class FragmentPhoneCover extends Fragment {
             @Override
             public void onFailure(Call<sub_category_model_details> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (alertDialog != null) {
                     alertDialog.dismiss();
                 }

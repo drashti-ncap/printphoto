@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mobile.cover.photo.editor.back.maker.Commen.Share
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.background_response
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.background_image_adapter
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.model.background_rv_images
@@ -25,8 +26,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class Background_image_activity : AppCompatActivity() {
-    internal var progressDialog: ProgressDialog? = null
+class Background_image_activity : PrintPhotoBaseActivity() {
+  //  internal var progressDialog: ProgressDialog? = null
     internal lateinit var activity: Activity
     internal var sqlist: MutableList<background_rv_images> = ArrayList()
     internal lateinit var default_image_adapter: background_image_adapter
@@ -62,8 +63,9 @@ class Background_image_activity : AppCompatActivity() {
     // TODO: 26/01/19 Method for getting backgroung images
     private fun getbackgroundimagesData() {
 
-        progressDialog = ProgressDialog.show(this@Background_image_activity, "", activity.resources.getString(R.string.loading), true, false)
-        progressDialog!!.show()
+//        progressDialog = ProgressDialog.show(this@Background_image_activity, "", activity.resources.getString(R.string.loading), true, false)
+//        progressDialog!!.show()
+        showProgressDialog(this@Background_image_activity)
         sqlist.clear()
         Share.backgroundimage_list.clear()
 
@@ -86,7 +88,8 @@ class Background_image_activity : AppCompatActivity() {
                         default_image_adapter.notifyDataSetChanged()
                         Log.e("SIZE", "onResponse: " + Share.backgroundimage_list.size)
                         Log.e("SIZE", "onResponse: " + response.body()!!.data.size)
-                        progressDialog!!.dismiss()
+                        //progressDialog!!.dismiss()
+                        hideProgressDialog()
 
                         if (response.body()!!.data.size == 0) {
                             tv_not_available.visibility = View.VISIBLE
@@ -102,9 +105,10 @@ class Background_image_activity : AppCompatActivity() {
 
             override fun onFailure(call: Call<background_response?>, t: Throwable) {
                 Log.d("succus", "Fail==>$t")
-                if (progressDialog != null && progressDialog!!.isShowing) {
-                    progressDialog!!.dismiss()
-                }
+//                if (progressDialog != null && progressDialog!!.isShowing) {
+//                    progressDialog!!.dismiss()
+//                }
+                hideProgressDialog()
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     val alertDialog = AlertDialog.Builder(activity).create()

@@ -50,7 +50,6 @@ import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreen;
 import com.mobile.cover.photo.editor.back.maker.testing_modules.ImageData;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.onesignal.OneSignal;
 
 
 public abstract class mainapplication extends AdsMultiDexApplication {
@@ -172,9 +171,11 @@ public abstract class mainapplication extends AdsMultiDexApplication {
             StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
             StrictMode.setVmPolicy(builder.build());
 
-            OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+
+            /*OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
             OneSignal.initWithContext(this);
-            OneSignal.setAppId(/*"79d4e9af-1afd-480d-b5e4-78226f679e27"*/"52ceeaf2-8f6d-4caa-af18-3035658b3e4e");
+            OneSignal.setAppId(*//*"79d4e9af-1afd-480d-b5e4-78226f679e27"*//*"52ceeaf2-8f6d-4caa-af18-3035658b3e4e");
             OneSignal.promptForPushNotifications();
 
             OneSignal.setNotificationOpenedHandler(osNotificationOpenedResult -> {
@@ -221,7 +222,7 @@ public abstract class mainapplication extends AdsMultiDexApplication {
 
                 }
 
-            });
+            });*/
 
             FacebookSdk.sdkInitialize(getApplicationContext());
             Fresco.initialize(this);

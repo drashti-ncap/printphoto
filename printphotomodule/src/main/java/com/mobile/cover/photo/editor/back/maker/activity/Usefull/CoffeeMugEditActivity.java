@@ -50,6 +50,7 @@ import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FirebaseEventsKt;
@@ -85,7 +86,7 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.drawables_st
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class CoffeeMugEditActivity extends AppCompatActivity {
+public class CoffeeMugEditActivity extends PrintPhotoBaseActivity {
     private static final long MIN_CLICK_INTERVAL = 1500;
     public static StickerView stickerView;
     public static Bitmap print_bitmap = null;
@@ -98,7 +99,7 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
     Bitmap bitmap;
     RelativeLayout savelayout;
     int selectedColor = Color.parseColor("#ffffff");
-    ProgressDialog progress, pd;
+   // ProgressDialog progress, pd;
     AlertDialog alertDialog;
     LinearLayout id_add_photo;
     private int PICK_IMAGE_REQUEST = 101;
@@ -755,8 +756,9 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
 
 
         if (!Share.imageuri.equalsIgnoreCase("")) {
-            pd = ProgressDialog.show(CoffeeMugEditActivity.this, "", getString(R.string.loading), true, false);
-            loadPicture(Share.imageuri, pd);
+            //pd = ProgressDialog.show(CoffeeMugEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(CoffeeMugEditActivity.this);
+            loadPicture(Share.imageuri);
         }
 
         if (Share.FONT_FLAG) {
@@ -775,7 +777,7 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
 //        setDiemns();
     }
 
-    private void loadPicture(final String photoUrl, final ProgressDialog pd) {
+    private void loadPicture(final String photoUrl) {
         Glide.with(CoffeeMugEditActivity.this).asBitmap()
                 .load(photoUrl)
                 .into(new SimpleTarget<Bitmap>() {
@@ -786,14 +788,16 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
                         DrawableSticker drawableSticker = new DrawableSticker(new BitmapDrawable(resource));
                         drawableSticker.setTag("cartoon");
                         stickerView.addSticker(drawableSticker);
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                     }
 
                     @Override
                     public void onLoadFailed(Drawable errorDrawable) {
                         super.onLoadFailed(errorDrawable);
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                         if (alertDialog != null && alertDialog.isShowing()) {
                             alertDialog.dismiss();
@@ -880,7 +884,8 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(CoffeeMugEditActivity.this, "", getString(R.string.loading), true, false);
+            //progress = ProgressDialog.show(CoffeeMugEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(CoffeeMugEditActivity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -899,8 +904,9 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Cart> call, Response<Cart> response) {
 
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (response != null) {
                             if (response.body().getcart_data().getStatus() == 1) {
@@ -956,8 +962,9 @@ public class CoffeeMugEditActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.d("response", "Failed==>" + t.toString());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(CoffeeMugEditActivity.this).create();

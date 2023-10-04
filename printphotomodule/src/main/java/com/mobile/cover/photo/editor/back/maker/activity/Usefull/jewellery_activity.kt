@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide
 import com.mobile.cover.photo.editor.back.maker.Commen.Share
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.constraint.RegReq
@@ -30,8 +31,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class jewellery_activity : AppCompatActivity(), View.OnClickListener {
-    var progress: ProgressDialog? = null
+class jewellery_activity : PrintPhotoBaseActivity(), View.OnClickListener {
+    //var progress: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -121,9 +122,10 @@ class jewellery_activity : AppCompatActivity(), View.OnClickListener {
 
         override fun onPreExecute() {
             super.onPreExecute()
-            progress = ProgressDialog(this@jewellery_activity)
-            progress!!.setMessage(getString(R.string.loading))
-            progress!!.show()
+//            progress = ProgressDialog(this@jewellery_activity)
+//            progress!!.setMessage(getString(R.string.loading))
+//            progress!!.show()
+            showProgressDialog(this@jewellery_activity)
 
             builder = MultipartBody.Builder()
         }
@@ -137,8 +139,9 @@ class jewellery_activity : AppCompatActivity(), View.OnClickListener {
                 cartCall!!.enqueue(object : Callback<Cart?> {
                     override fun onResponse(call: Call<Cart?>, response: Response<Cart?>) {
 
-                        if (progress != null && progress!!.isShowing)
-                            progress!!.dismiss()
+//                        if (progress != null && progress!!.isShowing)
+//                            progress!!.dismiss()
+                        hideProgressDialog()
 
                         if (response != null) {
                             if (response.body()!!.responseCode.equals("1", ignoreCase = true)) {
@@ -165,8 +168,9 @@ class jewellery_activity : AppCompatActivity(), View.OnClickListener {
 
                     override fun onFailure(call: Call<Cart?>, t: Throwable) {
                         Log.d("response", "Faied==>$t")
-                        if (progress != null && progress!!.isShowing)
-                            progress!!.dismiss()
+//                        if (progress != null && progress!!.isShowing)
+//                            progress!!.dismiss()
+                        hideProgressDialog()
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             val alertDialog = AlertDialog.Builder(this@jewellery_activity).create()

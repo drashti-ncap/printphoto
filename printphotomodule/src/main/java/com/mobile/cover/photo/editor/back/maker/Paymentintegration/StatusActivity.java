@@ -33,6 +33,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.final_status_response_data;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.get_final_status_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.PlaceOrderActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.SelectAddressActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
@@ -52,9 +53,9 @@ import retrofit2.Response;
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.isorder;
 
 
-public class StatusActivity extends AppCompatActivity {
+public class StatusActivity extends PrintPhotoBaseActivity {
 
-    ProgressDialog pd;
+   // ProgressDialog pd;
     LinearLayout ll_success;
     TextView tv_amnt, tv_order_id, tv_transaction_id, tv_mob, tv_time, tv_success,tv_prepaid;
     Button btn_continue;
@@ -128,7 +129,8 @@ public class StatusActivity extends AppCompatActivity {
     private void comman_new_place_order(final String orderid, int cancel) {
 
 
-        pd = ProgressDialog.show(StatusActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(StatusActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(StatusActivity.this);
         APIService api = new MainApiClient(StatusActivity.this).getApiInterface();
         String paymentId, signature, orderId;
         if (Share.paymenttype == 2) {
@@ -154,7 +156,8 @@ public class StatusActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     final get_final_status_response responseData = response.body();
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         if (responseData.getData().getStatus() == 1) {
 
 
@@ -174,9 +177,9 @@ public class StatusActivity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int which) {
                                     isorder = true;
                                     ll_success.setVisibility(View.VISIBLE);
-                                    if (SharedPrefs.getInt(StatusActivity.this, SharedPrefs.REVIEW) == 0) {
-                                        displayalert();
-                                    }
+//                                    if (SharedPrefs.getInt(StatusActivity.this, SharedPrefs.REVIEW) == 0) {
+//                                        displayalert();
+//                                    }
                                     tv_success.setText(getString(R.string.order_received));
                                     tv_order_id.setText("Order ID:" + responseData.getData().getOrderId());
                                     if (responseData.getData().getTransactionType().equalsIgnoreCase("COD")) {
@@ -251,14 +254,16 @@ public class StatusActivity extends AppCompatActivity {
                         alertDialog.show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(StatusActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<get_final_status_response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Toast.makeText(StatusActivity.this, getString(R.string.something_went_wrong) + t, Toast.LENGTH_LONG).show();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());

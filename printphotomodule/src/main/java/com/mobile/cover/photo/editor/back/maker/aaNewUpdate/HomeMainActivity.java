@@ -378,6 +378,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     public void offerclick() {
         Share.iscart_frommall = 0;
         iv_logout.setVisibility(View.GONE);
+        mall.setContext(this);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frg_main, mall);
         fragmentTransaction.commitAllowingStateLoss();
@@ -443,7 +444,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             cartclick();
         }
-        if (cart_select) {
+        else if (cart_select) {
             selected = 2;
             cart_select = false;
             id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
@@ -550,18 +551,17 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+//        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
           //  exitdialog();
             finish();
-        } else {
-            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-            id_back.callOnClick();
-        }
-
+//        } else {
+//            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+//            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+//            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+//            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+//            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+//            id_back.callOnClick();
+//        }
     }
 
     public void exitdialog() {

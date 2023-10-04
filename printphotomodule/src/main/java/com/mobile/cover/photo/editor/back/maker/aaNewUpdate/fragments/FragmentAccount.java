@@ -39,6 +39,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.new_numberverify;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.auth.PhoneAuthActivity;
@@ -60,14 +61,14 @@ import retrofit2.Response;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_offer;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 
-public class FragmentAccount extends Fragment {
+public class FragmentAccount extends PrintPhotoBaseFragment {
 
     LinearLayout id_ll_register, id_ll_sign_in, id_ll_password, id_ll_mobile_no, id_signIn, id_signOut, id_ll_email_id;
     RelativeLayout id_ll_print_photo;
     Spinner sp_code;
     ImageView im_printphoto, im_user, im_key, id_iv_forget_password;
-    ProgressDialog progressDialog;
-    ProgressDialog pd;
+   // ProgressDialog progressDialog;
+   // ProgressDialog pd;
     TextView tv_forget, become_seller;
     EditText id_mobile_number, id_password, id_email_id;
     Integer mobilecode;
@@ -247,8 +248,9 @@ public class FragmentAccount extends Fragment {
 
 
         Log.e("androidId", "==>" + androidId);
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
+        //progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
         String cred;
         if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
             cred = id_mobile_number.getText().toString();
@@ -271,15 +273,17 @@ public class FragmentAccount extends Fragment {
         regResponseCall.enqueue(new Callback<RegResponse>() {
             @Override
             public void onResponse(Call<RegResponse> call, Response<RegResponse> response) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
 
 
-                    progressDialog.dismiss();
+                    //progressDialog.dismiss();
+                    hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         SharedPrefs.save(getContext(), SharedPrefs.CART_COUNT, response.body().getCart_count());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
@@ -415,9 +419,10 @@ public class FragmentAccount extends Fragment {
 
             @Override
             public void onFailure(Call<RegResponse> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     if (alertDialog != null) {
                         alertDialog.dismiss();
@@ -491,7 +496,7 @@ public class FragmentAccount extends Fragment {
                 final Spinner sp_code = dialog.findViewById(R.id.sp_code);
 
 
-                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_item, spinnercodeArray);
+                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_print_item, spinnercodeArray);
                 sp_code.setAdapter(code_adapter);
 
 
@@ -611,7 +616,7 @@ public class FragmentAccount extends Fragment {
         });
 
         sp_country = v.findViewById(R.id.sp_country);
-        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_item, spinnercountryArray);
+        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_print_item, spinnercountryArray);
         sp_country.setAdapter(code_adapter);
 
 
@@ -728,7 +733,8 @@ public class FragmentAccount extends Fragment {
     private void verify(final String number, final String email, final Dialog dialog, final String code) {
 
 
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         APIService api = new MainApiClient(getActivity()).getApiInterface();
 
 
@@ -745,7 +751,8 @@ public class FragmentAccount extends Fragment {
                     Log.e("RESPONSE", "onResponse: " + responseData.getResponseCode());
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         dialog.dismiss();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         String verify;
                         if (send) {
                             verify = "1";
@@ -760,12 +767,15 @@ public class FragmentAccount extends Fragment {
                         Share.forgetpassword = 1;
                         startActivity(intent);
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(getActivity(), responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                 } else {
-                    pd.dismiss();
+//                    pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -773,7 +783,8 @@ public class FragmentAccount extends Fragment {
 
             @Override
             public void onFailure(Call<new_numberverify> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

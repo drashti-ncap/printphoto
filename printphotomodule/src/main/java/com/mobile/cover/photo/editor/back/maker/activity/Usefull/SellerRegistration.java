@@ -21,6 +21,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.SellerData;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.Responsedata;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.constraint.RegReq;
@@ -34,7 +35,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SellerRegistration extends AppCompatActivity implements View.OnClickListener {
+public class SellerRegistration extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     ArrayList<String> spinnerArray = new ArrayList<String>();
 
@@ -44,7 +45,7 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
     String name, email, mobile, adhaar, type;
     LinearLayout id_ll_register;
     ImageView id_back, iv_reset;
-    ProgressDialog pd;
+    //  ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +80,7 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
         sp_type = findViewById(R.id.sp_type);
         spinnerArray.add(getString(R.string.merchant));
         spinnerArray.add(getString(R.string.business));
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnerArray);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnerArray);
         sp_type.setAdapter(adapter);
 
         btn_register = findViewById(R.id.btn_register);
@@ -112,14 +113,15 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
             } else {
 
 
-                    pd = ProgressDialog.show(SellerRegistration.this, "", getString(R.string.loading), true, false);
-
-                    if (adhaar.length() < 12) {
-                        Toast.makeText(this, getString(R.string.provide_correct_adhar), Toast.LENGTH_SHORT).show();
-                        pd.dismiss();
-                    } else {
-                        postdata();
-                    }
+                //pd = ProgressDialog.show(SellerRegistration.this, "", getString(R.string.loading), true, false);
+                showProgressDialog(this);
+                if (adhaar.length() < 12) {
+                    Toast.makeText(this, getString(R.string.provide_correct_adhar), Toast.LENGTH_SHORT).show();
+                   // pd.dismiss();
+                    hideProgressDialog();
+                } else {
+                    postdata();
+                }
 
             }
         }
@@ -162,7 +164,8 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
                         SharedPrefs.save(getApplicationContext(), SharedPrefs.Sellerid, String.valueOf(seller_data.getId()));
                         Log.e(TAG, "onResponse:===> " + seller_data.getis_approve());
                         Log.e("SELLER_ID", "onResponse:===> " + seller_data.getId());
-                        pd.dismiss();
+                        hideProgressDialog();
+                        //pd.dismiss();
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(SellerRegistration.this);
                         alertDialog.setTitle(getString(R.string.seller_registration_succes));
                         alertDialog.setCancelable(false);
@@ -178,15 +181,18 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
 
 
                     } else if (responseData.getResponseCode().equalsIgnoreCase("0")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(SellerRegistration.this, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(SellerRegistration.this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     }
 
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(SellerRegistration.this, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -194,7 +200,8 @@ public class SellerRegistration extends AppCompatActivity implements View.OnClic
 
             @Override
             public void onFailure(Call<Responsedata> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(SellerRegistration.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));

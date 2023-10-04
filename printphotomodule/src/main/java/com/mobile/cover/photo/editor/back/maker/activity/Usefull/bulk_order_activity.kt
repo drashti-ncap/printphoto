@@ -13,6 +13,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.main_response_bulk
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.constraint.RegReq
 import com.mobile.cover.photo.editor.back.maker.model.bulk_category_model
@@ -23,8 +24,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
-    internal lateinit var pd: ProgressDialog
+class bulk_order_activity : PrintPhotoBaseActivity(), View.OnClickListener {
+   // internal lateinit var pd: ProgressDialog
     internal var products: MutableList<String> = ArrayList()
     internal var price_range: MutableList<String> = ArrayList()
     internal var spinnercodeArray = ArrayList<String>()
@@ -83,7 +84,7 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
         price_range.add("100 or above")
         sp_code.isEnabled = false
 
-        val code_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_item, spinnercodeArray)
+        val code_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_print_item, spinnercodeArray)
         sp_code.adapter = code_adapter
 
         sp_code.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -105,9 +106,9 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        val product_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_item, products)
+        val product_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_print_item, products)
         sp_product.adapter = product_adapter
-        val qty_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_item, price_range)
+        val qty_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_print_item, price_range)
         sp_quantity.adapter = qty_adapter
 
     }
@@ -115,7 +116,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
     private fun getMainData() {
 
 
-        pd = ProgressDialog.show(this@bulk_order_activity, "", applicationContext.resources.getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(this@bulk_order_activity, "", applicationContext.resources.getString(R.string.loading), true, false)
+        showProgressDialog(this@bulk_order_activity)
         val mainApiClient = MainApiClient(this@bulk_order_activity)
         val apiService = MainApiClient(this@bulk_order_activity).apiInterface
 
@@ -130,7 +132,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
                 Log.e("SERVER_RESPONSE", "onResponse: " + response.message())
                 Log.e("SERVER_RESPONSE", "onResponse: " + response.errorBody()!!)
                 if (response.code() == 200) {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
                     val new_main_model = response.body()
                     if (new_main_model!!.responseCode.equals("1", ignoreCase = true)) {
                         Share.main_category_data.clear()
@@ -169,7 +172,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
                     alertDialog.setMessage(applicationContext.resources.getString(R.string.server_under_maintenance))
                     alertDialog.setButton(applicationContext.resources.getString(R.string.ok)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                         finish()
                     }
                     alertDialog.show()
@@ -192,7 +196,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
             alertDialog.setMessage(applicationContext.resources.getString(R.string.connect_time_out))
             alertDialog.setButton(applicationContext.resources.getString(R.string.ok)) { dialog, which ->
                 dialog.dismiss()
-                pd.dismiss()
+                //pd.dismiss()
+                hideProgressDialog()
                 getMainData()
             }
             alertDialog.show()
@@ -203,7 +208,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
             alertDialog.setMessage(applicationContext.resources.getString(R.string.server_under_maintenance))
             alertDialog.setButton(applicationContext.resources.getString(R.string.ok)) { dialog, which ->
                 dialog.dismiss()
-                pd.dismiss()
+                //pd.dismiss()
+                hideProgressDialog()
                 finish()
             }
             alertDialog.show()
@@ -215,12 +221,14 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
             alertDialog.setMessage(applicationContext.resources.getString(R.string.slow_connect))
             alertDialog.setPositiveButton(applicationContext.resources.getString(R.string.retry)) { dialog, which ->
                 dialog.dismiss()
-                pd.dismiss()
+                //pd.dismiss()
+                hideProgressDialog()
                 getMainData()
             }
             alertDialog.setNegativeButton(applicationContext.resources.getString(R.string.cancel)) { dialog, which ->
                 dialog.dismiss()
-                pd.dismiss()
+                //pd.dismiss()
+                hideProgressDialog()
                 finish()
             }
             alertDialog.show()
@@ -313,10 +321,10 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
                 id_ed_email_id.setText("")
                 id_ed_mobile_no.setText("")
                 id_ed_business_name.setText("")
-                val state_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_item, products)
+                val state_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_print_item, products)
                 sp_product.adapter = state_adapter
 
-                val qty_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_item, price_range)
+                val qty_adapter = ArrayAdapter(applicationContext, R.layout.simple_spinner_print_item, price_range)
                 sp_quantity.adapter = qty_adapter
             }
         }
@@ -324,7 +332,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
 
     private fun bulk_order() {
 
-        pd = ProgressDialog.show(this@bulk_order_activity, "", getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(this@bulk_order_activity, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@bulk_order_activity)
 
         val user_id: Int
         if (!SharedPrefs.getBoolean(this@bulk_order_activity, Share.key_reg_suc)) {
@@ -344,7 +353,8 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
             override fun onResponse(call: Call<main_response_bulk?>, response: Response<main_response_bulk?>) {
                 Log.e(TAG, "onResponse: " + response.isSuccessful)
                 if (response.isSuccessful) {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
                     if (response.body()!!.responseCode.equals("1", ignoreCase = true)) {
                         val alertDialog = AlertDialog.Builder(this@bulk_order_activity).create()
                         alertDialog.setCancelable(false)
@@ -359,14 +369,16 @@ class bulk_order_activity : AppCompatActivity(), View.OnClickListener {
                         Toast.makeText(this@bulk_order_activity, response.body()!!.responseMessage, Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
                     Toast.makeText(this@bulk_order_activity, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show()
                 }
 
             }
 
             override fun onFailure(call: Call<main_response_bulk?>, t: Throwable) {
-                pd.dismiss()
+                //pd.dismiss()
+                hideProgressDialog()
                 Log.e(TAG, "onFailure: ======>$t")
                 Log.e(TAG, "onFailure: ======>" + t.message)
                 Log.e(TAG, "onFailure: ======>" + t.localizedMessage)

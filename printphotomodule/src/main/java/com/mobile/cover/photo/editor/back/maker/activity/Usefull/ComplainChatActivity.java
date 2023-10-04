@@ -21,6 +21,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.chatResponse;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.postcomplain;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.chat_adapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -33,12 +34,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ComplainChatActivity extends AppCompatActivity {
+public class ComplainChatActivity extends PrintPhotoBaseActivity {
     ImageView id_back;
     EditText ed_enter_complain;
     RecyclerView rv_chat;
     LinearLayout ll_send_complain;
-    ProgressDialog pd;
+  //  ProgressDialog pd;
     String userid;
     String text_chatmessage;
     chat_adapter chat_adapter;
@@ -83,7 +84,8 @@ public class ComplainChatActivity extends AppCompatActivity {
 
 
         sqlist_complain.clear();
-        pd = ProgressDialog.show(ComplainChatActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(ComplainChatActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
 
 
         APIService api = new MainApiClient(ComplainChatActivity.this).getApiInterface();
@@ -119,21 +121,25 @@ public class ComplainChatActivity extends AppCompatActivity {
                         }
 
                         chat_adapter.notifyDataSetChanged();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
 //                        Toast.makeText(ComplainChatActivity.this, "Request send Successfully", Toast.LENGTH_SHORT).show();
                     } else if (responseData.getResponseCode().equalsIgnoreCase("0")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
 //                        chatView.clearMessages();
                         chatMessage = new ChatMessage("Provide Your Complain", "", ChatMessage.Type.RECEIVED, "");
                         sqlist_complain.add(chatMessage);
                         chat_adapter.notifyDataSetChanged();
                     } else {
                         Toast.makeText(ComplainChatActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     }
 
                 } else {
-                    pd.dismiss();
+//                    pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(ComplainChatActivity.this, "Error==>2", Toast.LENGTH_LONG).show();
                 }
 
@@ -141,7 +147,8 @@ public class ComplainChatActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<chatResponse> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -177,7 +184,8 @@ public class ComplainChatActivity extends AppCompatActivity {
     private void sendcomplain() {
 
 
-        pd = ProgressDialog.show(ComplainChatActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(ComplainChatActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(this);
 
         APIService api = new MainApiClient(ComplainChatActivity.this).getApiInterface();
         Log.e("USERID", "onClick:===> " + SharedPrefs.getString(this, SharedPrefs.uid));
@@ -198,18 +206,21 @@ public class ComplainChatActivity extends AppCompatActivity {
                         Log.e("SUCCESS", "onSUCCESS: ");
                         chatMessage = new ChatMessage(ed_enter_complain.getText().toString(), responseData.getData().getDate(), ChatMessage.Type.SENT, "");
                         ed_enter_complain.setText("");
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(ComplainChatActivity.this, "Complain send Successfully", Toast.LENGTH_SHORT).show();
                         sqlist_complain.add(chatMessage);
                         chat_adapter.notifyDataSetChanged();
                     } else if (responseData.getResponseCode().equalsIgnoreCase("0")) {
                         Toast.makeText(ComplainChatActivity.this, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                         Log.e(TAG, "onResponse: " + responseData.getResponseMessage());
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     }
 
                 } else {
-                    pd.dismiss();
+//                    pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(ComplainChatActivity.this, "Error==>2", Toast.LENGTH_LONG).show();
                 }
 
@@ -217,7 +228,8 @@ public class ComplainChatActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<postcomplain> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

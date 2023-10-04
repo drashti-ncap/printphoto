@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.numberverify;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 
@@ -24,10 +25,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ForgetpasswordActivity extends AppCompatActivity implements View.OnClickListener {
+public class ForgetpasswordActivity extends PrintPhotoBaseActivity implements View.OnClickListener {
     EditText ed_new_pass, ed_cn_new_pass;
     Button btn_cn;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     ImageView id_back, id_reset;
 
     @Override
@@ -83,7 +84,8 @@ public class ForgetpasswordActivity extends AppCompatActivity implements View.On
     private void verify(final String password, String number) {
 
 
-        pd = ProgressDialog.show(ForgetpasswordActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(ForgetpasswordActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(ForgetpasswordActivity.this);
 
         APIService api = new MainApiClient(ForgetpasswordActivity.this).getApiInterface();
 
@@ -107,9 +109,11 @@ public class ForgetpasswordActivity extends AppCompatActivity implements View.On
                         Toast.makeText(ForgetpasswordActivity.this, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                         finish();
                     }
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(ForgetpasswordActivity.this, "Error==>2", Toast.LENGTH_LONG).show();
                 }
 
@@ -117,7 +121,8 @@ public class ForgetpasswordActivity extends AppCompatActivity implements View.On
 
             @Override
             public void onFailure(Call<numberverify> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

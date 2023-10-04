@@ -55,6 +55,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FirebaseEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
@@ -90,7 +91,7 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.drawables_st
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class CaseEditActivity extends AppCompatActivity {
+public class CaseEditActivity extends PrintPhotoBaseActivity {
     public static final int PICK_IMAGE = 123556;
     private static final long MIN_CLICK_INTERVAL = 1500;
     public static StickerView stickerView;
@@ -110,7 +111,7 @@ public class CaseEditActivity extends AppCompatActivity {
     int selectedColor = Color.parseColor("#ffffff");
     LinearLayout id_add_photo;
     ImageView btn_help, iv_add_to_cart;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     AlertDialog alertDialog;
     Glide glide;
     private int PICK_IMAGE_REQUEST = 101;
@@ -187,7 +188,7 @@ public class CaseEditActivity extends AppCompatActivity {
 
     }
 
-    private void loadPicture(final String photoUrl, final ProgressDialog pd) {
+    private void loadPicture(final String photoUrl) {
         Glide.with(activity).asBitmap()
                 .load(photoUrl)
                 .into(new SimpleTarget<Bitmap>() {
@@ -454,11 +455,13 @@ public class CaseEditActivity extends AppCompatActivity {
         if (!Share.imageuri.equalsIgnoreCase("")) {
             Log.e("AATLEAAIVO", "onResume: +=================>2");
 
-            if (pd != null) {
-                dismissDialog();
-            }
-            pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
-            loadPicture(Share.imageuri, pd);
+//            if (pd != null) {
+//                dismissDialog();
+//            }
+            hideProgressDialog();
+//            pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(CaseEditActivity.this);
+            loadPicture(Share.imageuri);
         }
         Log.e("STICKER", "onResume: " + Share.FONT_FLAG);
         if (Share.FONT_FLAG) {
@@ -1025,8 +1028,9 @@ public class CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
-            pd.show();
+//            pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
+//            pd.show();
+            showProgressDialog(CaseEditActivity.this);
             stickerView.setBackgroundColor(selectedColor);
 //            stickerView.setBackground(new BitmapDrawable(Share.final_result_bitmap));
         }
@@ -1075,7 +1079,8 @@ public class CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            //pd = ProgressDialog.show(CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(CaseEditActivity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -1229,9 +1234,10 @@ public class CaseEditActivity extends AppCompatActivity {
             if (isDestroyed()) {
                 return;
             }
-            if (pd != null && pd.isShowing()) {
-                pd.dismiss();
-            }
+//            if (pd != null && pd.isShowing()) {
+//                pd.dismiss();
+//            }
+            hideProgressDialog();
         } catch (Exception e) {
             Log.e("Dismiss Dialog", e.toString());
         }

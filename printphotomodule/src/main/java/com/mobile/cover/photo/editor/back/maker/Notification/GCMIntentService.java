@@ -19,7 +19,6 @@ import androidx.core.app.NotificationCompat.Builder;
 import com.google.android.gcm.GCMBaseIntentService;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
-import com.onesignal.shortcutbadger.ShortcutBadger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,7 +40,7 @@ public class GCMIntentService extends GCMBaseIntentService {
     @SuppressLint({"NewApi"})
     private static void generateNotification(Context context, String message, String is_file, String image, String badge) {
         if (!Build.BRAND.contains("Sony")) {
-            ShortcutBadger.applyCount(context, Integer.valueOf(badge).intValue());
+            //ShortcutBadger.applyCount(context, Integer.valueOf(badge).intValue());
         }
         long when = System.currentTimeMillis();
         ctx = context;

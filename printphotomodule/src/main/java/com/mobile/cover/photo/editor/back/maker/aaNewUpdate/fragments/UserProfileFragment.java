@@ -35,6 +35,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.Getstatus;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.logout_response;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ChangePasswordActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -60,12 +61,12 @@ import retrofit2.Response;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_offer;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.selected;
 
-public class UserProfileFragment extends Fragment implements View.OnClickListener {
+public class UserProfileFragment extends PrintPhotoBaseFragment implements View.OnClickListener {
 
     LinearLayout ll_offer, ll_order, ll_address, ll_personal_details, ll_Seller, ll_change_password, ll_privacy_policy, ll_terms_condition, ll_refund_policy, ll_video, ll_call_complain, ll_feedback_complain, ll_visit_website, ll_bulk_order;
     TextView tv_seller;
     ImageView iv_help_wa;
-    ProgressDialog pd;
+  //  ProgressDialog pd;
     AlertDialog alertDialog;
 
     @Override
@@ -114,11 +115,13 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
 
 
         dialog_main.dismiss();
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
 
+//        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         Call<logout_response> call = apiService.logout(SharedPrefs.getString(getActivity(), SharedPrefs.TOKEN), Locale.getDefault().getLanguage());
 
@@ -126,7 +129,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
             @Override
             public void onResponse(Call<logout_response> call, Response<logout_response> response) {
                 if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Share.address_value = "";
                     Share.saved_address_list.clear();
                     SharedPrefs.savePref(getContext(), Share.key_reg_suc, false);
@@ -147,7 +151,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
 //                    fragmentTransaction.commit();
                     fragmentTransaction.commitAllowingStateLoss();
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Share.address_value = "";
                     Share.saved_address_list.clear();
                     Share.search_saved_address_list.clear();
@@ -172,7 +177,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
             @Override
             public void onFailure(Call<logout_response> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (alertDialog != null) {
                     alertDialog.dismiss();
                 }
@@ -235,11 +241,12 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
 
     private void bulk_order_status_check() {
 
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         int user_id;
         if (!SharedPrefs.getBoolean(getActivity(), Share.key_reg_suc)) {
             user_id = 0000;
@@ -257,7 +264,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
             public void onResponse(Call<bulk_order_dashboard_Response> call, Response<bulk_order_dashboard_Response> response) {
                 Log.e(TAG, "onResponse: " + response.isSuccessful());
                 if (response.isSuccessful()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (response.body().getCanPlaceOrder() == 1) {
                         Intent intent = new Intent(getActivity(), bulk_order_activity.class);
                         intent.putExtra("fname", SharedPrefs.getString(getContext(), Share.key_ + RegReq.name).split(" ")[0]);
@@ -288,7 +296,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
                         alertDialog.show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -296,7 +305,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
 
             @Override
             public void onFailure(Call<bulk_order_dashboard_Response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (alertDialog != null) {
                     alertDialog.dismiss();
                 }
@@ -434,10 +444,12 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
     public void check_seller() {
 
 
-        if (pd != null) {
-            pd.dismiss();
-        }
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        if (pd != null) {
+//            pd.dismiss();
+//        }
+        hideProgressDialog();
+//        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         Integer userid = null;
         APIService api = new MainApiClient(getActivity()).getApiInterface();
 
@@ -459,7 +471,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
                     Getstatus responseData = response.body();
                     Log.e("RESPONSE", "onResponse: " + responseData.getResponseCode());
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         SharedPrefs.save(getActivity(), SharedPrefs.SELLER, responseData.getResponseCode());
                         Intent intent = new Intent(getActivity(), SellerWalletActivity.class);
                         Log.e(TAG, "onResponse: " + SharedPrefs.getString(getContext(), SharedPrefs.Sellerid));
@@ -469,7 +482,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
                         final Dialog dialog = new Dialog(getActivity());
                         dialog.setContentView(R.layout.dialogbrand_layout);
                         dialog.show();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Button ButtonCancelPick = dialog.findViewById(R.id.ButtonCancelPick);
                         ButtonCancelPick.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -478,16 +492,19 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
                             }
                         });
                     } else if (responseData.getResponseCode().equalsIgnoreCase("2")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Intent seller = new Intent(getActivity(), SellerRegistration.class);
                         getActivity().startActivity(seller);
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Toast.makeText(getActivity(), response.body().getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
 
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -495,7 +512,8 @@ public class UserProfileFragment extends Fragment implements View.OnClickListene
 
             @Override
             public void onFailure(Call<Getstatus> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
 
                 if (alertDialog != null) {
                     alertDialog.dismiss();

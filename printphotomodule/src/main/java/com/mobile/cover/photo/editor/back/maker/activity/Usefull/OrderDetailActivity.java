@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.order_cancel;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.complaints.Complain_ticket_system;
@@ -37,7 +38,7 @@ import retrofit2.Callback;
 
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.DialogHelperKt.cancelOrderConfirmation;
 
-public class OrderDetailActivity extends AppCompatActivity implements View.OnClickListener {
+public class OrderDetailActivity extends PrintPhotoBaseActivity implements View.OnClickListener {
     public static Activity activity;
     RecyclerView recyclerview;
     getorderDetailsAdapter mAdapter;
@@ -46,7 +47,7 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     TextView tv_gst_charge, tv_date, tv_amount, tv_method, tv_order_id, tv_discount, tv_paid_amount, tv_shipping_amount, tv_gift;
     Button btn_complain, btn_cancel;
     RelativeLayout rl_track;
-    ProgressDialog pd;
+  //  ProgressDialog pd;
     int total, final_total, Shipping_charge;
     boolean cancelable = false;
     AlertDialog alertDialog;
@@ -142,7 +143,8 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     private void cancel_order(int reasonId, String reasonDesc) {
 
 
-        pd = ProgressDialog.show(OrderDetailActivity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(OrderDetailActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(OrderDetailActivity.this);
 
         APIService api = new MainApiClient(OrderDetailActivity.this).getApiInterface();
 
@@ -160,7 +162,8 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
                 if (response.isSuccessful()) {
                     order_cancel responseData = response.body();
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         alertDialog = new AlertDialog.Builder(OrderDetailActivity.this).create();
                         alertDialog.setTitle(getString(R.string.order_cancelation));
                         alertDialog.setMessage(getString(R.string.order_cancelled));
@@ -173,7 +176,8 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
                         });
                         alertDialog.show();
                     } else {
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         alertDialog = new AlertDialog.Builder(OrderDetailActivity.this).create();
                         alertDialog.setTitle(getString(R.string.order_cancelation));
                         alertDialog.setMessage(responseData.getResponseMessage());
@@ -185,7 +189,8 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
                         alertDialog.show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(OrderDetailActivity.this, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -193,9 +198,10 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
 
             @Override
             public void onFailure(Call<order_cancel> call, Throwable t) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
+//                if (pd != null && pd.isShowing()) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(OrderDetailActivity.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));
@@ -228,8 +234,9 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     }
 
     public void passdata(String paidamount, String Order_total, String date, String discount) {
-        if (pd != null && pd.isShowing())
-            pd.dismiss();
+//        if (pd != null && pd.isShowing())
+//            pd.dismiss();
+        hideProgressDialog();
         tv_date.setText(getString(R.string.order_date) + date);
         tv_amount.setText(Share.symbol + Order_total);
         tv_paid_amount.setText(Share.symbol + paidamount);

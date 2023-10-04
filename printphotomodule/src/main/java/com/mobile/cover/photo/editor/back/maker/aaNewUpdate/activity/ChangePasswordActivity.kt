@@ -11,6 +11,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.OnSingleClickListener
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.numberverify
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import kotlinx.android.synthetic.main.activity_change_password.*
 import retrofit2.Call
@@ -18,9 +19,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class ChangePasswordActivity : AppCompatActivity() {
+class ChangePasswordActivity : PrintPhotoBaseActivity() {
 
-    private var moProgressDialog: ProgressDialog? = null
+  //  private var moProgressDialog: ProgressDialog? = null
 
     private var isTaskRunning = false
 
@@ -94,8 +95,9 @@ class ChangePasswordActivity : AppCompatActivity() {
     private fun ChangePasswordAPICall() {
 
 
-        moProgressDialog = ProgressDialog.show(this@ChangePasswordActivity, "", getString(R.string.loading), true, false)
-        moProgressDialog!!.show()
+//        moProgressDialog = ProgressDialog.show(this@ChangePasswordActivity, "", getString(R.string.loading), true, false)
+//        moProgressDialog!!.show()
+        showProgressDialog(this@ChangePasswordActivity)
         val api = MainApiClient(this@ChangePasswordActivity).apiInterface
 
         val call = api.changePassword(SharedPrefs.getString(this, SharedPrefs.uid), etOldPassword!!.text.toString().trim { it <= ' ' }, etNewPassword!!.text.toString().trim { it <= ' ' }, Locale.getDefault().language)
@@ -114,16 +116,19 @@ class ChangePasswordActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this@ChangePasswordActivity, responseData.responseMessage, Toast.LENGTH_SHORT).show()
                     }
-                    moProgressDialog!!.dismiss()
+                    //moProgressDialog!!.dismiss()
+                    hideProgressDialog()
                 } else {
-                    moProgressDialog!!.dismiss()
+//                    moProgressDialog!!.dismiss()
+                    hideProgressDialog()
                     Toast.makeText(this@ChangePasswordActivity, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show()
                 }
                 isTaskRunning = false
             }
 
             override fun onFailure(call: Call<numberverify?>, t: Throwable) {
-                moProgressDialog!!.dismiss()
+//                moProgressDialog!!.dismiss()
+                hideProgressDialog()
                 Log.e(TAG, "onFailure: ======>$t")
                 Log.e(TAG, "onFailure: ======>" + t.message)
                 Log.e(TAG, "onFailure: ======>" + t.localizedMessage)

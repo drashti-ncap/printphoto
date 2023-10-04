@@ -58,6 +58,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -100,7 +101,7 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.drawables_st
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class Dynamic_EditActivity extends AppCompatActivity {
+public class Dynamic_EditActivity extends PrintPhotoBaseActivity {
     public static final int PICK_IMAGE = 123556;
     private static final long MIN_CLICK_INTERVAL = 1500;
     public static StickerView stickerView;
@@ -118,12 +119,12 @@ public class Dynamic_EditActivity extends AppCompatActivity {
     RelativeLayout savelayout;
     int selectedColor = Color.parseColor("#ffffff");
     List<Bitmap> disp_bitmap_array = new ArrayList<>();
-    ProgressDialog progress;
+    //ProgressDialog progress;
     LinearLayout id_add_photo;
     FloatingActionButton fab_faceactivity;
     File file_printphoto;
     AlertDialog alertDialog;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     AlertDialog.Builder alertDialog_build;
     private int PICK_IMAGE_REQUEST = 101;
     private FloatingActionMenu menuYellow;
@@ -288,7 +289,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
         savelayout.setDrawingCacheEnabled(true);
         savelayout.buildDrawingCache();
 
-        progress = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
+        //progress = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Dynamic_EditActivity.this);
         new create_bitmap().execute();
     }
 
@@ -937,8 +939,9 @@ public class Dynamic_EditActivity extends AppCompatActivity {
         }
 
         if (!Share.imageuri.equalsIgnoreCase("")) {
-            pd = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
-            loadPicture(Share.imageuri, pd);
+            //pd = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(Dynamic_EditActivity.this);
+            loadPicture(Share.imageuri);
         }
 
         Log.e("STICKER", "onResume: " + Share.FONT_FLAG);
@@ -988,8 +991,9 @@ public class Dynamic_EditActivity extends AppCompatActivity {
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-        pd = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
-        pd.show();
+//        pd = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+//        pd.show();
+        showProgressDialog(mContext);
 
         APIService apiService = new MainApiClient(mContext).getApiInterface();
         Call<RegResponse> regResponseCall = apiService.getRegResponseLogin(cred, password, androidId, "android", TimeZone.getDefault().getID(), Locale.getDefault().getLanguage());
@@ -997,15 +1001,17 @@ public class Dynamic_EditActivity extends AppCompatActivity {
         regResponseCall.enqueue(new Callback<RegResponse>() {
             @Override
             public void onResponse(Call<RegResponse> call, Response<RegResponse> response) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
+//                if (pd != null && pd.isShowing()) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
 
 
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, response.body().getCart_count());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
@@ -1096,9 +1102,10 @@ public class Dynamic_EditActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegResponse> call, Throwable t) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
+//                if (pd != null && pd.isShowing()) {
+//                    pd.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
                     AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
@@ -1134,7 +1141,7 @@ public class Dynamic_EditActivity extends AppCompatActivity {
 
     }
 
-    private void loadPicture(final String photoUrl, final ProgressDialog pd) {
+    private void loadPicture(final String photoUrl) {
         Glide.with(Dynamic_EditActivity.this).asBitmap()
                 .load(photoUrl)
                 .into(new SimpleTarget<Bitmap>() {
@@ -1143,14 +1150,16 @@ public class Dynamic_EditActivity extends AppCompatActivity {
                         DrawableSticker drawableSticker = new DrawableSticker(new BitmapDrawable(resource));
                         drawableSticker.setTag("cartoon");
                         stickerView.addSticker(drawableSticker);
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                     }
 
                     @Override
                     public void onLoadFailed(Drawable errorDrawable) {
                         super.onLoadFailed(errorDrawable);
-                        pd.dismiss();
+                      //  pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                         if (alertDialog != null && alertDialog.isShowing()) {
                             alertDialog.dismiss();
@@ -1204,7 +1213,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            progress.dismiss();
+            //progress.dismiss();
+            hideProgressDialog();
             sendData();
         }
 
@@ -1234,7 +1244,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
+            //progress = ProgressDialog.show(Dynamic_EditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(Dynamic_EditActivity.this);
 //            stickerView.setBackground(new BitmapDrawable(Share.final_result_bitmap));
 
             builder = new MultipartBody.Builder();
@@ -1274,7 +1285,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
                                         upload = true;
                                         mStickers.clear();
                                         Share.edit_image = false;
-                                        progress.dismiss();
+                                        //progress.dismiss();
+                                        hideProgressDialog();
                                         if (Default_image_activity.Companion.getActivity() != null) {
                                             Default_image_activity.Companion.getActivity().finish();
                                         }
@@ -1306,7 +1318,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
                                         alertDialog.setMessage(response.body().getcart_data().getMessage());
                                         alertDialog.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int which) {
-                                                progress.dismiss();
+                                                //progress.dismiss();
+                                                hideProgressDialog();
                                                 dialog.dismiss();
                                             }
                                         });
@@ -1316,7 +1329,8 @@ public class Dynamic_EditActivity extends AppCompatActivity {
                                 }
 
                             } else {
-                                progress.dismiss();
+                                //progress.dismiss();
+                                hideProgressDialog();
                                 Toast.makeText(Dynamic_EditActivity.this, "" + response.body().getResponseMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -1326,8 +1340,9 @@ public class Dynamic_EditActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.d("response", "Failed==>" + t.toString());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (alertDialog != null) {
                             alertDialog.dismiss();

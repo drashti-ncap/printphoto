@@ -53,6 +53,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.activity.Usefull.Background_image_activity;
 import com.mobile.cover.photo.editor.back.maker.activity.Usefull.Default_image_activity;
 import com.mobile.cover.photo.editor.back.maker.activity.Usefull.FaceActivity;
@@ -91,7 +92,7 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.drawables_st
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class Custom_CaseEditActivity extends AppCompatActivity {
+public class Custom_CaseEditActivity extends PrintPhotoBaseActivity {
     public static final int PICK_IMAGE = 123556;
     public static StickerView stickerView;
     public static int width;
@@ -105,7 +106,7 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
     Bitmap bitmap;
     RelativeLayout savelayout;
     int selectedColor = Color.parseColor("#ffffff");
-    ProgressDialog progress;
+   // ProgressDialog progress;
     LinearLayout id_add_photo;
     FloatingActionButton fab_faceactivity;
     boolean iscolor = false;
@@ -1183,7 +1184,8 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
         savelayout.setDrawingCacheEnabled(true);
         savelayout.buildDrawingCache();
 
-        progress = ProgressDialog.show(Custom_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+        //progress = ProgressDialog.show(Custom_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Custom_CaseEditActivity.this);
         new create_bitmap().execute();
     }
 
@@ -1199,13 +1201,15 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress.show();
+            //progress.show();
+            showProgressDialog(Custom_CaseEditActivity.this);
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            progress.dismiss();
+            //progress.dismiss();
+            hideProgressDialog();
             maskableFrameLayout.setMask(R.drawable.mask_patiyu);
             new crateReq().execute();
         }
@@ -1224,7 +1228,8 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress.show();
+            //progress.show();
+            showProgressDialog(Custom_CaseEditActivity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -1249,7 +1254,8 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
                                 Share.resultbitmap = null;
                                 Share.final_result_bitmap = null;
                                 Share.edit_image = false;
-                                progress.dismiss();
+                                //progress.dismiss();
+                                hideProgressDialog();
                                 if (Default_image_activity.Companion.getActivity() != null) {
                                     Default_image_activity.Companion.getActivity().finish();
                                 }
@@ -1272,7 +1278,8 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
                                 alertDialog.setMessage(response.body().getcart_data().getMessage());
                                 alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        progress.dismiss();
+                                        //progress.dismiss();
+                                        hideProgressDialog();
                                         dialog.dismiss();
                                     }
                                 });
@@ -1286,8 +1293,9 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.d("response", "Failed==>" + t.toString());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(Custom_CaseEditActivity.this).create();
@@ -1364,7 +1372,8 @@ public class Custom_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            progress.dismiss();
+            //progress.dismiss();
+            hideProgressDialog();
             sendData();
         }
 

@@ -20,6 +20,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.customimage_response
 import com.mobile.cover.photo.editor.back.maker.R
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.default_image_adapter
 import com.mobile.cover.photo.editor.back.maker.model.case_images_data
@@ -31,8 +32,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class Default_image_activity : AppCompatActivity(), View.OnClickListener {
-    internal lateinit var pd: ProgressDialog
+class Default_image_activity : PrintPhotoBaseActivity(), View.OnClickListener {
+    //internal lateinit var pd: ProgressDialog
     internal lateinit var default_image_adapter: default_image_adapter
     private var sqlist: MutableList<getdefault_images> = ArrayList()
 
@@ -51,7 +52,7 @@ class Default_image_activity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
         rv_default_images.setOnTouchListener { v, event ->
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(v.windowToken, 0)
             false
         }
@@ -119,7 +120,8 @@ class Default_image_activity : AppCompatActivity(), View.OnClickListener {
         Share.default_image_sqlist.clear()
         sqlist_images.clear()
         Share.subDataArrayList_category.clear()
-        pd = ProgressDialog.show(this@Default_image_activity, "", getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(this@Default_image_activity, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@Default_image_activity)
         val api = MainApiClient(this@Default_image_activity).apiInterface
         var user_id: String
         if (SharedPrefs.getString(this@Default_image_activity, SharedPrefs.uid).equals("uid", ignoreCase = true) || SharedPrefs.getString(this@Default_image_activity, SharedPrefs.uid).equals("", ignoreCase = true)) {
@@ -141,7 +143,8 @@ class Default_image_activity : AppCompatActivity(), View.OnClickListener {
             override fun onResponse(call: Call<customimage_response?>, response: Response<customimage_response?>) {
 
                 if (response.body()!!.success) {
-                    pd.dismiss()
+                    //pd.dismiss()
+                    hideProgressDialog()
 
                     val isEditable = response.body()!!.isEditable
                     val datumList = response.body()!!.data
@@ -175,7 +178,8 @@ class Default_image_activity : AppCompatActivity(), View.OnClickListener {
                     alertDialog.setMessage(getString(R.string.connect_time_out))
                     alertDialog.setButton(getString(R.string.retry)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                         getMainData()
                     }
                     alertDialog.show()
@@ -186,12 +190,14 @@ class Default_image_activity : AppCompatActivity(), View.OnClickListener {
                     alertDialog.setMessage(getString(R.string.slow_connect))
                     alertDialog.setPositiveButton(getString(R.string.retry)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                         getMainData()
                     }
                     alertDialog.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
                         dialog.dismiss()
-                        pd.dismiss()
+                        //pd.dismiss()
+                        hideProgressDialog()
                     }
                     alertDialog.show()
                 }

@@ -1,33 +1,19 @@
 <resources>
-    <string name="text_null">Enter text first</string>
-
-    <string name="base_url_live">aHR0cHM6Ly9wcmludHBob3RvLmluL1Bob3RvX2Nhc2UvYXBpLw==</string>
-    <string name="base_url_test">aHR0cHM6Ly9hZG1pbi1yZWxlYXNlLnByaW50cGhvdG8uaW4vYXBpLw==</string>
-    <string name="base_url_paytm">aHR0cHM6Ly9wcmludHBob3RvLmluL1Bob3RvX2Nhc2UvcGF5dG0v</string>
-
-
-    <string name="registring">Registering..</string>
-
-    <string name="splash_text">Keep it stylish with Mobile Skins for your cell phone. Printphoto.in provides you the best quality customized mobile skins. </string>
-    <string name="rs_icon">₹</string>
     <string-array name="selectAction">
         <item>Resend OTP</item>
         <item>Enter OTP Manually</item>
     </string-array>
+
+    <string name="registring">Registering..</string>
+    <string name="splash_text">Keep it stylish with Mobile Skins for your cell phone. Printphoto.in provides you the best quality customized mobile skins. </string>
+    <string name="rs_icon">₹</string>
     <string name="title_activity_status">CCAvenueMobile</string>
     <string name="payment_successfull">Order Received</string>
-
     <string name="youAreNotUpdatedTitle">Update Available</string>
     <string name="youAreNotUpdatedMessage">A new version of Print photo is available. Please update to latest version now!!</string>
-
     <string name="Photo">Choose Photo</string>
     <string name="Instagram">Instagram</string>
-
-    <string name="instagram_client_id">3faa6c1b85a44436aea28432f6b9d04c</string>
-    <string name="instagram_secret">9fc189c74d8f4c72b601943f229a7b4e</string>
-    <string name="instagram_redirect">http://admin.vasundharavision.com/art_work/loader.html</string>
     <string name="instagram_login">Instagram Login</string>
-
     <string name="button_allow">Allow</string>
     <string name="button_deny">Deny</string>
     <string name="permission_pick_rationale">READ_EXTERNAL_STORAGE permission is needed to pick image.</string>
@@ -35,58 +21,25 @@
     <string name="share_your_promo_code_in_review">Share your promo code in review</string>
     <string name="code">CODE: </string>
     <string name="code_val">  Code</string>
-    <string name="apply_promocode_amp_get_discount"><![CDATA[Apply Promocode & Get Discount]]></string>
+    <string name="apply_promocode_amp_get_discount">Apply Promo code &amp; Get Discount</string>
     <string name="off">off</string>
     <string name="_50">₹50</string>
     <string name="flat">Flat</string>
-    <string name="use_this_promocode_amp_get_50_inr_instant_discount"><![CDATA[Use This Promocode & Get ₹0 INR Instant Discount:]]></string>
-    <string name="share_your_promocode_amp_get_50_in_wallet"><![CDATA[Share Your Promocode & Get ₹ 0 in Wallet]]></string>
+    <string name="use_this_promocode_amp_get_50_inr_instant_discount">Use This Promo code &amp; Get ₹0 INR Instant Discount:</string>
+    <string name="share_your_promocode_amp_get_50_in_wallet">Share Your Promo code &amp; Get ₹ 0 in Wallet</string>
     <string name="transaction_history">Transaction History</string>
     <string name="request_for_money_to_paytm_wallet">Request for money to paytm wallet</string>
     <string name="wallet_balance">Wallet Balance</string>
-
-
     <string name="error_msg_unknown">An unexpected error occurred</string>
     <string name="tap_to_reload">Tap to reload</string>
-
-
-    <string name="facebook_app_id" translatable="false">2127267220654385</string>
-    <string name="fb_login_protocol_scheme" translatable="false">fb2127267220654385</string>
-
-
     <string name="we_sent_you_code_to_nverify_your_mobile_number">OTP has been send to your \nmobile number</string>
-
-
-    <string name="india">+91</string>
-    <string name="Saudi">+966</string>
-    <string name="Egypt">+966</string>
-    <string name="UAE">+971</string>
-    <string name="Kuwait">+965</string>
-    <string name="Bahrain">+973</string>
-    <string name="Oman">+968</string>
-    <string name="Jordan">+962</string>
-
-    <string-array name="Country_Type">
-        <item>@string/india</item>
-    </string-array>
-
-
     <string name="image">image</string>
     <string name="image1">image1</string>
     <string name="image2">image2</string>
-    //original
-    <string name="inter_ad_unit_id">ca-app-pub-4150746206346324/6234784400</string>
-    <string name="app_id">ca-app-pub-4150746206346324~6426356099</string>
-    <string name="app_open">ca-app-pub-4150746206346324/6651599915</string>
-
-    //Testing
-    <!--<string name="native_ad_unit_id">ca-app-pub-3940256099942544/2247696110</string>-->
-    //Live
-    <string name="native_ad_unit_id">ca-app-pub-4150746206346324/3172688554</string>
     <string name="yes">yes</string>
     <string name="no">no</string>
     <string name="select_high_resolution_image">Please select high resolution image</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="background">Background</string>
     <string name="images">Images</string>
     <string name="images_n">Images</string>
@@ -101,7 +54,7 @@
     <string name="enter_email_id">Enter Email ID</string>
     <string name="enter_business_name_type">Enter Business Name/Type</string>
     <string name="enter_mobile_no">Enter Mobile No.</string>
-    <string name="description">Description...</string>
+    <string name="description">Description…</string>
     <string name="submit">Submit</string>
     <string name="select_quantity">Select quantity</string>
     <string name="select_product">Select product</string>
@@ -110,8 +63,8 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="please_enter_name">Please enter name</string>
-    <string name="please_enter_email">Please enter emailid</string>
-    <string name="valid_email">Please enter valid emailid</string>
+    <string name="please_enter_email">Please enter email id</string>
+    <string name="valid_email">Please enter valid email id</string>
     <string name="enter_mobile">Please enter mobile number</string>
     <string name="valid_mobile">Please enter valid mobile number</string>
     <string name="valid_business">Please enter valid business name</string>
@@ -123,7 +76,7 @@
     <string name="cover">Cover</string>
     <string name="editor">Editor</string>
     <string name="add_photo">Add Photo</string>
-    <string name="please_add_high_resolution_image_to_get_high_clearity_phone_cover">Please add high resolution image to get high clearity phone cover</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_phone_cover">Please add high resolution image to get high clarity phone cover</string>
     <string name="log_in">Log In</string>
     <string name="need_login">Need to log in first</string>
     <string name="please_select_image">Please select image</string>
@@ -148,7 +101,7 @@
     <string name="pass_does_not_match">Password Does not match.</string>
     <string name="pass_limit">New password required at least 6 digit.</string>
     <string name="pass_change_successfully">Password changed Successfully</string>
-    <string name="please_add_high_resolution_image_to_get_high_clearity_mug">Please add high resolution image to get high clearity mug</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_mug">Please add high resolution image to get high clarity mug</string>
     <string name="complain">Complain</string>
     <string name="email_id">Email ID</string>
     <string name="contact">Contact</string>
@@ -166,7 +119,7 @@
     <string name="offer">Offer</string>
     <string name="today_offer">Offers</string>
     <string name="no_offer_available">No offers available</string>
-    <string name="please_add_high_resolution_image_to_get_high_clearity_product">Please add high resolution image to get high clearity product</string>
+    <string name="please_add_high_resolution_image_to_get_high_clearity_product">Please add high resolution image to get high clarity product</string>
     <string name="add_image_sticker">Add image or stickers</string>
     <string name="edit">Edit</string>
     <string name="account">Account</string>
@@ -190,7 +143,7 @@
     <string name="subject">Subject:</string>
     <string name="add_image_if_required">Add Image(if required):</string>
     <string name="select_image">Select Image</string>
-    <string name="browse">Browse...</string>
+    <string name="browse">Browse…</string>
     <string name="complaint">Complaint:</string>
     <string name="type_complaint">Type Complaint</string>
     <string name="add">Add</string>
@@ -210,8 +163,8 @@
     <string name="register">Register</string>
     <string name="sort">Sort</string>
     <string name="description_val">Description:</string>
-    <string name="pincode_check_delivery">Pincode (Check Delivery)</string>
-    <string name="please_enter_your_pincode">Please Enter Your Pincode</string>
+    <string name="pincode_check_delivery">Pin code (Check Delivery)</string>
+    <string name="please_enter_your_pincode">Please Enter Your Pin code</string>
     <string name="product_details">Product Details:</string>
     <string name="product_description">Product Description:</string>
     <string name="seller_information">Seller Information:</string>
@@ -219,8 +172,8 @@
     <string name="add_to_cart_btn">Add To Cart</string>
     <string name="delivery_available">Delivery available</string>
     <string name="delivery_not_available">Delivery not available</string>
-    <string name="pls_enter_six_pin">Please enter 6 digit pincode</string>
-    <string name="pls_enter_pin">Please enter correct pincode</string>
+    <string name="pls_enter_six_pin">Please enter 6 digit pin code</string>
+    <string name="pls_enter_pin">Please enter correct pin code</string>
     <string name="filter">Filter</string>
     <string name="clear">Clear</string>
     <string name="clear_history">Clear History</string>
@@ -247,7 +200,7 @@
     <string name="select_country">Select Country</string>
     <string name="select_state">Select State</string>
     <string name="select_city">Select City</string>
-    <string name="valid_pincode">Please enter valid pincode!!</string>
+    <string name="valid_pincode">Please enter valid pin code!!</string>
     <string name="pls_enter_address">Please enter address</string>
     <string name="pls_select_country">Please select country!!</string>
     <string name="pls_select_state">Please select state!!</string>
@@ -286,24 +239,23 @@
     <string name="delivery_charges">Delivery Charges</string>
     <string name="gst_charges">GST Charges</string>
     <string name="instant_off">Get Instant Off on Pre-Paid</string>
-
     <string name="payable_amount">Payable Amount</string>
     <string name="gift_wrap">Gift Wrap</string>
-    <string name="enter_promocode">Enter Promocode</string>
+    <string name="enter_promocode">Enter Promo code</string>
     <string name="apply">Apply</string>
     <string name="cash_on_delivery">Cash On Delivery</string>
     <string name="make_payment">Make Payment</string>
     <string name="prepaid_best_offer">Prepaid Best Offer</string>
     <string name="dismiss">Dismiss</string>
     <string name="buy_one_get_one_keychain">Buy One Get One Keychain</string>
-    <string name="offer_sentence">Buy 1 get 1 keychain free by applying KEYCHAIN promocode!!</string>
+    <string name="offer_sentence">Buy 1 get 1 keychain free by applying KEYCHAIN promo code!!</string>
     <string name="place_order">Place Order</string>
     <string name="are_you_sure_want_to_purchase_using_cash_on_delivery">Are you sure you want to purchase this product using cash on delivery?</string>
-    <string name="terms_cond"><![CDATA[Terms & Conditions]]></string>
+    <string name="terms_cond">Terms &amp; Conditions</string>
     <string name="term_cond_sentence">Promo codes and offers are not applicable on cash on delivery. Applicable promo codes or offers will be automatically removed.</string>
     <string name="back_pressed_transaction_cancel">Back pressed. Transaction cancelled</string>
     <string name="payment_trans_failed">Payment Transaction Failed</string>
-    <string name="promocode_validation_sentence">Please enter promocode properly</string>
+    <string name="promocode_validation_sentence">Please enter promo code properly</string>
     <string name="re_enter_password">Re Enter Password</string>
     <string name="pls_enter_first_name">Please enter first name</string>
     <string name="pls_enter_last_name">Please enter last name</string>
@@ -315,7 +267,7 @@
     <string name="pls_re_enter">Please enter re-password</string>
     <string name="address_not_available">Address not available</string>
     <string name="delete_address_sentence">Are you sure to delete this address?</string>
-    <string name="select_region">Please select atleast one region!!</string>
+    <string name="select_region">Please select at-least one region!!</string>
     <string name="select">Select</string>
     <string name="country">Country</string>
     <string name="region_not_available">Region not available</string>
@@ -323,20 +275,20 @@
     <string name="history">History</string>
     <string name="no_transaction">No Transaction</string>
     <string name="paytm_mobile_number">Paytm Mobile Number</string>
-    <string name="adhaar_number">Adhaar Number</string>
+    <string name="adhaar_number">Aadhaar Number</string>
     <string name="merchant">Merchant</string>
     <string name="business">Business</string>
     <string name="pls_paytm_num">Enter paytm mobile number</string>
-    <string name="enter_adhar">Enter Adhaar</string>
-    <string name="provide_correct_adhar">Provide Correct Adhaar Number</string>
+    <string name="enter_adhar">Enter Aadhaar</string>
+    <string name="provide_correct_adhar">Provide Correct Aadhaar Number</string>
     <string name="seller_registration_succes">Seller Registered Successfully</string>
     <string name="seller_account_created_success">Your Seller account has been created Successfully</string>
     <string name="app_not_installed">App not Installed</string>
     <string name="wallet">Wallet</string>
-    <string name="seller_promocode">Seller Promocode</string>
+    <string name="seller_promocode">Seller Promo-code</string>
     <string name="atleast_three_image">At least 3 images require</string>
     <string name="remove_image_sentence">if you want to remove this images than add more images.</string>
-    <string name="select_atleast">Select atleast</string>
+    <string name="select_atleast">Select at-least</string>
     <string name="image_toast">image.</string>
     <string name="picture">Picture :</string>
     <string name="next">Next</string>
@@ -344,9 +296,9 @@
     <string name="image_not_exist">Image not exist anymore</string>
     <string name="max">Maximum</string>
     <string name="images_can_be_select">images can be select</string>
-    <string name="image_processing">Image is processing...</string>
+    <string name="image_processing">Image is processing…</string>
     <string name="your_order_will_be_confirm_within_48_hours">Your order will be confirm within 24 hours</string>
-    <string name="delivery_within_15_working_days_after_order_n_confirmation">Delivery within 4-5 working days after order confirmation</string>
+    <string name="delivery_within_15_working_days_after_order_n_confirmation">Delivery within 4–5 working days after order confirmation</string>
     <string name="continue_shopping">Continue Shopping</string>
     <string name="continue__">Continue</string>
     <string name="time_remaining">Time remaining:</string>
@@ -358,19 +310,17 @@
     <string name="seller_wallet">Seller Wallet</string>
     <string name="want_to_become_seller">Want to become a seller?</string>
     <string name="my_order">My Order</string>
-    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
-
     <string name="bulk_order">Bulk Order</string>
     <string name="new_offers">New Offers</string>
     <string name="delivery_address">Delivery Address</string>
     <string name="personal_details">Personal Details</string>
     <string name="want_to_become_a_seller">Want To Become a Seller</string>
-    <string name="privacy_amp_policy"><![CDATA[Privacy & Policy]]></string>
-    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
-    <string name="refund_amp_cancellation_policy"><![CDATA[Refund & Cancellation Policy]]></string>
+    <string name="privacy_amp_policy">Privacy &amp; Policy</string>
+    <string name="terms_amp_conditions">Terms &amp; Conditions</string>
+    <string name="refund_amp_cancellation_policy">Refund &amp; Cancellation Policy</string>
     <string name="need_help">Need Help?</string>
     <string name="policies">Policies</string>
-    <string name="security_amp_settings"><![CDATA[Security & Settings]]></string>
+    <string name="security_amp_settings">Security &amp; Settings</string>
     <string name="account_settings">Account Settings</string>
     <string name="shopping">Shopping</string>
     <string name="visit_our_website">Visit Our Website</string>
@@ -378,7 +328,7 @@
     <string name="contact_us">Contact Us</string>
     <string name="feedback_complain">Feedback/Complain</string>
     <string name="select_model">Select Model</string>
-    <string name="model">model...</string>
+    <string name="model">model…</string>
     <string name="out_of_stock">Requested item is out of stock, It will be available soon!!</string>
     <string name="comming_soon">Coming Soon</string>
     <string name="search_for_product">Search for product..</string>
@@ -422,7 +372,7 @@
     <string name="model_request">Model Request</string>
     <string name="request_sent_successfull">Request Sent Successfully</string>
     <string name="request_model_already_available">Requested Model is already available, Want to proceed for Editing ?</string>
-    <string name="please_sign_in_yourself">Please Signin yourself</string>
+    <string name="please_sign_in_yourself">Please Signing yourself</string>
     <string name="enter_brand_model_name">Enter Brand and Model name</string>
     <string name="placed_on">Placed on :</string>
     <string name="amount_val">Amount :</string>
@@ -442,14 +392,12 @@
     <string name="offer_code_copied">Offer Code Copied</string>
     <string name="qty_cannot_less">Quantity cannot be less then 1!!</string>
     <string name="please_wait">Please wait</string>
-
     <string name="update_whatsapp">Please install latest update for WhatsApp to begin</string>
     <string name="text_error">Error while encoding your text message</string>
-
     <string name="category_not_available">Category not available</string>
     <string name="no_product_available">No product available</string>
     <string name="personal_info">Personal Information:</string>
-    <string name="security_amp_privacy"><![CDATA[Security & Privacy:]]></string>
+    <string name="security_amp_privacy">Security &amp; Privacy:</string>
     <string name="location">Location:</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="sticker">Sticker</string>
@@ -463,7 +411,7 @@
     <string name="what_s_new">What\'s New</string>
     <string name="price_low_to_high">Price Low To High</string>
     <string name="price_high_to_low">Price High To Low</string>
-    <string name="color_amp_size"><![CDATA[Color & Size]]></string>
+    <string name="color_amp_size">Color &amp; Size</string>
     <string name="enter_your_complain">Enter your Complain</string>
     <string name="skip">Skip</string>
     <string name="the_item_which_are_there_in_your_cart_will_look_good_in_your_hand_n_ngo_and_buy_your_product">The item which are there in your cart will look good in your hand.   Go and Buy your product!!!</string>
@@ -482,7 +430,7 @@
     <string name="order_received">Order Received</string>
     <string name="enter_email_id_val">Enter Email ID</string>
     <string name="failure">Order Failure</string>
-    <string name="didn_t_recieve_your_otp_code">Didn\'t recieve your OTP code!!</string>
+    <string name="didn_t_recieve_your_otp_code">Didn\'t receive your OTP code!!</string>
     <string name="phone_case">Phone Case</string>
     <string name="shipper_bottle">Shipper Bottle Fancy Images</string>
     <string name="office_address">304, Heny Arcade, Near Dabholi Gam BRTS Bus stand, Katargam, Surat-396004</string>
@@ -493,10 +441,6 @@
     <string name="write_feedback">Write your feedback</string>
     <string name="for_men">For Men</string>
     <string name="for_women">For Women</string>
-
-
-    //original
-    <!--<string name="native_ad_unit_id">/42150330/printphoto/printphoto_native</string>-->
-    <!--<string name="inter_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
+    <string name="text_null">Enter text first</string>
 
 </resources>

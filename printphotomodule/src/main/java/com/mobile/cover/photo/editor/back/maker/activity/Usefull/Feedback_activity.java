@@ -32,6 +32,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.complain_feedback_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.utility.PathUtil;
@@ -50,7 +51,7 @@ import retrofit2.Callback;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class Feedback_activity extends AppCompatActivity {
+public class Feedback_activity extends PrintPhotoBaseActivity {
 
     LinearLayout rl_enter_complain, ll_select_image;
     Spinner sp_subject;
@@ -59,7 +60,7 @@ public class Feedback_activity extends AppCompatActivity {
     Button btn_browse;
     Uri uri;
     ArrayList<String> spinnerArray = new ArrayList<String>();
-    ProgressDialog pd;
+   // ProgressDialog pd;
     File file;
     String path, type = "Phone Case";
     MultipartBody.Part image;
@@ -120,7 +121,7 @@ public class Feedback_activity extends AppCompatActivity {
 
         spinnerArray.clear();
         spinnerArray.addAll(Share.maincategoryname);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, spinnerArray);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, spinnerArray);
         sp_subject.setAdapter(adapter);
         type = sp_subject.getSelectedItem().toString();
         ed_Complain = findViewById(R.id.ed_Complain);
@@ -362,7 +363,8 @@ public class Feedback_activity extends AppCompatActivity {
 
     private void sendcomplain(String message) {
 
-        pd = ProgressDialog.show(Feedback_activity.this, "", getString(R.string.loading), true, false);
+//        pd = ProgressDialog.show(Feedback_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Feedback_activity.this);
         APIService api = new MainApiClient(Feedback_activity.this).getApiInterface();
         Log.e("USERID", "onClick:===> " + SharedPrefs.getString(Feedback_activity.this, SharedPrefs.uid));
         String userid1 = SharedPrefs.getString(Feedback_activity.this, SharedPrefs.uid);
@@ -401,22 +403,26 @@ public class Feedback_activity extends AppCompatActivity {
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         Toast.makeText(Feedback_activity.this, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                         finish();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     } else {
                         Toast.makeText(Feedback_activity.this, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
-                        pd.dismiss();
+                        //pd.dismiss();
+                        hideProgressDialog();
                     }
 
                 } else {
                     Toast.makeText(Feedback_activity.this, getString(R.string.please_enter_text), Toast.LENGTH_SHORT).show();
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                 }
 
             }
 
             @Override
             public void onFailure(Call<complain_feedback_response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());

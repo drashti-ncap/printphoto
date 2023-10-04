@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
@@ -39,10 +40,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Phone_ModelActivity extends AppCompatActivity {
+public class Phone_ModelActivity extends PrintPhotoBaseActivity {
     public static Activity activity;
     public static TextView title, tv_no_fnd;
-    ProgressDialog pd;
+  //  ProgressDialog pd;
     RecyclerView rv_mug_model;
     CompanyModelRecyclerAdapter mAdapter;
     ImageView id_back, id_cart_display;
@@ -206,7 +207,8 @@ public class Phone_ModelActivity extends AppCompatActivity {
 
         sqlist.clear();
         Share.subDataArrayList_category_multiple_category.clear();
-        pd = ProgressDialog.show(Phone_ModelActivity.this, "", getString(R.string.loading), true, false);
+//        pd = ProgressDialog.show(Phone_ModelActivity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Phone_ModelActivity.this);
         int user_id;
         if (!SharedPrefs.getBoolean(activity, Share.key_reg_suc)) {
             user_id = 0000;
@@ -234,9 +236,11 @@ public class Phone_ModelActivity extends AppCompatActivity {
                     Share.isinternational = response.body().getIs_international();
                     Share.sub_category_data_array_list = sqlist;
                     Share.subDataArrayList_category_multiple_category.addAll(sqlist);
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getApplicationContext(), response.body().getResponseMessage(), Toast.LENGTH_LONG).show();
                 }
             }
@@ -244,7 +248,8 @@ public class Phone_ModelActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<sub_category_model_details> call, Throwable t) {
                 t.printStackTrace();
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(Phone_ModelActivity.this).create();
                     alertDialog.setTitle(getString(R.string.time_out));

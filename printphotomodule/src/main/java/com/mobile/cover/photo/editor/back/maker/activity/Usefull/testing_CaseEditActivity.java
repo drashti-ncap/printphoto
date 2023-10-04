@@ -54,6 +54,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FirebaseEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
@@ -88,7 +89,7 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.drawables_st
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.customView.StickerView.StickerView.mStickers;
 
-public class testing_CaseEditActivity extends AppCompatActivity {
+public class testing_CaseEditActivity extends PrintPhotoBaseActivity {
     public static final int PICK_IMAGE = 123556;
     public static StickerView stickerView;
     public static int width;
@@ -105,10 +106,10 @@ public class testing_CaseEditActivity extends AppCompatActivity {
     Bitmap bitmap;
     RelativeLayout savelayout, new_savelayout;
     int selectedColor = Color.parseColor("#ffffff");
-    ProgressDialog progress;
+   // ProgressDialog progress;
     LinearLayout id_add_photo;
     ImageView btn_help;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     AlertDialog alertDialog;
     Glide glide;
     private int PICK_IMAGE_REQUEST = 101;
@@ -183,7 +184,7 @@ public class testing_CaseEditActivity extends AppCompatActivity {
 
     }
 
-    private void loadPicture(final String photoUrl, final ProgressDialog pd) {
+    private void loadPicture(final String photoUrl) {
         Glide.with(activity).asBitmap()
                 .load(photoUrl)
                 .into(new SimpleTarget<Bitmap>() {
@@ -194,13 +195,13 @@ public class testing_CaseEditActivity extends AppCompatActivity {
                         DrawableSticker drawableSticker = new DrawableSticker(new BitmapDrawable(resource));
                         drawableSticker.setTag("cartoon");
                         stickerView.addSticker(drawableSticker);
-                        pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                     }
 
                     @Override
                     public void onLoadFailed(Drawable errorDrawable) {
-                        pd.dismiss();
+                        hideProgressDialog();
                         Share.imageuri = "";
                         if (alertDialog != null && alertDialog.isShowing()) {
                             alertDialog.dismiss();
@@ -532,11 +533,13 @@ public class testing_CaseEditActivity extends AppCompatActivity {
         if (!Share.imageuri.equalsIgnoreCase("")) {
             Log.e("AATLEAAIVO", "onResume: +=================>2");
 
-            if (pd != null) {
-                pd.dismiss();
-            }
-            pd = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
-            loadPicture(Share.imageuri, pd);
+//            if (pd != null) {
+//                pd.dismiss();
+//            }
+            hideProgressDialog();
+//            pd = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(testing_CaseEditActivity.this);
+            loadPicture(Share.imageuri);
         }
         Log.e("STICKER", "onResume: " + Share.FONT_FLAG);
         if (Share.FONT_FLAG) {
@@ -1103,14 +1106,16 @@ public class testing_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress.setCancelable(false);
-            progress.show();
+//            progress.setCancelable(false);
+//            progress.show();
+            showProgressDialog(testing_CaseEditActivity.this);
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            progress.dismiss();
+            //progress.dismiss();
+            hideProgressDialog();
             sendData();
         }
 
@@ -1130,8 +1135,9 @@ public class testing_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
-            progress.show();
+//            progress = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+//            progress.show();
+            showProgressDialog(testing_CaseEditActivity.this);
             stickerView.setBackgroundColor(selectedColor);
 //            stickerView.setBackground(new BitmapDrawable(Share.final_result_bitmap));
         }
@@ -1139,8 +1145,9 @@ public class testing_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            if (progress != null && progress.isShowing())
-                progress.dismiss();
+//            if (progress != null && progress.isShowing())
+//                progress.dismiss();
+            hideProgressDialog();
             Intent intent = new Intent(activity, Preview_activity.class);
             intent.putExtra("model_id", getIntent().getStringExtra("model_id"));
             intent.putExtra("model_name", getIntent().getStringExtra("model_name"));
@@ -1181,7 +1188,8 @@ public class testing_CaseEditActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            //progress = ProgressDialog.show(testing_CaseEditActivity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(testing_CaseEditActivity.this);
 
             builder = new MultipartBody.Builder();
         }
@@ -1198,7 +1206,8 @@ public class testing_CaseEditActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Cart> call, Response<Cart> response) {
                         if (response.isSuccessful()) {
-                            progress.dismiss();
+                            //progress.dismiss();
+                            hideProgressDialog();
 
                             if (response.body().getcart_data().getStatus() == 1) {
 
@@ -1244,7 +1253,8 @@ public class testing_CaseEditActivity extends AppCompatActivity {
                                 alertDialog.setMessage(response.body().getcart_data().getMessage());
                                 alertDialog.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-                                        progress.dismiss();
+                                        //progress.dismiss();
+                                        hideProgressDialog();
                                         dialog.dismiss();
                                     }
                                 });
@@ -1252,7 +1262,8 @@ public class testing_CaseEditActivity extends AppCompatActivity {
                                 alertDialog.create().show();
                             }
                         } else {
-                            progress.dismiss();
+                            //progress.dismiss();
+                            hideProgressDialog();
                             Toast.makeText(testing_CaseEditActivity.this, "Something Went Wrong!!", Toast.LENGTH_SHORT).show();
                         }
                         Log.e("response", "==>" + response.toString());
@@ -1262,8 +1273,9 @@ public class testing_CaseEditActivity extends AppCompatActivity {
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.e("response", "Failed==>" + t.getLocalizedMessage());
                         Log.e("response", "Failed==>" + t.getMessage());
-                        if (progress != null && progress.isShowing())
-                            progress.dismiss();
+//                        if (progress != null && progress.isShowing())
+//                            progress.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(testing_CaseEditActivity.this).create();

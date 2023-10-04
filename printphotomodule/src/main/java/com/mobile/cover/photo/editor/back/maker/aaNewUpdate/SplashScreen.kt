@@ -34,9 +34,6 @@ import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.URL_CONFIG
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.logAppOpenEvent
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.*
 import com.mobile.cover.photo.editor.back.maker.activity.Usefull.Select_region
-import com.onesignal.OSPermissionObserver
-import com.onesignal.OSPermissionStateChanges
-import com.onesignal.OneSignal
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -56,13 +53,13 @@ import kotlin.system.exitProcess
 const val ARG_IS_CART = "arg_cart"
 const val ARG_IS_OFFER = "arg_offer"
 
-class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObserver {
+class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermissionObserver*/ {
     internal var TAG = "SplashScreen"
     internal var pInfo: PackageInfo? = null
     internal lateinit var alarmManager: AlarmManager
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
     private var pendingIntent: PendingIntent? = null
-    var pd: ProgressDialog? = null
+  //  var pd: ProgressDialog? = null
     private var isCart = false
     private var isOffer = false
 
@@ -83,7 +80,7 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
             isOffer = intent.getBooleanExtra(ARG_IS_OFFER, false)
         }
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context)
-        OneSignal.addPermissionObserver(this);
+        //OneSignal.addPermissionObserver(this);
         loggers()
 
         generatefacebookhashkey()
@@ -115,7 +112,7 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
     }
 
 
-    override fun onOSPermissionChanged(stateChanges: OSPermissionStateChanges) {
+    /*override fun onOSPermissionChanged(stateChanges: OSPermissionStateChanges) {
         if (stateChanges.from.areNotificationsEnabled() &&
             !stateChanges.to.areNotificationsEnabled()
         ) {
@@ -124,11 +121,12 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
                 .show()
         }
         Log.i("Debug", "onOSPermissionChanged: $stateChanges")
-    }
+    }*/
 
     fun get_all_configurations() {
 
-        pd = ProgressDialog.show(context, "", context.getString(R.string.loading), true, false)
+        //pd = ProgressDialog.show(context, "", context.getString(R.string.loading), true, false)
+        showProgressDialog(context)
         val mainApiClient = MainApiClient(context)
         val apiService = mainApiClient.client!!.create(APIService::class.java)
         Log.e(
@@ -464,9 +462,10 @@ class SplashScreen(val context: Activity) : AppCompatActivity(), OSPermissionObs
             if (isDestroyed) {
                 return
             }
-            if (pd != null && pd!!.isShowing) {
-                pd!!.dismiss()
-            }
+//            if (pd != null && pd!!.isShowing) {
+//                pd!!.dismiss()
+//            }
+            hideProgressDialog()
         } catch (e: java.lang.Exception) {
             Log.e("Dismiss Dialog", e.toString())
         }

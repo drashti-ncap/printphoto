@@ -31,6 +31,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.brand_response
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.model_response_data;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.main_brand_model_data_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.Request_RecyclerAdapter;
@@ -47,12 +48,12 @@ import retrofit2.Callback;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.FBEventsKt.SEARCH_BRAND_MODEL;
 
 
-public class FragmentRequestModelBrand extends Fragment {
+public class FragmentRequestModelBrand extends PrintPhotoBaseFragment {
     public static EditText atv_brand_model;
     public static TextView tv_no_fnd;
     public static Button btn_request, btn_request_written;
     public ArrayList<request_final_brand> new_model;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     String model;
     RecyclerView rv_brandlist;
     Request_RecyclerAdapter request_recyclerAdapter;
@@ -80,7 +81,8 @@ public class FragmentRequestModelBrand extends Fragment {
 
         spinnermodelArray.clear();
         Share.request_brand.clear();
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getContext()).getApiInterface();
 
@@ -92,7 +94,8 @@ public class FragmentRequestModelBrand extends Fragment {
             public void onResponse(Call<main_brand_model_data_response> call, retrofit2.Response<main_brand_model_data_response> response) {
                 main_brand_model_data_response customimage_response = response.body();
                 if (customimage_response.getResponseCode().equalsIgnoreCase("1")) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
 
                     datumList = customimage_response.getData();
                     for (brand_response_data datum : datumList) {
@@ -123,7 +126,8 @@ public class FragmentRequestModelBrand extends Fragment {
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getMainData();
 
                         }
@@ -137,7 +141,8 @@ public class FragmentRequestModelBrand extends Fragment {
                     alertDialog.setButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getMainData();
                         }
                     });

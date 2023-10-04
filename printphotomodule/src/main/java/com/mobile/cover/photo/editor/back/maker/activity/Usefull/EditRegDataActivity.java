@@ -31,6 +31,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.username_update_response_data;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.response_main_username_update;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ChangePasswordActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -46,14 +47,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class EditRegDataActivity extends AppCompatActivity {
+public class EditRegDataActivity extends PrintPhotoBaseActivity {
 
     private static final String TAG = "EditRegDataActivity";
     int height = 0;
     int width = 0;
     ImageView id_back, id_done, id_ll_reset;
     LinearLayout personal_detail, id_ll_1, id_ll_10, id_ll_2, id_ll_3, id_ll_4, id_ll_5, id_ll_6, id_ll_7, id_ll_8, id_ll_9, address_detail, user_data, address_data, id_ll_save;
-    ProgressDialog progressDialog;
+   // ProgressDialog progressDialog;
     TextView title, title1, update;
     EditText id_ed_mobile2, id_ed_fname, id_ed_lname, id_ed_h_pincode, id_ed_h_homeno, id_ed_h_street, id_ed_h_landmark, id_ed_h_city, id_ed_h_state, id_ed_h_country, id_ed_email_id;
     Spinner sp_currency;
@@ -401,9 +402,9 @@ public class EditRegDataActivity extends AppCompatActivity {
     private void updateusername() {
 
 
-        progressDialog = ProgressDialog.show(EditRegDataActivity.this, "", getString(R.string.loading), true, false);
-        progressDialog.show();
-
+//        progressDialog = ProgressDialog.show(EditRegDataActivity.this, "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(EditRegDataActivity.this);
 
         String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         String name = id_ed_fname.getText() + " " + id_ed_lname.getText();
@@ -416,9 +417,10 @@ public class EditRegDataActivity extends AppCompatActivity {
         simpleResponseCall.enqueue(new Callback<response_main_username_update>() {
             @Override
             public void onResponse(Call<response_main_username_update> call, Response<response_main_username_update> response) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
 
                 username_update_response_data regData = response.body().getData();
 
@@ -462,9 +464,10 @@ public class EditRegDataActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<response_main_username_update> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
                 AlertDialog alertDialog = new AlertDialog.Builder(EditRegDataActivity.this).create();
                 alertDialog.setTitle(getString(R.string.update_fail));
                 alertDialog.setCancelable(false);
@@ -497,7 +500,7 @@ public class EditRegDataActivity extends AppCompatActivity {
         for (int i = 1; i < Share.currency_details.size(); i++) {
             currency_list.add(Share.currency_details.get(i).getCode());
         }
-        ArrayAdapter<String> currency_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_item, currency_list);
+        ArrayAdapter<String> currency_adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.simple_spinner_print_item, currency_list);
         sp_currency.setAdapter(currency_adapter);
 
         for (int i = 0; i < Share.currency_details.size(); i++) {

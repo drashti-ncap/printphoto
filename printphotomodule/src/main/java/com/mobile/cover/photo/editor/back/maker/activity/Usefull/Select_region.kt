@@ -18,6 +18,7 @@ import com.mobile.cover.photo.editor.back.maker.R
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.ARG_IS_CART
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.ARG_IS_OFFER
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.checkout.SelectAddressActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.getConfiguration
@@ -31,11 +32,11 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class Select_region : AppCompatActivity() {
+class Select_region : PrintPhotoBaseActivity() {
     internal var spinnercodeArray = ArrayList<region_model_data>()
     internal var selected_pos: Int = 0
     internal lateinit var region_adapter: region_adapter
-    var pd: ProgressDialog? = null
+//    var pd: ProgressDialog? = null
 
     val TAG ="Select_region"
 
@@ -68,7 +69,8 @@ class Select_region : AppCompatActivity() {
         }
 
 
-            pd = ProgressDialog.show(this@Select_region, "", getString(R.string.loading), true, false)
+            //pd = ProgressDialog.show(this@Select_region, "", getString(R.string.loading), true, false)
+        showProgressDialog(this@Select_region)
         val api = MainApiClient(this@Select_region).apiInterface
             val call = api.get_mall_enable_status(SharedPrefs.getString(this@Select_region, SharedPrefs.country_code))
 
@@ -90,7 +92,8 @@ class Select_region : AppCompatActivity() {
                             Toast.makeText(this@Select_region, response.body()!!.responseMessage, Toast.LENGTH_SHORT).show()
                         }
                     } else {
-                        pd?.dismiss()
+                        //pd?.dismiss()
+                        hideProgressDialog()
                         if (alertDialog != null) {
                             alertDialog?.dismiss()
                         }
@@ -117,7 +120,8 @@ class Select_region : AppCompatActivity() {
                         alertDialog?.setMessage(getString(R.string.connect_time_out))
                         alertDialog?.setButton(getString(R.string.ok)) { dialog, which ->
                             dialog.dismiss()
-                            pd?.dismiss()
+                            //pd?.dismiss()
+                            hideProgressDialog()
                             get_all_configurations()
                         }
                         alertDialog?.show()
@@ -131,7 +135,8 @@ class Select_region : AppCompatActivity() {
                         alertDialog?.setMessage(getString(R.string.server_under_maintenance))
                         alertDialog?.setButton(getString(R.string.ok)) { dialog, which ->
                             dialog.dismiss()
-                            pd?.dismiss()
+                            //pd?.dismiss()
+                            hideProgressDialog()
                             finish()
                         }
                         alertDialog?.show()
@@ -142,12 +147,14 @@ class Select_region : AppCompatActivity() {
                         alertDialog.setMessage(getString(R.string.slow_connect))
                         alertDialog.setPositiveButton(getString(R.string.retry)) { dialog, which ->
                             dialog.dismiss()
-                            pd?.dismiss()
+                            //pd?.dismiss()
+                            hideProgressDialog()
                             get_all_configurations()
                         }
                         alertDialog.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
                             dialog.dismiss()
-                            pd?.dismiss()
+                            //pd?.dismiss()
+                            hideProgressDialog()
                             finish()
                         }
                         alertDialog.show()

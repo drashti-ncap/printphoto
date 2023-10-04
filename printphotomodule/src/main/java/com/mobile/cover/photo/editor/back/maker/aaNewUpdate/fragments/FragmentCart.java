@@ -39,6 +39,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.check_stock_main_response;
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.CartRecyclerAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -67,10 +68,10 @@ import static com.mobile.cover.photo.editor.back.maker.Commen.Share.isorder;
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity.id_offer;
 
-public class FragmentCart extends Fragment implements View.OnClickListener {
+public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClickListener {
     private static final long MIN_CLICK_INTERVAL = 1000;
     public static TextView id_text_view_messess, sign_in_ll, tv_login, tv_login1, id_paid_amount;
-    ProgressDialog progressDialog, pd;
+    // ProgressDialog progressDialog, pd;
     CartRecyclerAdapter cartRecyclerAdapter;
     RecyclerView recyclerview;
     LinearLayout id_ll, id_ll_sign_in, id_text_view;
@@ -290,9 +291,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
     private void deleteitem(final int position) {
 
 
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
-
+        //progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         Call<SimpleResponse> cartCall = apiService.deleteCart("0", String.valueOf(Share.CartItem_data.get(position).getId()), SharedPrefs.getString(getContext(), Share.key_ + RegReq.id),
@@ -306,8 +307,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
                 try {
 
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
 
                         AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                         alertDialog.setTitle(getString(R.string.delete));
@@ -344,9 +346,10 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
             @Override
             public void onFailure(Call<SimpleResponse> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
@@ -386,8 +389,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
         isload = true;
         id_ll.setVisibility(View.GONE);
         id_text_view.setVisibility(View.GONE);
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
 
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
@@ -407,8 +411,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
                     Log.e("Response", "onResponse: =====>" + response.body().getcart_data().getCartItems().size());
                     Log.e("Response", "onResponse: =====>" + response.body().getcart_data().getCartTotal());
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
 
                         Share.symbol = response.body().getcart_data().getCurrency_symbol();
                         isload = false;
@@ -518,8 +523,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
                             }
                         });
                     } else {
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
                         isload = false;
                         id_ll.setVisibility(View.GONE);
                         id_ll_sign_in.setVisibility(View.GONE);
@@ -557,17 +563,19 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
-                    progressDialog.dismiss();
+//                    progressDialog.dismiss();
                     isload = false;
+                    hideProgressDialog();
                 }
 
             }
 
             @Override
             public void onFailure(Call<get_Cart> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
 
                 Log.e("FAILURE", "onFailure: " + t.getLocalizedMessage());
                 Log.e("FAILURE", "onFailure: " + t.getMessage());
@@ -734,7 +742,8 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
     private void Check_stock(final String item_id, final String cart_id, final String type, final String modelid, final String item_qnty, int quantity) {
 
-        pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        showProgressDialog(getActivity());
         APIService api = new MainApiClient(getActivity()).getApiInterface();
         Call<check_stock_main_response> call = api.check_stock(cart_id, Locale.getDefault().getLanguage());
 
@@ -745,7 +754,8 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
             public void onResponse(Call<check_stock_main_response> call, Response<check_stock_main_response> response) {
                 Log.e(TAG, "onResponse: " + response.isSuccessful());
                 if (response.isSuccessful()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     check_stock_main_response responseData = response.body();
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         if (responseData.getData().getStatus() == 1) {
@@ -783,7 +793,8 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
                         Toast.makeText(getActivity(), responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
@@ -791,7 +802,8 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
             @Override
             public void onFailure(Call<check_stock_main_response> call, Throwable t) {
-                pd.dismiss();
+                //pd.dismiss();
+                hideProgressDialog();
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
@@ -837,8 +849,9 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        progressDialog.show();
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog.show();
+        showProgressDialog(getActivity());
 
 
         APIService apiService = new MainApiClient(getActivity()).getApiInterface();
@@ -847,15 +860,17 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
         regResponseCall.enqueue(new Callback<RegResponse>() {
             @Override
             public void onResponse(Call<RegResponse> call, Response<RegResponse> response) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                showProgressDialog(getActivity());
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
 
 
-                    progressDialog.dismiss();
+                    //progressDialog.dismiss();
+                    hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
                         SharedPrefs.save(getContext(), SharedPrefs.CART_COUNT, response.body().getCart_count());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
@@ -946,9 +961,10 @@ public class FragmentCart extends Fragment implements View.OnClickListener {
 
             @Override
             public void onFailure(Call<RegResponse> call, Throwable t) {
-                if (progressDialog != null && progressDialog.isShowing()) {
-                    progressDialog.dismiss();
-                }
+//                if (progressDialog != null && progressDialog.isShowing()) {
+//                    progressDialog.dismiss();
+//                }
+                hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
                     AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.other.test_image_response_data;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.test_image_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Testing_adapter.test_new_default_image_adapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -24,11 +25,11 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class testing_case_image_activity extends AppCompatActivity {
+public class testing_case_image_activity extends PrintPhotoBaseActivity {
 
 
     RecyclerView rv_recycler_data;
-    ProgressDialog pd;
+   // ProgressDialog pd;
     List<getdefault_images> sqlist = new ArrayList<>();
     test_new_default_image_adapter test_new_deafault_image_adapter_new;
 
@@ -54,7 +55,8 @@ public class testing_case_image_activity extends AppCompatActivity {
     private void getMainData() {
 
         sqlist.clear();
-        pd = ProgressDialog.show(testing_case_image_activity.this, "", "Processing...", true, false);
+        //pd = ProgressDialog.show(testing_case_image_activity.this, "", "Processing...", true, false);
+        showProgressDialog(testing_case_image_activity.this);
         APIService api = new MainApiClient(testing_case_image_activity.this).getApiInterface();
 
 
@@ -66,7 +68,8 @@ public class testing_case_image_activity extends AppCompatActivity {
             public void onResponse(Call<test_image_response> call, retrofit2.Response<test_image_response> response) {
                 test_image_response customimage_response = response.body();
                 if (customimage_response.getSuccess()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
 
                     List<test_image_response_data> datumList = customimage_response.getData();
                     for (test_image_response_data datum : datumList) {
@@ -87,7 +90,8 @@ public class testing_case_image_activity extends AppCompatActivity {
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getMainData();
 
                         }
@@ -101,7 +105,8 @@ public class testing_case_image_activity extends AppCompatActivity {
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getMainData();
                         }
                     });
@@ -109,7 +114,8 @@ public class testing_case_image_activity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();

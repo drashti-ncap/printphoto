@@ -53,6 +53,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pagination.MainActivity;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -85,7 +86,7 @@ import retrofit2.Response;
 import static com.mobile.cover.photo.editor.back.maker.Commen.Share.upload;
 
 
-public class test_frame_editing_activity extends AppCompatActivity {
+public class test_frame_editing_activity extends PrintPhotoBaseActivity {
     private static final long MIN_CLICK_INTERVAL = 1500;
     PhilImageView phill_image_view;
     RecyclerView rv_frame;
@@ -93,7 +94,7 @@ public class test_frame_editing_activity extends AppCompatActivity {
     Drawable[] frame_2;
     test_frame_image_adapter test_frame_image_adapter;
     ImageView btn_add, id_back;
-    ProgressDialog progress, progressDialog;
+  //  ProgressDialog progress, progressDialog;
     InputStream inputStream;
     AlertDialog alertDialog;
     private long mLastClickTime;
@@ -393,9 +394,10 @@ public class test_frame_editing_activity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         if (Share.frame_bitmap.size() != 0) {
-            if (progress != null) {
-                progress.dismiss();
-            }
+//            if (progress != null) {
+//                progress.dismiss();
+//            }
+            hideProgressDialog();
             test_frame_image_adapter.notifyDataSetChanged();
             new HttpImageRequestTask().execute();
         }
@@ -649,12 +651,14 @@ public class test_frame_editing_activity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = ProgressDialog.show(test_frame_editing_activity.this, "", getString(R.string.loading), true, false);
+            //progress = ProgressDialog.show(test_frame_editing_activity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(test_frame_editing_activity.this);
         }
 
         @Override
         protected void onPostExecute(Drawable drawable) {
-            progress.dismiss();
+            //progress.dismiss();
+            hideProgressDialog();
             if (inputStream != null) {
                 phill_image_view = null;
                 phill_image_view = findViewById(R.id.phill_image_view);
@@ -664,7 +668,8 @@ public class test_frame_editing_activity extends AppCompatActivity {
                 Bitmap b = ((BitmapDrawable) d).getBitmap();
                 phill_image_view.load_urlAsset(inputStream, b);
 
-                progress.dismiss();
+//                progress.dismiss();
+                hideProgressDialog();
 //                phill_image_view.setImageDrawable(drawable);
             }
         }
@@ -685,9 +690,10 @@ public class test_frame_editing_activity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Log.e("EXCEPTION", "run: " + e.getLocalizedMessage());
-                        if (progress != null) {
-                            progress.dismiss();
-                        }
+//                        if (progress != null) {
+//                            progress.dismiss();
+//                        }
+                        hideProgressDialog();
                         if (alertDialog != null) {
                             alertDialog.dismiss();
                             alertDialog = new AlertDialog.Builder(test_frame_editing_activity.this).create();
@@ -732,7 +738,8 @@ public class test_frame_editing_activity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog = ProgressDialog.show(test_frame_editing_activity.this, "", getString(R.string.loading), true, false);
+            //progressDialog = ProgressDialog.show(test_frame_editing_activity.this, "", getString(R.string.loading), true, false);
+            showProgressDialog(test_frame_editing_activity.this);
             builder = new MultipartBody.Builder();
         }
 
@@ -756,7 +763,8 @@ public class test_frame_editing_activity extends AppCompatActivity {
                                     Share.resultbitmap = null;
                                     Share.final_result_bitmap = null;
                                     Share.edit_image = false;
-                                    progressDialog.dismiss();
+                                    //progressDialog.dismiss();
+                                    hideProgressDialog();
                                     if (Default_image_activity.Companion.getActivity() != null) {
                                         Default_image_activity.Companion.getActivity().finish();
                                     }
@@ -779,7 +787,8 @@ public class test_frame_editing_activity extends AppCompatActivity {
                                     alertDialog.setMessage(response.body().getcart_data().getMessage());
                                     alertDialog.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
-                                            progressDialog.dismiss();
+                                            //progressDialog.dismiss();
+                                            hideProgressDialog();
                                             dialog.dismiss();
                                         }
                                     });
@@ -787,7 +796,8 @@ public class test_frame_editing_activity extends AppCompatActivity {
                                     alertDialog.create().show();
                                 }
                             } else {
-                                progressDialog.dismiss();
+                                //progressDialog.dismiss();
+                                hideProgressDialog();
                                 Log.e("ISSUE", "onResponse: "+response.body().getResponseMessage());
                                 Toast.makeText(test_frame_editing_activity.this, response.body().getResponseMessage(), Toast.LENGTH_SHORT).show();
                             }
@@ -800,8 +810,9 @@ public class test_frame_editing_activity extends AppCompatActivity {
                     public void onFailure(Call<Cart> call, Throwable t) {
                         Log.e("response", "Failed==>" + t.getLocalizedMessage());
                         Log.e("response", "Failed==>" + t.getMessage());
-                        if (progressDialog != null && progressDialog.isShowing())
-                            progressDialog.dismiss();
+//                        if (progressDialog != null && progressDialog.isShowing())
+//                            progressDialog.dismiss();
+                        hideProgressDialog();
 
                         if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                             AlertDialog alertDialog = new AlertDialog.Builder(test_frame_editing_activity.this).create();

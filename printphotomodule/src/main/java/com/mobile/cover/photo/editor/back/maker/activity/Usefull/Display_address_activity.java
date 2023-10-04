@@ -22,6 +22,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.Share;
 import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs;
 import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.save_address_response;
 import com.mobile.cover.photo.editor.back.maker.R;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity;
 import com.mobile.cover.photo.editor.back.maker.adapter.Usefull_Adapter.new_AddressRecyclerAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.APIService;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient;
@@ -33,7 +34,7 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class Display_address_activity extends AppCompatActivity implements View.OnClickListener {
+public class Display_address_activity extends PrintPhotoBaseActivity implements View.OnClickListener {
 
     private static final long MIN_CLICK_INTERVAL = 1000;
     public static Activity activity;
@@ -41,7 +42,7 @@ public class Display_address_activity extends AppCompatActivity implements View.
     RecyclerView rv_address;
     LinearLayout ll_address_availablity;
     new_AddressRecyclerAdapter addressRecyclerAdapter;
-    ProgressDialog pd;
+//    ProgressDialog pd;
     private long mLastClickTime;
 
     @Override
@@ -149,8 +150,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
     private void getaddress_data() {
 
 
-        pd = ProgressDialog.show(Display_address_activity.this, "", getString(R.string.loading), true, false);
-
+//        pd = ProgressDialog.show(Display_address_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Display_address_activity.this);
 
         APIService api = new MainApiClient(Display_address_activity.this).getApiInterface();
         Call<save_address_response> call = api.get_saved_address(SharedPrefs.getString(activity, SharedPrefs.uid), Locale.getDefault().getLanguage());
@@ -161,7 +162,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
             public void onResponse(Call<save_address_response> call, retrofit2.Response<save_address_response> response) {
                 save_address_response address_response = response.body();
                 if (address_response.getSuccess()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     if (address_response.getData().size() != 0) {
                         Share.saved_address_list = address_response.getData();
                         Share.saved_address_list.get(0).setIsSelect(true);
@@ -244,7 +246,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
 
                         }
@@ -258,7 +261,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
                         }
                     });
@@ -266,7 +270,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();
@@ -282,7 +287,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
     private void deleteaddress(int type) {
 
 
-        pd = ProgressDialog.show(Display_address_activity.this, "", getString(R.string.loading), true, false);
+        //pd = ProgressDialog.show(Display_address_activity.this, "", getString(R.string.loading), true, false);
+        showProgressDialog(Display_address_activity.this);
 
 
         APIService api = new MainApiClient(Display_address_activity.this).getApiInterface();
@@ -295,7 +301,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
             public void onResponse(Call<save_address_response> call, retrofit2.Response<save_address_response> response) {
                 save_address_response address_response = response.body();
                 if (response.body().getSuccess()) {
-                    pd.dismiss();
+                    //pd.dismiss();
+                    hideProgressDialog();
                     Share.saved_address_list.clear();
                     Share.saved_address_list = address_response.getData();
                     for (int i = 0; i < Share.saved_address_list.size(); i++) {
@@ -374,7 +381,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                     alertDialog.setButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
 
                         }
@@ -388,7 +396,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                     alertDialog.setPositiveButton(getString(R.string.retry), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                             getaddress_data();
                         }
                     });
@@ -396,7 +405,8 @@ public class Display_address_activity extends AppCompatActivity implements View.
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            pd.dismiss();
+                            //pd.dismiss();
+                            hideProgressDialog();
                         }
                     });
                     alertDialog.show();
