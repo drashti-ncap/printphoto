@@ -18,7 +18,7 @@
     <string name="instagram_login">Accesso Instagram</string>
     <string name="button_allow">Consenti</string>
     <string name="button_deny">Nega</string>
-    <string name="permission_pick_rationale">È necessaria l\'autorizzazione READ_EXTERNAL_STORAGE per selezionare un'immagine.</string>
+    <string name="permission_pick_rationale">È necessaria l\'autorizzazione READ_EXTERNAL_STORAGE per selezionare un\'immagine.</string>
     <string name="permission_crop_rationale">È necessaria l\'autorizzazione WRITE_EXTERNAL_STORAGE per salvare l\'immagine ritagliata.</string>
     <string name="share_your_promo_code_in_review">Condividi il tuo codice promozionale nella recensione</string>
     <string name="code">CODICE: </string>

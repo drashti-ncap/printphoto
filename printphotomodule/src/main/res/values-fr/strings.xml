@@ -88,7 +88,7 @@
     <string name="take_photo">Prendre une photo</string>
     <string name="choose_from_gallery">Choisir depuis la galerie</string>
     <string name="permission_required">Permissions requises</string>
-    <string name="permission_sentence">Veuillez autoriser l\'accès à l'appareil photo.</string>
+    <string name="permission_sentence">Veuillez autoriser l\'accès à l\'appareil photo.</string>
     <string name="permission_sentence_storage">Veuillez autoriser l\'accès au stockage.</string>
     <string name="choose_color">Choisir la couleur</string>
     <string name="upload_fail">Échec du téléchargement</string>
