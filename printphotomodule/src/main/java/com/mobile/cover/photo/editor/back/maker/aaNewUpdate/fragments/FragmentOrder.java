@@ -425,7 +425,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 Share.display_isorder = true;
                 HomeMainActivity.selected = 3;
-                FragmentTransaction fragmentTransaction = mContext.getSupportFragmentManager().beginTransaction();
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frg_main, new FragmentAccount());
                 fragmentTransaction.commit();
             }
@@ -482,7 +482,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                FragmentTransaction fragmentTransaction = mContext.getSupportFragmentManager().beginTransaction();
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
 //                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
                 fragmentTransaction.commit();

@@ -858,7 +858,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                 HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                FragmentTransaction fragmentTransaction = mContext.getSupportFragmentManager().beginTransaction();
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
                 fragmentTransaction.commit();
             }
