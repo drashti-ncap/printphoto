@@ -535,7 +535,7 @@ class PhoneAuthActivity : PrintPhotoBaseActivity(), View.OnClickListener {
             val msg = getString(R.string.msg_token_fmt, token)
             Log.d(TAG, msg)
             android_id=msg.toString()
-            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+          //  Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })
 
         Log.e(TAG, "sendData: $fname")

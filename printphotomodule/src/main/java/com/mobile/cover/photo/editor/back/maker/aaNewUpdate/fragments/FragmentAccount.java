@@ -1,5 +1,6 @@
 package com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -81,6 +82,13 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
     int selected_pos;
     boolean send = false;
 
+    private Activity mContext;
+
+    // Define a method to set the context
+    public void setContext(Activity context) {
+        mContext = context;
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_account, container, false);
@@ -105,7 +113,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
             temp_spinnercodeArray.add(Share.country_mobile_code.get(country).getSortname());
             spinnercountryArray.add(" (" + Share.country_mobile_code.get(country).getSortname() + ")" + " " + Share.country_mobile_code.get(country).getName());
         }
-        Share.countryCodeValue = SharedPrefs.getString(getActivity(), SharedPrefs.country_code);
+        Share.countryCodeValue = SharedPrefs.getString(mContext, SharedPrefs.country_code);
 
         Log.e("COUNTRYCODEVALUE", "onCreateView: =======>" + Share.countryCodeValue);
         setHeader();
@@ -120,11 +128,11 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        mContext.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
         for (int i = 0; i < temp_spinnercodeArray.size(); i++) {
-            if (temp_spinnercodeArray.get(i).equalsIgnoreCase(SharedPrefs.getString(getActivity(), SharedPrefs.country_code))) {
+            if (temp_spinnercodeArray.get(i).equalsIgnoreCase(SharedPrefs.getString(mContext, SharedPrefs.country_code))) {
                 sp_country.setSelection(i);
             }
         }
@@ -140,7 +148,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         }*/
 
 
-        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
+        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.GONE);
         } else {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.VISIBLE);
@@ -150,8 +158,8 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
             Share.isRegistrationSuccess = false;
 
-            String mobile = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1);
-            String email = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.email);
+            String mobile = SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1);
+            String email = SharedPrefs.getString(mContext, Share.key_ + RegReq.email);
 
             if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
                 id_mobile_number.setText(mobile);
@@ -159,7 +167,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                 id_email_id.setText(email);
                 for (int i = 0; i < Share.country_mobile_code.size(); i++) {
                     if (Share.country_mobile_code.get(i).getIs_branch() == 1) {
-                        if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
+                        if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
                             id_mobile_number.setText(mobile);
                         }
                     }
@@ -183,7 +191,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         id_ll_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), RegistrationActivity.class);
+                Intent intent = new Intent(mContext, RegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -248,9 +256,9 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
 
         Log.e("androidId", "==>" + androidId);
-        //progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(getActivity());
+        showProgressDialog(mContext);
         String cred;
         if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
             cred = id_mobile_number.getText().toString();
@@ -258,7 +266,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
             cred = id_email_id.getText().toString();
             for (int i = 0; i < Share.country_mobile_code.size(); i++) {
                 if (Share.country_mobile_code.get(i).getIs_branch() == 1) {
-                    if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
+                    if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
                         cred = id_mobile_number.getText().toString();
                     }
                 }
@@ -266,7 +274,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         }
 
 
-        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
+        APIService apiService = new MainApiClient(mContext).getApiInterface();
 
         Call<RegResponse> regResponseCall = apiService.getRegResponseLogin(cred, id_password.getText().toString(), androidId, "android", TimeZone.getDefault().getID(), Locale.getDefault().getLanguage());
 
@@ -285,10 +293,10 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                     //progressDialog.dismiss();
                     hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        SharedPrefs.save(getContext(), SharedPrefs.CART_COUNT, response.body().getCart_count());
-                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
+                        SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, response.body().getCart_count());
+                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
                         if (response.body().getData() == null) {
-                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                             alertDialog.setTitle(getString(R.string.log_in));
                             alertDialog.setCancelable(false);
                             alertDialog.setMessage(response.body().getResponseMessage());
@@ -301,51 +309,51 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
                             alertDialog.create().show();
                         } else {
-                            SharedPrefs.savePref(getContext(), Share.key_reg_suc, true);
+                            SharedPrefs.savePref(mContext, Share.key_reg_suc, true);
                             id_mobile_number.setText("");
                             id_password.setText("");
                             RegData regData = response.body().getData();
                             Share.isinternational = regData.getIs_international();
                             if (regData != null) {
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.name, regData.getName());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.email, regData.getEmail());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.mobile_1, regData.getMobile_1());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.id, regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.currency_id, "" + regData.getCurrencyId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_id, regData.getCountry_id());
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_name, regData.getCountry_name());
-//                                SharedPrefs.save(getActivity(), SharedPrefs.last_country_code, SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_code, regData.getCountry_code());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.name, regData.getName());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.email, regData.getEmail());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.mobile_1, regData.getMobile_1());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.id, regData.getId());
+                                SharedPrefs.save(mContext, SharedPrefs.currency_id, "" + regData.getCurrencyId());
+                                SharedPrefs.save(mContext, SharedPrefs.country_id, regData.getCountry_id());
+                                SharedPrefs.save(mContext, SharedPrefs.country_name, regData.getCountry_name());
+//                                SharedPrefs.save(mContext, SharedPrefs.last_country_code, SharedPrefs.getString(mContext, SharedPrefs.country_code));
+                                SharedPrefs.save(mContext, SharedPrefs.country_code, regData.getCountry_code());
                                 Share.countryCodeValue = regData.getCountry_code();
 
                                 Log.e("UID", "onResponse: " + regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.uid, regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.Sellerid, regData.getseller_id());
-                                SharedPrefs.save(getActivity(), SharedPrefs.SELLER, regData.getis_approve());
-                                SharedPrefs.save(getActivity(), SharedPrefs.TOKEN, regData.getToken());
+                                SharedPrefs.save(mContext, SharedPrefs.uid, regData.getId());
+                                SharedPrefs.save(mContext, SharedPrefs.Sellerid, regData.getseller_id());
+                                SharedPrefs.save(mContext, SharedPrefs.SELLER, regData.getis_approve());
+                                SharedPrefs.save(mContext, SharedPrefs.TOKEN, regData.getToken());
 
                                 Log.e("LOGINDATA", "onResponse: " + regData.getseller_id());
                                 Log.e("TOKEN", "onResponse: ========>" + regData.getToken());
                                 Log.e("LOGINDATA", "onResponse: " + regData.getis_approve());
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), SharedPrefs.uid));
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, SharedPrefs.uid));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1));
 
 
-                                SharedPrefs.save(getActivity(), SharedPrefs.isapproved, regData.getis_approve());
+                                SharedPrefs.save(mContext, SharedPrefs.isapproved, regData.getis_approve());
 
                                 Log.e("ISAPPROVED", "onResponse:==> " + regData.getis_approve());
                             }
 
                             if (Share.iscart) {
-                                ImageView id_home = getActivity().findViewById(R.id.id_home);
-                                ImageView id_order = getActivity().findViewById(R.id.id_order);
-                                ImageView id_cart = getActivity().findViewById(R.id.id_cart);
-                                ImageView id_account = getActivity().findViewById(R.id.id_account);
-                                id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                                id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                ImageView id_home = mContext.findViewById(R.id.id_home);
+                                ImageView id_order = mContext.findViewById(R.id.id_order);
+                                ImageView id_cart = mContext.findViewById(R.id.id_cart);
+                                ImageView id_account = mContext.findViewById(R.id.id_account);
+                                id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                                id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                                 selected = 2;
                                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                                 fragmentTransaction.replace(R.id.frg_main, new FragmentCart());
@@ -354,15 +362,15 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
 
                             } else if (Share.display_isorder) {
-                                ImageView id_home = getActivity().findViewById(R.id.id_home);
-                                ImageView id_order = getActivity().findViewById(R.id.id_order);
-                                ImageView id_cart = getActivity().findViewById(R.id.id_cart);
-                                ImageView id_account = getActivity().findViewById(R.id.id_account);
-                                id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                                id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                ImageView id_home = mContext.findViewById(R.id.id_home);
+                                ImageView id_order = mContext.findViewById(R.id.id_order);
+                                ImageView id_cart = mContext.findViewById(R.id.id_cart);
+                                ImageView id_account = mContext.findViewById(R.id.id_account);
+                                id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                                id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                                 Share.isorder = true;
                                 HomeMainActivity.selected = 1;
                                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
@@ -386,7 +394,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
 
                     } else {
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                         alertDialog.setTitle(getString(R.string.log_in));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(response.body().getResponseMessage());
@@ -400,7 +408,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                         alertDialog.create().show();
                     }
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.log_in));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.something_went_wrong_try_agaian));
@@ -427,7 +435,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                     if (alertDialog != null) {
                         alertDialog.dismiss();
                     }
-                    alertDialog = new AlertDialog.Builder(getContext()).create();
+                    alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setCancelable(false);
@@ -443,7 +451,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                     if (alertDialog != null) {
                         alertDialog.dismiss();
                     }
-                    alertDialog = new AlertDialog.Builder(getContext()).create();
+                    alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setMessage(getString(R.string.slow_connect));
                     alertDialog.setCancelable(false);
@@ -483,7 +491,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         id_iv_forget_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(getActivity());
+                final Dialog dialog = new Dialog(mContext);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.dialog_getmobile);
                 Window window = dialog.getWindow();
@@ -496,11 +504,11 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                 final Spinner sp_code = dialog.findViewById(R.id.sp_code);
 
 
-                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_print_item, spinnercodeArray);
+                ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(mContext, R.layout.simple_spinner_print_item, spinnercodeArray);
                 sp_code.setAdapter(code_adapter);
 
 
-//                if (SharedPrefs.getString(getActivity(),SharedPrefs.country_code).equalsIgnoreCase("IN")||Share.country_mobile_code.get(country).getIs_branch()==1){
+//                if (SharedPrefs.getString(mContext,SharedPrefs.country_code).equalsIgnoreCase("IN")||Share.country_mobile_code.get(country).getIs_branch()==1){
 //                    spinnercodeArray.add("+" + Share.country_mobile_code.get(country).getPhonecode() + " (" + Share.country_mobile_code.get(country).getSortname() + ")" + " " + Share.country_mobile_code.get(country).getName());
 //                }
                 if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
@@ -616,7 +624,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         });
 
         sp_country = v.findViewById(R.id.sp_country);
-        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_print_item, spinnercountryArray);
+        ArrayAdapter<String> code_adapter = new ArrayAdapter<String>(mContext, R.layout.simple_spinner_print_item, spinnercountryArray);
         sp_country.setAdapter(code_adapter);
 
 
@@ -630,9 +638,9 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                         if (!Share.setselection) {
                             Share.setselection = false;
                             Share.isregistration = true;
-                            SharedPrefs.save(getActivity(), SharedPrefs.last_country_code, SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+                            SharedPrefs.save(mContext, SharedPrefs.last_country_code, SharedPrefs.getString(mContext, SharedPrefs.country_code));
                         }
-                        SharedPrefs.save(getActivity(), SharedPrefs.country_code, Share.country_mobile_code.get(i).getSortname());
+                        SharedPrefs.save(mContext, SharedPrefs.country_code, Share.country_mobile_code.get(i).getSortname());
                     }
 
 
@@ -671,7 +679,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         });
 
         for (int i = 0; i < temp_spinnercodeArray.size(); i++) {
-            if (temp_spinnercodeArray.get(i).equalsIgnoreCase(SharedPrefs.getString(getActivity(), SharedPrefs.country_code))) {
+            if (temp_spinnercodeArray.get(i).equalsIgnoreCase(SharedPrefs.getString(mContext, SharedPrefs.country_code))) {
                 sp_country.setSelection(i);
                 Share.setselection = true;
             }
@@ -682,7 +690,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         become_seller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sellerresgistration = new Intent(getActivity(), SellerRegistration.class);
+                Intent sellerresgistration = new Intent(mContext, SellerRegistration.class);
                 startActivity(sellerresgistration);
             }
         });
@@ -733,9 +741,9 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
     private void verify(final String number, final String email, final Dialog dialog, final String code) {
 
 
-        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        showProgressDialog(getActivity());
-        APIService api = new MainApiClient(getActivity()).getApiInterface();
+        //pd = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+        showProgressDialog(mContext);
+        APIService api = new MainApiClient(mContext).getApiInterface();
 
 
         Call<new_numberverify> call = api.forget_verify(number, email, Locale.getDefault().getLanguage());
@@ -759,7 +767,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                         } else {
                             verify = "0";
                         }
-                        Intent intent = new Intent(getActivity(), PhoneAuthActivity.class);
+                        Intent intent = new Intent(mContext, PhoneAuthActivity.class);
                         intent.putExtra("mobno", number);
                         intent.putExtra("emailid", email);
                         intent.putExtra("verify", verify);
@@ -769,14 +777,14 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                     } else {
                         //pd.dismiss();
                         hideProgressDialog();
-                        Toast.makeText(getActivity(), responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
                     //pd.dismiss();
                     hideProgressDialog();
                 } else {
 //                    pd.dismiss();
                     hideProgressDialog();
-                    Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -788,14 +796,14 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                 Log.e(TAG, "onFailure: ======>" + t);
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
-                getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+                mContext.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
                     if (alertDialog != null) {
                         alertDialog.dismiss();
                     }
 
-                    alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.connect_time_out));
@@ -811,7 +819,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                         alertDialog.dismiss();
                     }
 
-                    alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.slow_connect));
@@ -830,7 +838,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
 
 
     private void getDisplaySize() {
-        Display display = getActivity().getWindow().getWindowManager().getDefaultDisplay();
+        Display display = mContext.getWindow().getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         Share.screenWidth = size.x;
@@ -838,19 +846,19 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
     }
 
     private void setHeader() {
-        TextView title = getActivity().findViewById(R.id.title);
+        TextView title = mContext.findViewById(R.id.title);
         title.setText(getString(R.string.sign_in));
-        ImageView imageView = getActivity().findViewById(R.id.id_back);
+        ImageView imageView = mContext.findViewById(R.id.id_back);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selected = 0;
-                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                FragmentTransaction fragmentTransaction = mContext.getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
                 fragmentTransaction.commit();
             }
@@ -871,7 +879,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog = new ProgressDialog(getActivity());
+            progressDialog = new ProgressDialog(mContext);
             progressDialog.setCancelable(false);
             progressDialog.setMessage(getString(R.string.sign_in));
             progressDialog.show();

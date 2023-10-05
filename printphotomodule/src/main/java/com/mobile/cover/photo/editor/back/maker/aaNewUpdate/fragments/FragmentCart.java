@@ -1,5 +1,6 @@
 package com.mobile.cover.photo.editor.back.maker.aaNewUpdate.fragments;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
@@ -84,6 +85,12 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     private PendingIntent pendingIntent;
     private long mLastClickTime;
 
+    private Activity mContext;
+
+    public void setContext(Activity context) {
+        mContext = context;
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.new_frag_cart, container, false);
@@ -95,13 +102,13 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
         HomeMainActivity.iv_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Contactus_activity.class);
+                Intent intent = new Intent(mContext, Contactus_activity.class);
                 startActivity(intent);
             }
         });
 
-        firebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
-        // logger = AppEventsLogger.newLogger(getActivity());
+        firebaseAnalytics = FirebaseAnalytics.getInstance(mContext);
+        // logger = AppEventsLogger.newLogger(mContext);
         setHeader();
         getDisplaySize();
         findViews(v);
@@ -120,18 +127,18 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        mContext.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        Log.e("LENGTH", "onResume: " + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
-        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
+        Log.e("LENGTH", "onResume: " + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
+        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.GONE);
 
         } else {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.VISIBLE);
         }
 
-        Log.e("key_reg_suc", "intView: ======>" + SharedPrefs.getBoolean(getContext(), Share.key_reg_suc));
-        if (SharedPrefs.getBoolean(getContext(), Share.key_reg_suc)) {
+        Log.e("key_reg_suc", "intView: ======>" + SharedPrefs.getBoolean(mContext, Share.key_reg_suc));
+        if (SharedPrefs.getBoolean(mContext, Share.key_reg_suc)) {
             Log.e("ISCART_ISORDER", "onResume: =========>" + iscart + "======>" + isorder);
             if (iscart) {
                 iscart = false;
@@ -149,8 +156,8 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
 
             Share.isRegistrationSuccess = false;
 
-            String mobile = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1);
-            String email = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.email);
+            String mobile = SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1);
+            String email = SharedPrefs.getString(mContext, Share.key_ + RegReq.email);
 
             String cred;
             if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
@@ -159,7 +166,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 cred = email;
                 for (int i = 0; i < Share.country_mobile_code.size(); i++) {
                     if (Share.country_mobile_code.get(i).getIs_branch() == 1) {
-                        if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
+                        if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
                             cred = mobile;
                         }
                     }
@@ -175,24 +182,24 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     }
 
     private void intView() {
-        ImageView id_home = getActivity().findViewById(R.id.id_home);
-        ImageView id_order = getActivity().findViewById(R.id.id_order);
-        ImageView id_cart = getActivity().findViewById(R.id.id_cart);
-        ImageView id_account = getActivity().findViewById(R.id.id_account);
-        ImageView id_offer = getActivity().findViewById(R.id.id_offer);
+        ImageView id_home = mContext.findViewById(R.id.id_home);
+        ImageView id_order = mContext.findViewById(R.id.id_order);
+        ImageView id_cart = mContext.findViewById(R.id.id_cart);
+        ImageView id_account = mContext.findViewById(R.id.id_account);
+        ImageView id_offer = mContext.findViewById(R.id.id_offer);
 
         HomeMainActivity.selected = 2;
-        id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-        id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+        id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
 
         Share.iscart = false;
 
 
-        Log.e("key_reg_suc", "intView: ======>" + SharedPrefs.getBoolean(getContext(), Share.key_reg_suc));
-        if (SharedPrefs.getBoolean(getContext(), Share.key_reg_suc)) {
+        Log.e("key_reg_suc", "intView: ======>" + SharedPrefs.getBoolean(mContext, Share.key_reg_suc));
+        if (SharedPrefs.getBoolean(mContext, Share.key_reg_suc)) {
             id_ll.setVisibility(View.GONE);
             Share.CartItem_data = null;
             if (Share.CartItem_data != null) {
@@ -204,15 +211,15 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 id_ll.setVisibility(View.VISIBLE);
                 id_text_view.setVisibility(View.GONE);
 
-                recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
-                cartRecyclerAdapter = new CartRecyclerAdapter(getContext(), Share.CartItem_data);
+                recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
+                cartRecyclerAdapter = new CartRecyclerAdapter(mContext, Share.CartItem_data);
                 Log.e("LENGTH", "intView: " + Share.CartItem_data.size());
                 gift1 = 0;
                 total_amount = Double.valueOf(0);
-                SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, Share.CartItem_data.size());
+                SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, Share.CartItem_data.size());
                 if (Share.CartItem_data.size() == 0) {
                     HomeMainActivity.tv_nudge_cart_count.setVisibility(View.GONE);
-                    SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, 0);
+                    SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, 0);
                     HomeMainActivity.tv_nudge_cart_count.setText("0");
                 } else {
                     HomeMainActivity.tv_nudge_cart_count.setVisibility(View.VISIBLE);
@@ -232,7 +239,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         mLastClickTime = currentClickTime;
                         if (elapsedTime <= MIN_CLICK_INTERVAL)
                             return;
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                         alertDialog.setTitle(getString(R.string.delete));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(getString(R.string.are_u_sure_want_delete_cart));
@@ -280,7 +287,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 @Override
                 public void onClick(View view) {
                     Share.iscart = true;
-                    Intent intent = new Intent(getActivity(), RegistrationActivity.class);
+                    Intent intent = new Intent(mContext, RegistrationActivity.class);
                     startActivity(intent);
                 }
             });
@@ -291,12 +298,12 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     private void deleteitem(final int position) {
 
 
-        //progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+        //progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(getActivity());
+        showProgressDialog(mContext);
 
-        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
-        Call<SimpleResponse> cartCall = apiService.deleteCart("0", String.valueOf(Share.CartItem_data.get(position).getId()), SharedPrefs.getString(getContext(), Share.key_ + RegReq.id),
+        APIService apiService = new MainApiClient(mContext).getApiInterface();
+        Call<SimpleResponse> cartCall = apiService.deleteCart("0", String.valueOf(Share.CartItem_data.get(position).getId()), SharedPrefs.getString(mContext, Share.key_ + RegReq.id),
                 Locale.getDefault().getLanguage());
 
 
@@ -311,7 +318,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
 //                            progressDialog.dismiss();
                         hideProgressDialog();
 
-                        AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                         alertDialog.setTitle(getString(R.string.delete));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(getString(R.string.item_delete_successfully));
@@ -324,7 +331,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         });
                         alertDialog.show();
                     } else {
-                        AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                         alertDialog.setTitle(getString(R.string.failed_to_delete));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(response.body().getResponseMessage());
@@ -352,7 +359,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 hideProgressDialog();
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.connect_time_out));
@@ -365,7 +372,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     });
                     alertDialog.show();
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.slow_connect));
@@ -389,13 +396,13 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
         isload = true;
         id_ll.setVisibility(View.GONE);
         id_text_view.setVisibility(View.GONE);
-//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(getActivity());
+        showProgressDialog(mContext);
 
 
-        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
-        Call<get_Cart> cartCall = apiService.getCart(SharedPrefs.getString(getContext(), SharedPrefs.uid), Locale.getDefault().getLanguage());
+        APIService apiService = new MainApiClient(mContext).getApiInterface();
+        Call<get_Cart> cartCall = apiService.getCart(SharedPrefs.getString(mContext, SharedPrefs.uid), Locale.getDefault().getLanguage());
 
         total_amount = Double.valueOf(0);
         gift1 = 0;
@@ -429,43 +436,43 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                             tv_login1.setVisibility(View.GONE);
                         }
 
-                        recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
 
                         Share.CartItem_data = response.body().getcart_data().getCartItems();
 
-                        FirebaseEventsKt.logViewCartEvent(getActivity(), response.body().getcart_data().getCartItems(), response.body().getcart_data().getCartTotal());
+                        FirebaseEventsKt.logViewCartEvent(mContext, response.body().getcart_data().getCartItems(), response.body().getcart_data().getCartTotal());
 
 
-                        SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, Share.CartItem_data.size());
-                        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
+                        SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, Share.CartItem_data.size());
+                        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
                             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.GONE);
                         } else {
                             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.VISIBLE);
-                            HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
+                            HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
                         }
 
-                        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
-                            alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-                            Intent myIntent = new Intent(getActivity(), CAlarmReceiver.class);
+                        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
+                            alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+                            Intent myIntent = new Intent(mContext, CAlarmReceiver.class);
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             pendingIntent = PendingIntent.getBroadcast(
-                                    getActivity(), 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
+                                    mContext, 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
 
                             alarmManager.cancel(pendingIntent);
-                        } else if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) > 0) {
+                        } else if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) > 0) {
 
                             SharedPrefs preff = new SharedPrefs();
-                            SharedPrefs.save(getActivity(), "noti_count", 0);
+                            SharedPrefs.save(mContext, "noti_count", 0);
 
                             Calendar updateTime = Calendar.getInstance();
                             updateTime.setTimeZone(TimeZone.getDefault());
                             updateTime.set(Calendar.HOUR_OF_DAY, 12);
                             updateTime.set(Calendar.MINUTE, 30);
-                            Intent myIntent = new Intent(getActivity(), CAlarmReceiver.class); //get class from LocalNotification folder
+                            Intent myIntent = new Intent(mContext, CAlarmReceiver.class); //get class from LocalNotification folder
                             myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            pendingIntent = PendingIntent.getBroadcast(getActivity(), 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
+                            pendingIntent = PendingIntent.getBroadcast(mContext, 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
 
-                            alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+                            alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
                             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + AlarmManager.INTERVAL_DAY, AlarmManager.INTERVAL_DAY, pendingIntent);
                         }
 
@@ -473,10 +480,10 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         Log.e("LENGTH", "onResponse: " + Share.CartItem_data.size());
                         HomeMainActivity.tv_nudge_cart_count.setText("" + Share.CartItem_data.size());
                         if (Share.CartItem_data.size() == 0) {
-                            SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, 0);
+                            SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, 0);
                             HomeMainActivity.tv_nudge_cart_count.setText("0");
                         }
-                        cartRecyclerAdapter = new CartRecyclerAdapter(getContext(), Share.CartItem_data);
+                        cartRecyclerAdapter = new CartRecyclerAdapter(mContext, Share.CartItem_data);
                         recyclerview.setAdapter(cartRecyclerAdapter);
                         cartRecyclerAdapter.notifyDataSetChanged();
                         total_amount = response.body().getcart_data().getCartTotal();
@@ -489,7 +496,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                                 mLastClickTime = currentClickTime;
                                 if (elapsedTime <= MIN_CLICK_INTERVAL)
                                     return;
-                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                                 alertDialog.setTitle(getString(R.string.delete));
                                 alertDialog.setCancelable(false);
                                 alertDialog.setMessage(getString(R.string.are_u_sure_want_delete_cart));
@@ -533,31 +540,31 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         tv_login.setVisibility(View.GONE);
                         tv_login1.setVisibility(View.GONE);
                         id_text_view_messess.setText(response.body().getResponseMessage());
-                        SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, 0);
+                        SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, 0);
                         HomeMainActivity.tv_nudge_cart_count.setText("0");
 
-                        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
-                            alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
-                            Intent myIntent = new Intent(getActivity(), CAlarmReceiver.class);
+                        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
+                            alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+                            Intent myIntent = new Intent(mContext, CAlarmReceiver.class);
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             pendingIntent = PendingIntent.getBroadcast(
-                                    getActivity(), 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
+                                    mContext, 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
 
                             alarmManager.cancel(pendingIntent);
-                        } else if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) > 0) {
+                        } else if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) > 0) {
 
                             SharedPrefs preff = new SharedPrefs();
-                            SharedPrefs.save(getActivity(), "noti_count", 0);
+                            SharedPrefs.save(mContext, "noti_count", 0);
 
                             Calendar updateTime = Calendar.getInstance();
                             updateTime.setTimeZone(TimeZone.getDefault());
                             updateTime.set(Calendar.HOUR_OF_DAY, 12);
                             updateTime.set(Calendar.MINUTE, 30);
-                            Intent myIntent = new Intent(getActivity(), CAlarmReceiver.class); //get class from LocalNotification folder
+                            Intent myIntent = new Intent(mContext, CAlarmReceiver.class); //get class from LocalNotification folder
                             myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            pendingIntent = PendingIntent.getBroadcast(getActivity(), 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
+                            pendingIntent = PendingIntent.getBroadcast(mContext, 0, myIntent, PendingIntent.FLAG_IMMUTABLE);
 
-                            alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+                            alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
                             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + AlarmManager.INTERVAL_DAY, AlarmManager.INTERVAL_DAY, pendingIntent);
                         }
                     }
@@ -582,7 +589,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 Log.e("FAILURE", "onFailure: " + t.getStackTrace());
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setCancelable(false);
@@ -595,8 +602,8 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     });
                     alertDialog.show();
                 } else {
-                    if (getActivity() != null) {
-                        AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    if (mContext != null) {
+                        AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                         alertDialog.setTitle(getString(R.string.internet_connection));
                         alertDialog.setMessage(getString(R.string.slow_connect));
                         alertDialog.setCancelable(false);
@@ -640,15 +647,15 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
             public void onClick(View v) {
                 id_text_view.setVisibility(View.VISIBLE);
                 id_ll.setVisibility(View.GONE);
-                ImageView id_home = getActivity().findViewById(R.id.id_home);
-                ImageView id_order = getActivity().findViewById(R.id.id_order);
-                ImageView id_cart = getActivity().findViewById(R.id.id_cart);
-                ImageView id_account = getActivity().findViewById(R.id.id_account);
-                id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                ImageView id_home = mContext.findViewById(R.id.id_home);
+                ImageView id_order = mContext.findViewById(R.id.id_order);
+                ImageView id_cart = mContext.findViewById(R.id.id_cart);
+                ImageView id_account = mContext.findViewById(R.id.id_account);
+                id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 Share.iscart = true;
                 HomeMainActivity.selected = 3;
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
@@ -668,7 +675,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     }
 
     private void getDisplaySize() {
-        Display display = getActivity().getWindow().getWindowManager().getDefaultDisplay();
+        Display display = mContext.getWindow().getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         Share.screenWidth = size.x;
@@ -676,18 +683,18 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     }
 
     private void setHeader() {
-        TextView title = getActivity().findViewById(R.id.title);
+        TextView title = mContext.findViewById(R.id.title);
         title.setText(getString(R.string.cart));
-        ImageView imageView = getActivity().findViewById(R.id.id_back);
+        ImageView imageView = mContext.findViewById(R.id.id_back);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeMainActivity.selected = 0;
-                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
 //                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
@@ -742,9 +749,9 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
 
     private void Check_stock(final String item_id, final String cart_id, final String type, final String modelid, final String item_qnty, int quantity) {
 
-        //pd = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
-        showProgressDialog(getActivity());
-        APIService api = new MainApiClient(getActivity()).getApiInterface();
+        //pd = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+        showProgressDialog(mContext);
+        APIService api = new MainApiClient(mContext).getApiInterface();
         Call<check_stock_main_response> call = api.check_stock(cart_id, Locale.getDefault().getLanguage());
 
         call.enqueue(new Callback<check_stock_main_response>() {
@@ -760,10 +767,10 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         if (responseData.getData().getStatus() == 1) {
                             Share.isfromplaceorder = true;
-                            Intent intent = new Intent(getActivity(), SelectAddressActivity.class);
+                            Intent intent = new Intent(mContext, SelectAddressActivity.class);
                             intent.putExtra("addresstype", "select");
                             intent.putExtra("total_amount", "" + total_amount);
-                            intent.putExtra("user_id", SharedPrefs.getString(getContext(), Share.key_ + RegReq.id));
+                            intent.putExtra("user_id", SharedPrefs.getString(mContext, Share.key_ + RegReq.id));
                             intent.putExtra("shipping", "0");
 
                             intent.putExtra("item_id", item_id);
@@ -776,7 +783,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                             startActivity(intent);
 
                         } else {
-                            AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                            AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                             alertDialog.setTitle("Alert");
                             alertDialog.setCancelable(false);
                             alertDialog.setMessage(responseData.getData().getMessage());
@@ -787,15 +794,15 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                                 }
                             });
                             alertDialog.show();
-//                            Toast.makeText(getActivity(), responseData.getData().getMessage(), Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(mContext, responseData.getData().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(getActivity(), responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, responseData.getResponseMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     //pd.dismiss();
                     hideProgressDialog();
-                    Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -808,7 +815,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 Log.e(TAG, "onFailure: ======>" + t.getMessage());
                 Log.e(TAG, "onFailure: ======>" + t.getLocalizedMessage());
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setCancelable(false);
@@ -821,7 +828,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     });
                     alertDialog.show();
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setMessage(getString(R.string.slow_connect));
                     alertDialog.setCancelable(false);
@@ -849,12 +856,12 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
+//        progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(getActivity());
+        showProgressDialog(mContext);
 
 
-        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
+        APIService apiService = new MainApiClient(mContext).getApiInterface();
         Call<RegResponse> regResponseCall = apiService.getRegResponseLogin(cred, password, androidId, "android", TimeZone.getDefault().getID(), Locale.getDefault().getLanguage());
 
         regResponseCall.enqueue(new Callback<RegResponse>() {
@@ -863,7 +870,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
 //                if (progressDialog != null && progressDialog.isShowing()) {
 //                    progressDialog.dismiss();
 //                }
-                showProgressDialog(getActivity());
+                showProgressDialog(mContext);
 
                 if (response.body() != null) {
                     Log.e("androidId", "==>" + response.body().getResponseCode());
@@ -872,51 +879,46 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     //progressDialog.dismiss();
                     hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        SharedPrefs.save(getContext(), SharedPrefs.CART_COUNT, response.body().getCart_count());
-                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
+                        SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, response.body().getCart_count());
+                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
                         if (response.body().getData() == null) {
-                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                             alertDialog.setTitle(getString(R.string.log_in));
                             alertDialog.setCancelable(false);
                             alertDialog.setMessage(response.body().getResponseMessage());
-                            alertDialog.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-
-                                }
-                            });
+                            alertDialog.setPositiveButton(getString(R.string.ok), (dialog, which) -> dialog.dismiss());
 
                             alertDialog.create().show();
                         } else {
-                            SharedPrefs.savePref(getContext(), Share.key_reg_suc, true);
+                            SharedPrefs.savePref(mContext, Share.key_reg_suc, true);
                             RegData regData = response.body().getData();
                             Share.isinternational = regData.getIs_international();
                             if (regData != null) {
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.name, regData.getName());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.email, regData.getEmail());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.mobile_1, regData.getMobile_1());
-                                SharedPrefs.save(getContext(), Share.key_ + RegReq.id, regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.currency_id, "" + regData.getCurrencyId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_id, regData.getCountry_id());
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_name, regData.getCountry_name());
-//                                SharedPrefs.save(getActivity(), SharedPrefs.last_country_code, SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
-                                SharedPrefs.save(getActivity(), SharedPrefs.country_code, regData.getCountry_code());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.name, regData.getName());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.email, regData.getEmail());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.mobile_1, regData.getMobile_1());
+                                SharedPrefs.save(mContext, Share.key_ + RegReq.id, regData.getId());
+                                SharedPrefs.save(mContext, SharedPrefs.currency_id, "" + regData.getCurrencyId());
+                                SharedPrefs.save(mContext, SharedPrefs.country_id, regData.getCountry_id());
+                                SharedPrefs.save(mContext, SharedPrefs.country_name, regData.getCountry_name());
+//                                SharedPrefs.save(mContext, SharedPrefs.last_country_code, SharedPrefs.getString(mContext, SharedPrefs.country_code));
+                                SharedPrefs.save(mContext, SharedPrefs.country_code, regData.getCountry_code());
                                 Share.countryCodeValue = regData.getCountry_code();
 
                                 Log.e("UID", "onResponse: " + regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.uid, regData.getId());
-                                SharedPrefs.save(getActivity(), SharedPrefs.Sellerid, regData.getseller_id());
-                                SharedPrefs.save(getActivity(), SharedPrefs.SELLER, regData.getis_approve());
-                                SharedPrefs.save(getActivity(), SharedPrefs.TOKEN, regData.getToken());
+                                SharedPrefs.save(mContext, SharedPrefs.uid, regData.getId());
+                                SharedPrefs.save(mContext, SharedPrefs.Sellerid, regData.getseller_id());
+                                SharedPrefs.save(mContext, SharedPrefs.SELLER, regData.getis_approve());
+                                SharedPrefs.save(mContext, SharedPrefs.TOKEN, regData.getToken());
 
                                 Log.e("LOGINDATA", "onResponse: " + regData.getseller_id());
                                 Log.e("TOKEN", "onResponse: ========>" + regData.getToken());
                                 Log.e("LOGINDATA", "onResponse: " + regData.getis_approve());
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), SharedPrefs.uid));
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, SharedPrefs.uid));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1));
 
 
-                                SharedPrefs.save(getActivity(), SharedPrefs.isapproved, regData.getis_approve());
+                                SharedPrefs.save(mContext, SharedPrefs.isapproved, regData.getis_approve());
 
                                 Log.e("ISAPPROVED", "onResponse:==> " + regData.getis_approve());
                             }
@@ -928,7 +930,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
 
 
                     } else {
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
                         alertDialog.setTitle(getString(R.string.log_in));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(response.body().getResponseMessage());
@@ -942,7 +944,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         alertDialog.create().show();
                     }
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.log_in));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.something_went_wrong_try_agaian));
@@ -967,7 +969,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                 hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setCancelable(false);
@@ -981,7 +983,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                     alertDialog.show();
                 } else {
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setMessage(getString(R.string.slow_connect));
                     alertDialog.setCancelable(false);

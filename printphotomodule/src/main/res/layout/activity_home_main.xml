@@ -98,8 +98,7 @@
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginRight="@dimen/_5sdp"
-                    android:src="@drawable/ic_shopping_cart"
-                    app:tint="@color/blue_500"/>
+                    android:src="@drawable/ic_shopping_cart" />
 
             </RelativeLayout>
 

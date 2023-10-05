@@ -386,6 +386,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
     public void orderclick() {
         iv_logout.setVisibility(View.GONE);
+        order.setContext(this);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frg_main, order);
         fragmentTransaction.commitAllowingStateLoss();
@@ -393,6 +394,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
     public void cartclick() {
         iv_logout.setVisibility(View.GONE);
+        cart.setContext(this);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frg_main, cart);
         fragmentTransaction.commitAllowingStateLoss();
@@ -400,6 +402,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
     public void acountclick() {
         iv_logout.setVisibility(View.VISIBLE);
+        account.setContext(this);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frg_main, account);
         fragmentTransaction.commitAllowingStateLoss();
