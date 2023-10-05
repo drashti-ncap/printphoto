@@ -34,7 +34,6 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5e045ed39f7dc9fad5ec8f8e7bbec746/transformed/jetified-shimmer-0.5.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/f388a2d249d11c7344726e2697896413/transformed/material-1.9.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af7b8f1c2af811a627975533332c452e/transformed/jetified-loading-dots-1.0.2-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/03bb93120f6698071eea97b68e969733/transformed/jetified-OneSignal-4.8.6-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5589f31418489d690a5af71581d3e8e4/transformed/jetified-material-1.3.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6529952c1b8657128460c81b21563d65/transformed/jetified-smileyrating-1.6.8-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/da91b6e45b1ff7a7e3ed2aee1005893c/transformed/jetified-crystalrangeseekbar-1.1.3-api.jar</arg>
@@ -410,22 +409,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.isseiaoki:simplecropview:1.1.8@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.hotchemi:permissionsdispatcher:2.3.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: me.biubiubiu.justifytext:library:1.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.onesignal:OneSignal:4.8.6@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-messaging:23.2.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-datatransport:18.1.8@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-api:3.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-runtime:3.1.9@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-backend-cct:3.1.9@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders-json:18.0.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-iid-interop:17.1.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-cloud-messaging:17.0.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.work:work-runtime:2.7.1@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.startup:startup-runtime:1.1.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.clans:fab:1.6.4@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.fresco:fresco:1.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.fresco:drawee:1.0.1@aar" level="project" />
@@ -437,6 +420,14 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.rey5137:material:1.3.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-gcm:17.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-iid:17.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-messaging:23.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-datatransport:18.1.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-api:3.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-runtime:3.1.9@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.datatransport:transport-backend-cct:3.1.9@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders-json:18.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-iid-interop:17.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-cloud-messaging:17.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.jaredrummler:android-device-names:2.1.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: jp.wasabeef:richeditor-android:1.2.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.github.sujithkanna:smileyrating:1.6.8@aar" level="project" />
@@ -457,6 +448,11 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.installreferrer:installreferrer:2.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.android:facebook-android-sdk:16.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.android:facebook-common:16.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.android:facebook-login:16.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.android:facebook-share:16.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.android:facebook-applinks:16.0.0@aar" level="project" />
@@ -473,9 +469,11 @@
     <orderEntry type="library" scope="TEST" name="Gradle: swarajsaaj:otpreader:1.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-extensions:2.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-process:2.5.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.startup:startup-runtime:1.1.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-service:2.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.5.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.work:work-runtime-ktx:2.7.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.work:work-runtime:2.7.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-ads:22.3.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-ads-base:22.3.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-ads-lite:22.3.0@aar" level="project" />
@@ -527,8 +525,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-annotations:16.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.errorprone:error_prone_annotations:2.15.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.uncopt:android.justified:1.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders:17.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders-proto:16.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.nostra13.universalimageloader:universal-image-loader:1.9.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
@@ -536,6 +532,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.httpcomponents:httpclient:4.5.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders:17.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-encoders-proto:16.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.itextpdf:itextg:5.5.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.picasso:picasso:2.5.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.caverock:androidsvg:1.2.1" level="project" />

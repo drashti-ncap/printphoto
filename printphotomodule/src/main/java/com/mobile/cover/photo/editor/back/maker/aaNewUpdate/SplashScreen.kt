@@ -55,7 +55,7 @@ const val ARG_IS_OFFER = "arg_offer"
 
 class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermissionObserver*/ {
     internal var TAG = "SplashScreen"
-    internal var pInfo: PackageInfo? = null
+    //internal var pInfo: PackageInfo? = null
     internal lateinit var alarmManager: AlarmManager
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
     private var pendingIntent: PendingIntent? = null
@@ -101,11 +101,11 @@ class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermis
         SharedPrefs.save(context, SharedPrefs.SCREEN_HEIGHT, GlobalData.screenHeight)
         SharedPrefs.save(context, SharedPrefs.SCREEN_WIDTH, GlobalData.screenWidth)
 
-        try {
-            pInfo = context.packageManager.getPackageInfo(/*context.packageName*/"com.mobile.cover.photo.editor.back.maker", 0)
+        /*try {
+            pInfo = context.packageManager.getPackageInfo(*//*context.packageName*//*"com.mobile.cover.photo.editor.back.maker", 0)
         } catch (e: PackageManager.NameNotFoundException) {
             e.printStackTrace()
-        }
+        }*/
         get_all_configurations()
 
         //id_appversion.text = "Version : " + pInfo!!.versionName
@@ -162,10 +162,8 @@ class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermis
                             TAG,
                             "onResponse: " + Double.valueOf(response.body()!!.data.androidVersion)
                         )
-                        Log.e(TAG, "onResponse: " + Double.valueOf(pInfo!!.versionName))
-                        if (Double.valueOf(response.body()!!.data.androidVersion) <= Double.valueOf(
-                                pInfo!!.versionName)
-                        ) {
+                        BuildConfig.LIBRARY_PACKAGE_NAME
+                        if (Double.valueOf(response.body()!!.data.androidVersion) <= /*Double.valueOf(pInfo!!.versionName)*/78) {
                             Log.e(TAG, "onResponse:=========>Version matched")
 
 

@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/_25sdp"
         android:backgroundTint="@color/white"
-        android:background="@drawable/bg_round">
+        android:background="@drawable/bg_print_round">
 
         <com.github.ybq.android.spinkit.SpinKitView
             android:id="@+id/progressbar1"
