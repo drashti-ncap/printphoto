@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:orientation="horizontal"
         android:padding="@dimen/_25sdp"
-        android:background="@drawable/bg_dialog">
+        android:background="@drawable/bg_print_dialog">
 
         <com.github.ybq.android.spinkit.SpinKitView
             android:id="@+id/progressbar1"

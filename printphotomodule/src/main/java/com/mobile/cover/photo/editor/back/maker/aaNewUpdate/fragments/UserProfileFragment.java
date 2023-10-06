@@ -146,8 +146,10 @@ public class UserProfileFragment extends PrintPhotoBaseFragment implements View.
                     HomeMainActivity.selected = 3;
                     Share.saved_address_list.clear();
                     Share.search_saved_address_list.clear();
+                    FragmentAccount account = new FragmentAccount();
+                    account.setContext(requireActivity());
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frg_main, new FragmentAccount());
+                    fragmentTransaction.replace(R.id.frg_main, account);
 //                    fragmentTransaction.commit();
                     fragmentTransaction.commitAllowingStateLoss();
                 } else {
@@ -168,8 +170,10 @@ public class UserProfileFragment extends PrintPhotoBaseFragment implements View.
                     SharedPrefs.save(getActivity(), SharedPrefs.currency_id, "");
                     HomeMainActivity.selected = 3;
                     Share.saved_address_list.clear();
+                    FragmentAccount account = new FragmentAccount();
+                    account.setContext(requireActivity());
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frg_main, new FragmentAccount());
+                    fragmentTransaction.replace(R.id.frg_main,account);
                     fragmentTransaction.commit();
                 }
             }
@@ -349,8 +353,10 @@ public class UserProfileFragment extends PrintPhotoBaseFragment implements View.
     public void onClick(View v) {
         if (v == ll_order) {
             selected = 1;
+            FragmentOrder order = new FragmentOrder();
+            order.setContext(getActivity());
             FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frg_main, new FragmentOrder());
+            fragmentTransaction.replace(R.id.frg_main, order);
             fragmentTransaction.commit();
         }
         if (v == ll_bulk_order) {

@@ -102,8 +102,10 @@ public class FragmentPhoneCover extends PrintPhotoBaseFragment {
                     id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
                     id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                     id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                    FragmentCart cart =  new FragmentCart();
+                    cart.setContext(getActivity());
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frg_main, new FragmentCart());
+                    fragmentTransaction.replace(R.id.frg_main, cart);
                     fragmentTransaction.commit();
                 }
             }

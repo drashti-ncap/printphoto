@@ -33,6 +33,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.mobile.cover.photo.editor.back.maker.Commen.Share;
@@ -355,8 +356,10 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                                 id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                                 selected = 2;
+                                FragmentCart cart = new FragmentCart();
+                                cart.setContext(mContext);
                                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.frg_main, new FragmentCart());
+                                fragmentTransaction.replace(R.id.frg_main,cart);
 //                                fragmentTransaction.commit();
                                 fragmentTransaction.commitAllowingStateLoss();
 
@@ -373,8 +376,10 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
                                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                                 Share.isorder = true;
                                 HomeMainActivity.selected = 1;
-                                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.frg_main, new FragmentOrder());
+                                FragmentOrder order = new FragmentOrder();
+                                order.setContext(mContext);
+                                FragmentTransaction fragmentTransaction = ((FragmentActivity) mContext).getSupportFragmentManager().beginTransaction();
+                                fragmentTransaction.replace(R.id.frg_main, order);
 //                                fragmentTransaction.commit();
                                 fragmentTransaction.commitAllowingStateLoss();
 

@@ -33,8 +33,8 @@ class MainApiClient(val mContext: Context) {
 
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-//                        .baseUrl(mContext.getBaseUrl())
-                        .baseUrl("https://printphoto.in/Photo_case/api/")
+                        .baseUrl(mContext.getBaseUrl())
+//                        .baseUrl("https://printstudio.mobilemiracle.io/api/")
                         .client(httpClient)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build()

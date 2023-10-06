@@ -425,8 +425,10 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 Share.display_isorder = true;
                 HomeMainActivity.selected = 3;
+                FragmentAccount account = new FragmentAccount();
+                account.setContext(mContext);
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frg_main, new FragmentAccount());
+                fragmentTransaction.replace(R.id.frg_main, account);
                 fragmentTransaction.commit();
             }
         });

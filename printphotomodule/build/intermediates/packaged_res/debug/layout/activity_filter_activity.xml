@@ -71,7 +71,6 @@
                     android:layout_centerInParent="true"
                     android:paddingLeft="@dimen/_5sdp"
                     android:paddingRight="@dimen/_5sdp"
-                    app:tint="@color/green_500"
                     android:src="@drawable/ic_shopping_cart" />
 
             </RelativeLayout>

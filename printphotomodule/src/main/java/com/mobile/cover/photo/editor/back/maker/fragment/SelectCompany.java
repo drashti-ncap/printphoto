@@ -148,8 +148,10 @@ public class SelectCompany extends Fragment {
                     id_cart.setImageResource(R.drawable.ic_cart);
                     id_order.setImageResource(R.drawable.ic_order);
                     HomeMainActivity.selected = 3;
+                    FragmentAccount account = new FragmentAccount();
+                    account.setContext(getActivity());
                     FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frg_main, new FragmentAccount());
+                    fragmentTransaction.replace(R.id.frg_main, account);
                     fragmentTransaction.commit();
                 } else {
                     final Dialog dialog = new Dialog(getActivity());

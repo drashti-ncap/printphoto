@@ -5672,6 +5672,8 @@ int drawable bg_card_ads 0x0
 int drawable bg_card_transparent 0x0
 int drawable bg_images_final 0x0
 int drawable bg_login_button 0x0
+int drawable bg_print_dialog 0x0
+int drawable bg_print_round 0x0
 int drawable bg_purcharse 0x0
 int drawable bg_selection 0x0
 int drawable black_new_bg_border 0x0
@@ -6073,6 +6075,7 @@ int drawable ic_pesonal_detials 0x0
 int drawable ic_pincode 0x0
 int drawable ic_plus 0x0
 int drawable ic_policy 0x0
+int drawable ic_print_arrow 0x0
 int drawable ic_print_country 0x0
 int drawable ic_print_photo 0x0
 int drawable ic_print_user 0x0

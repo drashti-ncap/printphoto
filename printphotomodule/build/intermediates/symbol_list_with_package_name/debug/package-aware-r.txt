@@ -5673,6 +5673,8 @@ drawable bg_card_ads
 drawable bg_card_transparent
 drawable bg_images_final
 drawable bg_login_button
+drawable bg_print_dialog
+drawable bg_print_round
 drawable bg_purcharse
 drawable bg_selection
 drawable black_new_bg_border
@@ -6074,6 +6076,7 @@ drawable ic_pesonal_detials
 drawable ic_pincode
 drawable ic_plus
 drawable ic_policy
+drawable ic_print_arrow
 drawable ic_print_country
 drawable ic_print_photo
 drawable ic_print_user
