@@ -347,7 +347,7 @@
     <string name="order_is_delivered">Twoje zamówienie zostało dostarczone</string>
     <string name="sign_up">Zarejestruj się</string>
     <string name="already_have_an_account">Masz już konto?</string>
-    <string name="login">Zaloguj się</string>
+    <string name="login">Masz już konto? <font color="#0ABAD4">Zaloguj się</font></string>
     <string name="no_order_available">Brak dostępnych zamówień</string>
     <string name="mobile_cover">Pokrowiec na telefon</string>
     <string name="click_here">Kliknij tutaj!!</string>

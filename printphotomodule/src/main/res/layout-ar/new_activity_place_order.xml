@@ -605,7 +605,6 @@
             android:id="@+id/ll_cod"
             android:layout_width="0dp"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginRight="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:layout_weight="1"
             android:background="@drawable/rect"
@@ -628,6 +627,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:layout_weight="1"
+            android:layout_marginRight="@dimen/_5sdp"
             android:background="@drawable/rect"
             android:visibility="gone">
 

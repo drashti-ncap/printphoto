@@ -346,7 +346,7 @@
     <string name="order_is_delivered">تم توصيل طلبك</string>
     <string name="sign_up">سجل</string>
     <string name="already_have_an_account">هل لديك حساب بالفعل؟</string>
-    <string name="login">تسجيل الدخول</string>
+    <string name="login">هل لديك حساب بالفعل؟ <font color="#0ABAD4">تسجيل الدخول</font></string>
     <string name="no_order_available">لا يوجد طلب متاح</string>
     <string name="mobile_cover">غطاء الهاتف المحمول</string>
     <string name="click_here">انقر هنا!!</string>

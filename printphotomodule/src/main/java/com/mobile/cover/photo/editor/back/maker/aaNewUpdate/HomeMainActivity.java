@@ -482,6 +482,10 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 //            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
 //            homeclick();
         }
+        order.setContext(this);
+        cart.setContext(this);
+        account.setContext(this);
+        mall.setContext(this);
     }
 
     @Override

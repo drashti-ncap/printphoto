@@ -347,7 +347,7 @@
     <string name="order_is_delivered">您的订单已交付</string>
     <string name="sign_up">注册</string>
     <string name="already_have_an_account">已经有账户了吗？</string>
-    <string name="login">登录</string>
+    <string name="login">已经有账户了吗？<font color="#0ABAD4">登录</font></string>
     <string name="no_order_available">没有订单可用</string>
     <string name="mobile_cover">手机壳</string>
     <string name="click_here">点击这里！</string>

@@ -381,7 +381,8 @@
                 <LinearLayout
                     android:id="@+id/ll_refund_policy"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_35sdp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_35sdp"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:background="@drawable/tablerow_bottomborder_new"
@@ -390,14 +391,15 @@
                     <ImageView
                         android:layout_width="@dimen/_28sdp"
                         android:layout_height="@dimen/_28sdp"
-                        android:layout_gravity="left"
+                        android:layout_gravity="left|center"
                         android:src="@drawable/ic_refund" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
                         android:gravity="left|center"
                         android:text="@string/refund_amp_cancellation_policy"
                         android:textColor="@color/black"
@@ -462,7 +464,8 @@
                 <LinearLayout
                     android:id="@+id/ll_video"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_35sdp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_35sdp"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:background="@drawable/tablerow_bottomborder_new"
@@ -471,16 +474,17 @@
                     <ImageView
                         android:layout_width="@dimen/_28sdp"
                         android:layout_height="@dimen/_28sdp"
-                        android:layout_gravity="left"
+                        android:layout_gravity="left|center"
                         android:src="@drawable/ic_learn" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_weight="1"
                         android:gravity="left|center"
                         android:text="@string/learn_how_to_edit_mobile_cover"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_14sdp" />
 

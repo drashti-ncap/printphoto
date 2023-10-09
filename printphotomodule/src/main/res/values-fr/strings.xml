@@ -24,7 +24,7 @@
     <string name="share_your_promo_code_in_review">Partagez votre code promo dans l\'avis</string>
     <string name="code">CODE : </string>
     <string name="code_val">  Code</string>
-    <string name="apply_promocode_amp_get_discount">Appliquez le code promo et obtenez une réduction</string>
+    <string name="apply_promocode_amp_get_discount">Appliquer le code et obtenir une réduction.</string>
     <string name="off">de réduction</string>
     <string name="_50">₹50</string>
     <string name="flat">Fixe</string>
@@ -348,7 +348,7 @@
     <string name="order_is_delivered">Votre commande est livrée</string>
     <string name="sign_up">Inscription</string>
     <string name="already_have_an_account">Vous avez déjà un compte ?</string>
-    <string name="login">Connexion</string>
+    <string name="login">Vous avez déjà un compte? <font color="#0ABAD4">Connexion</font></string>
     <string name="no_order_available">Aucune commande disponible</string>
     <string name="mobile_cover">Coque mobile</string>
     <string name="click_here">Cliquez ici!!</string>

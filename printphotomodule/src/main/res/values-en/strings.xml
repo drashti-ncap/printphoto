@@ -345,7 +345,7 @@
     <string name="order_is_delivered">Your order is Delivered</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="login">Login</string>
+    <string name="login">Already have an account? <font color="#0ABAD4">Login</font></string>
     <string name="no_order_available">No order available</string>
     <string name="mobile_cover">MobileCover</string>
     <string name="click_here">Click here!!</string>
