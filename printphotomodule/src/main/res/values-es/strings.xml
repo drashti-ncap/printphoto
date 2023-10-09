@@ -22,7 +22,7 @@
     <string name="code">CÓDIGO: </string>
     <string name="code_val"> Código</string>
     <string name="apply_promocode_amp_get_discount">Aplica el código promocional y obtén descuento</string>
-    <string name="off">de descuento</string>
+    <string name="off">descuento</string>
     <string name="_50">₹50</string>
     <string name="flat">Plano</string>
     <string name="use_this_promocode_amp_get_50_inr_instant_discount">Usa este código promocional y obtén un descuento instantáneo de ₹0 INR:</string>

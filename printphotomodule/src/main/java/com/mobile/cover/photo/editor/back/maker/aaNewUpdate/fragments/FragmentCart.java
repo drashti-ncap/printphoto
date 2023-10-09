@@ -71,7 +71,7 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 
 public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClickListener {
     private static final long MIN_CLICK_INTERVAL = 1000;
-    public static TextView id_text_view_messess, sign_in_ll, tv_login, tv_login1, id_paid_amount;
+    public static TextView id_text_view_messess, sign_in_ll, tv_login/*, tv_login1*/, id_paid_amount;
     // ProgressDialog progressDialog, pd;
     CartRecyclerAdapter cartRecyclerAdapter;
     RecyclerView recyclerview;
@@ -432,7 +432,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                             id_text_view_messess.setText(getString(R.string.no_item_available));
                             id_ll_sign_in.setVisibility(View.GONE);
                             tv_login.setVisibility(View.GONE);
-                            tv_login1.setVisibility(View.GONE);
+                            //tv_login1.setVisibility(View.GONE);
                         }
 
                         recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
@@ -537,7 +537,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
                         id_ll_sign_in.setVisibility(View.GONE);
                         id_text_view.setVisibility(View.VISIBLE);
                         tv_login.setVisibility(View.GONE);
-                        tv_login1.setVisibility(View.GONE);
+                        //tv_login1.setVisibility(View.GONE);
                         id_text_view_messess.setText(response.body().getResponseMessage());
                         SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, 0);
                         HomeMainActivity.tv_nudge_cart_count.setText("0");
@@ -640,7 +640,7 @@ public class FragmentCart extends PrintPhotoBaseFragment implements View.OnClick
         id_text_view = v.findViewById(R.id.id_text_view);
         id_text_view_messess = v.findViewById(R.id.id_text_view_messess);
         tv_login = v.findViewById(R.id.tv_login);
-        tv_login1 = v.findViewById(R.id.tv_login1);
+        //tv_login1 = v.findViewById(R.id.tv_login1);
         tv_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

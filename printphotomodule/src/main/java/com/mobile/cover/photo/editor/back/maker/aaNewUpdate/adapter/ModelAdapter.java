@@ -311,8 +311,16 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder
             final ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
             activityManager.getMemoryInfo(memoryInfo);
             final double ramTotal = memoryInfo.totalMem / (1024 * 1024);
-            Log.e("RAM", "onBindViewHolder: Total RAM: " + String.format("%.1f", ramTotal / 1024) + " GB");
-            final String ram = String.format("%.1f", ramTotal / 1024);
+            Log.e("RAM", "onBindViewHolder: Total RAM: " + ramTotal);
+            Log.e("RAM", "onBindViewHolder: Total RAM: " + ramTotal / 1024 + " GB");
+            String ram="";
+            if(Locale.getDefault().getLanguage().equals("en")){
+                 ram = String.format("%.1f", ramTotal / 1024);
+            }else {
+                 ram= String.valueOf(ramTotal / 1024);
+            }
+            Log.e("RAM", "onBindViewHolder: Total RAM: " + ram + " GB");
+
 
 
             long currentClickTime = SystemClock.uptimeMillis();

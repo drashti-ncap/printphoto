@@ -174,7 +174,7 @@
     <string name="loading">Loading…</string>
     <string name="location">Location:</string>
     <string name="log_in">Log In</string>
-    <string name="login">Login</string>
+    <string name="login">Already have an account? <font color="#0ABAD4">Login</font></string>
     <string name="logout">Logout</string>
     <string name="logout_sentence">Do you want to logout?</string>
     <string name="make_payment">Make Payment</string>

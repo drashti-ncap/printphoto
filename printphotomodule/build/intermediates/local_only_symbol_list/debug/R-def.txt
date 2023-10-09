@@ -197,7 +197,6 @@ drawable ic_add_image
 drawable ic_add_image_new
 drawable ic_address
 drawable ic_adhaar
-drawable ic_arrow
 drawable ic_arrow_status
 drawable ic_back
 drawable ic_back_select
@@ -705,6 +704,7 @@ id im_key
 id im_printphoto
 id im_user
 id image
+id image1
 id image2
 id imageView
 id imageView1
@@ -1102,7 +1102,6 @@ id tv_info_share
 id tv_item_amount
 id tv_kannad
 id tv_login
-id tv_login1
 id tv_max
 id tv_method
 id tv_min

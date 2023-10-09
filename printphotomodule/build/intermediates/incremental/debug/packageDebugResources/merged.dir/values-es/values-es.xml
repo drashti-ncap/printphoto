@@ -174,7 +174,7 @@
     <string name="loading">Cargando...</string>
     <string name="location">Ubicación:</string>
     <string name="log_in">Iniciar sesión</string>
-    <string name="login">Iniciar sesión</string>
+    <string name="login">Ya tienes una cuenta? <font color="#0ABAD4">Iniciar sesión</font></string>
     <string name="logout">Cerrar sesión</string>
     <string name="logout_sentence">¿Desea cerrar sesión?</string>
     <string name="make_payment">Realizar Pago</string>

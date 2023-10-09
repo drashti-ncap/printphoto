@@ -5802,7 +5802,6 @@ int drawable ic_add_image 0x0
 int drawable ic_add_image_new 0x0
 int drawable ic_address 0x0
 int drawable ic_adhaar 0x0
-int drawable ic_arrow 0x0
 int drawable ic_arrow_back_black_24 0x0
 int drawable ic_arrow_back_black_24dp 0x0
 int drawable ic_arrow_status 0x0
@@ -6998,6 +6997,7 @@ int id im_key 0x0
 int id im_printphoto 0x0
 int id im_user 0x0
 int id image 0x0
+int id image1 0x0
 int id image2 0x0
 int id imageView 0x0
 int id imageView1 0x0
@@ -7778,7 +7778,6 @@ int id tv_info_share 0x0
 int id tv_item_amount 0x0
 int id tv_kannad 0x0
 int id tv_login 0x0
-int id tv_login1 0x0
 int id tv_max 0x0
 int id tv_method 0x0
 int id tv_min 0x0

@@ -72,7 +72,7 @@ import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActiv
 public class FragmentOrder extends PrintPhotoBaseFragment {
   //  ProgressDialog progressDialog;
     LinearLayout id_text_view, id_ll_sign_in, ll_sign_in_text, id_ll;
-    TextView id_text_view_messess, tv_login1, tv_login;
+    TextView id_text_view_messess/*, tv_login1*/, tv_login;
     RecyclerView recyclerview;
     SwipeRefreshLayout mySwipeRefreshLayout;
     //ProgressDialog pd;
@@ -282,7 +282,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                         ll_sign_in_text.setVisibility(View.GONE);
                         id_text_view.setVisibility(View.VISIBLE);
                         tv_login.setVisibility(View.GONE);
-                        tv_login1.setVisibility(View.GONE);
+                        //tv_login1.setVisibility(View.GONE);
                         id_text_view_messess.setText(response.body().getResponseMessage());
                     }
                 } else {
@@ -432,7 +432,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 fragmentTransaction.commit();
             }
         });
-        tv_login1 = v.findViewById(R.id.tv_login1);
+        //tv_login1 = v.findViewById(R.id.tv_login1);
         id_text_view_messess = v.findViewById(R.id.id_text_view_messess);
         id_ll_sign_in = v.findViewById(R.id.id_ll_sign_in);
         ll_sign_in_text = v.findViewById(R.id.ll_sign_in_text);

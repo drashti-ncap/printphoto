@@ -174,7 +174,7 @@
     <string name="loading">جار التحميل…</string>
     <string name="location">الموقع:</string>
     <string name="log_in">تسجيل الدخول</string>
-    <string name="login">تسجيل الدخول</string>
+    <string name="login">هل لديك حساب بالفعل؟ <font color="#0ABAD4">تسجيل الدخول</font></string>
     <string name="logout">تسجيل الخروج</string>
     <string name="logout_sentence">هل ترغب في تسجيل الخروج؟</string>
     <string name="make_payment">إجراء الدفع</string>
