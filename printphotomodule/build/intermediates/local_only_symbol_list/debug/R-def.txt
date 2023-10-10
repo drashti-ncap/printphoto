@@ -197,6 +197,7 @@ drawable ic_add_image
 drawable ic_add_image_new
 drawable ic_address
 drawable ic_adhaar
+drawable ic_arrow
 drawable ic_arrow_status
 drawable ic_back
 drawable ic_back_select

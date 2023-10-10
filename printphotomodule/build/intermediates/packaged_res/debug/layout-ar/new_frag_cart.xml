@@ -155,11 +155,11 @@
                         android:fontFamily="@font/pnuregular"
                         android:gravity="center"
                         android:scaleType="fitXY"
-
                         android:text="@string/sign_up"
                         android:textColor="@color/white"
                         android:textSize="@dimen/headertext"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:paddingHorizontal="@dimen/_10sdp" />
                 </androidx.cardview.widget.CardView>
 
 

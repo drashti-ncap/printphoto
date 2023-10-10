@@ -216,7 +216,7 @@
     <string name="not_available">No disponible</string>
     <string name="not_support_device">Este producto no es compatible con tu dispositivo para personalizarlo.</string>
     <string name="number_has_already_registered">¡El número ya ha sido registrado!</string>
-    <string name="off">de descuento</string>
+    <string name="off">descuento</string>
     <string name="offer">Oferta</string>
     <string name="offer_code_copied">Código de oferta copiado</string>
     <string name="offer_sentence">¡Compra 1 llavero y obtén otro gratis aplicando el código promocional KEYCHAIN!</string>

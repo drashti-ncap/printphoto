@@ -98,7 +98,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
         HomeMainActivity.iv_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, Contactus_activity.class);
+                Intent intent = new Intent(getActivity(), Contactus_activity.class);
                 startActivity(intent);
             }
         });
@@ -121,22 +121,22 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 
     private void intView() {
 
-        ImageView id_home = mContext.findViewById(R.id.id_home);
-        ImageView id_order = mContext.findViewById(R.id.id_order);
-        ImageView id_cart = mContext.findViewById(R.id.id_cart);
-        ImageView id_account = mContext.findViewById(R.id.id_account);
-        ImageView id_offer = mContext.findViewById(R.id.id_offer);
+        ImageView id_home = getActivity().findViewById(R.id.id_home);
+        ImageView id_order = getActivity().findViewById(R.id.id_order);
+        ImageView id_cart = getActivity().findViewById(R.id.id_cart);
+        ImageView id_account = getActivity().findViewById(R.id.id_account);
+        ImageView id_offer = getActivity().findViewById(R.id.id_offer);
 
 
         HomeMainActivity.selected = 1;
-        id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-        id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+        id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
 
         Share.isorder = false;
-        if (SharedPrefs.getBoolean(mContext, Share.key_reg_suc)) {
+        if (SharedPrefs.getBoolean(getActivity(), Share.key_reg_suc)) {
             id_ll_sign_in.setVisibility(View.GONE);
             ll_sign_in_text.setVisibility(View.GONE);
 //            if (Share.order_simplerespons != null) {
@@ -158,7 +158,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
             public void onClick(View view) {
                 Share.isorder = true;
                 HomeMainActivity.selected = 3;
-                Intent intent = new Intent(mContext, RegistrationActivity.class);
+                Intent intent = new Intent(getActivity(), RegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -172,26 +172,26 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
             getorder();
         }
 
-        TelephonyManager tm = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
-        if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase("")) {
+        TelephonyManager tm = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+        if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase("")) {
             Share.countryCodeValue = tm.getNetworkCountryIso().toUpperCase();
         } else {
-            Share.countryCodeValue = SharedPrefs.getString(mContext, SharedPrefs.country_code);
+            Share.countryCodeValue = SharedPrefs.getString(getActivity(), SharedPrefs.country_code);
         }
 
-        if (SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT) == 0) {
+        if (SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT) == 0) {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.GONE);
         } else {
             HomeMainActivity.tv_nudge_cart_count.setVisibility(View.VISIBLE);
-            HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
+            HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
         }
 
         if (Share.isRegistrationSuccess) {
 
             Share.isRegistrationSuccess = false;
 
-            String mobile = SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1);
-            String email = SharedPrefs.getString(mContext, Share.key_ + RegReq.email);
+            String mobile = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1);
+            String email = SharedPrefs.getString(getActivity(), Share.key_ + RegReq.email);
 
             String cred;
             if (Share.countryCodeValue.equalsIgnoreCase("IN")) {
@@ -200,7 +200,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 cred = email;
                 for (int i = 0; i < Share.country_mobile_code.size(); i++) {
                     if (Share.country_mobile_code.get(i).getIs_branch() == 1) {
-                        if (SharedPrefs.getString(mContext, SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
+                        if (SharedPrefs.getString(getActivity(), SharedPrefs.country_code).equalsIgnoreCase(Share.country_mobile_code.get(i).getSortname())) {
                             cred = mobile;
                         }
                     }
@@ -224,16 +224,16 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
         id_ll_sign_in.setVisibility(View.GONE);
         ll_sign_in_text.setVisibility(View.GONE);
         id_text_view.setVisibility(View.VISIBLE);
-//        progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(mContext);
+        showProgressDialog(getActivity());
 
 
-        APIService apiService = new MainApiClient(mContext).getApiInterface();
+        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
 
-        Log.e("UID", "getorder:=======>" + SharedPrefs.getString(mContext, Share.key_ + RegReq.id));
+        Log.e("UID", "getorder:=======>" + SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id));
 
-        Call<getorderresponse> call = apiService.getorderdetiails(Integer.valueOf(SharedPrefs.getString(mContext, Share.key_ + RegReq.id)), Locale.getDefault().getLanguage());
+        Call<getorderresponse> call = apiService.getorderdetiails(Integer.valueOf(SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id)), Locale.getDefault().getLanguage());
         call.enqueue(new Callback<getorderresponse>() {
             public static final String TAG = "test";
 
@@ -289,7 +289,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                     //progressDialog.dismiss();
                     hideProgressDialog();
                     mySwipeRefreshLayout.setRefreshing(false);
-                    Toast.makeText(mContext, getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -309,7 +309,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 //                }
 
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.connect_time_out));
@@ -322,7 +322,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                     });
                     alertDialog.show();
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.slow_connect));
@@ -341,14 +341,14 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 
 
     public void exitdialog() {
-        if (SharedPrefs.getInt(mContext, SharedPrefs.REVIEW) == 0) {
+        if (SharedPrefs.getInt(getActivity(), SharedPrefs.REVIEW) == 0) {
             displayalert();
         }
     }
 
 
     private void displayalert() {
-        final Dialog dialog = new Dialog(mContext);
+        final Dialog dialog = new Dialog(getActivity());
         if (dialog != null)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -385,13 +385,13 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                     case SmileRating.OKAY:
                     case SmileRating.TERRIBLE:
                         dialog.dismiss();
-                        SharedPrefs.save(mContext, SharedPrefs.REVIEW, 1);
-                        FeedbackUtils.FeedbackDialog(mContext);
+                        SharedPrefs.save(getActivity(), SharedPrefs.REVIEW, 1);
+                        FeedbackUtils.FeedbackDialog(getActivity());
                         break;
                     case SmileRating.GOOD:
                     case SmileRating.GREAT:
                         dialog.dismiss();
-                        SharedPrefs.save(mContext, SharedPrefs.REVIEW, 1);
+                        SharedPrefs.save(getActivity(), SharedPrefs.REVIEW, 1);
                         rate_app();
                         break;
                 }
@@ -402,9 +402,9 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 
     private void rate_app() {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + mContext.getPackageName())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getActivity().getPackageName())));
         } catch (ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getActivity().getPackageName())));
         }
     }
 
@@ -414,19 +414,19 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
         tv_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageView id_home = mContext.findViewById(R.id.id_home);
-                ImageView id_order = mContext.findViewById(R.id.id_order);
-                ImageView id_cart = mContext.findViewById(R.id.id_cart);
-                ImageView id_account = mContext.findViewById(R.id.id_account);
-                id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                ImageView id_home = getActivity().findViewById(R.id.id_home);
+                ImageView id_order = getActivity().findViewById(R.id.id_order);
+                ImageView id_cart = getActivity().findViewById(R.id.id_cart);
+                ImageView id_account = getActivity().findViewById(R.id.id_account);
+                id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 Share.display_isorder = true;
                 HomeMainActivity.selected = 3;
                 FragmentAccount account = new FragmentAccount();
-                account.setContext(mContext);
+                account.setContext(getActivity());
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frg_main, account);
                 fragmentTransaction.commit();
@@ -443,7 +443,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        if (SharedPrefs.getString(mContext, Share.key_ + RegReq.id).equalsIgnoreCase("")) {
+                        if (SharedPrefs.getString(getActivity(), Share.key_ + RegReq.id).equalsIgnoreCase("")) {
                             Log.e("NOTHING", "onRefresh: ");
                             mySwipeRefreshLayout.setRefreshing(false);
                         } else {
@@ -454,8 +454,8 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
         );
         sqlist = new ArrayList<Orderdetails>();
         sqlist1 = new ArrayList<>();
-        mAdapter = new OrderAdapter(mContext, sqlist);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
+        mAdapter = new OrderAdapter(getActivity(), sqlist);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerview.setLayoutManager(mLayoutManager);
         recyclerview.setItemAnimator(new DefaultItemAnimator());
         recyclerview.setAdapter(mAdapter);
@@ -463,7 +463,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
     }
 
     private void getDisplaySize() {
-        Display display = mContext.getWindow().getWindowManager().getDefaultDisplay();
+        Display display = getActivity().getWindow().getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         Share.screenWidth = size.x;
@@ -471,19 +471,22 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
     }
 
     private void setHeader() {
-        TextView title = mContext.findViewById(R.id.title);
-
+        Log.e("CHECKCONTEXT", "setHeader: context==>"+getActivity()+" activity==>"+getActivity());
+//        if(getActivity() == null){
+//            getActivity()= getActivity();
+//        }
+        TextView title = getActivity().findViewById(R.id.title);
         title.setText(getString(R.string.order));
-        ImageView imageView = mContext.findViewById(R.id.id_back);
+        ImageView imageView = getActivity().findViewById(R.id.id_back);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HomeMainActivity.selected = 0;
-                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-                id_offer.setColorFilter(ContextCompat.getColor(mContext, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_home.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_account.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_cart.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                HomeMainActivity.id_order.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+                id_offer.setColorFilter(ContextCompat.getColor(getActivity(), R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
 //                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
@@ -503,11 +506,11 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
     private void signin(String cred, String password) {
         String androidId = Share.firebaseToken;
         Log.e("androidId", "==>" + androidId);
-//        progressDialog = ProgressDialog.show(mContext, "", getString(R.string.loading), true, false);
+//        progressDialog = ProgressDialog.show(getActivity(), "", getString(R.string.loading), true, false);
 //        progressDialog.show();
-        showProgressDialog(mContext);
+        showProgressDialog(getActivity());
 
-        APIService apiService = new MainApiClient(mContext).getApiInterface();
+        APIService apiService = new MainApiClient(getActivity()).getApiInterface();
         Call<RegResponse> regResponseCall = apiService.getRegResponseLogin(cred, password, androidId, "android", TimeZone.getDefault().getID(), Locale.getDefault().getLanguage());
 
         regResponseCall.enqueue(new Callback<RegResponse>() {
@@ -525,10 +528,10 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                     //progressDialog.dismiss();
                     hideProgressDialog();
                     if (response.body().getResponseCode().equalsIgnoreCase("1")) {
-                        SharedPrefs.save(mContext, SharedPrefs.CART_COUNT, response.body().getCart_count());
-                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(mContext, SharedPrefs.CART_COUNT));
+                        SharedPrefs.save(getActivity(), SharedPrefs.CART_COUNT, response.body().getCart_count());
+                        HomeMainActivity.tv_nudge_cart_count.setText("" + SharedPrefs.getInt(getActivity(), SharedPrefs.CART_COUNT));
                         if (response.body().getData() == null) {
-                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
+                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                             alertDialog.setTitle(getString(R.string.log_in));
                             alertDialog.setCancelable(false);
                             alertDialog.setMessage(response.body().getResponseMessage());
@@ -541,35 +544,35 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 
                             alertDialog.create().show();
                         } else {
-                            SharedPrefs.savePref(mContext, Share.key_reg_suc, true);
+                            SharedPrefs.savePref(getActivity(), Share.key_reg_suc, true);
                             RegData regData = response.body().getData();
                             Share.isinternational = regData.getIs_international();
                             if (regData != null) {
-                                SharedPrefs.save(mContext, Share.key_ + RegReq.name, regData.getName());
-                                SharedPrefs.save(mContext, Share.key_ + RegReq.email, regData.getEmail());
-                                SharedPrefs.save(mContext, Share.key_ + RegReq.mobile_1, regData.getMobile_1());
-                                SharedPrefs.save(mContext, Share.key_ + RegReq.id, regData.getId());
-                                SharedPrefs.save(mContext, SharedPrefs.currency_id, "" + regData.getCurrencyId());
-                                SharedPrefs.save(mContext, SharedPrefs.country_id, regData.getCountry_id());
-                                SharedPrefs.save(mContext, SharedPrefs.country_name, regData.getCountry_name());
-//                                SharedPrefs.save(mContext, SharedPrefs.last_country_code, SharedPrefs.getString(mContext, SharedPrefs.country_code));
-                                SharedPrefs.save(mContext, SharedPrefs.country_code, regData.getCountry_code());
+                                SharedPrefs.save(getActivity(), Share.key_ + RegReq.name, regData.getName());
+                                SharedPrefs.save(getActivity(), Share.key_ + RegReq.email, regData.getEmail());
+                                SharedPrefs.save(getActivity(), Share.key_ + RegReq.mobile_1, regData.getMobile_1());
+                                SharedPrefs.save(getActivity(), Share.key_ + RegReq.id, regData.getId());
+                                SharedPrefs.save(getActivity(), SharedPrefs.currency_id, "" + regData.getCurrencyId());
+                                SharedPrefs.save(getActivity(), SharedPrefs.country_id, regData.getCountry_id());
+                                SharedPrefs.save(getActivity(), SharedPrefs.country_name, regData.getCountry_name());
+//                                SharedPrefs.save(getActivity(), SharedPrefs.last_country_code, SharedPrefs.getString(getActivity(), SharedPrefs.country_code));
+                                SharedPrefs.save(getActivity(), SharedPrefs.country_code, regData.getCountry_code());
                                 Share.countryCodeValue = regData.getCountry_code();
 
                                 Log.e("UID", "onResponse: " + regData.getId());
-                                SharedPrefs.save(mContext, SharedPrefs.uid, regData.getId());
-                                SharedPrefs.save(mContext, SharedPrefs.Sellerid, regData.getseller_id());
-                                SharedPrefs.save(mContext, SharedPrefs.SELLER, regData.getis_approve());
-                                SharedPrefs.save(mContext, SharedPrefs.TOKEN, regData.getToken());
+                                SharedPrefs.save(getActivity(), SharedPrefs.uid, regData.getId());
+                                SharedPrefs.save(getActivity(), SharedPrefs.Sellerid, regData.getseller_id());
+                                SharedPrefs.save(getActivity(), SharedPrefs.SELLER, regData.getis_approve());
+                                SharedPrefs.save(getActivity(), SharedPrefs.TOKEN, regData.getToken());
 
                                 Log.e("LOGINDATA", "onResponse: " + regData.getseller_id());
                                 Log.e("TOKEN", "onResponse: ========>" + regData.getToken());
                                 Log.e("LOGINDATA", "onResponse: " + regData.getis_approve());
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, SharedPrefs.uid));
-                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(mContext, Share.key_ + RegReq.mobile_1));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), SharedPrefs.uid));
+                                Log.e("LOGINDATA", "onResponse: " + SharedPrefs.getString(getActivity(), Share.key_ + RegReq.mobile_1));
 
 
-                                SharedPrefs.save(mContext, SharedPrefs.isapproved, regData.getis_approve());
+                                SharedPrefs.save(getActivity(), SharedPrefs.isapproved, regData.getis_approve());
 
                                 Log.e("ISAPPROVED", "onResponse:==> " + regData.getis_approve());
                             }
@@ -581,7 +584,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
 
 
                     } else {
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                         alertDialog.setTitle(getString(R.string.log_in));
                         alertDialog.setCancelable(false);
                         alertDialog.setMessage(response.body().getResponseMessage());
@@ -595,7 +598,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                         alertDialog.create().show();
                     }
                 } else {
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                     alertDialog.setTitle(getString(R.string.log_in));
                     alertDialog.setCancelable(false);
                     alertDialog.setMessage(getString(R.string.something_went_wrong_try_agaian));
@@ -620,7 +623,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                 hideProgressDialog();
                 if (t.toString().contains("connect timed out") || t.toString().contains("timeout")) {
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                     alertDialog.setTitle(getString(R.string.time_out));
                     alertDialog.setMessage(getString(R.string.connect_time_out));
                     alertDialog.setCancelable(false);
@@ -634,7 +637,7 @@ public class FragmentOrder extends PrintPhotoBaseFragment {
                     alertDialog.show();
                 } else {
 
-                    AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+                    AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                     alertDialog.setTitle(getString(R.string.internet_connection));
                     alertDialog.setMessage(getString(R.string.slow_connect));
                     alertDialog.setCancelable(false);

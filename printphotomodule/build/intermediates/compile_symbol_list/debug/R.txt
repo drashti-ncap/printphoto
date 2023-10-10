@@ -5802,6 +5802,7 @@ int drawable ic_add_image 0x0
 int drawable ic_add_image_new 0x0
 int drawable ic_address 0x0
 int drawable ic_adhaar 0x0
+int drawable ic_arrow 0x0
 int drawable ic_arrow_back_black_24 0x0
 int drawable ic_arrow_back_black_24dp 0x0
 int drawable ic_arrow_status 0x0

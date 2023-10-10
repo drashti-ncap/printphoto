@@ -265,15 +265,32 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
         }*/
-        selected = 0;
-        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.frg_main, home);
-        fragmentTransaction.commit();
-        id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
-        id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-        id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        if(selected==1){
+            selected=1;
+            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            orderclick();
+        } else if (selected == 0) {
+            selected = 0;
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.add(R.id.frg_main, home);
+            fragmentTransaction.commit();
+            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+        }else if(selected == 9 || selected==3){
+            id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
+            id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
+            acountclick();
+        }
     }
 
     public void fragment_transact(FragmentHomeSub fragmentOne) {
@@ -428,6 +445,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e("CHECKCONTEXT", "setHeader: context======>"+this);
         fragment_onresume_selection();
         nudge_count();
         Log.e("USERPROFILE", "onResume: " + Share.upload_success);
@@ -579,6 +597,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
         Log.e("CHECKCOUNT", "onBackPressed:Selection===>"+selected);
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
            // exitdialog();
+            selected = 0;
             finish();
         }else if(getSupportFragmentManager().getBackStackEntryCount()>0 && (selected==2 || selected == 11 || selected == 1 || selected == 9 || selected==3)){
             getSupportFragmentManager().popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
