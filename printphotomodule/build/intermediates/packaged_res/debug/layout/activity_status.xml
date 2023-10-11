@@ -153,7 +153,7 @@
         android:layout_marginLeft="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:background="@color/colorPrimary"
+        android:background="@color/print_colorPrimary"
         android:gravity="center"
         android:text="@string/continue_shopping"
         android:textColor="@color/white" />

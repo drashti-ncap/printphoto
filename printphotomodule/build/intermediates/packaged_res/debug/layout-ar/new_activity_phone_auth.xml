@@ -51,7 +51,7 @@
                     android:fontFamily="@font/pnuregular"
                     android:gravity="center"
                     android:text="@string/verification"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -243,7 +243,7 @@
             android:gravity="center|right"
             android:paddingRight="@dimen/_5sdp"
             android:text="@string/app_name"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/print_colorPrimary"
             android:textSize="@dimen/_13sdp" />
 
 
@@ -279,7 +279,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:fontFamily="@font/pnuregular"
             android:text="@string/verify"
             android:textColor="@color/white"

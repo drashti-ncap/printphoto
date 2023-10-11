@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         app:bar_color="@color/grey_500"
-        app:bar_highlight_color="@color/colorPrimary"
+        app:bar_highlight_color="@color/print_colorPrimary"
         app:corner_radius="10"
         app:data_type="_integer"
-        app:left_thumb_color="@color/colorPrimary"
-        app:left_thumb_color_pressed="@color/colorPrimary"
+        app:left_thumb_color="@color/print_colorPrimary"
+        app:left_thumb_color_pressed="@color/print_colorPrimary"
         app:min_value="0"
-        app:right_thumb_color="@color/colorPrimary"
-        app:right_thumb_color_pressed="@color/colorPrimary" />
+        app:right_thumb_color="@color/print_colorPrimary"
+        app:right_thumb_color_pressed="@color/print_colorPrimary" />
 
 </LinearLayout>

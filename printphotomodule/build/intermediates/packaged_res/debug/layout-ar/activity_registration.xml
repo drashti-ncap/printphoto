@@ -55,7 +55,7 @@
                     android:gravity="center"
                     android:text="ister"
 
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
                     android:visibility="gone" />
             </LinearLayout>
@@ -517,7 +517,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:layout_marginBottom="@dimen/_2sdp"
-                        app:cardBackgroundColor="@color/colorPrimaryDark"
+                        app:cardBackgroundColor="@color/print_colorPrimaryDark"
                         app:cardElevation="@dimen/_2sdp">
 
                         <TextView

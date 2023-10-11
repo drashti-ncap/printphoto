@@ -50,7 +50,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text="@string/country"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -118,7 +118,7 @@
         android:layout_marginLeft="@dimen/_9sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_9sdp"
-        android:background="@color/colorPrimary"
+        android:background="@color/print_colorPrimary"
         android:text="Continue"
         android:textAllCaps="false"
         android:textColor="@color/white"

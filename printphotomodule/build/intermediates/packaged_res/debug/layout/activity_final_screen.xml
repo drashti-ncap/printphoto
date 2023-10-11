@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimary"
+        android:background="@color/print_colorPrimary"
         android:visibility="gone">
 
         <TextView
@@ -82,14 +82,14 @@
                 android:layout_marginRight="5dp"
                 android:text="01"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/print_colorPrimary" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/print_colorPrimary" />
 
             <TextView
                 android:id="@+id/tv_total_page"
@@ -98,7 +98,7 @@
                 android:layout_marginLeft="5dp"
                 android:text=" 1"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorPrimary" />
+                android:textColor="@color/print_colorPrimary" />
 
         </LinearLayout>
 

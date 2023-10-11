@@ -216,7 +216,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:text="@string/add_to_cart_btn"
             android:textAllCaps="false"
             android:textColor="@color/white"

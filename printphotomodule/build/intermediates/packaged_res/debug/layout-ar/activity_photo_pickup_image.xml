@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pnuregular"
                     android:text="@string/gallery"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textSize="@dimen/_17sdp" />
 
             </LinearLayout>

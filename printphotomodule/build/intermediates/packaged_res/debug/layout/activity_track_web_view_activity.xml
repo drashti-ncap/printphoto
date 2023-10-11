@@ -50,7 +50,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text="Order"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -113,7 +113,7 @@
             android:layout_marginRight="@dimen/_5sdp"
             android:gravity="left|center"
             android:text="How to track your order ?"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/print_colorPrimary"
             android:textSize="@dimen/_14sdp" />
 
         <TextView

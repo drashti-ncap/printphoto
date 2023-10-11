@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/_40sdp"
-        android:background="@color/colorPrimary"
+        android:background="@color/print_colorPrimary"
         android:fontFamily="@font/pnuregular"
         android:gravity="center"
 
@@ -63,7 +63,7 @@
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:fontFamily="@font/pnuregular"
             android:text="@string/submit"
 
@@ -76,7 +76,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
 
             android:fontFamily="@font/pnuregular"
             android:text="@string/cancel"

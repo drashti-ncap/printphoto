@@ -341,7 +341,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/print_colorPrimary"
         android:fontFamily="@font/pnuregular"
         android:text="@string/continue_val"
         android:textAllCaps="false"

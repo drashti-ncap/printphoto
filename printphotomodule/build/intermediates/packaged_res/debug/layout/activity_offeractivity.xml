@@ -69,7 +69,7 @@
                         app:sliderIndicatorPadding="3dp"
                         android:layoutDirection="ltr"
                         app:sliderIndicatorRadius="2.5dp"
-                        app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                        app:sliderIndicatorSelectedColor="@color/print_colorPrimary"
                         app:sliderIndicatorUnselectedColor="@color/grey_500"
                         app:sliderScrollTimeInSec="1"
                         android:layout_height="@dimen/_165sdp"/>

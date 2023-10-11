@@ -122,7 +122,7 @@
             android:gravity="left|center"
 
             android:text="How to track your order ?"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/print_colorPrimary"
             android:textSize="@dimen/_14sdp" />
 
         <TextView

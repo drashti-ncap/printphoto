@@ -51,7 +51,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text="@string/account"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -389,7 +389,7 @@
                     <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/colorPrimaryDark"
+                        app:cardBackgroundColor="@color/print_colorPrimaryDark"
                         app:cardCornerRadius="7dp"
                         app:cardUseCompatPadding="true">
 
@@ -732,7 +732,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/print_colorPrimary"
                         android:gravity="center">
 
                         <ImageView

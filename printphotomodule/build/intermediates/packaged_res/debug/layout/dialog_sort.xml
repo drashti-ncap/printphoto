@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
+            android:background="@color/print_colorPrimary">
 
             <TextView
                 android:layout_width="match_parent"
@@ -258,7 +258,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/_5sdp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/print_colorPrimary">
 
             <TextView
                 android:id="@+id/tv_clear"
@@ -275,7 +275,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/print_colorPrimary">
 
             <TextView
                 android:id="@+id/tv_apply"

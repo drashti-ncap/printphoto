@@ -16,9 +16,9 @@
             android:height="@dimen/_10ssp" />
 
         <gradient
-            android:centerColor="@color/colorPrimary"
+            android:centerColor="@color/print_colorPrimary"
             android:centerY="0.5"
-            android:endColor="@color/colorAccent"
+            android:endColor="@color/print_colorAccent"
             android:startColor="@android:color/white"
             android:type="sweep"
             android:useLevel="false" />
