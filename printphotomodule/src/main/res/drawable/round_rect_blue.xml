@@ -6,9 +6,9 @@
 
 
     <gradient
-        android:centerColor="@color/colorPrimary"
-        android:endColor="@color/colorPrimary"
-        android:startColor="@color/colorPrimary"
+        android:centerColor="@color/print_colorPrimary"
+        android:endColor="@color/print_colorPrimary"
+        android:startColor="@color/print_colorPrimary"
         android:useLevel="true" />
 
 

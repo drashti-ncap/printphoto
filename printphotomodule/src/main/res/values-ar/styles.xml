@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/print_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/print_colorPrimaryDark</item>
+        <item name="colorAccent">@color/print_colorAccent</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -29,7 +29,7 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">12sp</item>
         <item name="android:text">"Ad"</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/print_colorPrimaryDark</item>
         <item name="android:width">20dp</item>
         <item name="android:height">20dp</item>
     </style>
@@ -115,7 +115,7 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/print_colorPrimaryDark</item>
     </style>
 
     <style name="AppTheme.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">

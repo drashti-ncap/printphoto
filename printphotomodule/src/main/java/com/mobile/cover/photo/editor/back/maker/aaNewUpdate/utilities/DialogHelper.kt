@@ -73,7 +73,7 @@ fun Context.showAlert(title: String?, msg: String?, positiveText: String?, negat
     dialog.setCancelable(false)
     if (title != null) {
         // Initialize a new foreground color span instance
-        val foregroundColorSpan = ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimaryDark))
+        val foregroundColorSpan = ForegroundColorSpan(ContextCompat.getColor(this, R.color.print_colorPrimaryDark))
         val ssBuilder = SpannableStringBuilder(title)
         ssBuilder.setSpan(foregroundColorSpan, 0, title.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         dialog.setTitle(ssBuilder)

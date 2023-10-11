@@ -103,9 +103,6 @@ color black
 color black_overlay
 color black_semi_transparent
 color caldroid_transparent
-color colorAccent
-color colorPrimary
-color colorPrimaryDark
 color color_green
 color color_red
 color colorbutton
@@ -117,6 +114,9 @@ color grey_500
 color overlay
 color placeholder_grey
 color placeholder_grey_20
+color print_colorAccent
+color print_colorPrimary
+color print_colorPrimaryDark
 color progress_background
 color searchbg
 color textColorPrimary
@@ -197,7 +197,6 @@ drawable ic_add_image
 drawable ic_add_image_new
 drawable ic_address
 drawable ic_adhaar
-drawable ic_arrow
 drawable ic_arrow_status
 drawable ic_back
 drawable ic_back_select

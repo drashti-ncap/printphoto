@@ -3669,6 +3669,9 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color print_colorAccent
+color print_colorPrimary
+color print_colorPrimaryDark
 color progress_background
 color purple_100
 color purple_200
@@ -5803,7 +5806,6 @@ drawable ic_add_image
 drawable ic_add_image_new
 drawable ic_address
 drawable ic_adhaar
-drawable ic_arrow
 drawable ic_arrow_back_black_24
 drawable ic_arrow_back_black_24dp
 drawable ic_arrow_status

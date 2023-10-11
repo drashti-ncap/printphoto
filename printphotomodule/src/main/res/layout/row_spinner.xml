@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:gravity="center"
             android:text="@string/cancel_order"
             android:textColor="@color/white"
@@ -90,7 +90,7 @@
         android:layout_marginEnd="@dimen/_50sdp"
         android:layout_marginBottom="@dimen/_15sdp"
         android:layout_weight="1"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/print_colorPrimary"
         app:cardCornerRadius="@dimen/_5sdp"
         app:cardElevation="@dimen/_2sdp">
 

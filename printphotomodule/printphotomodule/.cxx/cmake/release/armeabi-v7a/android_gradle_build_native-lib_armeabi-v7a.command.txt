@@ -1,7 +1,0 @@
-Executable : C:\Users\jigne\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
-arguments : 
--C
-D:\Vasu\Projects\PrintPhoto\CustomizeMobileCover\app\.cxx\cmake\release\armeabi-v7a
-native-lib
-jvmArgs : 
-

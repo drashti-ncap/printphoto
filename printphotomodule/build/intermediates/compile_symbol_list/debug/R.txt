@@ -3668,6 +3668,9 @@ int color primary_text_default_material_dark 0x0
 int color primary_text_default_material_light 0x0
 int color primary_text_disabled_material_dark 0x0
 int color primary_text_disabled_material_light 0x0
+int color print_colorAccent 0x0
+int color print_colorPrimary 0x0
+int color print_colorPrimaryDark 0x0
 int color progress_background 0x0
 int color purple_100 0x0
 int color purple_200 0x0
@@ -5802,7 +5805,6 @@ int drawable ic_add_image 0x0
 int drawable ic_add_image_new 0x0
 int drawable ic_address 0x0
 int drawable ic_adhaar 0x0
-int drawable ic_arrow 0x0
 int drawable ic_arrow_back_black_24 0x0
 int drawable ic_arrow_back_black_24dp 0x0
 int drawable ic_arrow_status 0x0

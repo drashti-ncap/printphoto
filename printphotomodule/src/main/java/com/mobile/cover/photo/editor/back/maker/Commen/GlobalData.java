@@ -129,7 +129,7 @@ public class GlobalData {
         }
         //dialog.setCancelable(true);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.setProgressDrawable((new ColorDrawable(mContext.getResources().getColor(R.color.colorPrimary))));
+        dialog.setProgressDrawable((new ColorDrawable(mContext.getResources().getColor(R.color.print_colorPrimary))));
         dialog.setContentView(R.layout.custom_dialog_layout);
         return dialog;
     }

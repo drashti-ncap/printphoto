@@ -107,7 +107,7 @@
     <string name="download_failed">Descarga fallida</string>
     <string name="edit">Editar</string>
     <string name="editor">Editor</string>
-    <string name="email_id">ID de Correo Electrónico</string>
+    <string name="email_id">Email</string>
     <string name="enter_adhar">Ingrese Aadhaar</string>
     <string name="enter_another_name">Ingresa otro nombre</string>
     <string name="enter_brand_model">Ingrese el nombre de la marca y el modelo</string>

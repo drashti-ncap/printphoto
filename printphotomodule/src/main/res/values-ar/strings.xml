@@ -104,7 +104,7 @@
     <string name="pass_change_successfully">تم تغيير كلمة المرور بنجاح</string>
     <string name="please_add_high_resolution_image_to_get_high_clearity_mug">يرجى إضافة صورة عالية الوضوح للحصول على قهوة واضحة</string>
     <string name="complain">شكوى</string>
-    <string name="email_id">عنوان البريد الإلكتروني</string>
+    <string name="email_id">إيميل</string>
     <string name="contact">اتصل بنا</string>
     <string name="us">نحن</string>
     <string name="mobile_number">رقم الجوال</string>

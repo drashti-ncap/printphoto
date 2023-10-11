@@ -52,7 +52,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text=" Designs"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
                     android:visibility="gone"
 

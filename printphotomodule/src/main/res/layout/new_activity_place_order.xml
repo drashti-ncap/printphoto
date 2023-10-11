@@ -50,7 +50,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text="@string/order"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -106,7 +106,7 @@
                         android:id="@+id/ll_address_layout"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/print_colorPrimary"
                         android:orientation="horizontal">
 
                         <TextView
@@ -161,7 +161,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/print_colorPrimary"
                         android:orientation="horizontal">
 
                         <TextView
@@ -519,7 +519,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.3"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/print_colorPrimary"
                         android:text="@string/apply"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_14sdp" />
@@ -623,7 +623,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/print_colorPrimary"
                 android:gravity="center"
                 android:text="@string/cash_on_delivery"
                 android:textColor="@color/white"
@@ -643,7 +643,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/print_colorPrimary"
                 android:gravity="center"
                 android:text="@string/make_payment"
                 android:textColor="@color/white"

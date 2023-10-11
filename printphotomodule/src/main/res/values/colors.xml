@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0ABAD4</color>
-    <color name="colorPrimaryDark">#0ABAD4</color>
-    <color name="colorAccent">#0ABAD4</color>
+    <color name="print_colorPrimary">#0ABAD4</color>
+    <color name="print_colorPrimaryDark">#0ABAD4</color>
+    <color name="print_colorAccent">#0ABAD4</color>
     <color name="colorbutton">#0498E1</color>
 
 

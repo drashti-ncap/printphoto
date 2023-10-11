@@ -51,7 +51,7 @@
                     android:fontFamily="@font/pnuregular"
                     android:gravity="center"
                     android:text="@string/history"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
 

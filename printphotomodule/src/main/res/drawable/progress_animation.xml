@@ -15,7 +15,7 @@
             android:thicknessRatio="100"
             android:useLevel="false">
             <gradient
-                android:centerColor="@color/colorPrimary"
+                android:centerColor="@color/print_colorPrimary"
                 android:centerY="0.5"
                 android:endColor="@color/white"
                 android:startColor="@android:color/white"

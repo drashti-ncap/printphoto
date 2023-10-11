@@ -182,7 +182,7 @@
                     android:fontFamily="@font/pnuregular"
                     android:gravity="right|center"
                     android:text="@string/login"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textSize="@dimen/_14sdp" />
 
 

@@ -18,7 +18,7 @@
             <!---->
             <TextView
                 style="@style/AppTheme.AdAttribution"
-                android:background="@color/colorPrimary"
+                android:background="@color/print_colorPrimary"
                 android:gravity="center" />
 
             <LinearLayout
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLength="30"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/print_colorPrimary"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:elevation="5dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardBackgroundColor="@color/print_colorPrimary"
                         app:cardUseCompatPadding="true">
 
                         <Button

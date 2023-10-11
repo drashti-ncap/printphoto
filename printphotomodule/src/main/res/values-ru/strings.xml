@@ -105,7 +105,7 @@
     <string name="pass_change_successfully">Пароль успешно изменен</string>
     <string name="please_add_high_resolution_image_to_get_high_clearity_mug">Пожалуйста, добавьте изображение высокого разрешения для получения четкой кружки</string>
     <string name="complain">Жалоба</string>
-    <string name="email_id">Адрес электронной почты</string>
+    <string name="email_id">Электронная почта</string>
     <string name="contact">Контакт</string>
     <string name="us">Нас</string>
     <string name="mobile_number">Мобильный номер</string>

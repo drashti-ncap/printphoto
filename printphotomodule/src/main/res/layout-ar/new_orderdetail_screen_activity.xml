@@ -48,7 +48,7 @@
                     android:layout_toRightOf="@id/title"
                     android:gravity="center"
                     android:text="@string/details"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -434,7 +434,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/_40sdp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:text="@string/complain"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -447,7 +447,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/print_colorPrimary"
             android:text="@string/cancel"
             android:textAllCaps="false"
             android:textColor="@color/white"

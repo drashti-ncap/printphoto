@@ -114,15 +114,15 @@ public class new_getorderadapter extends RecyclerView.Adapter<new_getorderadapte
         holder.tv_status.setText(sqlitemodel.getOrderStatus());
         if (sqlitemodel.getOrderStatus().equalsIgnoreCase("Order Received")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                holder.tv_status.setTextColor(mContext.getColor(R.color.colorPrimary));
+                holder.tv_status.setTextColor(mContext.getColor(R.color.print_colorPrimary));
             } else {
-                holder.tv_status.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+                holder.tv_status.setTextColor(mContext.getResources().getColor(R.color.print_colorPrimary));
             }
         } else if (sqlitemodel.getOrderStatus().equalsIgnoreCase("Order Confirmed")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                holder.tv_status.setTextColor(mContext.getColor(R.color.colorPrimary));
+                holder.tv_status.setTextColor(mContext.getColor(R.color.print_colorPrimary));
             } else {
-                holder.tv_status.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+                holder.tv_status.setTextColor(mContext.getResources().getColor(R.color.print_colorPrimary));
             }
         } else if (sqlitemodel.getOrderStatus().equalsIgnoreCase("Order Cancelled")) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

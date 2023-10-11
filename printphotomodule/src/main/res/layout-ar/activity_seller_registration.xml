@@ -57,7 +57,7 @@
                     android:fontFamily="@font/pnuregular"
                     android:gravity="center"
                     android:text="@string/registration"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/print_colorPrimary"
                     android:textStyle="bold"
 
                     />
@@ -339,7 +339,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:layout_marginBottom="@dimen/_2sdp"
-                        app:cardBackgroundColor="@color/colorPrimaryDark"
+                        app:cardBackgroundColor="@color/print_colorPrimaryDark"
                         app:cardElevation="@dimen/_2sdp"
                         app:cardUseCompatPadding="true">
 
