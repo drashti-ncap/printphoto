@@ -110,7 +110,7 @@
             android:exported="true"
             android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppSplashTheme">
+            android:theme="@style/AppSplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

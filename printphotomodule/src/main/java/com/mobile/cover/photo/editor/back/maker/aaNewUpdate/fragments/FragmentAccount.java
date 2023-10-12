@@ -201,6 +201,7 @@ public class FragmentAccount extends PrintPhotoBaseFragment {
         id_ll_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Share.hideKeyboard(getActivity());
                 id_mobile_number.setError(null);
                 id_password.setError(null);
                 id_email_id.setError(null);

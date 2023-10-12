@@ -16,6 +16,7 @@ import android.view.Window
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.mobile.cover.photo.editor.back.maker.R
 import com.mobile.cover.photo.editor.back.maker.model.CancelReason
 import org.jetbrains.anko.toast
@@ -114,7 +115,7 @@ fun Context.showAlert(title: String?, msg: String?, positiveText: String?, negat
 /*
      * ToDo..Custom layout popup dialog
      */
-fun Context.offerDialog(total_charge: Double, onPositive: OnPositive) {
+fun Context.offerDialog(total_charge: Double,isCod : Boolean, onPositive: OnPositive) {
 
     val dialog = Dialog(this)
     dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
@@ -154,6 +155,7 @@ fun Context.offerDialog(total_charge: Double, onPositive: OnPositive) {
     tvCod.text = codCharge
     tvOffer.text = offerCharge
 
+    cardOffer.isVisible = isCod
 
     cardOffer.setOnClickListener {
         onPositive.onYes(true)

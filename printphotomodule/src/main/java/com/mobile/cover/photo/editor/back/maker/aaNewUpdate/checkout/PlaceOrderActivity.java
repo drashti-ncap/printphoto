@@ -372,7 +372,7 @@ public class PlaceOrderActivity extends PrintPhotoBaseActivity implements Paymen
         if (Share.countryCodeValue.equalsIgnoreCase("IN") && DataHelperKt.getOfferAmount(mContext) > 0) {
             linear_prepaid_offer.setVisibility(View.VISIBLE);
             tv_prepaid_offer_amount.setText(Share.symbol + DataHelperKt.getOfferAmount(mContext));
-            DialogHelperKt.offerDialog(PlaceOrderActivity.this, total_charge, isPositive -> {
+            DialogHelperKt.offerDialog(PlaceOrderActivity.this, total_charge, getIntent().getBooleanExtra("COD", false) && !getIntent().getStringExtra("COD_dialog").equalsIgnoreCase("0"),isPositive -> {
                 if (isPositive) {
                     CLICK_CURRENT = CLICK_OTHER;
                     applycode(temp_offer_code, true);

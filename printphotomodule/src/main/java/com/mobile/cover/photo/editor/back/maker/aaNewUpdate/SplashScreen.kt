@@ -34,7 +34,6 @@ import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.URL_CONFIG
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.events.logAppOpenEvent
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.utilities.*
 import com.mobile.cover.photo.editor.back.maker.activity.Usefull.Select_region
-import kotlinx.android.synthetic.main.activity_splash_screen.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
