@@ -106,7 +106,7 @@
     <string name="email_id">Email</string>
     <string name="contact">Contacto</string>
     <string name="us">Nosotros</string>
-    <string name="mobile_number">Número de Teléfono Móvil</string>
+    <string name="mobile_number">Número de Móvil</string>
     <string name="support_timing">Horario de Soporte</string>
     <string name="default_val">Predeterminado</string>
     <string name="search">Buscar...</string>

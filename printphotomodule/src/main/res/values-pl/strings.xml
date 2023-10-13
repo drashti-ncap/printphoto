@@ -108,7 +108,7 @@
     <string name="email_id">ID E-mail</string>
     <string name="contact">Kontakt</string>
     <string name="us">Nas</string>
-    <string name="mobile_number">Numer Telefonu Komórkowego</string>
+    <string name="mobile_number">Numer Komórkowego</string>
     <string name="support_timing">Godziny Obsługi</string>
     <string name="default_val">Domyślnie</string>
     <string name="search">Szukaj ..</string>
