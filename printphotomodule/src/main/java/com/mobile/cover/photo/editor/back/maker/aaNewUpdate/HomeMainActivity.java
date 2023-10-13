@@ -297,7 +297,14 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
-            acountclick();
+//            acountclick();
+            if(selected==9 && SharedPrefs.getBoolean(HomeMainActivity.this, Share.key_reg_suc)) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frg_main, new UserProfileFragment());
+                fragmentTransaction.commitAllowingStateLoss();
+            }else {
+                acountclick();
+            }
         }
     }
 
