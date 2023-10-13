@@ -615,6 +615,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     public void onBackPressed() {
         Log.e("CHECKCOUNT", "onBackPressed:getBackStackEntryCount()===>"+getSupportFragmentManager().getBackStackEntryCount());
         Log.e("CHECKCOUNT", "onBackPressed:Selection===>"+selected);
+        if(!home.isAdded() && !mall.isAdded() && !order.isAdded() && !cart.isAdded() && !account.isAdded()){
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
            // exitdialog();
             selected = 0;
@@ -635,6 +636,9 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 //            id_order.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
 //            id_offer.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
 //            id_back.callOnClick();
+        }}else {
+            selected=0;
+            finish();
         }
     }
 
