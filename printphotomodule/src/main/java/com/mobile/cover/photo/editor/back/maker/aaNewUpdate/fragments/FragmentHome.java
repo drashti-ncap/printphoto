@@ -50,6 +50,7 @@ import com.mobile.cover.photo.editor.back.maker.Pojoclasses.response.mall_main_c
 import com.mobile.cover.photo.editor.back.maker.R;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseFragment;
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreenKt;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.activity.ModelListActivity;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeAdapter;
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.adapter.HomeMallAdapter;
@@ -94,7 +95,7 @@ public class FragmentHome extends PrintPhotoBaseFragment {
     OfferMain[] offer;
     LinearLayout ll_main;
     SelectCompany selectCompany;
-   // ProgressDialog pd;
+    // ProgressDialog pd;
     AlarmManager alarmManager;
     AlertDialog alertDialog;
     private PendingIntent pendingIntent;
@@ -111,10 +112,17 @@ public class FragmentHome extends PrintPhotoBaseFragment {
     private String idNative = "";
     private String idInter = "";
     private int layoutNativeCustom;
+    private int whichClick;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+        if (getArguments() != null) {
+            whichClick = getArguments().getInt(SplashScreenKt.ARG_POS, -1);
+        }else {
+            whichClick = -1;
+        }
+        Log.e("WICHCLICK", "fragment_oncreate_selection: which click 2 ==>" + whichClick);
         HomeMainActivity.id_back.setVisibility(View.GONE);
         HomeMainActivity.toolbar.setVisibility(View.GONE);
         HomeMainActivity.btn_count.setVisibility(View.GONE);
@@ -160,7 +168,7 @@ public class FragmentHome extends PrintPhotoBaseFragment {
                         Log.e("datasize", "onResponse: " + Share.symbol);
                         Share.maincategoryname.clear();
                         Share.click_positions.clear();
-                       // setHeader();
+                        // setHeader();
                         getDisplaySize();
 
                         try {
@@ -275,7 +283,7 @@ public class FragmentHome extends PrintPhotoBaseFragment {
                 Share.maincategoryname.clear();
                 Share.click_positions.clear();
                 try {
-               //     setHeader();
+                    //     setHeader();
                     getDisplaySize();
                     intView();
                 } catch (Exception e) {
@@ -394,6 +402,7 @@ public class FragmentHome extends PrintPhotoBaseFragment {
         Intent intent = new Intent(getActivity(), finished_activity.class);
         startActivity(intent);
     }
+
     private void displayalert() {
         final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -497,9 +506,18 @@ public class FragmentHome extends PrintPhotoBaseFragment {
 
 
                 mHomeAdapter = new HomeAdapter(getContext(), Share.main_category_data, (v, position) -> {
+                    Log.e("WICHCLICK", "intView: item click==>" + position);
                     onItemClick(position);
                 });
                 mHomeRecyclerview.setAdapter(mHomeAdapter);
+
+                if (whichClick == 0) {
+                    getArguments().clear();
+                    onItemClick(0);
+                } else if (whichClick == 1) {
+                    getArguments().clear();
+                    onItemClick(2);
+                }
 
             }
         } catch (Exception e) {

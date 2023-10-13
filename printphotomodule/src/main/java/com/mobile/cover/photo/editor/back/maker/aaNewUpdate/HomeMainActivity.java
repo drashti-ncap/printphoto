@@ -70,6 +70,7 @@ import java.util.TimeZone;
 
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreenKt.ARG_IS_CART;
 import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreenKt.ARG_IS_OFFER;
+import static com.mobile.cover.photo.editor.back.maker.aaNewUpdate.SplashScreenKt.ARG_POS;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -102,6 +103,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
     private PendingIntent pendingIntent;
     private Context mContext;
     private ProgressDialog pd = null;
+    int whichClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +129,8 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
         boolean isOffer = getIntent().getBooleanExtra(ARG_IS_OFFER, false);
         Log.i(TAG, "isOffer:" + isOffer);
+
+        whichClick= getIntent().getIntExtra(ARG_POS,-1);
 
         if (isCart && selected != 2) {
             selected = 2;
@@ -275,6 +279,10 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
             orderclick();
         } else if (selected == 0) {
             selected = 0;
+            Bundle bundle = new Bundle();
+            bundle.putInt(ARG_POS,whichClick);
+            home.setArguments(bundle);
+            Log.e("WICHCLICK", "fragment_oncreate_selection: which click==>"+whichClick );
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.add(R.id.frg_main, home);
             fragmentTransaction.commit();
@@ -403,7 +411,11 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
 
     public void homeclick() {
+        Log.e("WICHCLICK", "fragment_oncreate_selection: which click 1 ==>"+whichClick );
         iv_logout.setVisibility(View.GONE);
+        Bundle bundle = new Bundle();
+        bundle.putInt(ARG_POS,whichClick);
+        home.setArguments(bundle);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frg_main, home);
         fragmentTransaction.commitAllowingStateLoss();

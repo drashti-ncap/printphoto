@@ -4,19 +4,14 @@ import android.app.Activity
 import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.PendingIntent
-import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.net.wifi.WifiManager
-import android.os.Build
 import android.os.Bundle
-import android.text.format.Formatter
 import android.util.Base64
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import com.facebook.applinks.AppLinkData
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -44,15 +39,14 @@ import java.util.*
 import kotlin.Boolean
 import kotlin.Exception
 import kotlin.IllegalStateException
-import kotlin.RuntimeException
-import kotlin.String
 import kotlin.Throwable
 import kotlin.system.exitProcess
 
 const val ARG_IS_CART = "arg_cart"
 const val ARG_IS_OFFER = "arg_offer"
+const val ARG_POS = "arg_pos"
 
-class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermissionObserver*/ {
+class SplashScreen(val context: Activity, val i : Int) : PrintPhotoBaseActivity()/*, OSPermissionObserver*/ {
     internal var TAG = "SplashScreen"
     //internal var pInfo: PackageInfo? = null
     internal lateinit var alarmManager: AlarmManager
@@ -150,7 +144,6 @@ class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermis
                 call: Call<setting_model_main_response?>,
                 response: Response<setting_model_main_response?>
             ) {
-
 
                 if (response.code() == 200) {
 
@@ -279,6 +272,7 @@ class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermis
            // intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.putExtra(ARG_IS_CART, isCart)
             intent.putExtra(ARG_IS_OFFER, isOffer)
+            intent.putExtra(ARG_POS, i)
             context.startActivity(intent)
         } else {
             Share.countryCodeValue = SharedPrefs.getString(context, SharedPrefs.country_code)
@@ -286,6 +280,7 @@ class SplashScreen(val context: Activity) : PrintPhotoBaseActivity()/*, OSPermis
 //            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.putExtra(ARG_IS_CART, isCart)
             intent.putExtra(ARG_IS_OFFER, isOffer)
+            intent.putExtra(ARG_POS, i)
             context.startActivity(intent)
         }
     }

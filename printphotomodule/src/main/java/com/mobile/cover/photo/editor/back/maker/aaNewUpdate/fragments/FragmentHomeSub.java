@@ -143,9 +143,10 @@ public class FragmentHomeSub extends Fragment {
 
                     Log.e("SIZE", "onClick: ===========>" + Share.click_positions.size() + "//" + level + "//" + Share.dynamic_sub_category_list.size());
                     if (level == 2) {
-                        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
-                        fragmentTransaction.commit();
+                        getActivity().onBackPressed();
+//                        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                        fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
+//                        fragmentTransaction.commit();
                     } else {
                         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frg_main, new FragmentHomeSub());

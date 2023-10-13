@@ -172,9 +172,10 @@ public class FragmentPhoneCover extends PrintPhotoBaseFragment {
 
 
                         if (level == 2) {
-                            FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                            fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
-                            fragmentTransaction.commit();
+//                            FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                            fragmentTransaction.replace(R.id.frg_main, new FragmentHome());
+//                            fragmentTransaction.commit();
+                            getActivity().onBackPressed();
                         } else {
                             FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                             fragmentTransaction.replace(R.id.frg_main, new FragmentPhoneCover());
@@ -183,6 +184,7 @@ public class FragmentPhoneCover extends PrintPhotoBaseFragment {
 
                     }
                 } else {
+                    Log.e("CHECKCOUNT", "onClick: ");
                     fragOne_ed_search.setText("");
                     fragOne_ed_search.setHint(getString(R.string.search_phone_brand));
                     tv_no_fnd.setVisibility(View.GONE);
@@ -195,7 +197,6 @@ public class FragmentPhoneCover extends PrintPhotoBaseFragment {
         rv_offer = v.findViewById(R.id.fragOne_rv_offer);
         fragOne_ed_search = v.findViewById(R.id.fragOne_ed_search);
         tv_no_fnd = v.findViewById(R.id.tv_no_fnd);
-
 
         myRecyclerAdapter = new CompanyRecyclerAdapter(getActivity(), Share.dynamic_sub_category_list);
         rv_offer.setLayoutManager(new GridLayoutManager(getActivity(), 2));

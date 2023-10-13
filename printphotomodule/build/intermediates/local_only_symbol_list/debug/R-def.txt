@@ -1213,7 +1213,6 @@ layout activity_home_main
 layout activity_images_activity
 layout activity_jewellery_activity
 layout activity_log_in
-layout activity_main
 layout activity_main2
 layout activity_main_page
 layout activity_mall_category_activity
@@ -1252,6 +1251,7 @@ layout activity_ticket_webview_system
 layout activity_track_web_view_activity
 layout activity_tshirt__editing_
 layout activity_tshirt_category_activity
+layout activity_webview
 layout activity_zoom_view_activity
 layout album_item
 layout approve_otp_layout
@@ -1842,7 +1842,7 @@ string youAreNotUpdatedTitle
 string your_order_is_delivered
 string your_order_will_be_confirm_within_48_hours
 string zipcode
-style AppSplashTheme
+style AppSplashScreenTheme
 style AppTheme
 style AppTheme.AdAttribution
 style AppTheme.AppBarOverlay

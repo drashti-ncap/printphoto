@@ -17,6 +17,7 @@ import com.mobile.cover.photo.editor.back.maker.Commen.SharedPrefs
 import com.mobile.cover.photo.editor.back.maker.R
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.ARG_IS_CART
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.ARG_IS_OFFER
+import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.ARG_POS
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.HomeMainActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.PrintPhotoBaseActivity
 import com.mobile.cover.photo.editor.back.maker.aaNewUpdate.apiclient.MainApiClient
@@ -83,9 +84,11 @@ class Select_region : PrintPhotoBaseActivity() {
                             val intent = Intent(this@Select_region, HomeMainActivity::class.java)
                             val isCart = getIntent().getBooleanExtra(ARG_IS_CART, false)
                             val isOffer = intent.getBooleanExtra(ARG_IS_OFFER, false)
+                            val whichClick = intent.getIntExtra(ARG_POS, -1)
                             Log.i(TAG, "isCart: $isCart")
                             intent.putExtra(ARG_IS_CART, isCart)
                             intent.putExtra(ARG_IS_OFFER, isOffer)
+                            intent.putExtra(ARG_POS, whichClick)
                             startActivity(intent)
                             finish()
                         } else {

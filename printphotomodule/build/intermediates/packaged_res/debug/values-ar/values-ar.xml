@@ -442,7 +442,7 @@
     <string name="your_order_is_delivered">تم تسليم طلبك</string>
     <string name="your_order_will_be_confirm_within_48_hours">سيتم تأكيد طلبك في غضون 24 ساعة</string>
     <string name="zipcode">الرمز البريدي</string>
-    <style name="AppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppSplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>

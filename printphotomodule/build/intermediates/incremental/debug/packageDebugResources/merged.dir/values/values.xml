@@ -512,7 +512,7 @@
     <string name="your_order_is_delivered">Your order is Delivered</string>
     <string name="your_order_will_be_confirm_within_48_hours">Your order will be confirm within 24 hours</string>
     <string name="zipcode">Zipcode</string>
-    <style name="AppSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppSplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>

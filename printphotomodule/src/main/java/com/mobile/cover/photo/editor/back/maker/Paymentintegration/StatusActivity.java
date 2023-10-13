@@ -155,6 +155,7 @@ public class StatusActivity extends PrintPhotoBaseActivity {
                 Log.e(TAG, "onResponse: " + response.message());
                 if (response.isSuccessful()) {
                     final get_final_status_response responseData = response.body();
+                    Log.e(TAG, "onResponse: " + responseData.getData().getMessage());
                     if (responseData.getResponseCode().equalsIgnoreCase("1")) {
                         //pd.dismiss();
                         hideProgressDialog();
