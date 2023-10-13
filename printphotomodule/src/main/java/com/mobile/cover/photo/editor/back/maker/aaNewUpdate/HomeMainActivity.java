@@ -541,6 +541,7 @@ public class HomeMainActivity extends AppCompatActivity implements View.OnClickL
 
 //                if (selected != 0) {
             selected = 0;
+            whichClick=-1;
             id_home.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_blue_select), PorterDuff.Mode.SRC_IN);
             id_account.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
             id_cart.setColorFilter(ContextCompat.getColor(HomeMainActivity.this, R.color.tint_grey_unselect), PorterDuff.Mode.SRC_IN);
