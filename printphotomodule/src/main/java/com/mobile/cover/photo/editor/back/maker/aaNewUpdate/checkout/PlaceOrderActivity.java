@@ -369,25 +369,28 @@ public class PlaceOrderActivity extends PrintPhotoBaseActivity implements Paymen
         setShippingAndTotalCharge();
 
         //// OFFER DIALOG
-        if (Share.countryCodeValue.equalsIgnoreCase("IN") && DataHelperKt.getOfferAmount(mContext) > 0) {
-            linear_prepaid_offer.setVisibility(View.VISIBLE);
-            tv_prepaid_offer_amount.setText(Share.symbol + DataHelperKt.getOfferAmount(mContext));
-            DialogHelperKt.offerDialog(PlaceOrderActivity.this, total_charge, getIntent().getBooleanExtra("COD", false) && !getIntent().getStringExtra("COD_dialog").equalsIgnoreCase("0"),isPositive -> {
-                if (isPositive) {
-                    CLICK_CURRENT = CLICK_OTHER;
-                    applycode(temp_offer_code, true);
-                } else {
-                    doCOD();
-                }
-            });
-        } else {
-            linear_prepaid_offer.setVisibility(View.GONE);
-        }
+        if(Share.countryCodeValue!=null) {
+            Log.e("CHECKVALUE", "intiViews: code value ==>"+Share.countryCodeValue );
+            if (Share.countryCodeValue.equalsIgnoreCase("IN") && DataHelperKt.getOfferAmount(mContext) > 0) {
+                linear_prepaid_offer.setVisibility(View.VISIBLE);
+                tv_prepaid_offer_amount.setText(Share.symbol + DataHelperKt.getOfferAmount(mContext));
+                DialogHelperKt.offerDialog(PlaceOrderActivity.this, total_charge, getIntent().getBooleanExtra("COD", false) && !getIntent().getStringExtra("COD_dialog").equalsIgnoreCase("0"), isPositive -> {
+                    if (isPositive) {
+                        CLICK_CURRENT = CLICK_OTHER;
+                        applycode(temp_offer_code, true);
+                    } else {
+                        doCOD();
+                    }
+                });
+            } else {
+                linear_prepaid_offer.setVisibility(View.GONE);
+            }
 
-        if (gstCharges > 0) {
-            linear_gst.setVisibility(View.VISIBLE);
-        } else {
-            linear_gst.setVisibility(View.GONE);
+            if (gstCharges > 0) {
+                linear_gst.setVisibility(View.VISIBLE);
+            } else {
+                linear_gst.setVisibility(View.GONE);
+            }
         }
 
     }
@@ -1196,7 +1199,7 @@ public class PlaceOrderActivity extends PrintPhotoBaseActivity implements Paymen
                 Log.e("ENABLED", "findViews: =======>" + Share.enabledpayment_gateway.get(i));
                 if (Share.enabledpayment_gateway.get(i).equalsIgnoreCase("Paytm")) {
                     Log.e("PAYTM", "findViews: ===>ENABLED");
-                    id_iv_pay_now.setVisibility(View.VISIBLE);
+                    id_iv_pay_now.setVisibility(View.GONE);//visible
                 }
                 if (Share.enabledpayment_gateway.get(i).equalsIgnoreCase("CCAvenueGateway")) {
                     iv_pay_by_card.setVisibility(View.VISIBLE);
@@ -1211,7 +1214,7 @@ public class PlaceOrderActivity extends PrintPhotoBaseActivity implements Paymen
                     params.setMargins(0, 0, 10, 0); //substitute parameters for left, top, right, bottom
                     id_iv_pay_now.setLayoutParams(params);
                     Log.e("VISIBILTY", "findViews: ====>1" + id_iv_pay_now.getVisibility());
-                    ll_paypal.setVisibility(View.VISIBLE);
+                    ll_paypal.setVisibility(View.GONE);//visible
                 } else {
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) id_iv_pay_now.getLayoutParams();
                     params.setMargins(0, 0, 0, 0); //substitute parameters for left, top, right, bottom
