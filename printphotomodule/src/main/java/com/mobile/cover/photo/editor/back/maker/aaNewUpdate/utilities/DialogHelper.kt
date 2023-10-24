@@ -155,7 +155,7 @@ fun Context.offerDialog(total_charge: Double,isCod : Boolean, onPositive: OnPosi
     tvCod.text = codCharge
     tvOffer.text = offerCharge
 
-    cardOffer.isVisible = isCod
+    cardCOD.isVisible = isCod
 
     cardOffer.setOnClickListener {
         onPositive.onYes(true)
