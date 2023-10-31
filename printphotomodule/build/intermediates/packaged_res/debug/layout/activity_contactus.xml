@@ -118,13 +118,13 @@
                     android:background="@drawable/shadow_border"
                     android:orientation="vertical"
                     android:padding="@dimen/_2sdp"
-                    android:weightSum="4">
+                    android:weightSum="5">
 
                     <LinearLayout
                         android:id="@+id/ll_email"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
                         android:background="@drawable/tablerow_bottomborder_new"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -180,7 +180,7 @@
                         android:id="@+id/ll_call"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
                         android:background="@drawable/tablerow_bottomborder_new"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -204,7 +204,7 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="0.5"
                                 android:gravity="bottom|left|center"
-                                android:text="@string/mobile_number"
+                                android:text="mobile_number\ndfvhdfv"
                                 android:textSize="@dimen/_14sdp" />
 
 
@@ -235,7 +235,7 @@
                         android:id="@+id/ll_loc"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
+                        android:layout_weight="2.4"
                         android:orientation="horizontal"
                         android:weightSum="3">
 

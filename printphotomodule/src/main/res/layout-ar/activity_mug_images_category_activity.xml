@@ -25,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/id_back"
                 android:gravity="center">
 
 
@@ -39,7 +40,7 @@
                     android:gravity="center"
                     android:singleLine="true"
                     android:text="@string/custom"
-
+                    android:ellipsize="start"
                     android:textColor="@color/colortitle1"
                     android:textStyle="bold" />
 
