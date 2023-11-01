@@ -111,6 +111,7 @@ public class test_frame_editing_activity extends PrintPhotoBaseActivity {
         getDisplaySize();
 
 //        frame_2 = new Drawable[]{getResources().getDrawable(R.drawable.shape1), getResources().getDrawable(R.drawable.shape2), getResources().getDrawable(R.drawable.shape3), getResources().getDrawable(R.drawable.shape4), getResources().getDrawable(R.drawable.shape5), getResources().getDrawable(R.drawable.shape6)};
+        Share.frame_bitmap.clear();
         for (int i = 0; i < Share.frame_alldetails.size(); i++) {
             frame_bitmap_model frame_bitmap_model = new frame_bitmap_model();
             frame_bitmap_model.setId(i);
@@ -398,8 +399,18 @@ public class test_frame_editing_activity extends PrintPhotoBaseActivity {
 //                progress.dismiss();
 //            }
             hideProgressDialog();
-            test_frame_image_adapter.notifyDataSetChanged();
             new HttpImageRequestTask().execute();
+            if (test_frame_image_adapter != null)
+                test_frame_image_adapter.notifyDataSetChanged();
+            else {
+                test_frame_image_adapter = new test_frame_image_adapter(test_frame_editing_activity.this, Share.frame_bitmap);
+                if(rv_frame!=null) {
+                    rv_frame.setAdapter(test_frame_image_adapter);
+                }else {
+                    rv_frame = findViewById(R.id.rv_frame);
+                    rv_frame.setAdapter(test_frame_image_adapter);
+                }
+            }
         }
     }
 

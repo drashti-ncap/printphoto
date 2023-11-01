@@ -506,6 +506,7 @@ public class testing_CaseEditActivity extends PrintPhotoBaseActivity {
     protected void onResume() {
         super.onResume();
         up.setVisibility(View.VISIBLE);
+        setDiemns();
         if (Share.resultbitmap != null) {
             msk = Share.resultbitmap;
             bground = Share.resultbitmap;

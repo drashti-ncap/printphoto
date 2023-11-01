@@ -827,6 +827,10 @@ public class frame_Dynamic_EditActivity extends PrintPhotoBaseActivity {
         super.onResume();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        if(up_image!=null){
+            up.setImageBitmap(up_image);
+        }
+
         Log.e("STICKERVIEW", "onResourceReady: " + frame_Dynamic_EditActivity.stickerView);
 
 
