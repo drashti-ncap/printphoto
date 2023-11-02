@@ -36,7 +36,7 @@ fun Context.errorDialog(message: String, positive: OnPositive?) {
         msg = getString(R.string.connect_time_out)
         positiveText = getString(R.string.retry)
         isPositive = true
-    } else if (message.contains("Handshake failed") || message.contains("Failed to connect to printphoto") || message.contains(getString(R.string.server_error))) {
+    } else if (message.contains("Handshake failed") || message.contains("Failed to connect to printphoto") || message.contains("Internal Server Error",true)) {
         title = getString(R.string.server_error)
         msg = getString(R.string.server_under_maintenance)
         positiveText = getString(R.string.retry)
